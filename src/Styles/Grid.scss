@@ -1,0 +1,57 @@
+// Import Breakpoints
+@import 'breakpoints';
+
+// Grid System Variables
+$grid-spacing: (
+        xxs: 0,
+        xs: 8px,
+        s: 16px,
+        m: 24px,
+        l: 32px,
+        xl: 40px,
+        xll: 48px
+);
+
+$grid-columns: 12;
+
+// Grid System Mixins
+@mixin grid-container($spacing: 0) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: map-get($grid-spacing, $spacing) * -1;
+  margin-right: map-get($grid-spacing, $spacing) * -1;
+  width: calc(100% + map-get($grid-spacing, $spacing) * 2);
+}
+
+@mixin grid-item($columns: $grid-columns, $breakpoint: xs) {
+  $col-width: 100% / $grid-columns * $columns;
+  @include min-width($breakpoint) {
+    flex: 0 0 $col-width;
+    max-width: $col-width;
+  }
+}
+
+@mixin grid-spacing($spacing: 0) {
+  padding: map-get($grid-spacing, $spacing);
+}
+
+// Grid Container Class
+.grid-container {
+  @include grid-container(2); // Default spacing
+}
+
+// Grid Item Classes
+@for $i from 1 through $grid-columns {
+  @each $breakpoint, $min-width in $breakpoints {
+    .grid-item-#{$i}-#{$breakpoint} {
+      @include grid-item($i, $breakpoint);
+    }
+  }
+}
+
+// Spacing Classes
+@each $spacing, $value in $grid-spacing {
+  .spacing-#{$spacing} {
+    @include grid-spacing($spacing);
+  }
+}

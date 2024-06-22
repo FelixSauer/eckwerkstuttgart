@@ -1,0 +1,22 @@
+---
+export interface Props {
+  page: any;
+}
+const { page } = Astro.props;
+const { Content } = await page.render();
+---
+
+<section id={page.data.title}>
+  <h1>{page.title}</h1>
+  <article>
+    <Content />
+  </article>
+</section>
+
+<style lang="scss">
+  section {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+  }
+</style>

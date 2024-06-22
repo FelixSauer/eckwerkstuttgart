@@ -1,0 +1,22 @@
+@import './Breakpoints';
+@import './Colors';
+@import './Fonts';
+@Import 'Grid';
+
+html {
+  font-size: 100%;
+}
+
+a {
+  font-family: 'Montserrat Variable', sans-serif;
+  text-decoration: none;
+  color: var(--primary-dark);
+
+  &:hover {
+    color: var(--secondary-light);
+  }
+
+  &:active {
+    color: var(--primary-color);
+  }
+}

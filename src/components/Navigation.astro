@@ -1,0 +1,58 @@
+---
+import type { INavigation } from "../types/navigation";
+
+interface Props {
+  navigation: INavigation[];
+  navigationPostion: string;
+}
+
+const { navigation } = Astro.props;
+const { navigationPostion } = Astro.props;
+---
+
+<nav>
+  <ul>
+    {
+      navigation.map((item) => {
+        return (
+          <li>
+            <a
+              href={
+                navigationPostion === "header" ? "#" + item.title : item.title
+              }
+            >
+              {item.title}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
+<style lang="scss">
+  nav {
+    width: 100%;
+    height: 50px;
+    bottom: unset;
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: unset;
+      padding: unset;
+
+      li {
+        margin-right: 10px;
+
+        a {
+          color: var(--white);
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+</style>
