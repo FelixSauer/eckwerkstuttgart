@@ -1,10 +1,33 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig} from 'astro/config';
+import icon from 'astro-icon';
 
-// https://astro.build/config
+/*
+import {fileURLToPath} from 'url';
+import path, {dirname} from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+*/
+
 export default defineConfig({
-    // Other configurations
-    plugins: [
-        // Other plugins
-        '@astrojs/sass'
-    ]
+  site: 'https://felixsauer.github.io',
+  base: 'eckwerkstuttgart',
+  integrations: [icon()],
+  /*vite: {
+    resolve: {
+      alias: {
+        '@/': `${path.resolve(__dirname, 'src')}/`
+      }
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+          @import "src/styles/GlobalStyling.scss";
+          `,
+        }
+      }
+    }
+  }*/
 });
+

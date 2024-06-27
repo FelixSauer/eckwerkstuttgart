@@ -1,35 +1,46 @@
 {
-	"name": "eckwerkstuttgart",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro check && astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
-	},
-	"dependencies": {
-		"@astrojs/check": "^0.7.0",
-		"@fontsource-variable/fira-code": "^5.0.18",
-		"@fontsource-variable/material-symbols-outlined": "^5.0.33",
-		"@fontsource-variable/montserrat": "^5.0.19",
-		"@fontsource-variable/source-code-pro": "^5.0.19",
-		"@fontsource/roboto": "^5.0.13",
-		"astro": "^4.9.1",
-		"astro-robots-txt": "^1.0.0",
-		"astro-seo": "^0.8.3",
-		"sass": "^1.77.6",
-		"typescript": "^5.4.5"
-	},
-	"devDependencies": {
-		"@typescript-eslint/parser": "^7.13.1",
-		"eslint": "^9.5.0",
-		"eslint-plugin-astro": "^1.2.2",
-		"eslint-plugin-jsx-a11y": "^6.9.0",
-		"prettier": "^3.3.2",
-		"prettier-plugin-packagejson": "^2.4.3",
-		"prettier-plugin-astro": "^0.14.0"
-	}
+  "name": "eckwerkstuttgart",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@fontsource-variable/fira-code": "^5.0.18",
+    "@fontsource-variable/material-symbols-outlined": "^5.0.33",
+    "@fontsource-variable/montserrat": "^5.0.19",
+    "@fontsource-variable/source-code-pro": "^5.0.19",
+    "@fontsource/roboto": "^5.0.13",
+    "@iconify-json/line-md": "^1.1.38",
+    "@iconify-json/mdi": "^1.1.67",
+    "astro": "^4.11.1",
+    "astro-favicons": "^2.0.2",
+    "astro-robots-txt": "^1.0.0",
+    "astro-seo": "^0.8.3",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^7.13.1",
+    "astro-icon": "^1.1.0",
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.3",
+    "eslint": "^9.5.0",
+    "eslint-plugin-astro": "^1.2.2",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "postcss-preset-env": "^9.5.14",
+    "postcss-utilities": "^0.8.4",
+    "prettier": "^3.3.2",
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "sass": "^1.77.6"
+  },
+  "volta": {
+    "node": "22.3.0"
+  }
 }

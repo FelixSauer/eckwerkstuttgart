@@ -1,25 +1,26 @@
 @import "Breakpoints";
 
 body {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
 
-  /*@include least-width(xs) {
-    font-size: 3rem;
+  @include min-width('l') {
+    font-size: 1rem;
   }
 
-  @include least-width(s) {
-    font-size: 2.5rem;
+  @include min-width('xl') {
+    font-size: 1rem;
   }
 
-  @include least-width(m) {
-    font-size: 2rem;
-  }*/
+  @include min-width('xxl') {
+    font-size: 1.75rem;
+  }
 }
 
 h1 {
   font-family: 'Montserrat Variable', sans-serif;
-  font-weight: 400;
 }
 
 h2 {

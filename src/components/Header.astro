@@ -1,6 +1,7 @@
 ---
 import type { INavigation } from "../types/navigation";
 import Navigation from "./Navigation.astro";
+import { Icon } from "astro-icon/components";
 interface Props {
   navigation: INavigation[];
 }
@@ -9,16 +10,25 @@ const { navigation } = Astro.props;
 ---
 
 <header>
+  <Icon name="line-md:email" />
+  <div>Logo Eckwerk Stuttgart</div>
   <Navigation navigation={navigation} navigationPostion="header" />
 </header>
 
 <style lang="scss">
-  @import "../Styles/Colors";
+  @import "../styles/Colors";
 
   header {
     width: 100%;
-    height: 50px;
+    height: 54px;
     position: fixed;
     background-color: $primary-color;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      width: 300px;
+    }
   }
 </style>

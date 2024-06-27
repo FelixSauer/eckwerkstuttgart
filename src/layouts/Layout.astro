@@ -1,10 +1,4 @@
 ---
-import GlobalStyles from "../components/GlobalStyles.astro";
-import "@fontsource-variable/montserrat";
-import "@fontsource-variable/fira-code";
-import "@fontsource-variable/source-code-pro";
-import "@fontsource/roboto";
-
 interface Props {
   title: string;
 }
@@ -19,28 +13,10 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
-      rel="stylesheet"
-    />
-    <GlobalStyles />
+    <link rel="icon" type="image/svg+xml" href="/favicon-mode-dark.svg" />
     <title>{title}</title>
   </head>
   <body>
     <slot />
-    <style lang="scss">
-      html {
-        position: relative;
-        scroll-behavior: smooth;
-      }
-
-      body {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
   </body>
 </html>

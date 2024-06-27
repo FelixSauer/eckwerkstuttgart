@@ -2,7 +2,6 @@
  * Breakpoints
  */
 $breakpoints: (
-        xxs: 320px,
         xs: 375px,
         s: 425px,
         m: 768px,
@@ -14,7 +13,12 @@ $breakpoints: (
 /**
  * Breakpoint Mixins
  */
-@mixin least-width($size) {
+
+/**
+* Mixin for min-width media query
+* @param {string} $size - The size of the breakpoint
+ */
+@mixin min-width($size) {
   @if map-has-key($breakpoints, $size) {
     $breakpoint: map-get($breakpoints, $size);
     @media (min-width: $breakpoint) {
@@ -23,6 +27,10 @@ $breakpoints: (
   }
 }
 
+/**
+* Mixin for max-width media query
+* @param {string} $size - The size of the breakpoint
+ */
 @mixin between-width($start, $end) {
   @if map-has-key($breakpoints, $start) and map-has-key($breakpoints, $end) {
     $breakpoint-start: map-get($breakpoints, $start);
@@ -33,6 +41,10 @@ $breakpoints: (
   }
 }
 
+/**
+* Mixin for max-width media query
+* @param {string} $size - The size of the breakpoint
+ */
 @mixin exact-width($size) {
   @if map-has-key($breakpoints, $size) {
     $breakpoint: map-get($breakpoints, $size);
