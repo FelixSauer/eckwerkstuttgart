@@ -9,7 +9,6 @@ import "@fontsource-variable/montserrat";
 import "@fontsource-variable/fira-code";
 import "@fontsource-variable/source-code-pro";
 import "@fontsource/roboto";
-import "~styles/GlobalStyling.scss";
 
 const pages = await getCollection("pages");
 
@@ -42,8 +41,9 @@ const navigationFooter = navigation.filter((nav) =>
   <Footer navigation={navigationFooter} />
 </Layout>
 
-<style lang="scss">
-  @use "../styles/GlobalStyling";
+<style lang="scss" is:global>
+  @import "./../styles/GlobalStyling";
+
   main {
     position: relative;
     scroll-behavior: smooth;

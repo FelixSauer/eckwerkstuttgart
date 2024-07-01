@@ -10,8 +10,6 @@ const __dirname = dirname(__filename);
 */
 
 export default defineConfig({
-  site: 'https://felixsauer.github.io',
-  base: 'eckwerkstuttgart',
   integrations: [icon()],
   /*vite: {
     resolve: {
