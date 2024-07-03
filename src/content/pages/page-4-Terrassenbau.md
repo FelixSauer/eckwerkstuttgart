@@ -11,5 +11,4 @@ Ob Sie schon eine ganz konkrete Vorstellung haben oder erst eine vage Idee, wir 
 
 bis Ihr Wunschprojekt fix fertig ist.
 
-
 Kommen Sie für ein Erstgespräch, eine Beratung oder ein konkretes Angebot direkt auf uns zu.

@@ -30,6 +30,20 @@ $breakpoints: (
 /**
 * Mixin for max-width media query
 * @param {string} $size - The size of the breakpoint
+*/
+@mixin max-width($size) {
+  @if map-has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media (max-width: $breakpoint - 0.02px) {
+      @content;
+    }
+  }
+}
+
+
+/**
+* Mixin for max-width media query
+* @param {string} $size - The size of the breakpoint
  */
 @mixin between-width($start, $end) {
   @if map-has-key($breakpoints, $start) and map-has-key($breakpoints, $end) {

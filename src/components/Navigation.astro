@@ -31,8 +31,9 @@ const { navigationPostion } = Astro.props;
 </nav>
 
 <style lang="scss">
+  @import "./../styles/GlobalStyling";
+
   nav {
-    height: 50px;
     align-items: center;
 
     ul {
@@ -42,7 +43,11 @@ const { navigationPostion } = Astro.props;
       padding: unset;
 
       li {
-        margin-right: 10px;
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: unset;
+        }
 
         a {
           color: var(--white);
