@@ -19,23 +19,24 @@
     "@fontsource/roboto": "^5.0.13",
     "@iconify-json/line-md": "^1.1.38",
     "@iconify-json/mdi": "^1.1.67",
-    "astro": "^4.11.1",
+    "astro": "^4.11.3",
     "astro-favicons": "^2.0.2",
+    "astro-icon": "^1.1.0",
     "astro-robots-txt": "^1.0.0",
-    "astro-seo": "^0.8.3",
-    "typescript": "^5.4.5"
+    "astro-seo": "^0.8.4",
+    "typescript": "^5.5.3"
   },
   "devDependencies": {
-    "astro-icon": "^1.1.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^9.5.0",
+    "eslint": "^9.6.0",
     "eslint-plugin-astro": "^1.2.2",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
-    "prettier-plugin-packagejson": "^2.4.3",
+    "prettier-plugin-packagejson": "^2.5.0",
     "sass": "^1.77.6"
   },
   "volta": {
-    "node": "22.3.0"
+    "node": "22.4.0",
+    "yarn": "4.3.1"
   }
 }
