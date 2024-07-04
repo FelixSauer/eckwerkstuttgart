@@ -43,13 +43,12 @@ const { navigationPostion } = Astro.props;
       //Set init active link
       if(currentPath.hash === "") {
         //Set first link active
-        link[0].setAttribute("active");
+        link[0].classList.add('active');
       }
 
       //Set active link
       if(link.getAttribute("data-href") === currentPath.hash) {
-        console.log("hallo") // REMOVE ME LATER
-        link.setAttribute("active");
+        link.classList.add('active');
       }
     });
 
