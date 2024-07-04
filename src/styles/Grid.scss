@@ -1,5 +1,13 @@
-// Import Breakpoints
 @import 'breakpoints';
+
+// Spacing Variables
+$spacing-xxs: 3px;
+$spacing-xs: 5px;
+$spacing-s: 8px;
+$spacing-m: 13px;
+$spacing-l: 21px;
+$spacing-xl: 34px;
+$spacing-xxl: 55px;
 
 // Grid System Variables
 $grid-spacing: (

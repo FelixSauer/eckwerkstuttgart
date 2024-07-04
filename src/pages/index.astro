@@ -45,11 +45,12 @@ const navigationFooter = navigation.filter((nav) =>
   @import "./../styles/GlobalStyling";
 
   main {
-    position: relative;
     scroll-behavior: smooth;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
+    overflow-y: auto;
+
+    @include min-width("l") {
+      padding-top: 90px;
+    }
   }
 </style>
 

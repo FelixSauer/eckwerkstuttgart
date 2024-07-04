@@ -8,6 +8,7 @@ interface Props {
 
 const { navigation } = Astro.props;
 const { navigationPostion } = Astro.props;
+
 ---
 
 <nav>
@@ -20,6 +21,8 @@ const { navigationPostion } = Astro.props;
               href={
                 navigationPostion === "header" ? "#" + item.title : item.title
               }
+              data-href={item.title}
+              aria-current="page"
             >
               {item.title}
             </a>
@@ -29,6 +32,36 @@ const { navigationPostion } = Astro.props;
     }
   </ul>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const navigationLinks = document.querySelectorAll("nav ul li a[data-href]");
+    const currentPath = window.location;
+
+
+    navigationLinks.forEach((link) => {
+      //Set init active link
+      if(currentPath.hash === "") {
+        //Set first link active
+        link[0].setAttribute("active");
+      }
+
+      //Set active link
+      if(link.getAttribute("data-href") === currentPath.hash) {
+        console.log("hallo") // REMOVE ME LATER
+        link.setAttribute("active");
+      }
+    });
+
+
+
+    console.log(navigationLinks);
+
+
+
+
+  });
+</script>
 
 <style lang="scss">
   @import "./../styles/GlobalStyling";
@@ -43,16 +76,29 @@ const { navigationPostion } = Astro.props;
       padding: unset;
 
       li {
-        margin-right: 30px;
+        margin-right: $spacing-l;
+        font-weight: 300;
+
 
         &:last-child {
           margin-right: unset;
         }
 
         a {
-          color: var(--white);
+          color: $color-white;
           text-decoration: none;
           text-transform: uppercase;
+          font-family: Source Code Pro Variable, sans-serif;
+
+          padding: $spacing-s;
+
+          &:hover {
+            color: $color-accent-3;
+          }
+
+          &:active {
+            color: $color-gray-6;
+          }
         }
       }
     }

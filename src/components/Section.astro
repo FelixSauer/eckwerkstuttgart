@@ -19,5 +19,9 @@ const { Content } = await page.render();
   section {
     width: 100%;
     min-height: 100vh;
+
+    @include min-width("l") {
+      padding-top: 90px;
+    }
   }
 </style>

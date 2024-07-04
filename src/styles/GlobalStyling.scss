@@ -3,6 +3,7 @@
 @import 'Fonts';
 @import "Scrollbar";
 @import "Normalize";
+@import "Spacings";
 
 html {
   font-size: 100%;
@@ -10,16 +11,4 @@ html {
   scroll-behavior: smooth;
 }
 
-a {
-  font-family: 'Montserrat Variable', sans-serif;
-  text-decoration: none;
-  color: var(--primary-dark);
 
-  &:hover {
-    color: var(--secondary-light);
-  }
-
-  &:active {
-    color: var(--primary-color);
-  }
-}
