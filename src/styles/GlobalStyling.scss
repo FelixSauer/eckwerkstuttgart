@@ -5,6 +5,12 @@
 @import "Normalize";
 @import "Spacings";
 
+@mixin useBreakpoint($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 html {
   font-size: 100%;
   position: relative;
