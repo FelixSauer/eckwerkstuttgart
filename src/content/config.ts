@@ -7,6 +7,7 @@ const pageCollection = defineCollection({
   schema: z
     .object({
       title: z.string(),
+      mainstage: z.boolean(),
       navigation: z.string().transform(parseNavigationString),
     })
     .passthrough(),

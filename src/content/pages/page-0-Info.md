@@ -1,5 +1,6 @@
 ---
 title: Info
+mainstage: true
 navigation: Header
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Wohnhandwerk
+mainstage: true
 navigation: Header
 ---
 

@@ -1,66 +1,106 @@
 ---
-import type { INavigation } from "../types/navigation";
+import type {INavigation} from "../types/navigation";
 
 interface Props {
-  navigation: INavigation[];
-  navigationPostion: string;
+	navigation: INavigation[];
+	navigationPostion: string;
 }
 
-const { navigation } = Astro.props;
-const { navigationPostion } = Astro.props;
-
+const {navigation} = Astro.props;
+const {navigationPostion} = Astro.props;
 ---
 
-<nav>
-  <ul>
-    {
-      navigation.map((item) => {
-        return (
-          <li>
-            <a
-              href={
-                navigationPostion === "header" ? "#" + item.title : item.title
-              }
-              data-href={item.title}
-              aria-current="page"
-            >
-              {item.title}
-            </a>
-          </li>
-        );
-      })
-    }
-  </ul>
+<nav class="navbar">
+    <ul>
+			{
+				navigation.map((item) => {
+					return (
+                  <li>
+                      <a
+                              href={
+																navigationPostion === "header" ? "#" + item.title : item.title
+															}
+                              data-href={item.title}
+                              aria-current="page"
+                      >
+												{item.title}
+                      </a>
+                  </li>
+					);
+				})
+			}
+    </ul>
 </nav>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const navigationLinks = document.querySelectorAll("nav ul li a[data-href]");
-    const currentPath = window.location;
+	let scrollTimeout: NodeJS.Timeout | null = null;
 
+	document.addEventListener("DOMContentLoaded", () => {
+		initNavigation();
+		initIntersectionObserver();
+	});
 
-    navigationLinks.forEach((link) => {
-      //Set init active link
-      if(currentPath.hash === "") {
-        //Set first link active
-        link[0].classList.add('active');
-      }
+	function initNavigation(): void {
+		window.addEventListener('hashchange', updateActiveLink);
+		updateActiveLink();
+	}
 
-      //Set active link
-      if(link.getAttribute("data-href") === currentPath.hash) {
-        link.classList.add('active');
-      }
-    });
+	function updateActiveLink(): void {
+		const navigationLinks = document.querySelectorAll<HTMLAnchorElement>('a[data-href]');
+		const currentUrl = window.location.hash.substring(1);
 
+		navigationLinks.forEach((link) => {
+			let currentLink = link.getAttribute('data-href');
+			if (currentLink === '#') {
+				currentLink = currentLink.substring(1);
+			}
 
+			if (currentLink === currentUrl) {
+				link.classList.add("active");
+			} else {
+				link.classList.remove("active");
+			}
+		});
+	}
 
-    console.log(navigationLinks);
+	function initIntersectionObserver(): void {
+		const observerOptions: IntersectionObserverInit = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 0.5
+		};
 
+		const observerCallback: IntersectionObserverCallback = (entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const sectionId = entry.target.id;
+					const activeLink = document.querySelector<HTMLAnchorElement>(`a[data-href='${sectionId}']`);
 
+					if (activeLink) {
+						// Clear previous scroll timeout
+						if (scrollTimeout) {
+							clearTimeout(scrollTimeout);
+						}
 
+						// Set new timeout to update active link after scrolling stops
+						scrollTimeout = setTimeout(() => {
+							document.querySelectorAll<HTMLAnchorElement>('a[data-href]').forEach(link => {
+								link.classList.remove('active');
+							});
+							activeLink.classList.add('active');
+						}, 200); // Adjust delay time (in milliseconds) as needed
+					}
+				}
+			});
+		};
 
-  });
+		const observer = new IntersectionObserver(observerCallback, observerOptions);
+		document.querySelectorAll<HTMLElement>('section').forEach(section => {
+			observer.observe(section);
+		});
+	}
 </script>
+
 
 <style lang="scss">
   @import "./../styles/GlobalStyling";
@@ -78,28 +118,35 @@ const { navigationPostion } = Astro.props;
         margin-right: $spacing-l;
         font-weight: 300;
 
-
         &:last-child {
           margin-right: unset;
-        }
-
-        a {
-          color: $color-white;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-family: Source Code Pro Variable, sans-serif;
-
-          padding: $spacing-s;
-
-          &:hover {
-            color: $color-accent-3;
-          }
-
-          &:active {
-            color: $color-gray-6;
-          }
         }
       }
     }
   }
+
+  .navbar {
+    a {
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: Source Code Pro Variable, sans-serif;
+      padding: $spacing-s;
+
+      &.active {
+        color: black;
+      }
+
+      &:hover {
+        color: $color-black;
+        background-color: lighten($color-white, 20%);
+      }
+
+      &:focus {
+        outline: none;
+
+      }
+    }
+  }
+
 </style>

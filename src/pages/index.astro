@@ -1,10 +1,10 @@
 ---
-import { getCollection } from "astro:content";
+import {getCollection} from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import type { INavigation } from "../types/navigation";
+import type {INavigation} from "../types/navigation";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/fira-code";
 import "@fontsource-variable/source-code-pro";
@@ -13,33 +13,32 @@ import "@fontsource/roboto";
 const pages = await getCollection("pages");
 
 const navigation: INavigation[] = pages.map(
-  (page: any): INavigation => ({
-    page: page,
-    title: page.data.title,
-    navigation: page.data.navigation,
-    slug: page.slug,
-  }),
+	(page: any): INavigation => ({
+		page: page,
+		title: page.data.title,
+		navigation: page.data.navigation,
+		slug: page.slug,
+	}),
 );
 
 const navigationHeader = navigation.filter((nav) =>
-  nav.navigation.includes("Header"),
+	nav.navigation.includes("Header"),
 );
 const navigationFooter = navigation.filter((nav) =>
-  nav.navigation.includes("Footer"),
+	nav.navigation.includes("Footer"),
 );
 ---
 
 <Layout title="Eckwerk Stuttgart">
-  <Header navigation={navigationHeader} />
-  <main>
-    {
-      pages.map((originPage) => {
-        return <Section page={originPage} />;
-      })
-    }
-  </main>
-  <Footer navigation={navigationFooter} />
+    <Header navigation={navigationHeader} />
+    <main>
+        {pages.map((originPage) =>
+          originPage.data.mainstage === true ? <Section page={originPage} /> : null
+        )}
+    </main>
+    <Footer navigation={navigationFooter} />
 </Layout>
+
 
 <style lang="scss" is:global>
   @import "./../styles/GlobalStyling";
@@ -53,38 +52,3 @@ const navigationFooter = navigation.filter((nav) =>
     }
   }
 </style>
-
-<!--
-<script>
-  const setFavicon = () => {
-    const favicon = document.querySelector('link[rel="
-  icon"]');
-  favicon.href='window.matchMedia("(prefers-color-scheme:'
-  dark)").matches
-  ?
-  "dark-mode-favicon.png"
-  :
-  "light-mode-favicon.png";
-  };
-  Set
-  the
-  initial
-  favicon
-  setFavicon();
-  Listen
-  for
-  changes
-  in
-  the
-  color
-  scheme
-  preference
-  window
-  .matchMedia("(prefers-color-scheme:
-  dark)")
-  .addEventListener("change",
-  setFavicon);
-  <
-  script
->
-  -->

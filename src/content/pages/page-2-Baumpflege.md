@@ -1,5 +1,6 @@
 ---
 title: Baumpflege
+mainstage: true
 navigation: Header
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Example
+mainstage: true
 navigation: Header
 ---
 
