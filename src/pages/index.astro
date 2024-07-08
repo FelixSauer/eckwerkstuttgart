@@ -8,6 +8,7 @@ import type {INavigation} from "../types/navigation";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/fira-code";
 import "@fontsource-variable/source-code-pro";
+import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 
 const pages = await getCollection("pages");
@@ -45,7 +46,7 @@ const navigationFooter = navigation.filter((nav) =>
 
   main {
     scroll-behavior: smooth;
-    overflow-y: auto;
+    overflow-y: scroll;
 
     @include min-width("l") {
       padding-top: 90px;

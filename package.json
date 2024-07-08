@@ -17,6 +17,7 @@
     "@fontsource-variable/montserrat": "^5.0.19",
     "@fontsource-variable/source-code-pro": "^5.0.19",
     "@fontsource/roboto": "^5.0.13",
+    "@fontsource/source-sans-pro": "^5.0.8",
     "@iconify-json/line-md": "^1.1.38",
     "@iconify-json/mdi": "^1.1.67",
     "astro": "^4.11.3",

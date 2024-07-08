@@ -1,16 +1,17 @@
 ---
 export interface Props {
-  page: any;
+	page: any;
 }
-const { page } = Astro.props;
-const { Content } = await page.render();
+const {page} = Astro.props;
+const {Content} = await page.render();
 ---
 
 <section id={page.data.title}>
-  <h1>{page.title}</h1>
-  <article>
-    <Content />
-  </article>
+    <div>
+        <article>
+            <Content/>
+        </article>
+    </div>
 </section>
 
 <style lang="scss">
@@ -19,9 +20,38 @@ const { Content } = await page.render();
   section {
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
 
-    @include min-width("l") {
-      margin-top: 90px;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+
+      @include min-width("s") {
+        width: 80%;
+      }
+
+      @include min-width("m") {
+        width: 80%;
+      }
+
+      @include min-width("l") {
+        width: 70%;
+      }
+
+      @include min-width("xl") {
+        width: 65%;
+      }
+
+      @include min-width("xxl") {
+        width: 60%;
+      }
+
+      article {
+
+      }
     }
   }
 </style>
