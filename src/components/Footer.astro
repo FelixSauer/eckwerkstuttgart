@@ -1,32 +1,18 @@
 ---
-import type { INavigation } from "../types/navigation";
+import type {INavigation} from "../types/navigation";
 import Navigation from "./Navigation.astro";
 import Contact from "./Contact.astro";
 import Copyright from "./Copyright.astro";
 
 interface Props {
-  navigation: INavigation[];
+	navigation: INavigation[];
 }
 
-const { navigation } = Astro.props;
+const {navigation} = Astro.props;
 ---
 
 <footer>
-  <Contact />
-  <Navigation navigation={navigation} navigationPostion="footer" />
-  <Copyright />
+    <Contact/>
+    <Navigation navigation={navigation} navigationPostion="footer"/>
+    <Copyright/>
 </footer>
-
-<style lang="scss">
-  @import "./../styles/GlobalStyling";
-
-  footer {
-    display: flex;
-    flex-direction: row;
-    bottom: 0;
-    width: 100%;
-    background-color: $color-primary;
-    color: white;
-    padding: $spacing-s $spacing-xxl ;
-  }
-</style>

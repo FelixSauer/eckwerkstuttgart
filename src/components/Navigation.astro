@@ -33,7 +33,7 @@ const {navigationPostion} = Astro.props;
 </nav>
 
 <script>
-	let scrollTimeout: NodeJS.Timeout | null = null;
+	let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
 
 	document.addEventListener("DOMContentLoaded", () => {
 		initNavigation();
@@ -50,16 +50,8 @@ const {navigationPostion} = Astro.props;
 		const currentUrl = window.location.hash.substring(1);
 
 		navigationLinks.forEach((link) => {
-			let currentLink = link.getAttribute('data-href');
-			if (currentLink === '#') {
-				currentLink = currentLink.substring(1);
-			}
-
-			if (currentLink === currentUrl) {
-				link.classList.add("active");
-			} else {
-				link.classList.remove("active");
-			}
+			const linkHref = link?.getAttribute('data-href')?.substring(1);
+			link.classList.toggle("active", linkHref === currentUrl);
 		});
 	}
 
@@ -74,22 +66,7 @@ const {navigationPostion} = Astro.props;
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					const sectionId = entry.target.id;
-					const activeLink = document.querySelector<HTMLAnchorElement>(`a[data-href='${sectionId}']`);
-
-					if (activeLink) {
-						// Clear previous scroll timeout
-						if (scrollTimeout) {
-							clearTimeout(scrollTimeout);
-						}
-
-						// Set new timeout to update active link after scrolling stops
-						scrollTimeout = setTimeout(() => {
-							document.querySelectorAll<HTMLAnchorElement>('a[data-href]').forEach(link => {
-								link.classList.remove('active');
-							});
-							activeLink.classList.add('active');
-						}, 200); // Adjust delay time (in milliseconds) as needed
-					}
+					handleScrollStop(sectionId);
 				}
 			});
 		};
@@ -98,6 +75,23 @@ const {navigationPostion} = Astro.props;
 		document.querySelectorAll<HTMLElement>('section').forEach(section => {
 			observer.observe(section);
 		});
+	}
+
+	function handleScrollStop(sectionId: string): void {
+		const activeLink = document.querySelector<HTMLAnchorElement>(`a[data-href='#${sectionId}']`);
+
+		if (activeLink) {
+			if (scrollTimeout !== null) {
+				clearTimeout(scrollTimeout);
+			}
+
+			scrollTimeout = setTimeout(() => {
+				document.querySelectorAll<HTMLAnchorElement>('a[data-href]').forEach(link => {
+					link.classList.remove('active');
+				});
+				activeLink.classList.add('active');
+			}, 200) as any; // Type assertion to allow assignment of setTimeout return value
+		}
 	}
 </script>
 

@@ -21,7 +21,7 @@ $breakpoints: (
 @mixin min-width($size) {
   @if map-has-key($breakpoints, $size) {
     $breakpoint: map-get($breakpoints, $size);
-    @media (min-width: $breakpoint) {
+    @media screen and (min-width: $breakpoint) {
       @content;
     }
   }
@@ -34,7 +34,7 @@ $breakpoints: (
 @mixin max-width($size) {
   @if map-has-key($breakpoints, $size) {
     $breakpoint: map-get($breakpoints, $size);
-    @media (max-width: $breakpoint - 0.02px) {
+    @media screen and (max-width: $breakpoint) {
       @content;
     }
   }
@@ -49,7 +49,7 @@ $breakpoints: (
   @if map-has-key($breakpoints, $start) and map-has-key($breakpoints, $end) {
     $breakpoint-start: map-get($breakpoints, $start);
     $breakpoint-end: map-get($breakpoints, $end);
-    @media (min-width: $breakpoint-start) and (max-width: $breakpoint-end - 0.02px) {
+    @media (min-width: $breakpoint-start) and (max-width: $breakpoint-end) {
       @content;
     }
   }

@@ -10,6 +10,7 @@ import "@fontsource-variable/fira-code";
 import "@fontsource-variable/source-code-pro";
 import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
+import "./../styles/GlobalStyling.scss";
 
 const pages = await getCollection("pages");
 
@@ -31,25 +32,17 @@ const navigationFooter = navigation.filter((nav) =>
 ---
 
 <Layout title="Eckwerk Stuttgart">
-    <Header navigation={navigationHeader} />
+    <Header navigation={navigationHeader}/>
     <main>
-        {pages.map((originPage) =>
-          originPage.data.mainstage === true ? <Section page={originPage} /> : null
-        )}
+			{pages.map((originPage) =>
+				originPage.data.mainstage === true ?
+                <Section page={originPage}/> : null
+			)}
     </main>
-    <Footer navigation={navigationFooter} />
+    <Footer navigation={navigationFooter}/>
 </Layout>
 
 
 <style lang="scss" is:global>
   @import "./../styles/GlobalStyling";
-
-  main {
-    scroll-behavior: smooth;
-    overflow-y: scroll;
-
-    @include min-width("l") {
-      padding-top: 90px;
-    }
-  }
 </style>

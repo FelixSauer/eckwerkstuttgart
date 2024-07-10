@@ -1,44 +1,16 @@
 ---
 import Navigation from "./Navigation.astro";
-import { Icon } from "astro-icon/components";
-import type { INavigation } from "../types/navigation";
+import {Icon} from "astro-icon/components";
+import type {INavigation} from "../types/navigation";
 
 interface Props {
-  navigation: INavigation[];
+	navigation: INavigation[];
 }
 
-const { navigation } = Astro.props;
+const {navigation} = Astro.props;
 ---
 
 <header>
-  <Icon name="logo" />
-  <Navigation navigation={navigation} navigationPostion="header" />
+    <Icon name="logo"/>
+    <Navigation navigation={navigation} navigationPostion="header"/>
 </header>
-
-<style lang="scss">
-  @import "./../styles/GlobalStyling";
-
-  header {
-    position: fixed;
-    background-color: $color-primary;
-    height: 40px;
-    z-index: 100;
-
-    @include min-width("l") {
-      display: flex;
-      justify-content: space-between;
-      width: calc(100% - 100px);
-      align-items: center;
-      font-size: 1rem;
-      height: 90px;
-      padding-left: $spacing-xxl;
-      padding-right: $spacing-xxl;
-    }
-
-    [data-icon] {
-      @include min-width("l") {
-          font-size: 3rem;
-      }
-    }
-  }
-</style>
