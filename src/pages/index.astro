@@ -1,48 +1,135 @@
 ---
-import {getCollection} from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import Section from "../components/Section.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import type {INavigation} from "../types/navigation";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/fira-code";
 import "@fontsource-variable/source-code-pro";
 import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
+import {Icon} from "astro-icon/components";
+import Contact from "../components/Contact.astro";
 
-const pages = await getCollection("pages");
-
-const navigation: INavigation[] = pages.map(
-	(page: any): INavigation => ({
-		page: page,
-		title: page.data.title,
-		navigation: page.data.navigation,
-		slug: page.slug,
-	}),
-);
-
-const navigationHeader = navigation.filter((nav) =>
-	nav.navigation.includes("Header"),
-);
-const navigationFooter = navigation.filter((nav) =>
-	nav.navigation.includes("Footer"),
-);
+// --- Maintenance page
 ---
 
 <Layout title="Eckwerk Stuttgart">
-    <Header navigation={navigationHeader}/>
     <main>
-			{pages.map((originPage) =>
-				originPage.data.mainstage === true ?
-                <Section page={originPage}/> : null
-			)}
+        <Icon name="logo2"/>
+        <h1>Wir renovieren momentan.</h1>
+        <Contact/>
     </main>
-    <Footer navigation={navigationFooter}/>
 </Layout>
 
 
 <style lang="scss" is:global>
   @import "./../styles/GlobalStyling";
+
+  body {
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Source Sans Pro', sans-serif;
+
+
+    main {
+      display: grid;
+      gap: 1rem;
+      padding-top: 0px;
+      padding-bottom: 180px;
+      font-size: 1rem;
+      color: $color-white;
+      font-size: .75rem;
+
+      @include min-width("xs") {
+        font-size: .75rem;
+
+      }
+
+      @include min-width("s") {
+        font-size: 1rem;
+      }
+
+      @include min-width("m") {
+        font-size: 1.1rem;
+      }
+
+      @include min-width("l") {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+        margin: 0px;
+
+        @include min-width("xs") {
+          font-size: 1.5rem;
+
+        }
+
+        @include min-width("s") {
+          font-size: 2.5rem;
+        }
+
+        @include min-width("m") {
+          font-size: 3.5rem;
+        }
+      }
+
+      [data-icon] {
+        font-size: 4rem;
+      }
+
+      @include min-width("xs") {
+        gap: 1rem;
+        font-size: 1.25rem;
+        [data-icon] {
+          font-size: 4rem;
+        }
+      }
+
+      @include min-width("s") {
+        gap: 1rem;
+        font-size: 1.25rem;
+        [data-icon] {
+          font-size: 6rem;
+        }
+      }
+
+      @include min-width("m") {
+        gap: 1rem;
+        font-size: 1.25rem;
+        [data-icon] {
+          font-size: 10rem;
+        }
+      }
+
+      @include min-width("l") {
+        gap: 2rem;
+        font-size: 1.25rem;
+        [data-icon] {
+          font-size: 12rem;
+        }
+      }
+
+      @include min-width("xl") {
+        gap: 5rem;
+        font-size: 1.75rem;
+        [data-icon] {
+          font-size: 13rem;
+        }
+      }
+
+      @include min-width("xxl") {
+        gap: 5rem;
+        font-size: 1.75rem;
+        [data-icon] {
+          font-size: 16rem;
+        }
+      }
+    }
+  }
 </style>

@@ -2,8 +2,25 @@
 
 ---
 
-<div>
-  Eckwerk Stuttgart Stierlenstraße 25 70327 Stuttgart Mail:
+<p>
+    Eckwerk Stuttgart <br>
+    Stierlenstraße 25, 70327 Stuttgart <br>
+    Mail: <a href="mailto:hallo@eckwerkstuttgart.de" target="_blank">hallo@eckwerkstuttgart.de</a>
+</p>
 
-  <a href="mailto:hallo@eckwerkstuttgart.de">hallo@eckwerkstuttgart.de</a>
-</div>
+
+<style lang="scss">
+  @import "./../styles/GlobalStyling";
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+
+
+    &:hover {
+      padding-bottom: 0.1rem;
+      border-bottom: 1px solid $color-white;
+
+    }
+  }
+</style>
