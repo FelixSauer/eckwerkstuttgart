@@ -21,13 +21,14 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: 'Source Sans Pro', sans-serif;
+  padding: 0 90px;
 
 
   main {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     padding-top: 0;
-    padding-bottom: 180px;
+    padding-bottom: 120px;
     color: $color-white;
     font-size: .75rem;
 
@@ -79,7 +80,7 @@ body {
     }
 
     @include min-width("s") {
-      gap: 1rem;
+      gap: 3rem;
       font-size: 1.25rem;
       [data-icon] {
         font-size: 6rem;
@@ -87,7 +88,7 @@ body {
     }
 
     @include min-width("m") {
-      gap: 1rem;
+      gap: 3rem;
       font-size: 1.25rem;
       [data-icon] {
         font-size: 10rem;
@@ -95,7 +96,7 @@ body {
     }
 
     @include min-width("l") {
-      gap: 2rem;
+      gap: 3rem;
       font-size: 1.25rem;
       [data-icon] {
         font-size: 12rem;
