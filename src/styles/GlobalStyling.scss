@@ -17,7 +17,7 @@ html, body {
 
 
 header {
-  height: 50px;
+  height: 70px;
   width: 100%;
   position: fixed;
   display: flex;
@@ -25,15 +25,16 @@ header {
   align-items: center;
   background-color: $color-primary;
   z-index: 1000;
+  padding: $spacing-l;
 
   @include min-width("l") {
-    height: 70px;
-    font-size: 1rem;
     padding-left: $spacing-xxl;
     padding-right: $spacing-xxl;
   }
 
   [data-icon] {
+    font-size: 3rem;
+
     @include min-width("l") {
       font-size: 3rem;
     }
@@ -43,10 +44,15 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  padding: 90px $spacing-xxl;
+  padding-left: $spacing-xxl;
+  padding-right: $spacing-xxl;
 
   section {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

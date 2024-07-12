@@ -1,5 +1,6 @@
 ---
 import type {INavigation} from "../types/navigation";
+import {Icon} from "astro-icon/components";
 
 interface Props {
 	navigation: INavigation[];
@@ -11,28 +12,68 @@ const {navigationPostion} = Astro.props;
 ---
 
 <nav class="navbar">
-    <ul>
-			{
-				navigation.map((item) => {
-					return (
-                  <li>
-                      <a
-                              href={
-																navigationPostion === "header" ? "#" + item.title : item.title
-															}
-                              data-href={item.title}
-                              aria-current="page"
-                      >
-												{item.title}
-                      </a>
-                  </li>
-					);
-				})
-			}
-    </ul>
+    <div class="navbar-display">
+        <ul>
+					{
+						navigation.map((item) => {
+							return (
+                      <li>
+                          <a
+                                  href={
+																		navigationPostion === "header" ? "#" + item.title : item.title
+																	}
+                                  data-href={item.title}
+                                  aria-current="page"
+                          >
+														{item.title}
+                          </a>
+                      </li>
+
+							);
+						})
+					}
+        </ul>
+    </div>
+    <div class="navbar-mobile">
+        <button>
+            <Icon name="line-md:close-to-menu-transition"/>
+        </button>
+
+        <div>
+            <ul>
+							{
+								navigation.map((item) => {
+									return (
+                          <li>
+                              <a
+                                      href={
+																				navigationPostion === "header" ? "#" + item.title : item.title
+																			}
+                                      data-href={item.title}
+                                      aria-current="page"
+                              >
+																{item.title}
+                              </a>
+                          </li>
+
+									);
+								})
+							}
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <script>
+	//---- Navbar ----
+	const navbarMobile = document.querySelector(".navbar-mobile");
+
+	navbarMobile.addEventListener("click", () => {
+		navbarMobile.classList.toggle("active");
+	});
+
+
+	//------ Navigation ----
 	let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
 
 	document.addEventListener("DOMContentLoaded", () => {
@@ -90,7 +131,7 @@ const {navigationPostion} = Astro.props;
 					link.classList.remove('active');
 				});
 				activeLink.classList.add('active');
-			}, 200) as any; // Type assertion to allow assignment of setTimeout return value
+			}, 200) as any;
 		}
 	}
 </script>
@@ -120,28 +161,91 @@ const {navigationPostion} = Astro.props;
   }
 
   .navbar {
-    a {
-      color: $color-white;
-      opacity: 0.5;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-family: Source Code Pro Variable, sans-serif;
-      padding: $spacing-s;
-      border: 1px solid transparent;
-      transition: border 0.5s;
+    .navbar-mobile {
+      cursor: pointer;
+      display: flex;
+
+      @include min-width('l') {
+        display: none;
+      }
+
+      button {
+        background: none;
+        border: none;
+        color: $color-white;
+        font-size: 1.5rem;
+        padding: 0;
+        transition: color 0.5s;
+        z-index: 2000;
+
+        &:hover {
+          color: $color-secondary;
+        }
+
+        &:focus {
+          color: $color-secondary;
+        }
+      }
+
+      div {
+        display: none;
+      }
 
       &.active {
-        opacity: 1;
-      }
+        div {
+          display: flex;
+          width: 100vw;
+          height: 100vw;
 
-      &:hover {
-        opacity: 0.75;
-      }
+          ul {
+            display: flex;
+            flex-direction: column;
+            background-color: $color-primary;
+            width: 100%;
 
-      &:focus {
-        color: $color-accent-3;
+            list-style: none;
+
+            li {
+              &:last-child {
+                margin: unset;
+              }
+            }
+          }
+        }
       }
     }
-  }
 
+    .navbar-display {
+      display: none;
+
+      @include min-width('l') {
+        display: block;
+      }
+
+      a {
+        color: $color-white;
+        opacity: 0.5;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: Source Code Pro Variable, sans-serif;
+        padding: $spacing-s;
+        border: 1px solid transparent;
+        transition: border 0.5s;
+
+        &.active {
+          opacity: 1;
+        }
+
+        &:hover {
+          opacity: 0.75;
+          color: $color-secondary;
+        }
+
+        &:focus {
+          color: $color-secondary;
+        }
+      }
+    }
+
+  }
 </style>
