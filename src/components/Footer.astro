@@ -1,16 +1,13 @@
 ---
 import type {INavigation} from "../types/navigation";
-import Navigation from "./Navigation.astro";
 import Contact from "./Contact.astro";
 import Copyright from "./Copyright.astro";
 
 interface Props {
 	navigation: INavigation[];
-	navigationPostion: string;
 }
 
 const {navigation} = Astro.props;
-const {navigationPostion} = Astro.props;
 ---
 
 <footer>
@@ -20,17 +17,14 @@ const {navigationPostion} = Astro.props;
 			{
 				navigation.map((item) => {
 					return (
-                  <li>
-                      <a
-                              href={
-																navigationPostion === "header" ? "#" + item.title : item.title
-															}
-                              data-href={item.title}
-                              aria-current="page"
-                      >
-												{item.title}
-                      </a>
-                  </li>
+                  <a
+                          href={item.title}
+                          data-href={item.title}
+                          aria-current="page"
+                  >
+										{item.title}
+                  </a>
+
 					);
 				})
 			}

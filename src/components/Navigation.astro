@@ -68,8 +68,8 @@ const {navigationPostion} = Astro.props;
 	//---- Navbar ----
 	const navbarMobile = document.querySelector(".navbar-mobile");
 
-	navbarMobile.addEventListener("click", () => {
-		navbarMobile.classList.toggle("active");
+	navbarMobile?.addEventListener("click", () => {
+		navbarMobile?.classList.toggle("active");
 	});
 
 
