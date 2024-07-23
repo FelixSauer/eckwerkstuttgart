@@ -1,4 +1,4 @@
-name: Develop deployment on fxsr
+name: deploy on fxsr k3s
 
 on:
   push:
@@ -32,5 +32,3 @@ jobs:
           context: "{{defaultContext}}:src"
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
