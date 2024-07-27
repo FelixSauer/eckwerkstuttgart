@@ -1,42 +1,38 @@
-name: deploy develop on fxsr two
+name: Deploy Develop on FXSR Two
 
 on:
   push:
     branches: [ develop ]
 
 env:
-  REGISTRY: ghcr.io
+  REGISTRY: registry.fxsr.de
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build:
-    name: Build
+    name: Build and Push Docker Image
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
 
-      - name: Setup Docker buildx
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Log in to registry
+        env:
+          REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
+          REGISTRY_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
+          REGISTRY_URL: ${{ secrets.REGISTRY_URL }}
+        run: echo "$REGISTRY_PASSWORD" | docker login $REGISTRY_URL -u $REGISTRY_USERNAME --password-stdin
+
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Extract Docker metadata for image tags and labels
-        id: meta
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: registry.fxsr.de
-          username: felixsauer
-          password: ${{ secrets.FXSRDOCKERREGISTRYTOKEN }}
-
-      - name: Build and push Docker image to private fxsr registry
+      - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
+      - name: Log out from registry
+        run: docker logout ${{ secrets.REGISTRY_URL }}
