@@ -21,14 +21,10 @@ jobs:
 
       - name: 'Login to fxsr Container Registry'
         uses: docker/login-action@v3
-        env:
-          REGISTRY_URL: https://registry.fxsr.de/
-          REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
-          REGISTRY_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
         with:
-          registry: $REGISTRY_URL
-          username: $REGISTRY_USERNAME
-          password: $REGISTRY_PASSWORD
+          registry: ${{ secrets.REGISTRY_URL }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
 
       - name: Build and push
         uses: docker/build-push-action@v4
