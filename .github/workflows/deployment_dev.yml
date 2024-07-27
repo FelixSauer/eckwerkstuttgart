@@ -23,7 +23,7 @@ jobs:
         env:
           REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
           REGISTRY_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
-          REGISTRY_URL: ${{ secrets.REGISTRY_URL }}
+          REGISTRY_URL: https://registry.fxsr.de/
         run: echo "$REGISTRY_PASSWORD" | docker login $REGISTRY_URL -u $REGISTRY_USERNAME --password-stdin
 
       - name: Build and push Docker image
