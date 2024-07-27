@@ -1,4 +1,4 @@
-name: deploy on fxsr k3s
+name: deploy develop on fxsr two
 
 on:
   push:
