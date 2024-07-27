@@ -2,7 +2,7 @@ name: deploy develop on fxsr two
 
 on:
   push:
-    branches: [develop]
+    branches: [ develop ]
 
 env:
   REGISTRY: ghcr.io
@@ -25,10 +25,18 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
-      - name: Build and push Docker image to gitHub container registry
-        id: build-and-push
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: registry.fxsr.de
+          username: felixsauer
+          password: ${{ secrets.FXSRDOCKERREGISTRYTOKEN }}
+
+      - name: Build and push Docker image to private fxsr registry
         uses: docker/build-push-action@v4
         with:
-          context: "{{defaultContext}}"
+          context: .
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
