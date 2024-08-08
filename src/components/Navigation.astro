@@ -128,10 +128,13 @@ const {navigationPostion} = Astro.props;
 
 			scrollTimeout = setTimeout(() => {
 				document.querySelectorAll<HTMLAnchorElement>('a[data-href]').forEach(link => {
-					link.classList.remove('active');
+					link.classList.remove('active', 'inactive');
+					link.classList.add('inactive');
 				});
+
+				activeLink.classList.remove('inactive');
 				activeLink.classList.add('active');
-			}, 200) as any;
+			}, 200);
 		}
 	}
 </script>
@@ -156,6 +159,13 @@ const {navigationPostion} = Astro.props;
         &:last-child {
           margin-right: unset;
         }
+
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: Source Code Pro Variable, sans-serif;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -163,26 +173,25 @@ const {navigationPostion} = Astro.props;
   .navbar {
     .navbar-mobile {
       cursor: pointer;
-      display: flex;
 
       @include min-width('l') {
         display: none;
       }
 
+
       button {
+        position: absolute;
+        top: .75rem;
+        right: .75rem;
         background: none;
         border: none;
         color: $color-white;
         font-size: 1.5rem;
+        cursor: pointer;
         padding: 0;
-        transition: color 0.5s;
-        z-index: 2000;
+        z-index: 1000;
 
         &:hover {
-          color: $color-secondary;
-        }
-
-        &:focus {
           color: $color-secondary;
         }
       }
@@ -193,24 +202,42 @@ const {navigationPostion} = Astro.props;
 
       &.active {
         div {
-          display: flex;
-          width: 100vw;
-          height: 100vw;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: slideIn ease-in;
+          animation-duration: 0.5s;
 
           ul {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            gap: $spacing-xl;
+            width: 100vw;
+            height: 100vh;
+            padding: $spacing-4xl $spacing-xxl;
             background-color: $color-primary;
-            width: 100%;
-
-            list-style: none;
 
             li {
-              &:last-child {
-                margin: unset;
+              a {
+                font-size: 1.75rem;
+                color: $color-white;
+
+                &:hover {
+                  color: $color-secondary;
+                }
               }
             }
           }
+        }
+      }
+
+      &.inactive {
+        div {
+          animation: slideIn ease-out;
+          animation-duration: 0.5s;
+
         }
       }
     }
@@ -223,11 +250,7 @@ const {navigationPostion} = Astro.props;
       }
 
       a {
-        color: $color-white;
         opacity: 0.5;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: Source Code Pro Variable, sans-serif;
         padding: $spacing-s;
         border: 1px solid transparent;
         transition: border 0.5s;
@@ -247,5 +270,14 @@ const {navigationPostion} = Astro.props;
       }
     }
 
+    @keyframes slideIn {
+      from {
+        transform: translateX(100vw);
+      }
+
+      to {
+        transform: translateX(0vw);
+      }
+    }
   }
 </style>

@@ -11,6 +11,7 @@ import "@fontsource-variable/source-code-pro";
 import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
+import GoBack from "../components/GoBack.astro";
 
 const pages = await getCollection("pages");
 
@@ -40,6 +41,7 @@ const navigationFooter = navigation.filter((nav) =>
                 <Section page={originPage}/>
 				) : null
 			)}
+        <GoBack/>
     </main>
     <Footer navigation={navigationFooter}/>
 </Layout>

@@ -10,8 +10,6 @@
 
 html, body {
   font-size: 100%;
-  overflow-x: hidden;
-  overflow-y: visible;
   scroll-behavior: smooth;
 }
 
@@ -34,6 +32,7 @@ header {
 
   [data-icon] {
     font-size: 3rem;
+    z-index: 1000;
 
     @include min-width("l") {
       font-size: 3rem;
@@ -44,24 +43,39 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  padding-left: $spacing-xxl;
-  padding-right: $spacing-xxl;
+  padding-left: $spacing-l;
+  padding-right: $spacing-l;
+
+    @include min-width("s") {
+        padding-left: $spacing-l;
+        padding-right: $spacing-l;
+    }
+
+    @include min-width("l") {
+        padding-left: $spacing-xxl;
+        padding-right: $spacing-xxl;
+    }
+
+    @include min-width("xl") {
+        padding-left: $spacing-xxl;
+        padding-right: $spacing-xxl;
+    }
 
   section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
 footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: $spacing-m;
   bottom: 0;
   width: 100%;
-  height: 120px;
   background-color: $color-primary;
   color: white;
   padding: $spacing-s $spacing-xxl;

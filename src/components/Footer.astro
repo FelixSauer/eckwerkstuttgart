@@ -11,8 +11,6 @@ const {navigation} = Astro.props;
 ---
 
 <footer>
-    <Copyright/>
-    <Contact/>
     <ul>
 			{
 				navigation.map((item) => {
@@ -29,4 +27,6 @@ const {navigation} = Astro.props;
 				})
 			}
     </ul>
+    <Copyright/>
+    <Contact/>
 </footer>

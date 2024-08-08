@@ -76,13 +76,3 @@ _Italic_
 ### Inline Code
 
 Here is some inline code: `print('Hello, World!')`
-
-### Code Block
-
-```python
-def hello_world():
-    print("Hello, Eckwerk Stuttgart!")
-
-
-hello_world()
-```
