@@ -1,17 +1,18 @@
-<!--
--&#45;&#45;
-import { Image } from "astro:assets";
+---
+import {Image} from 'astro:assets';
 
 interface Props {
-  src: string;
-  altText: string;
+	src: string;
+	altText: string;
+	sologan: string;
 }
 
 const src = Astro.props.src;
 const altText = Astro.props.altText;
--&#45;&#45;
-
-<AstroImage src={src} alt={altText} />
+---
+<div>
+    <AstroImage src={src} alt={altText}/>
+</div>
 
 <style lang="scss">
   div {
@@ -25,4 +26,3 @@ const altText = Astro.props.altText;
     }
   }
 </style>
--->
