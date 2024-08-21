@@ -1,0 +1,21 @@
+services:
+  fxsrEckwerkDev:
+    image: registry.fxsr.de/eckwerk:latest
+    container_name: fxsrEckwerkDev
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fxsrDockerRegistry.rule=Host(`eckwerk-dev.fxsr.de`)"
+      - "traefik.http.routers.fxsrDockerRegistry.entrypoints=websec"
+      - "traefik.http.routers.fxsrDockerRegistry.tls=true"
+      - "traefik.http.routers.fxsrDockerRegistry.tls.certresolver=production"
+      - "traefik.http.services.fxsrDockerRegistry.loadbalancer.server.port=8008"
+      - "traefik.http.services.fxsrDockerRegistry.loadbalancer.server.scheme=https"
+    ports:
+      - 8008:80
+    restart: unless-stopped
+    networks:
+      - fxsr-traefik-proxy
+
+networks:
+  fxsr-traefik-proxy:
+    external: true
