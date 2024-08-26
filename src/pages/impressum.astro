@@ -1,7 +1,6 @@
 ---
 import {getCollection} from "astro:content";
-import Layout from "../layouts/multi.astro";
-import Section from "../components/Section.astro";
+import Layout from "../layouts/single.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import type {INavigation} from "../types/navigation";
@@ -11,9 +10,9 @@ import "@fontsource-variable/source-code-pro";
 import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
-import GoBack from "../components/GoBack.astro";
 
 const pages = await getCollection("pages");
+const {Content} = await page.render();
 
 const navigation: INavigation[] = pages.map(
 	(page: any): INavigation => ({
@@ -34,13 +33,20 @@ const navigationFooter = navigation.filter((nav) =>
 ---
 
 <Layout title="Eckwerk Stuttgart">
-			{pages.map((originPage) =>
-				originPage.data.mainstage === true ? (
-                <Section page={originPage}/>
-				) : null
-			)}
+    <Header navigation={navigationHeader}/>
+    <main>
+        <section id={page.data.title}>
+            <div>
+                <article>
+                    <div><Content/></div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <Footer navigation={navigationFooter}/>
 </Layout>
 
 <style lang="scss" is:global>
   @import "./../styles/GlobalStyling";
 </style>
+

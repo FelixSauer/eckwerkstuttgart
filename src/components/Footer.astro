@@ -1,13 +1,13 @@
 ---
 import type {INavigation} from "../types/navigation";
-import Contact from "./Contact.astro";
-import Copyright from "./Copyright.astro";
 
 interface Props {
 	navigation: INavigation[];
 }
 
 const {navigation} = Astro.props;
+const date = new Date();
+const year = date.getFullYear();
 ---
 
 <footer>
@@ -15,6 +15,7 @@ const {navigation} = Astro.props;
 			{
 				navigation.map((item) => {
 					return (
+            <li>
                   <a
                           href={item.title}
                           data-href={item.title}
@@ -22,11 +23,59 @@ const {navigation} = Astro.props;
                   >
 										{item.title}
                   </a>
-
+            </li>
 					);
 				})
 			}
     </ul>
-    <Copyright/>
-    <Contact/>
+    <div>
+        <p>Eckwerk Stuttgart</p>
+        <p>Stierlenstraße 25,</p>
+        <p>70327 Stuttgart,</p>
+        <p>Mail: <a href="mailto:hallo@eckwerkstuttgart.de">hallo@eckwerkstuttgart.de</a></p>
+        <p>© {year} Eckwerk Stuttgart</p>
+    </div>
 </footer>
+
+
+<style lang="scss">
+    @import "./../styles/GlobalStyling";
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-s;
+        font-size: .85rem;
+        bottom: 0;
+        width: 100%;
+        background-color: $color-primary;
+        color: $color-white;
+        padding: $spacing-m $spacing-4xl;
+
+
+        ul {
+            display: flex;
+            gap: $spacing-m;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: unset;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-m;
+            justify-content: center;
+
+            p {
+                margin: unset;
+            }
+        }
+
+        a {
+            color: $color-white;
+
+        }
+    }
+</style>

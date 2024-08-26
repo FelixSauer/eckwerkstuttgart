@@ -15,7 +15,7 @@ html, body {
 
 
 header {
-  height: 120px;
+  height: 90px;
   width: 100%;
   position: fixed;
   display: flex;
@@ -33,33 +33,13 @@ header {
   [data-icon] {
     font-size: 3rem;
     z-index: 1000;
-
-    @include min-width("l") {
-      font-size: 3rem;
-    }
   }
 }
 
 main {
   display: flex;
   flex-direction: column;
-  padding-left: $spacing-l;
-  padding-right: $spacing-l;
-
-    @include min-width("s") {
-        padding-left: $spacing-l;
-        padding-right: $spacing-l;
-    }
-
-    @include min-width("l") {
-        padding-left: $spacing-xxl;
-        padding-right: $spacing-xxl;
-    }
-
-    @include min-width("xl") {
-        padding-left: $spacing-xxl;
-        padding-right: $spacing-xxl;
-    }
+  align-items: center;
 
   section {
     min-height: 100vh;
@@ -67,19 +47,23 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding: $spacing-l;
+
+    @include min-width("l") {
+      width: 1024px;
+    }
+
+    @include min-width("xl") {
+      width: 1024px;
+    }
+
+    @include min-width("xxl") {
+      width: 1024px;
+    }
   }
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-m;
-  bottom: 0;
-  width: 100%;
-  background-color: $color-primary;
-  color: white;
-  padding: $spacing-s $spacing-xxl;
-}
+
 
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;

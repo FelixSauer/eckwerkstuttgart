@@ -9,7 +9,10 @@ const {Content} = await page.render();
 <section id={page.data.title}>
     <div>
         <article>
-            <Content/>
+            <div><Content/></div>
+            {page.data.title === "Kontakt" && (
+              <p>Hallo</p>
+            )}
         </article>
     </div>
 </section>
