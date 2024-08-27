@@ -54,11 +54,11 @@ main {
     }
 
     @include min-width("xl") {
-      width: 1024px;
+      width: 1280px;
     }
 
     @include min-width("xxl") {
-      width: 1024px;
+      width: 1600px;
     }
   }
 }

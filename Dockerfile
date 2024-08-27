@@ -32,8 +32,3 @@ EXPOSE 80
 
 # Start Apache in the foreground
 CMD ["httpd-foreground"]
-
-
-
-<v/pve/vm-400-disk-0,if=none,id=drive-usb0,discard=on,format=raw,cache=none,aio=io_uring,detect-zeroes>
-args: -set drive.drive-scsi0.readonly=on -drive 'file=/dev/pve/vm-101-disk-0,if=none,id=drive-usb0,discard=on,format=raw,cache=none,aio=io_uring,detect-zeroes=unmap' -device 'usb-storage,drive=drive-usb0,bootindex=1,removable=on'
