@@ -1,4 +1,4 @@
-name: Deploy Develop on FXSR Two
+name: Deploy Develop on fxsr Portainer
 
 on:
   push:
@@ -27,5 +27,16 @@ jobs:
 
       - name: 'Build Inventory Image'
         run: |
-          docker build . --tag registry.fxsr.de/felixsauer/eckwerkstuttgart:${{ env.VERSION }}
-          docker push registry.fxsr.de/felixsauer/eckwerkstuttgart:${{ env.VERSION }}
+          docker build . --tag registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart:${{ env.VERSION }}
+          docker push registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart:${{ env.VERSION }}
+
+      - name: 'Deploy to fxsr Portainer'
+        uses: carlrygart/portainer-stack-deploy@v1
+        with:
+          endpoint: ${{ secrets.PORTAINER_ENDPOINT }}
+          username: ${{ secrets.PORTAINER_USERNAME }}
+          password: ${{ secrets.PORTAINER_PASSWORD }}
+          stack_name: 'eckwerkstuttgart'
+          stack_file: 'docker-compose.yml'
+          repository: 'registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart'
+          tag: ${{ env.VERSION }}
