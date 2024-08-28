@@ -33,10 +33,9 @@ jobs:
       - name: 'Deploy to fxsr Portainer'
         uses: carlrygart/portainer-stack-deploy@v1
         with:
-          endpoint: ${{ secrets.PORTAINER_ENDPOINT }}
+          portainer-host: ${{ secrets.PORTAINER_ENDPOINT }}
           username: ${{ secrets.PORTAINER_USERNAME }}
           password: ${{ secrets.PORTAINER_PASSWORD }}
-          stack_name: 'eckwerkstuttgart'
-          stack_file: 'docker-compose.yml'
-          repository: 'registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart'
-          tag: ${{ env.VERSION }}
+          stack-name: 'eckwerkstuttgart'
+          stack-definition: 'docker-compose.yml'
+          image: 'registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart:${{ env.VERSION }}'
