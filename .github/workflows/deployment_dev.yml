@@ -37,7 +37,7 @@ jobs:
 
     steps:
       - name: Curl
-        run:  curl https://portainer.fxsr.de
+        run: ls -la
       - name: Deploy Stack
         uses: kgierke/portainer-stack-deployment@v1
         with:
