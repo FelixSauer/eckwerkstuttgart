@@ -1,4 +1,4 @@
-name: Deploy Develop on fxsr Portainer
+name: Deploy Develop on fxsr server
 
 on:
   push:
@@ -13,8 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: 'Login to fxsr Container Registry'
-        run: echo ${{ secrets.REGISTRY_PASSWORD }} | docker login ${{ secrets.REGISTRY_URL }} -u ${{ secrets.REGISTRY_USERNAME }} --password-stdin
+      - name: 'Login to Docker Registry'
+        run: echo ${{ secrets.REGISTRY_PASSWORD }} | docker login -u ${{ secrets.REGISTRY_USERNAME }} --password-stdin
 
       - name: Extract version from package.json
         id: get_version
@@ -27,8 +27,8 @@ jobs:
 
       - name: Build Inventory Image
         run: |
-          docker build . --tag registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart:${{ env.VERSION }}
-          docker push registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart:${{ env.VERSION }}
+          docker build . --tag fxsrdocker/eckwerkstuttgart:${{ env.VERSION }}
+          docker push fxsrdocker/eckwerkstuttgart:${{ env.VERSION }}
 
       - name: Cache docker-compose.yml
         uses: actions/cache@v3
@@ -51,12 +51,3 @@ jobs:
           key: ${{ runner.os }}-docker-compose-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-docker-compose-
-
-      - name: Deploy Stack
-        uses: kgierke/portainer-stack-deployment@v1
-        with:
-          portainer-url: "https://portainer.fxsr.de"
-          portainer-username: ${{ secrets.PORTAINER_USERNAME }}
-          portainer-password: ${{ secrets.PORTAINER_PASSWORD }}
-          portainer-endpoint: 1
-          name: eckwerkstuttgart
