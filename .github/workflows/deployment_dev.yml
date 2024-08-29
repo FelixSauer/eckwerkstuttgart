@@ -39,7 +39,7 @@ jobs:
       - name: Deploy Stack
         uses: kgierke/portainer-stack-deployment@v1
         with:
-          portainer-url: ${{ secrets.PORTAINER_URL }}
+          portainer-url: "https://portainer.fxsr.de"
           portainer-username: ${{ secrets.PORTAINER_USERNAME }}
           portainer-password: ${{ secrets.PORTAINER_PASSWORD }}
           portainer-endpoint: 1
