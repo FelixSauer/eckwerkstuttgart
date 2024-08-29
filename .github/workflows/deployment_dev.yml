@@ -30,12 +30,11 @@ jobs:
           docker build . --tag registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart:${{ env.VERSION }}
           docker push registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart:${{ env.VERSION }}
 
-      - name: 'Deploy to fxsr Portainer'
-        uses: carlrygart/portainer-stack-deploy@v1
-        with:
-          portainer-host: ${{ secrets.PORTAINER_ENDPOINT }}
-          username: ${{ secrets.PORTAINER_USERNAME }}
-          password: ${{ secrets.PORTAINER_PASSWORD }}
-          stack-name: 'eckwerkstuttgart'
-          stack-definition: 'docker-compose.yml'
-          image: 'registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart:${{ env.VERSION }}'
+  deploy:
+    name: Deploy on fxsr Portainer
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ls
+        run: ls
