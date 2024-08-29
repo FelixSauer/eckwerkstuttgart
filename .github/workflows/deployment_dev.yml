@@ -52,9 +52,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-docker-compose-
 
-      - name: Verify docker-compose.yml
-        run: ls -la docker-compose.yml
-
       - name: Deploy Stack
         uses: kgierke/portainer-stack-deployment@v1
         with:
