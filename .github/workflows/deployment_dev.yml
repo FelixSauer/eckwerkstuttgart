@@ -36,22 +36,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Restore docker-compose.yml from cache
-        uses: actions/cache@v3
-        with:
-          path: docker-compose.yml
-          key: ${{ runner.os }}-docker-compose-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-docker-compose-
-
-      - name: Get changed Docker Compose files
-        run: |
-          echo docker-compose.yml > changed_files.txt
-        shell: bash
-
       - name: Deploy on fxsr server portainer
-        uses: BramKelchtermans/portainer-deploy-action@beta-0.2
+        uses: cssnr/portainer-stack-deploy-action@v1
         with:
-          portainer_url: ${{ secrets.PORTAINER_URL }}
-          portainer_api_key: ${{ secrets.PORTAINER_API_KEY }}
-          changed_files_path: 'changed_files.txt'
+          token: ${{ secrets.PORTAINER_API_KEY }}
+          url: ${{ secrets.PORTAINER_URL }}
+          name: eckwerkstuttgart
+          file: docker-compose.yaml
+          type: file
