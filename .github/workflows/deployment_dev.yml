@@ -51,3 +51,14 @@ jobs:
           key: ${{ runner.os }}-docker-compose-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-docker-compose-
+
+      - name: Deploy on fxsr server portainer
+        uses: carlrygart/portainer-stack-deploy@v1
+        with:
+          portainer-host: ${{ secrets.PORTAINER_HOST }}
+          username: ${{ secrets.PORTAINER_USERNAME }}
+          password: ${{ secrets.PORTAINER_PASSWORD }}
+          stack-name: 'eckwerkstuttgart'
+          stack-definition: 'docker-compose.yml'
+          template-variables: '{"username": "fxsr"}'
+          image: ${{ env.DOCKER_IMAGE_URI }}:${{ env.IMAGE_TAG }}
