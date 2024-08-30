@@ -30,14 +30,6 @@ jobs:
           docker build . --tag fxsrdocker/eckwerkstuttgart:${{ env.VERSION }}
           docker push fxsrdocker/eckwerkstuttgart:${{ env.VERSION }}
 
-      - name: Cache docker-compose.yml
-        uses: actions/cache@v3
-        with:
-          path: docker-compose.yml
-          key: ${{ runner.os }}-docker-compose-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-docker-compose-
-
   deploy:
     name: Deploy on Portainer
     needs: build
@@ -52,13 +44,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-docker-compose-
 
+      - name: Get changed Docker Compose files
+        run: |
+          git diff --name-only HEAD^ HEAD | grep 'docker-compose.yml' > changed_files.txt
+
       - name: Deploy on fxsr server portainer
-        uses: carlrygart/portainer-stack-deploy@v1
+        uses: BramKelchtermans/portainer-deploy-action@beta-0.2
         with:
-          portainer-host: ${{ secrets.PORTAINER_HOST }}
-          username: ${{ secrets.PORTAINER_USERNAME }}
-          password: ${{ secrets.PORTAINER_PASSWORD }}
-          stack-name: 'eckwerkstuttgart'
-          stack-definition: 'docker-compose.yml'
-          template-variables: '{"username": "fxsr"}'
-          image: ${{ env.DOCKER_IMAGE_URI }}:${{ env.IMAGE_TAG }}
+          portainer_url: ${{ secrets.PORTAINER_URL }}
+          portainer_api_key: ${{ secrets.PORTAINER_API_KEY }}
+          changed_files_path: 'changed_files.txt'
