@@ -39,8 +39,8 @@ jobs:
       - name: Deploy on fxsr server portainer
         uses: cssnr/portainer-stack-deploy-action@v1
         with:
+          url: https://portainer.fxsr.de
           token: ${{ secrets.PORTAINER_API_KEY }}
-          url: ${{ secrets.PORTAINER_URL }}
           name: eckwerkstuttgart
           file: docker-compose.yaml
           type: file
