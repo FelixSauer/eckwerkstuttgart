@@ -46,11 +46,8 @@ jobs:
 
       - name: Get changed Docker Compose files
         run: |
-          echo "$(git diff --name-only HEAD^ HEAD)" | while read FILE; do
-            if [[ $FILE == *docker-compose.yml* ]]; then
-              echo "$FILE" >> changed_files.txt
-            fi
-          done
+          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep 'docker-compose.yml')
+          echo "$CHANGED_FILES" > changed_files.txt
         shell: bash
 
       - name: Deploy on fxsr server portainer
