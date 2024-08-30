@@ -37,10 +37,11 @@ jobs:
 
     steps:
       - name: Deploy on fxsr server portainer
-        uses: cssnr/portainer-stack-deploy-action@v1
+        uses: nevcodia/portainer-stack-deployment@v2.19.3
         with:
-          url: https://portainer.fxsr.de
-          token: ${{ secrets.PORTAINER_API_KEY }}
-          name: eckwerkstuttgart
-          file: docker-compose.yaml
-          type: file
+          url: ${{ secrets.PORTAINER_URL }}
+          username: ${{ secrets.PORTAINER_USERNAME }}
+          password: ${{ secrets.PORTAINER_PASSWORD }}
+          environment_id: 0
+          stack_name: portainer-stack-deployment-test
+          stack_file_path: docker-compose.yml
