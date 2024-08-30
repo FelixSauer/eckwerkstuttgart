@@ -39,7 +39,7 @@ jobs:
       - name: Deploy on fxsr server portainer
         uses: nevcodia/portainer-stack-deployment@v2.19.3
         with:
-          url: ${{ secrets.PORTAINER_URL }}
+          url: https://portainer.fxsr.de
           username: ${{ secrets.PORTAINER_USERNAME }}
           password: ${{ secrets.PORTAINER_PASSWORD }}
           environment_id: 0
