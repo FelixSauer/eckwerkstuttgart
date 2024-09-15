@@ -14,8 +14,8 @@ services:
       - 8083:80
     restart: unless-stopped
     networks:
-      - traefik
+      - traefik-test
 
 networks:
-  traefik:
+  traefik-test:
     external: true
