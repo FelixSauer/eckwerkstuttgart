@@ -7,11 +7,10 @@ services:
       - "traefik.http.routers.fxsrDockerRegistry.rule=Host(`eckwerk-dev`)"
       - "traefik.http.routers.fxsrDockerRegistry.entrypoints=https"
       - "traefik.http.routers.fxsrDockerRegistry.tls=https"
-      - "traefik.http.routers.fxsrDockerRegistry.tls.certresolver=production"
-      - "traefik.http.services.fxsrDockerRegistry.loadbalancer.server.port=8008"
+      - "traefik.http.services.fxsrDockerRegistry.loadbalancer.server.port=4321"
       - "traefik.http.services.fxsrDockerRegistry.loadbalancer.server.scheme=https"
     ports:
-      - 8008:80
+      - 4321:4321
     restart: unless-stopped
     networks:
       - traefik
