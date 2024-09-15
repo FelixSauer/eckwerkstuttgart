@@ -11,7 +11,7 @@ services:
       - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.port=8083"
       - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.scheme=http"
     ports:
-      - 8083:80
+      - "8083:80"
     restart: unless-stopped
     networks:
       - traefik
