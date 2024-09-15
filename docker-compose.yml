@@ -4,7 +4,7 @@ services:
     container_name: fxsrEckwerkStuttgartDev
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.fxsrDockerRegistry.rule=Host(`eckwerk-dev`)"
+      - "traefik.http.routers.fxsrDockerRegistry.rule=Host(`eckwerk-test`)"
       - "traefik.http.routers.fxsrDockerRegistry.entrypoints=https"
       - "traefik.http.routers.fxsrDockerRegistry.tls=https"
       - "traefik.http.routers.fxsrDockerRegistry.tls.certresolver=production"
