@@ -9,6 +9,7 @@ services:
       - "traefik.http.routers.eckwerkstuttgart.tls=true"
       - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.port=8083"
       - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.scheme=http"
+      - "traefik.http.routers.eckwerkstuttgart.middlewares=default-headers"
     ports:
       - 8083:80
     restart: unless-stopped
