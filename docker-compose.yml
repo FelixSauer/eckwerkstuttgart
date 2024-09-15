@@ -8,6 +8,9 @@ services:
       - "traefik.http.routers.eckwerkstuttgart.entrypoints=https"
       - "traefik.http.routers.eckwerkstuttgart.tls=https"
       - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.port=4321"
+      - "traefik.http.middlewares.default-headers.headers.customResponseHeaders.X-Content-Type-Options=nosniff"
+      - "traefik.http.middlewares.default-headers.headers.customResponseHeaders.X-Frame-Options=SAMEORIGIN"
+      - "traefik.http.middlewares.default-headers.headers.customResponseHeaders.X-XSS-Protection=1; mode=block"
     ports:
       - 4321:80
     restart: unless-stopped
