@@ -1,12 +1,12 @@
 services:
   fxsrEckwerkDev:
-    image: registry.fxsr.de/eckwerkstuttgart/eckwerkstuttgart:latest
+    image: fxsrdocker/eckwerkstuttgart:latest
     container_name: fxsrEckwerkStuttgartDev
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.fxsrDockerRegistry.rule=Host(`eckwer-dev.fxsr.de`)"
+      - "traefik.http.routers.fxsrDockerRegistry.rule=Host(`eckwerk-dev`)"
       - "traefik.http.routers.fxsrDockerRegistry.entrypoints=websec"
-      - "traefik.http.routers.fxsrDockerRegistry.tls=true"
+      - "traefik.http.routers.fxsrDockerRegistry.tls=https"
       - "traefik.http.routers.fxsrDockerRegistry.tls.certresolver=production"
       - "traefik.http.services.fxsrDockerRegistry.loadbalancer.server.port=8008"
       - "traefik.http.services.fxsrDockerRegistry.loadbalancer.server.scheme=https"
