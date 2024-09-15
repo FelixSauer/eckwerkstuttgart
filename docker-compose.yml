@@ -6,9 +6,10 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.eckwerkstuttgart.rule=Host(`eckwerk-dev`)"
       - "traefik.http.routers.eckwerkstuttgart.entrypoints=https"
-      - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.port=80"
+      - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.port=8083"
+      - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.scheme=http"
     ports:
-      - 80:80
+      - 8083:80
     restart: unless-stopped
     networks:
       - traefik
