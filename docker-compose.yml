@@ -5,7 +5,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.eckwerkstuttgart.rule=Host(`eckwerk-dev.fxsr.de`)"
-      - "traefik.http.routers.eckwerkstuttgart.entrypoints=https"
+      - "traefik.http.routers.eckwerkstuttgart.entrypoints=http"
       - "traefik.http.routers.eckwerkstuttgart.tls=true"
       - "traefik.http.routers.middlewares=default-headers"
       - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.port=8083"
