@@ -4,12 +4,12 @@ services:
     container_name: fxsrEckwerkStuttgartDev
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.eckwerkstuttgart.rule=Host(`eckwerk-dev.fxsr.de`)"
-      - "traefik.http.routers.eckwerkstuttgart.entrypoints=https"
-      - "traefik.http.routers.eckwerkstuttgart.tls=true"
+      - "traefik.http.routers.eckwerk.entrypoints=https"
+      - "traefik.http.routers.eckwerk.rule=Host(`eckwerk-dev.fxsr.de`)"
+      - "traefik.http.routers.eckwerk.tls=true"
       - "traefik.http.routers.middlewares.headers=default-security-headers"
-      - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.port=8083"
-      - "traefik.http.services.eckwerkstuttgart.loadbalancer.server.scheme=http"
+      - "traefik.http.services.eckwerk.loadbalancer.server.port=8083"
+      - "traefik.http.services.eckwerk.loadbalancer.server.scheme=http"
     ports:
       - "8083:80"
     restart: unless-stopped
