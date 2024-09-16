@@ -7,7 +7,6 @@ services:
       - "traefik.http.routers.eckwerk.entryPoints=https"
       - "traefik.http.routers.eckwerk.rule=Host(`eckwerk-dev.fxsr.de`)"
       - "traefik.http.routers.eckwerk.tls=true"
-      - "traefik.http.routers.middlewares.headers=default-security-headers"
       - "traefik.http.services.eckwerk.loadbalancer.server.port=8083"
       - "traefik.http.services.eckwerk.loadbalancer.server.scheme=http"
     ports:
