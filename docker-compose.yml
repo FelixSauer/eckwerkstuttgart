@@ -1,7 +1,7 @@
 services:
   fxsrEckwerkDev:
     image: fxsrdocker/eckwerkstuttgart:0.0.3
-    container_name: fxsrEckwerkStuttgartDev
+    container_name: eckwerkStuttgart-Dev
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.eckwerk.entryPoints=websecure"
@@ -9,7 +9,6 @@ services:
       - "traefik.http.routers.eckwerk.tls=true"
       - "traefik.http.routers.eckwerk.tls.certresolver=staging"
       - "traefik.http.services.eckwerk.loadbalancer.server.port=8083"
-      - "traefik.http.services.eckwerk.loadbalancer.server.scheme=https"
     ports:
       - "8083:80"
     restart: unless-stopped
