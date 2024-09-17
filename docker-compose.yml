@@ -4,7 +4,7 @@ services:
     container_name: fxsrEckwerkStuttgartDev
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.eckwerk.entryPoints=https"
+      - "traefik.http.routers.eckwerk.entryPoints=websecure"
       - "traefik.http.routers.eckwerk.rule=Host(`eckwerk-dev.fxsr.de`)"
       - "traefik.http.routers.eckwerk.tls=true"
       - "traefik.http.routers.eckwerk.tls.certresolver=staging"
