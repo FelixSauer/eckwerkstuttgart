@@ -7,7 +7,7 @@ services:
       - "traefik.http.routers.eckwerk.entryPoints=websecure"
       - "traefik.http.routers.eckwerk.rule=Host(`eckwerk-dev.fxsr.de`)"
       - "traefik.http.routers.eckwerk.tls=true"
-      - "traefik.http.routers.eckwerk.tls.certresolver=production"
+      - "traefik.http.routers.eckwerk.tls.certresolver=staging"
     restart: unless-stopped
     networks:
       - traefik-net
