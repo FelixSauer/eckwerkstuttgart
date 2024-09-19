@@ -8,10 +8,6 @@ services:
       - "traefik.http.routers.eckwerk.rule=Host(`eckwerk-dev.fxsr.de`)"
       - "traefik.http.routers.eckwerk.tls=true"
       - "traefik.http.routers.eckwerk.tls.certresolver=production"
-      - "traefik.http.services.eckwerk.loadbalancer.server.port=8083"
-      - "traefik.http.services.eckwerk.loadbalancer.server.scheme=https"
-    ports:
-      - "8083:80"
     restart: unless-stopped
     networks:
       - traefik-net
