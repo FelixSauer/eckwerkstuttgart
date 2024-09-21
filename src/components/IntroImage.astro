@@ -31,7 +31,11 @@ importedImage = await importImage(imageName);
 <div>
 	{importedImage &&
           <Image src={importedImage.default} alt={slogan || 'Default Alt Text'}/>}
-	{slogan && <p>{slogan}</p>}
+	{slogan && <h1>{slogan}</h1>}
+
+    <div>
+        <button>Quick Links</button>
+    </div>
 </div>
 
 <style lang="scss">
@@ -40,16 +44,34 @@ importedImage = await importImage(imageName);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
-    p {
-      margin-top: 1rem;
-      font-size: 1.25rem;
+    h1 {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.5rem;
       text-align: center;
+      padding: 0.5rem;
+
+    }
+
+    div {
+      position: absolute;
+      top: 88%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 0.5rem;
     }
   }
 </style>

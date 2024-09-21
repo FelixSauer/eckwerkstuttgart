@@ -14,3 +14,30 @@ const {navigation} = Astro.props;
     <Icon name="logo"/>
     <Navigation navigation={navigation} navigationPostion="header"/>
 </header>
+
+
+<style lang="scss">
+  @import "./../styles/GlobalStyling";
+
+  header {
+    height: 90px;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary;
+    z-index: 1000;
+    padding: $spacing-l;
+
+    @include min-width("l") {
+      padding-left: $spacing-xxl;
+      padding-right: $spacing-xxl;
+    }
+
+    [data-icon] {
+      font-size: 3rem;
+      z-index: 1000;
+    }
+  }
+</style>

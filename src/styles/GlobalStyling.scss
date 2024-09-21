@@ -14,33 +14,11 @@ html, body {
   width: 100vw;
 }
 
-
-header {
-  height: 90px;
-  width: 100vw;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $color-primary;
-  z-index: 1000;
-  padding: $spacing-l;
-
-  @include min-width("l") {
-    padding-left: $spacing-xxl;
-    padding-right: $spacing-xxl;
-  }
-
-  [data-icon] {
-    font-size: 3rem;
-    z-index: 1000;
-  }
-}
-
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 90px;
 
   section {
     min-height: 100vh;
@@ -72,6 +50,22 @@ h1, h2, h3, h4, h5, h6, p {
 
 del {
   text-decoration: line-through;
+}
+
+button {
+    background: $color-white;
+    border-radius: 0;
+    border: none;
+    color: $color-gray-8;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1;
+    margin: 0;
+    padding: 1rem  1.75rem;
+    text-align: inherit;
+    text-decoration: none;
 }
 
 blockquote {
