@@ -3,7 +3,7 @@ title: Home
 mainStage: true
 navigation: Header
 slogan: "Ihr Handwerker in der Region"
-introImage: "IntroImage.jpg"
+imagePath: IntroImage.jpg
 ---
 
 # Welcome

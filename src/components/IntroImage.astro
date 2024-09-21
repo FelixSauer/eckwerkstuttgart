@@ -1,32 +1,28 @@
 ---
 import {Image} from 'astro:assets';
+import type {ImageMetadata} from 'astro';
 
 interface Props {
-	imageName: string;
+	imagePath: string;
 	slogan: string;
 }
 
-const {imageName, slogan} = Astro.props;
+const {imagePath, slogan} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif}');
 
-let importedImage;
-const importImage = async (name: string) => {
-	try {
-		if (name.endsWith('.jpg') || name.endsWith('.png') || name.endsWith('.svg')) {
-			return await import(/* @vite-ignore */ `../assets/images/${name}`);
-		} else {
-			throw new Error('Unsupported image format');
-		}
-	} catch (e) {
-		console.error(`Failed to import image: ${name}`, e);
-	}
-};
+console.log(images); // REMOVE ME LATER
 
-importedImage = await importImage(imageName);
+let imageSrc: ImageMetadata | undefined;
+if (images[`/src/assets/images/${imagePath}`]) {
+	imageSrc = (await images[`/src/assets/images/${imagePath}`]()).default;
+} else {
+	console.error(`Image not found: /src/assets/images/${imagePath}`);
+}
 ---
 
 <div>
-	{importedImage &&
-          <Image src={importedImage.default} alt={slogan} loading="lazy"/>}
+	{imageSrc ?
+          <Image src={imageSrc} alt={slogan}/> : <p>Image not found</p>}
 	{slogan && <h1>{slogan}</h1>}
 
     <div>
