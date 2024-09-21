@@ -1,0 +1,55 @@
+---
+import {Image} from 'astro:assets';
+
+interface Props {
+	imageName: string;
+	slogan: string;
+}
+
+const {imageName, slogan} = Astro.props;
+
+let importedImage;
+const importImage = async (name) => {
+	try {
+		if (name.endsWith('.jpg')) {
+			return await import(`../assets/images/${name}`);
+		} else if (name.endsWith('.png')) {
+			return await import(`../assets/images/${name}`);
+		} else if (name.endsWith('.svg')) {
+			return await import(`../assets/images/${name}`);
+		} else {
+			throw new Error('Unsupported image format');
+		}
+	} catch (e) {
+		console.error(`Failed to import image: ${name}`, e);
+	}
+};
+
+importedImage = await importImage(imageName);
+---
+
+<div>
+	{importedImage &&
+          <Image src={importedImage.default} alt={slogan || 'Default Alt Text'}/>}
+	{slogan && <p>{slogan}</p>}
+</div>
+
+<style lang="scss">
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+</style>

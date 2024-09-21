@@ -8,13 +8,15 @@ import "@fontsource-variable/source-code-pro";
 import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
+import IntroImage from "../components/IntroImage.astro";
 
 const pages = await getCollection("pages");
 ---
 
 <Layout title="Eckwerk Stuttgart">
+    <IntroImage imageName={pages[0].data.introImage} slogan={pages[0].data.slogan}/>
 	{pages.map((originPage) =>
-		originPage.data.mainstage === true ? (
+		originPage.data.mainStage === true ? (
             <Section page={originPage}/>
 		) : null
 	)}

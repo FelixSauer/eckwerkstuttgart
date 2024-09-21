@@ -1,6 +1,6 @@
 ---
 title: Datenschutzerklärung
-mainstage: false
+mainStage: false
 navigation: Footer
 ---
 

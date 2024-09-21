@@ -1,6 +1,6 @@
 ---
 title: Terrassenbau
-mainstage: true
+mainStage: true
 navigation: Header
 ---
 
