@@ -35,6 +35,14 @@ const {navigation} = Astro.props;
       padding-right: $spacing-xxl;
     }
 
+    a {
+      //Resetting the default styles
+      text-decoration: none;
+      color: inherit;
+      padding: 0;
+      margin: 0;
+    }
+
     [data-icon] {
       font-size: 3rem;
       z-index: 1000;

@@ -9,14 +9,10 @@ interface Props {
 const {imageName, slogan} = Astro.props;
 
 let importedImage;
-const importImage = async (name) => {
+const importImage = async (name: string) => {
 	try {
-		if (name.endsWith('.jpg')) {
-			return await import(`../assets/images/${name}`);
-		} else if (name.endsWith('.png')) {
-			return await import(`../assets/images/${name}`);
-		} else if (name.endsWith('.svg')) {
-			return await import(`../assets/images/${name}`);
+		if (name.endsWith('.jpg') || name.endsWith('.png') || name.endsWith('.svg')) {
+			return await import(/* @vite-ignore */ `../assets/images/${name}`);
 		} else {
 			throw new Error('Unsupported image format');
 		}
@@ -30,7 +26,7 @@ importedImage = await importImage(imageName);
 
 <div>
 	{importedImage &&
-          <Image src={importedImage.default} alt={slogan || 'Default Alt Text'}/>}
+          <Image src={importedImage.default} alt={slogan} loading="lazy"/>}
 	{slogan && <h1>{slogan}</h1>}
 
     <div>
@@ -40,15 +36,17 @@ importedImage = await importImage(imageName);
 
 <style lang="scss">
   div {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
 
     h1 {
@@ -60,18 +58,21 @@ importedImage = await importImage(imageName);
       font-size: 1.5rem;
       text-align: center;
       padding: 0.5rem;
-
     }
 
     div {
       position: absolute;
-      top: 88%;
+      top: 80%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
       font-size: 1.5rem;
       text-align: center;
       padding: 0.5rem;
+
+      button {
+        background-color: rgba(255, 255, 255, 0.75);
+      }
     }
   }
 </style>
