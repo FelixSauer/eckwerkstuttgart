@@ -37,27 +37,3 @@ jobs:
           key: ${{ runner.os }}-docker-compose-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-docker-compose-
-
-  deploy:
-    name: Deploy on Portainer
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Restore docker-compose.yml from cache
-        uses: actions/cache@v3
-        with:
-          path: docker-compose.yml
-          key: ${{ runner.os }}-docker-compose-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-docker-compose-
-
-      - name: Deploy on fxsr server portainer
-        uses: nevcodia/portainer-stack-deployment@v2.19.3
-        with:
-          url: https://portainer.fxsr.de
-          username: ${{ secrets.PORTAINER_USERNAME }}
-          password: ${{ secrets.PORTAINER_PASSWORD }}
-          environment_id: 0
-          stack_name: portainer-stack-deployment-test
-          stack_file_path: docker-compose.yml
