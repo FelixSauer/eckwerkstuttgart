@@ -1,0 +1,95 @@
+---
+import type {ImageMetadata} from 'astro';
+import {Image} from 'astro:assets';
+
+interface Props {
+	imageCollection: string;
+}
+
+const {imageCollection} = Astro.props;
+
+const images = import.meta.glob<{
+	default: ImageMetadata
+}>('/src/content/albums/Gallerys/*/*.{jpeg,jpg,png,gif}');
+
+let filteredImages: ImageMetadata[] = [];
+if (images) {
+	await Promise.all(
+		Object.entries(images).map(async ([path, image]) => {
+			filteredImages.push((await image()).default);
+			if (path.includes(imageCollection)) {
+			}
+		})
+	);
+}
+
+
+const numParts = 1;
+const splitFilteredImages = [];
+const partSize = Math.ceil(filteredImages.length / numParts);
+
+for (let i = 0; i < filteredImages.length; i += partSize) {
+	splitFilteredImages.push(filteredImages.slice(i, i + partSize));
+}
+
+const chunkedImages = [];
+const chunkSize = 1; // Number of images per chunk
+for (let i = 0; i < filteredImages.length; i += chunkSize) {
+	const chunk = filteredImages.slice(i, i + chunkSize);
+	chunkedImages.push(chunk);
+}
+---
+
+<div class="fake-masonry">
+	{chunkedImages.map((chunk) => (
+          <div>
+						{chunk.map((image) =>
+                    <Image src={image}
+                           alt={image.src}
+                           format="avif"
+                           width={520}
+                           quality="mid"
+                    />)}
+          </div>
+	))}
+
+</div>
+
+<style lang="scss">
+  @import "./../styles/GlobalStyling";
+
+  .fake-masonry {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    height: 465px;
+    width: 455px;
+  }
+
+  .fake-masonry::before,
+  .fake-masonry::after {
+    content: "";
+    flex-basis: 100%;
+    width: 0;
+    order: 2;
+  }
+
+  .item {
+    box-sizing: border-box;
+    width: 32%;
+    margin-bottom: 2%;
+    padding: 1em;
+  }
+
+  .item:nth-child(3n+1) {
+    order: 1;
+  }
+
+  .item:nth-child(3n+2) {
+    order: 2;
+  }
+
+  .item:nth-child(3n) {
+    order: 3;
+  }
+</style>

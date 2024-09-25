@@ -6,17 +6,14 @@ interface Props {
 	imagePath: string;
 	slogan: string;
 }
-
 const {imagePath, slogan} = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif}');
-
-console.log(images); // REMOVE ME LATER
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/albums/Intro/*.{jpeg,jpg,png,gif}');
 
 let imageSrc: ImageMetadata | undefined;
-if (images[`/src/assets/images/${imagePath}`]) {
-	imageSrc = (await images[`/src/assets/images/${imagePath}`]()).default;
+if (images[`/src/content/albums/Intro/${imagePath}`]) {
+	imageSrc = (await images[`/src/content/albums/Intro/${imagePath}`]()).default;
 } else {
-	console.error(`Image not found: /src/assets/images/${imagePath}`);
+	console.error(`Image not found: src/content/albums/Intro/${imagePath}`);
 }
 ---
 
@@ -31,6 +28,8 @@ if (images[`/src/assets/images/${imagePath}`]) {
 </div>
 
 <style lang="scss">
+  @import "./../styles/GlobalStyling";
+
   div {
     position: relative;
     display: flex;
@@ -47,28 +46,25 @@ if (images[`/src/assets/images/${imagePath}`]) {
 
     h1 {
       position: absolute;
-      top: 35%;
+      top: 33%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
       font-size: 1.5rem;
+      font-weight: 300;
       text-align: center;
       padding: 0.5rem;
     }
 
     div {
       position: absolute;
-      top: 80%;
+      top: 75%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
       font-size: 1.5rem;
       text-align: center;
       padding: 0.5rem;
-
-      button {
-        background-color: rgba(255, 255, 255, 0.75);
-      }
     }
   }
 </style>

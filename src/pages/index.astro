@@ -9,6 +9,7 @@ import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
 import IntroImage from "../components/IntroImage.astro";
+import Gallery from "../components/Gallery.astro";
 
 const pages = await getCollection("pages");
 ---
@@ -20,6 +21,7 @@ const pages = await getCollection("pages");
             <Section page={originPage}/>
 		) : null
 	)}
+
 </Layout>
 
 <style lang="scss" is:global>

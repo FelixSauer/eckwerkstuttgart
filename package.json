@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@astrojs/react": "^3.6.2",
     "@fontsource-variable/fira-code": "^5.0.18",
     "@fontsource-variable/material-symbols-outlined": "^5.0.33",
     "@fontsource-variable/montserrat": "^5.0.19",
@@ -20,12 +21,17 @@
     "@fontsource/source-sans-pro": "^5.0.8",
     "@iconify-json/line-md": "^1.1.38",
     "@iconify-json/mdi": "^1.1.67",
+    "@types/react": "^18.3.9",
+    "@types/react-dom": "^18.3.0",
     "astro": "^4.11.3",
     "astro-favicons": "^2.0.2",
     "astro-icon": "^1.1.0",
     "astro-image": "^0.0.7",
     "astro-robots-txt": "^1.0.0",
     "astro-seo": "^0.8.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-native-awesome-gallery": "^0.4.2",
     "typescript": "^5.5.3"
   },
   "devDependencies": {
