@@ -1,5 +1,4 @@
 ---
-import Gallery from "./Gallery.astro";
 export interface Props {
 	page: any;
 }
@@ -18,6 +17,8 @@ const {Content} = await page.render();
     </div>
 </section>
 
+<!--
 {page.data.title === "Home" && (
 <Gallery imageCollection={page.data.title.toString()}/>
 	)}
+-->
