@@ -7,11 +7,11 @@ interface Props {
 	slogan: string;
 }
 const {imagePath, slogan} = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/albums/Intro/*.{jpeg,jpg,png,gif}');
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/Albums/Intro/*.{jpeg,jpg,png,gif}');
 
 let imageSrc: ImageMetadata | undefined;
-if (images[`/src/content/albums/Intro/${imagePath}`]) {
-	imageSrc = (await images[`/src/content/albums/Intro/${imagePath}`]()).default;
+if (images[`/src/assets/Albums/Intro/${imagePath}`]) {
+	imageSrc = (await images[`/src/assets/Albums/Intro/${imagePath}`]()).default;
 } else {
 	console.error(`Image not found: src/content/albums/Intro/${imagePath}`);
 }

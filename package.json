@@ -29,6 +29,7 @@
     "astro-image": "^0.0.7",
     "astro-robots-txt": "^1.0.0",
     "astro-seo": "^0.8.4",
+    "photoswipe": "^5.4.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-grid-gallery": "^1.0.1",
@@ -36,6 +37,7 @@
     "typescript": "^5.5.3"
   },
   "devDependencies": {
+    "@types/photoswipe": "^4.1.6",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.6.0",
     "eslint-plugin-astro": "^1.2.2",
