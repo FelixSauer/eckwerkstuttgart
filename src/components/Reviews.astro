@@ -1,5 +1,6 @@
----
-const {reviews} = await fetchReviews();
+<!--
+-&#45;&#45;
+const reviews = await fetchReviews();
 
 async function fetchReviews() {
 	const API_KEY = import.meta.env.VITE_GOOGLE_PLACES_API_KEY; // Load your API key from environment variables
@@ -15,13 +16,13 @@ async function fetchReviews() {
 
 	return data.result.reviews || [];
 }
----
+-&#45;&#45;
 
 <section class="google-reviews">
     <h2>Google Reviews</h2>
     <ul>
 			{reviews.map(review => (
-              <li key={review.time}>
+              <li>
                   <p><strong>{review.author_name}</strong> - {review.rating}⭐</p>
                   <p>{review.text}</p>
                   <p><em>{new Date(review.time * 1000).toLocaleDateString()}</em></p>
@@ -50,3 +51,4 @@ async function fetchReviews() {
         padding-bottom: 8px;
     }
 </style>
+-->
