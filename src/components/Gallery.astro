@@ -38,7 +38,7 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
                           src={image}
                           alt={"altText"}
                           format="avif"
-                          width={720}
+                          width={520}
                           quality="mid"
                           class="rounded mb-4 border border-transparent hover:border-gray-300 transition-all duration-300 ease-in-out hover:shadow-lg"
                           loading="lazy"
@@ -66,6 +66,7 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
 		pswpModule: () => import("photoswipe")
 	});
 
+	lightbox.init();
 	document.addEventListener(
 		'astro:page-load',
 		() => {

@@ -1,6 +1,6 @@
 services:
   fxsrEckwerkDev:
-    image: fxsrdocker/eckwerkstuttgart:0.0.3
+    image: fxsrdocker/eckwerkstuttgart:0.0.5
     container_name: eckwerkStuttgart-Dev
     labels:
       - "traefik.enable=true"
