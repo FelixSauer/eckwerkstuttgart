@@ -10,15 +10,14 @@ interface Props {
 const {imageCollection} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/Albums/*/*");
 
-console.log(images) // REMOVE ME LATERe
-
 const imagePaths = Object.keys(images).filter((imagePath) => {
 
 	return imagePath.startsWith(`/src/assets/Albums/${imageCollection}/`);
 });
 ---
 
-<div id="gallery">
+<div id="gallery"
+     class="mx-auto container my-8 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5">
 	{
 		imagePaths.map(async (imagePath) => {
 			let image = images[imagePath]();
@@ -33,13 +32,16 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
                       data-pswp-width={optimizedImage.attributes.width}
                       data-pswp-height={optimizedImage.attributes.height}
                       target="_blank"
-                      class="overflow-hidden rounded-md border-[1px] border-primary hover:border-secondary"
+                      class="group transition-all block"
               >
                   <Image
                           src={image}
                           alt={"altText"}
-                          height={270}
-
+                          format="avif"
+                          width={720}
+                          quality="mid"
+                          class="rounded mb-4 border border-transparent hover:border-gray-300 transition-all duration-300 ease-in-out hover:shadow-lg"
+                          loading="lazy"
                   />
               </a>
 			);
@@ -60,12 +62,17 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
 		wheelToZoom: false,
 		showHideOpacity: false,
 		counter: false,
-		imageClickAction: "close",
-		showHideAnimationType: 'fade',
+		imageClickAction: "next",
 		pswpModule: () => import("photoswipe")
 	});
 
-	lightbox.init();
+	document.addEventListener(
+		'astro:page-load',
+		() => {
+			if (lightbox) lightbox.init()
+		},
+		{once: false},
+	)
 </script>
 
 
