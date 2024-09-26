@@ -10,7 +10,7 @@ interface Props {
 const {imageCollection} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/Albums/*/*");
 
-console.log(images) // REMOVE ME LATER
+console.log(images) // REMOVE ME LATERe
 
 const imagePaths = Object.keys(images).filter((imagePath) => {
 
@@ -24,7 +24,7 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
 			let image = images[imagePath]();
 			let optimizedImage = await getImage({
 				src: image,
-				width: 1920,
+				width: 1070,
 			});
 
 			return (
@@ -38,8 +38,8 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
                   <Image
                           src={image}
                           alt={"altText"}
-                          height={350}
-                          
+                          height={270}
+
                   />
               </a>
 			);
@@ -54,8 +54,49 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
 	const lightbox = new PhotoSwipeLightbox({
 		gallery: "#gallery",
 		children: "a",
-		pswpModule: () => import("photoswipe"),
+		zoom: false,
+		arrowPrev: false,
+		arrowNext: false,
+		wheelToZoom: false,
+		showHideOpacity: false,
+		counter: false,
+		imageClickAction: "close",
+		showHideAnimationType: 'fade',
+		pswpModule: () => import("photoswipe")
 	});
 
 	lightbox.init();
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
