@@ -1,0 +1,52 @@
+---
+const {reviews} = await fetchReviews();
+
+async function fetchReviews() {
+	const API_KEY = import.meta.env.VITE_GOOGLE_PLACES_API_KEY; // Load your API key from environment variables
+	const PLACE_ID = import.meta.env.VITE_GOOGLE_PLACE_ID; // Your Google Place ID
+	const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&key=${API_KEY}`;
+
+	const response = await fetch(url);
+	const data = await response.json();
+
+	if (!response.ok) {
+		throw new Error(data.error_message || 'Failed to fetch Google Reviews');
+	}
+
+	return data.result.reviews || [];
+}
+---
+
+<section class="google-reviews">
+    <h2>Google Reviews</h2>
+    <ul>
+			{reviews.map(review => (
+              <li key={review.time}>
+                  <p><strong>{review.author_name}</strong> - {review.rating}⭐</p>
+                  <p>{review.text}</p>
+                  <p><em>{new Date(review.time * 1000).toLocaleDateString()}</em></p>
+              </li>
+			))}
+    </ul>
+	{reviews.length === 0 && <p>No reviews available.</p>}
+</section>
+
+<style>
+    .google-reviews {
+        border: 1px solid #ccc;
+        padding: 16px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    .google-reviews ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .google-reviews li {
+        margin-bottom: 16px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 8px;
+    }
+</style>
