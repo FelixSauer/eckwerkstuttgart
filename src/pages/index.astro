@@ -15,7 +15,7 @@ const pages = await getCollection("pages");
 ---
 
 <Layout title="Eckwerk Stuttgart">
-    <IntroImage imagePath={pages[0].data.imagePath!.toString()} slogan={pages[0].data.slogan!.toString()}/>
+    <IntroImage slogan={pages[0].data.slogan!.toString()}/>
     <Gallery imageCollection="Montage"/>
 	{pages.map((originPage) =>
 		originPage.data.mainStage === true ? (

@@ -4,7 +4,7 @@ const reviews = await fetchReviews();
 
 async function fetchReviews() {
 	const API_KEY = import.meta.env.VITE_GOOGLE_PLACES_API_KEY; // Load your API key from environment variables
-	const PLACE_ID = import.meta.env.VITE_GOOGLE_PLACE_ID; // Your Google Place ID
+	const PLACE_ID = import.meta.env.VITE_GOOGLE_PLACE_ID; // Your Google Place ID ==> ChIJ_erOoVuif6kRZSACbgSg1Ss
 	const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&key=${API_KEY}`;
 
 	const response = await fetch(url);

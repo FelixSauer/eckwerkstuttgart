@@ -1,26 +1,17 @@
 ---
 import {Image} from 'astro:assets';
-import type {ImageMetadata} from 'astro';
+import introImage from '../assets/Albums/Intro/IntroImage.jpg';
 
 interface Props {
-	imagePath: string;
 	slogan: string;
 }
-const {imagePath, slogan} = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/Albums/Intro/*.{jpeg,jpg,png,gif}');
 
-let imageSrc: ImageMetadata | undefined;
-if (images[`/src/assets/Albums/Intro/${imagePath}`]) {
-	imageSrc = (await images[`/src/assets/Albums/Intro/${imagePath}`]()).default;
-} else {
-	console.error(`Image not found: src/content/albums/Intro/${imagePath}`);
-}
+const {slogan} = Astro.props;
 ---
 
 <div>
-	{imageSrc &&
-          <Image src={imageSrc} alt={slogan}/>
-	}
+	{introImage &&
+          <Image src={introImage} alt={slogan}/>}
 	{slogan && <h1>{slogan}</h1>}
 
     <div>
