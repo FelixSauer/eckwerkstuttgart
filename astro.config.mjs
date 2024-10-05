@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   /*site: 'https://felixsauer.github.io',*/
-  base: 'eckwerkstuttgart',
+  /*base: 'eckwerkstuttgart',*/<D-s>
   integrations: [icon({
     iconDir: "src/assets/icons"
   }), tailwind()],
