@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import icon from "astro-icon";
 
 import tailwind from "@astrojs/tailwind";
@@ -6,13 +6,16 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   /*site: 'https://felixsauer.github.io',*/
-  /*base: 'eckwerkstuttgart',*/<D-s>
-  integrations: [icon({
-    iconDir: "src/assets/icons"
-  }), tailwind()],
+  /*base: 'eckwerkstuttgart',*/
+  integrations: [
+    icon({
+      iconDir: "src/assets/icons",
+    }),
+    tailwind(),
+  ],
   build: {
-    site: 'eckwerkstuttgart',
-    out: 'assets',
-    assets: 'assets',
+    site: "eckwerkstuttgart",
+    out: "assets",
+    assets: "assets",
   },
 });
