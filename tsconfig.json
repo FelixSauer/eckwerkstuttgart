@@ -5,9 +5,10 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "~*": [
-        "src/*"
-      ]
+      "~*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@public/*": ["public/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

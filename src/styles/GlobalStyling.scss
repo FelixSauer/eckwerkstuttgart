@@ -16,36 +16,13 @@ html, body {
   overflow-x: hidden;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 90px;
-
-  section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: $spacing-l;
-
-    @include min-width("l") {
-      width: 1024px;
-    }
-
-    @include min-width("xl") {
-      width: 1280px;
-    }
-
-    @include min-width("xxl") {
-      width: 1600px;
-    }
-  }
-}
-
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
+}
+
+hr {
+  border-top: 1px solid $color-gray-6;
+  margin: 4rem 0;
 }
 
 del {
@@ -96,11 +73,18 @@ blockquote {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: disc;
   padding-left: 0;
   margin-top: 0;
+  list-style-position: inside;
 
   li {
+    padding-left: 1rem;
+
+    &::marker {
+      color: $color-primary;
+    }
+
     li {
       padding-left: 1rem;
     }

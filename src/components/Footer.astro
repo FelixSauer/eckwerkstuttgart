@@ -15,15 +15,15 @@ const year = date.getFullYear();
 			{
 				navigation.map((item) => {
 					return (
-            <li>
-                  <a
-                          href={"eckwerkstuttgart/" + item.title}
-                          data-href={item.title}
-                          aria-current="page"
-                  >
-										{item.title}
-                  </a>
-            </li>
+                  <li>
+                      <a
+                              href={"eckwerkstuttgart/" + item.title}
+                              data-href={item.title}
+                              aria-current="page"
+                      >
+												{item.title}
+                      </a>
+                  </li>
 					);
 				})
 			}
@@ -39,43 +39,43 @@ const year = date.getFullYear();
 
 
 <style lang="scss">
-    @import "./../styles/GlobalStyling";
+  @import "./../styles/GlobalStyling";
 
-    footer {
-        display: flex;
-        flex-direction: column;
-        gap: $spacing-s;
-        font-size: .85rem;
-        bottom: 0;
-        width: 100%;
-        background-color: $color-primary;
-        color: $color-white;
-        padding: $spacing-m $spacing-4xl;
+  footer {
 
 
-        ul {
-            display: flex;
-            gap: $spacing-m;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            margin: unset;
-        }
+    gap: $spacing-s;
+    font-size: .85rem;
+    bottom: 0;
+    width: 100%;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: $spacing-m $spacing-4xl;
 
-        div {
-            display: flex;
-            flex-direction: row;
-            gap: $spacing-m;
-            justify-content: center;
 
-            p {
-                margin: unset;
-            }
-        }
-
-        a {
-            color: $color-white;
-
-        }
+    ul {
+      display: flex;
+      gap: $spacing-m;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin: unset;
     }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: $spacing-m;
+      justify-content: center;
+
+      p {
+        margin: unset;
+      }
+    }
+
+    a {
+      color: $color-white;
+
+    }
+  }
 </style>

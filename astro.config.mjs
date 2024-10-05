@@ -6,8 +6,13 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   /*site: 'https://felixsauer.github.io',*/
-  /*base: 'eckwerkstuttgart',*/
+  base: 'eckwerkstuttgart',
   integrations: [icon({
     iconDir: "src/assets/icons"
-  }), tailwind()]
+  }), tailwind()],
+  build: {
+    site: 'eckwerkstuttgart',
+    out: 'assets',
+    assets: 'assets',
+  },
 });
