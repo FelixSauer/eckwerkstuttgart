@@ -28,6 +28,9 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
         </div>
     </section>
 
+  <section class="subContent">
+  </section>
+
 	{pages.map(async (originPage, index) => {
 		const {Content} = await originPage.render();
 		const imagePath = ParallaxImages[index % ParallaxImages.length];
@@ -66,14 +69,14 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 
     article {
-      min-height: 30vh;
+      min-height: 40vh;
       width: 100vw;
-      margin: 40vh auto;
+      margin: 62vh auto;
       padding: $spacing-xxl;
       background-color: $color-white;
       border-radius: 4px;
@@ -95,14 +98,9 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     background-size: cover;
 
     h1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transform: translateY(-90%);
       color: white;
-      font-size: 6rem !important;
+      font-size: 4rem !important;
       font-weight: 400;
-      text-align: center;
     }
 
     div {
@@ -118,7 +116,7 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
   }
 
   section.subContent {
-    min-height: 20vh;
+    min-height: 15vh;
     width: 100vw;
     display: flex;
     justify-content: center;
