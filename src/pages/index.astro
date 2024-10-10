@@ -9,6 +9,7 @@ import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
 import Contact from "../components/Contact.astro";
+import Carousel from "../components/Carousel.astro";
 
 const pages = await getCollection("pages");
 
@@ -28,8 +29,8 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
         </div>
     </section>
 
-  <section class="subContent">
-  </section>
+    <section class="subContent">
+    </section>
 
 	{pages.map(async (originPage, index) => {
 		const {Content} = await originPage.render();
@@ -38,8 +39,9 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 
 		return originPage.data.mainStage === true ? (
             <>
-                <section id={originPage.data.title} class="content"
-                         style={`background-image: url('${image.default.src}')`}>
+                <section class="content"
+                         style={`background-image: url('${image.default.src}'); @media (max-width: 768px) { background-image: url('/path/to/mobile-image.jpg'); }`}>
+
                     <article>
                         <Content/>
 
@@ -51,7 +53,12 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 
 							{index % 1 === 0 ? (
                       <section class="subContent">
-    Google Reviews
+
+												{(index === 0) &&
+                                <Carousel/>}
+												{(index === 1) &&
+                                <div>Google Reviews</div>}
+
                       </section>
 							) : null}
             </>
@@ -69,7 +76,7 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
-    background-position: left;
+    background-position: 25%;
     background-repeat: no-repeat;
     background-size: cover;
 
