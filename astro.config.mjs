@@ -15,7 +15,10 @@ export default defineConfig({
   ],
   compressHTML: false,
   vite: {
-    plugins: [ViteImageOptimizer(),]
+    plugins: [ViteImageOptimizer(),],
+    jpg: {
+      quality: 70,
+    },
   },
   build: {
     site: "eckwerkstuttgart",
