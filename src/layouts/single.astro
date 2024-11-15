@@ -14,20 +14,20 @@ const {title} = Astro.props;
 const pages = await getCollection("pages");
 
 const navigation: INavigation[] = pages.map(
-(page: any): INavigation => ({
-  page: page,
-  title: page.data.title,
-  navigation: page.data.navigation,
-  slug: page.slug,
-  }),
+	(page: any): INavigation => ({
+		page: page,
+		title: page.data.title,
+		navigation: page.data.navigation,
+		slug: page.slug,
+	}),
 );
 
 const navigationHeader = navigation.filter((nav) =>
-  nav.navigation?.includes("Header")
+	nav.navigation?.includes("Header")
 );
 
 const navigationFooter = navigation.filter((nav) =>
-  nav.navigation?.includes("Footer")
+	nav.navigation?.includes("Footer")
 );
 ---
 
@@ -42,9 +42,10 @@ const navigationFooter = navigation.filter((nav) =>
     <title>{title}</title>
 </head>
 <body>
-    <Header navigation={navigationHeader}/>
-        <slot/>
-    <GoBack/>
-    <Footer navigation={navigationFooter}/>
+<Header navigation={navigationHeader}/>
+<slot/>
+<GoBack/>
+<Footer navigation={navigationFooter}/>
 </body>
 </html>
+s

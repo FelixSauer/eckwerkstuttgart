@@ -10,6 +10,7 @@ import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
 import Contact from "../components/Contact.astro";
 import Carousel from "../components/Carousel.astro";
+import Gallery from "../components/Gallery.astro";
 
 const pages = await getCollection("pages");
 
@@ -22,15 +23,7 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 ---
 
 <Layout title="Eckwerk Stuttgart">
-    <section class="introimage" style={`background-image: url('${IntroImage.default.src}')`}>
-			{pages[0].data.slogan && <h1>{pages[0].data.slogan}</h1>}
-        <div>
-            <button>Quick Links</button>
-        </div>
-    </section>
 
-    <section class="subContent">
-    </section>
 
 	{pages.map(async (originPage, index) => {
 		const {Content} = await originPage.render();
@@ -39,28 +32,35 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 
 		return originPage.data.mainStage === true ? (
             <>
-                <section class="content"
+							{index === 0 && (
+                      <section class="introimage" style={`background-image: url('${IntroImage.default.src}')`}>
+												{pages[0].data.slogan && <h1>{pages[0].data.slogan}</h1>}
+                      </section>
+							)}
+
+                <section class="content" id={originPage.data.title}
                          style={`background-image: url('${image.default.src}'); @media (max-width: 768px) { background-image: url('/path/to/mobile-image.jpg'); }`}>
 
                     <article>
                         <Content/>
-
 											{originPage.data.title === "Kontakt" && (
                               <Contact/>
 											)}
                     </article>
                 </section>
 
-							{index % 1 === 0 ? (
-                      <section class="subContent">
+							{index !== 0 && index !== pages.length - 1 && (
+                      <section class="subcontent">
+                          <article>
+														{index === 0 &&
+                                    <Gallery imageCollection="Gruenpflege"/>}
+														{index === 1 &&
+                                    <div>Google Reviews</div>}
 
-												{(index === 0) &&
-                                <Carousel/>}
-												{(index === 1) &&
-                                <div>Google Reviews</div>}
-
+                              Hallo
+                          </article>
                       </section>
-							) : null}
+							)}
             </>
 		) : null;
 	})}
@@ -79,15 +79,13 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     background-position: 25%;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 0 $spacing-xxl;
 
     article {
-      min-height: 40vh;
+      height: auto;
       width: 100vw;
-      margin: 62vh auto;
       padding: $spacing-xxl;
       background-color: $color-white;
-      border-radius: 4px;
-
     }
   }
 
@@ -97,7 +95,7 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
     background-attachment: fixed;
     background-position: center;
@@ -106,8 +104,9 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 
     h1 {
       color: white;
-      font-size: 4rem !important;
+      font-size: 8rem !important;
       font-weight: 400;
+      padding-top: 325px;
     }
 
     div {

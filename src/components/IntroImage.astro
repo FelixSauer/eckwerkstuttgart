@@ -13,10 +13,6 @@ const {slogan} = Astro.props;
 	{introImage &&
           <Image src={introImage} alt={slogan}/>}
 	{slogan && <h1>{slogan}</h1>}
-
-    <div>
-        <button>Quick Links</button>
-    </div>
 </div>
 
 <style lang="scss">
@@ -38,26 +34,12 @@ const {slogan} = Astro.props;
 
     h1 {
       position: absolute;
-      top: 33%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
       color: white;
-      font-size: 5rem !important;
+      font-size: 6rem !important;
       font-weight: 200;
-      text-align: center;
       padding: 0.5rem;
       width: 100%;
-    }
-
-    div {
-      position: absolute;
-      top: 75%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 1.5rem;
-      text-align: center;
-      padding: 0.5rem;
     }
   }
 </style>
