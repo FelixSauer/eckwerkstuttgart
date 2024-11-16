@@ -5,8 +5,8 @@ import {ViteImageOptimizer} from "vite-plugin-image-optimizer";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://felixsauer.github.io',
-  base: 'eckwerkstuttgart',
+  site: 'https://eckwerk-dev.fxsr.de',
+  base: '/',
   integrations: [
     icon({
       iconDir: "src/assets/icons",
