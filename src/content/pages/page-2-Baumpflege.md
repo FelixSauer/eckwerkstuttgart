@@ -4,12 +4,21 @@ mainStage: true
 navigation: Header
 ---
 
-# Baumpflege
+# Baumpflege – Gesunde Bäume und gepflegte Außenanlagen
 
-Eine neue Küche oder Möbel aufzubauen und zu montieren, kostet viel Zeit und Nerven. Hier springen wir für Sie ein und
-Sie können sich entspannt zurücklehnen.
+Baumpflege ist ein wichtiger Bestandteil der Garten- und Landschaftspflege.\
+Wir sorgen dafür, dass Ihre Bäume gesund bleiben und Ihre Außenanlagen sicher und gepflegt wirken. Mit modernen
+Techniken – wie der Seilklettertechnik und Hubarbeitsbühnen – erreichen wir selbst die schwer zugänglichsten
+Baumbereiche, um effizient und sicher arbeiten zu können.\
+\
+Unser Angebot im Bereich Baumpflege:
 
-Das gilt übrigens auch für den Terrassenbau oder neue Wege auf Ihrem Grundstück, denn wir kümmern uns um Montagen im In-
-und Outdoorbereich. Es müssen nicht immer Großprojekte sein, auch kleinere Aufträge übernehmen wir gern.
-
-Lassen Sie sich von uns beraten und fragen Sie nach einem Angebot für das Rundum-sorglos-Paket.
+1. Pflegeschnitte & Baumfällungen: Wir schneiden Bäume professionell zurück oder fällen sie sicher, wenn es notwendig
+   ist.
+2. Baumkronensicherung: Um das Wachstum und die Stabilität Ihrer Bäume zu fördern, sichern wir die Baumkrone gezielt.
+3. Todholzbeseitigung: Wir entfernen totes Holz aus den Bäumen, um das Risiko von Bruch oder Krankheiten zu minimieren.
+4. Rodungen jeglicher Art: Ob kleine oder große Flächen – wir kümmern uns um alle Arten von Rodungen.
+5. Steilhangrodungen per Freischneider: Auch an schwierigen, steilen Hängen arbeiten wir mit speziell ausgestatteten
+   Geräten, um die Fläche effizient zu räumen.
+6. Entfernen von Wurzelstöcken: Wir entfernen störende Wurzelstöcke, die das Wachstum neuer Pflanzen behindern oder den
+   Boden beschädigen könnten.

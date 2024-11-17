@@ -8,9 +8,6 @@ import "@fontsource-variable/source-code-pro";
 import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
-import Contact from "../components/Contact.astro";
-import Carousel from "../components/Carousel.astro";
-import Gallery from "../components/Gallery.astro";
 
 const pages = await getCollection("pages");
 
@@ -23,7 +20,9 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 ---
 
 <Layout title="Eckwerk Stuttgart">
-
+    <section class="introimage" style={`background-image: url('${IntroImage.default.src}')`}>
+        <article>{pages[0].data.slogan && <h1>{pages[0].data.slogan}</h1>}</article>
+    </section>
 
 	{pages.map(async (originPage, index) => {
 		const {Content} = await originPage.render();
@@ -32,35 +31,25 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 
 		return originPage.data.mainStage === true ? (
             <>
-							{index === 0 && (
-                      <section class="introimage" style={`background-image: url('${IntroImage.default.src}')`}>
-												{pages[0].data.slogan && <h1>{pages[0].data.slogan}</h1>}
-                      </section>
-							)}
-
                 <section class="content" id={originPage.data.title}
-                         style={`background-image: url('${image.default.src}'); @media (max-width: 768px) { background-image: url('/path/to/mobile-image.jpg'); }`}>
-
+                         style={originPage.data.title !== "Kontakt" ? `background-image: url('${image.default.src}'); @media (max-width: 768px) { background-image: url('/path/to/mobile-image.jpg'); }` : null}>
                     <article>
                         <Content/>
-											{originPage.data.title === "Kontakt" && (
-                              <Contact/>
-											)}
                     </article>
                 </section>
 
-							{index !== 0 && index !== pages.length - 1 && (
+
+							{index === 3 &&
                       <section class="subcontent">
                           <article>
-														{index === 0 &&
-                                    <Gallery imageCollection="Gruenpflege"/>}
-														{index === 1 &&
-                                    <div>Google Reviews</div>}
-
-                              Hallo
+                              Google Reviews
                           </article>
                       </section>
-							)}
+                      <section class="subcontent">
+                          <article>
+                              Gallery
+                          </article>
+                      </section>}
             </>
 		) : null;
 	})}
@@ -69,67 +58,45 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 <style lang="scss" is:global>
   @import "./../styles/GlobalStyling";
 
-  section.content {
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  section {
+    height: 100vh;
     background-attachment: fixed;
     background-position: 25%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0 $spacing-xxl;
+    scroll-margin-top: 20vh;
+    background-color: $color-white;
 
     article {
       height: auto;
       width: 100vw;
-      padding: $spacing-xxl;
+      padding: 2.5vw 15vw;
       background-color: $color-white;
     }
-  }
 
-  section.introimage {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    h1 {
-      color: white;
-      font-size: 8rem !important;
-      font-weight: 400;
-      padding-top: 325px;
+    &.subcontent {
+      height: 25vh;
+      background-color: $color-white;
     }
 
-    div {
-      position: absolute;
-      top: 75%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 1.5rem;
-      text-align: center;
-      padding: 0.5rem;
+    &.introimage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      article {
+        width: 100vw;
+        padding: unset;
+        padding-bottom: 25vh;
+        background-color: unset;
+
+        h1 {
+          font-size: 4rem !important;
+          font-weight: 400;
+          color: $color-white;
+          text-align: center;
+        }
+      }
     }
-  }
-
-  section.subContent {
-    min-height: 15vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-white;
-    border-left: unset;
-    border-right: unset;
-
   }
 </style>

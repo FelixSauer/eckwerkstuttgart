@@ -1,5 +1,4 @@
 ---
-
 title: Impressum
 mainStage: false
 navigation: Footer

@@ -6,8 +6,6 @@ navigation: Footer
 
 # Datenschutzerklärung
 
-# Datenschutzerklärung
-
 Stand: 15. Juni 2024
 
 ## Inhaltsübersicht

@@ -9,43 +9,19 @@ imagePath: IntroImage.jpg
 
 # Welcome
 
-Stehen kleine Renovierungen an oder gleich eine komplette Altbausanierung?
+Sie suchen einen zuverlässigen Partner für Ihre Renovierung, Sanierung oder andere Projekte?
+\
+\
+Dann sind Sie bei uns genau
+richtig! Als professionelles Handwerksunternehmen bieten wir Ihnen maßgeschneiderte Lösungen für Ihre Renovierung,
+Badsanierung, den Bau von Terrassen und die Pflege Ihrer Bäume – immer mit dem Ziel, Ihre Wohn- und Lebensqualität zu
+verbessern.\
+\
+Als kleines, agiles Team kümmern wir uns um alle Belange Ihrer Renovierungsarbeiten und verschönern so Ihr Zuhause.
+Egal, ob Sie Ihr ganzes Haus sanieren, Ihr Bad auf den neuesten Stand bringen oder sich eine neue Terrasse im Garten
+wünschen – bei uns sind Sie in besten Händen. Mit höchsten Qualitätsansprüchen setzen wir Ihre Wünsche um und liefern
+Ergebnisse, die Sie begeistern.\
+\
+Unser Ziel ist es, Ihre Lebensräume mit hochwertiger Handwerksarbeit zu verschönern. Durch eine Kombination aus
+traditionellem Handwerk und innovativen Lösungen realisieren wir Ihre Vorstellungen effizient und professionell.
 
-Wünschen Sie sich eine neue Holzterrasse? Dann sind Sie hier genau richtig: Wir bieten einen umfassenden
-Handwerks-Service und machen uns direkt an die Arbeit.
-
-Erzählen Sie uns einfach von Ihrem Projekt und wir unterbreiten Ihnen ein Angebot, wie wir Sie dabei unterstützen.
-
----
-
-## Unsere Leistungen
-
-### Inneneinsatz:
-
-Wir montieren alles, was im Haus gebraucht wird von der ganzen Küche bis zu einzelnen Möbelstücken – unabhängig vom
-Hersteller.
-
-- Auf- und Abbau von Küchen und Möbeln
-- Küchenumbau und -modernisierung
-- Alles, was im Haus anfällt
-
----
-
-### Außeneinsatz:
-
-Wir kümmern uns um den Garten, Außenbereiche und auch industrielle Flächen.
-
-- Carport
-- Gartenhaus
-- Zäune
-
----
-
-### Terassen- und Wegebau:
-
-Holz, Stein, WPC: Die Möglichkeiten für Ihre individuellen Außenflächen sind unbegrenzt. Wir beraten Sie gerne bei der
-richtigen Materialauswahl.
-
-- Terrassenflächen
-- Flächenerweiterungen
-- Anlegen und Anpassen von Wegen
