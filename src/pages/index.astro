@@ -8,6 +8,7 @@ import "@fontsource-variable/source-code-pro";
 import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
+import Reviews from "../components/Reviews.astro";
 
 const pages = await getCollection("pages");
 
@@ -42,7 +43,7 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 							{index === 3 &&
                       <section class="subcontent">
                           <article>
-                              Google Reviews
+                              <Reviews/>
                           </article>
                       </section>
                       <section class="subcontent">
@@ -64,7 +65,7 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     background-position: 25%;
     background-repeat: no-repeat;
     background-size: cover;
-    scroll-margin-top: 20vh;
+    scroll-margin-top: 30vh;
     background-color: $color-white;
 
     article {
@@ -75,8 +76,14 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     }
 
     &.subcontent {
-      height: 25vh;
+      height: auto;
       background-color: $color-white;
+
+      article {
+        height: auto;
+        padding: 2.5vw 15vw;
+        background-color: $color-white;
+      }
     }
 
     &.introimage {
