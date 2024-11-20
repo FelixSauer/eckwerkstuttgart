@@ -69,8 +69,6 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     background-color: $color-white;
 
     article {
-      height: auto;
-      width: 100vw;
       padding: 2.5vw 15vw;
       background-color: $color-white;
     }
@@ -80,9 +78,24 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
       background-color: $color-white;
 
       article {
-        height: auto;
-        padding: 2.5vw 15vw;
+        padding: 2.5vw 5vw;
         background-color: $color-white;
+
+        @include min-width('s') {
+          padding: 2.5vw 10vw;
+        }
+
+        @include min-width('m') {
+          padding: 2.5vw 10vw;
+        }
+
+        @include min-width('l') {
+          padding: 2.5vw 20vw;
+        }
+
+        @include min-width('xl') {
+          padding: 2.5vw 20vw;
+        }
       }
     }
 
@@ -90,15 +103,14 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
       display: flex;
       justify-content: center;
       align-items: center;
+      background-position: 45%;
 
       article {
-        width: 100vw;
-        padding: unset;
-        padding-bottom: 25vh;
+        padding: 0 15vw 25vh;
         background-color: unset;
 
         h1 {
-          font-size: 4rem !important;
+          font-size: 7rem !important;
           font-weight: 400;
           color: $color-white;
           text-align: center;
