@@ -15,7 +15,7 @@ async function fetchReviews() {
 	return data.result.reviews || [];
 }
 
-function renderStars(rating) {
+function renderStars(rating: number) {
 	const fullStars = Math.floor(rating);
 	const halfStar = rating % 1 >= 0.5 ? 1 : 0;
 	const emptyStars = 5 - fullStars - halfStar;
@@ -29,14 +29,11 @@ function renderStars(rating) {
         <div class="carousel-inner">
 					{reviews.map((review) => (
                   <div class="carousel-item">
-
                       <a href={review.author_url} target="_blank">
                           <h3>{review.author_name}</h3>
                       </a>
                       <p>{renderStars(review.rating)} {review.relative_time_description}</p>
-
                       <p>{review.text}</p>
-
                   </div>
 					))}
         </div>
@@ -78,7 +75,7 @@ function renderStars(rating) {
 <script>
 	let currentIndex = 0;
 
-	function showSlide(index) {
+	function showSlide(index: number) {
 		const slides = document.querySelectorAll('.carousel-item');
 		if (index >= slides.length) {
 			currentIndex = 0;
@@ -88,6 +85,7 @@ function renderStars(rating) {
 			currentIndex = index;
 		}
 		const offset = -currentIndex * 100;
+		//@ts-ignore
 		document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
 	}
 
