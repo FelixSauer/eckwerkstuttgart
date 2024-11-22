@@ -22,7 +22,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t fxsreckwerkstuttgartreg.azurecr.io/eckwerkstuttgart/eckwerkstuttgart:latest
+          docker build -t fxsreckwerkstuttgartreg.azurecr.io/eckwerkstuttgart/eckwerkstuttgart:latest .
 
       - name: Push Docker image to Azure Container Registry
         run: |
