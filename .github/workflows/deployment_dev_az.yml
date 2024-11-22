@@ -22,13 +22,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t fxsrEckwerkstuttgartReg.azurecr.io/${{ github.event.repository.name }}: .
+          docker build -t fxsrEckwerkstuttgartReg.azurecr.io/${{ github.event.repository.name }}:latest .
 
       - name: Push Docker image to Azure Container Registry
         run: |
-          docker push fxsrEckwerkstuttgartReg.azurecr.io/${{ github.event.repository.name }}:latest
-
-      - name: Tag and push the 'latest' Docker image
-        run: |
-          docker tag fxsrEckwerkstuttgartReg.azurecr.io/${{ github.event.repository.name }}:latest fxsrEckwerkstuttgartReg.azurecr.io/${{ github.event.repository.name }}:latest
           docker push fxsrEckwerkstuttgartReg.azurecr.io/${{ github.event.repository.name }}:latest
