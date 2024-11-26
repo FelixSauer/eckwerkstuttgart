@@ -2,106 +2,96 @@
 @import "Colors";
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  letter-spacing: .6px;
+  font-family: 'Source Sans 3 Variable', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 200;
+  letter-spacing: 0.6px;
   padding-bottom: 1rem;
-
-  @include min-width('s') {
-    font-size: 1.15rem!important;
-  }
-
-  @include min-width('l') {
-    font-size: 1.25rem!important;
-  }
-
-  @include min-width('xl') {
-    font-size: 1.4rem!important;
-  }
 }
 
 h1 {
-  font-family: 'Montserrat Variable', sans-serif;
-  font-weight: 200;
+  font-family: "Montserrat Variable", sans-serif;
+  font-weight: 300;
   padding-bottom: 1rem;
+  font-size: 1.25rem !important;
 
-  @include min-width('s') {
-    font-size: 2.75rem!important;
+  @include min-width("s") {
+    font-size: 1.75rem !important;
   }
 
-  @include min-width('m') {
-    font-size: 2.75rem!important;
+  @include min-width("m") {
+    font-size: 2.25rem !important;
   }
 
-  @include min-width('l') {
-    font-size: 3rem!important;
+  @include min-width("l") {
+    font-size: 2.5rem !important;
   }
 
-  @include min-width('xl') {
-    font-size: 4.75rem!important;
+  @include min-width("xl") {
+    font-size: 2.5rem !important;
   }
 }
 
 h2 {
-  font-family: 'Montserrat Variable', sans-serif;
-  font-weight: 200;
+  font-family: "Montserrat Variable", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem !important;
 
-  @include min-width('s') {
-    font-size: 1.5rem!important;
+  @include min-width("s") {
+    font-size: 1.5rem !important;
   }
 
-  @include min-width('m') {
-    font-size: 1.7rem!important;
+  @include min-width("m") {
+    font-size: 1.7rem !important;
   }
 
-  @include min-width('l') {
-    font-size: 2.25rem!important;
+  @include min-width("l") {
+    font-size: 2.25rem !important;
   }
 
-  @include min-width('xl') {
-    font-size: 2.5rem!important;
+  @include min-width("xl") {
+    font-size: 2.5rem !important;
   }
 }
 
 h3 {
-  font-family: 'Montserrat Variable', sans-serif;
+  font-family: "Montserrat Variable", sans-serif;
   font-weight: 200;
 
-  @include min-width('s') {
-    font-size: 1.25rem!important;
+  @include min-width("s") {
+    font-size: 1.25rem !important;
   }
 
-  @include min-width('m') {
-    font-size: 1.25rem!important;
+  @include min-width("m") {
+    font-size: 1.25rem !important;
   }
 
-  @include min-width('l') {
-    font-size: 1.75rem!important;
+  @include min-width("l") {
+    font-size: 1.75rem !important;
   }
 
-  @include min-width('xl') {
-    font-size: 1.75rem!important;
+  @include min-width("xl") {
+    font-size: 1.75rem !important;
   }
 }
 
 h4 {
-  font-family: 'Source Code Pro Variable', monospace;
+  font-family: "Source Code Pro Variable", monospace;
   font-weight: normal;
 
-  @include min-width('s') {
-    font-size: 1rem!important;
+  @include min-width("s") {
+    font-size: 1rem !important;
   }
 
-  @include min-width('m') {
-    font-size: 1.25rem!important;
+  @include min-width("m") {
+    font-size: 1.25rem !important;
   }
 
-  @include min-width('l') {
-    font-size: 1.75rem!important;
+  @include min-width("l") {
+    font-size: 1.75rem !important;
   }
 
-  @include min-width('xl') {
-    font-size: 1.75rem!important;
+  @include min-width("xl") {
+    font-size: 1.75rem !important;
   }
 }

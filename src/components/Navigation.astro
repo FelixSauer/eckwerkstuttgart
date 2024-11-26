@@ -1,210 +1,229 @@
 ---
-import type { INavigation } from '../types/navigation';
-import { Icon } from 'astro-icon/components';
+import type {INavigation} from '../types/navigation';
+import {Icon} from 'astro-icon/components';
 
 interface Props {
 	navigation: INavigation[];
 	navigationPostion: string;
 }
 
-const { navigation } = Astro.props;
-const { navigationPostion } = Astro.props;
+const {navigation} = Astro.props;
+const {navigationPostion} = Astro.props;
 ---
 
 <nav class='navbar'>
-	<div class='navbar-display'>
-		<ul>
-			{
-				navigation.map((item) => {
-					return (
-						<li>
-							<a
-								href={
-									navigationPostion === 'header' ? '#' + item.title : item.title
-								}
-								data-href={item.title}
-								aria-current='page'
-							>
-								{item.title}
-							</a>
-						</li>
-					);
-				})
-			}
-		</ul>
-	</div>
-	<div class='navbar-mobile'>
-		<button>
-			<Icon name='line-md:close-to-menu-transition' />
-		</button>
+    <div class='navbar-display'>
+        <ul>
+					{
+						navigation.map((item) => {
+							return (
+                      <li>
+                          <a
+                                  href={
+																		navigationPostion === 'header' ? '#' + item.title : item.title
+																	}
+                                  data-href={item.title}
+                                  aria-current='page'
+                          >
+														{item.title}
+                          </a>
+                      </li>
+							);
+						})
+					}
+        </ul>
+    </div>
+    <div class='navbar-mobile'>
+        <button>
+            <Icon name='line-md:close-to-menu-transition'/>
+        </button>
 
-		<div>
-			<ul>
-				{
-					navigation.map((item) => {
-						return (
-							<li>
-								<a
-									href={
-										navigationPostion === 'header'
-											? '#' + item.title
-											: item.title
-									}
-									data-href={item.title}
-									aria-current='page'
-								>
-									{item.title}
-								</a>
-							</li>
-						);
-					})
-				}
-			</ul>
-		</div>
-	</div>
+        <div>
+            <ul>
+							{
+								navigation.map((item) => {
+									return (
+                          <li>
+                              <a
+                                      href={
+																				navigationPostion === 'header'
+																					? '#' + item.title
+																					: item.title
+																			}
+                                      data-href={item.title}
+                                      aria-current='page'
+                              >
+																{item.title}
+                              </a>
+                          </li>
+									);
+								})
+							}
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <style lang='scss'>
-	@import './../styles/GlobalStyling';
+  @import './../styles/GlobalStyling';
 
-	nav {
-		align-items: center;
+  nav {
+    align-items: center;
 
-		ul {
-			display: flex;
-			list-style: none;
-			margin: unset;
-			padding: unset;
+    ul {
+      display: flex;
+      list-style: none;
+      margin: unset;
+      padding: unset;
 
-			li {
-				margin-right: $spacing-l;
-				font-weight: 350;
+      li {
+        font-weight: 350;
 
-				&:last-child {
-					margin-right: unset;
-				}
+        &:first-child {
+          margin-left: unset;
+        }
 
-				a {
-					text-decoration: none;
-					text-transform: uppercase;
-					font-family:
-						Source Code Pro Variable,
-						sans-serif;
-					font-size: 1.1rem;
-					cursor: pointer;
-				}
-			}
-		}
-	}
+        &:last-child {
+          margin-right: unset;
+        }
 
-	.navbar {
-		.navbar-mobile {
-			cursor: pointer;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: Source Code Pro Variable,
+          sans-serif;
+          font-size: 1.1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 
-			@include min-width('l') {
-				display: none;
-			}
+  .navbar {
+    .navbar-mobile {
+      cursor: pointer;
 
-			button {
-				position: absolute;
-				top: 1.25rem;
-				right: 1.25rem;
-				background: none;
-				border: none;
-				color: $color-white;
-				font-size: 1.5rem;
-				cursor: pointer;
-				padding: 0;
-				z-index: 1000;
+      @include min-width('l') {
+        display: none;
+      }
 
-				&:hover {
-					color: $color-secondary;
-				}
-			}
+      button {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        background: none;
+        border: none;
+        color: $color-white;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1000;
 
-			div {
-				display: none;
-			}
+        &:hover {
+          color: $color-secondary;
+        }
+      }
 
-			&.active {
-				div {
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					animation: slideIn ease-in;
-					animation-duration: 0.5s;
+      div {
+        display: none;
+      }
 
-					ul {
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						gap: $spacing-xl;
-						width: 100vw;
-						height: 100vh;
-						padding: $spacing-4xl $spacing-xxl;
-						background-color: $color-primary;
+      &.active {
+        div {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: slideIn ease-in;
+          animation-duration: 0.5s;
 
-						li {
-							a {
-								font-size: 1.75rem;
-								color: $color-white;
+          ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: $spacing-xl;
+            width: 100vw;
+            height: 100vh;
+            background-color: $color-primary;
+            padding: 3vh 5vw;
 
-								&:hover {
-									color: $color-secondary;
-								}
-							}
-						}
-					}
-				}
-			}
+            @include min-width("s") {
+              padding: 3vh 5vw;
+            }
 
-			&.inactive {
-				div {
-					animation: slideIn ease-out;
-					animation-duration: 0.5s;
-				}
-			}
-		}
+            @include min-width("m") {
+              padding: 5vh 10vw;
+            }
 
-		.navbar-display {
-			display: none;
+            @include min-width("l") {
+              padding: 5vh 15vw;
+            }
 
-			@include min-width('l') {
-				display: block;
-			}
+            @include min-width("xl") {
+              padding: 5vh 15vw;
+            }
 
-			a {
-				opacity: 0.5;
-				padding: $spacing-s;
-				border: 1px solid transparent;
-				transition: border 0.5s;
 
-				&.active {
-					opacity: 1;
-				}
+            li {
+              a {
+                font-size: 1.75rem;
+                color: $color-white;
 
-				&:hover {
-					opacity: 0.75;
-					color: $color-secondary;
-				}
+                &:hover {
+                  color: $color-secondary;
+                }
+              }
+            }
+          }
+        }
+      }
 
-				&:focus {
-					color: $color-secondary;
-				}
-			}
-		}
+      &.inactive {
+        div {
+          animation: slideIn ease-out;
+          animation-duration: 0.5s;
+        }
+      }
+    }
 
-		@keyframes slideIn {
-			from {
-				transform: translateX(100vw);
-			}
+    .navbar-display {
+      display: none;
 
-			to {
-				transform: translateX(0vw);
-			}
-		}
-	}
+      @include min-width('l') {
+        display: block;
+      }
+
+      a {
+        opacity: 0.5;
+        padding: $spacing-s;
+        border: 1px solid transparent;
+        transition: border 0.5s;
+
+        &.active {
+          opacity: 1;
+        }
+
+        &:hover {
+          opacity: 0.75;
+          color: $color-secondary;
+        }
+
+        &:focus {
+          color: $color-secondary;
+        }
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100vw);
+      }
+
+      to {
+        transform: translateX(0vw);
+      }
+    }
+  }
 </style>
 
 <script>

@@ -24,53 +24,55 @@ function renderStars(rating: number) {
 ---
 
 <div class='reviews'>
-	<h2>Google Reviews</h2>
-	<div class='carousel'>
-		<div class='carousel-inner'>
-			{
-				// @ts-ignore
-				reviews.map((review) => (
-					<div class='carousel-item'>
-						<a href={review.author_url} target='_blank'>
-							<h3>{review.author_name}</h3>
-						</a>
-						<p>
-							{renderStars(review.rating)} {review.relative_time_description}
-						</p>
-						<p>{review.text}</p>
-					</div>
-				))
-			}
-		</div>
-	</div>
+    <h2>Google Reviews</h2>
+    <div class='carousel'>
+        <div class='carousel-inner'>
+					{
+						// @ts-ignore
+
+						reviews.map((review) => (
+                    <div class='carousel-item'>
+                        <a href={review.author_url} target='_blank'>
+                            <h3>{review.author_name}</h3>
+                        </a>
+                        <p>
+													{renderStars(review.rating)} {review.relative_time_description}
+                        </p>
+                        <p>{review.text}</p>
+                    </div>
+						))
+					}
+        </div>
+    </div>
 </div>
 
 <style>
-	.reviews {
-		display: flex;
-		flex-direction: column;
-		gap: 8rem;
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
 
-		.carousel {
-			width: 100%;
-			margin: auto;
-			overflow-y: scroll;
+        .carousel {
+            width: 100%;
+            margin: auto;
+            overflow-y: scroll;
 
-			.carousel-inner {
-				display: flex;
-				transition: transform 0.5s ease;
+            .carousel-inner {
+                display: flex;
+                transition: transform 0.5s ease;
 
-				.carousel-item {
-					min-width: 100%;
-					box-sizing: border-box;
-					margin-right: 2rem;
-					&:last-child {
-						padding-right: unset;
-					}
-				}
-			}
-		}
-	}
+                .carousel-item {
+                    min-width: 100%;
+                    box-sizing: border-box;
+                    margin-right: 2rem;
+
+                    &:last-child {
+                        padding-right: unset;
+                    }
+                }
+            }
+        }
+    }
 </style>
 
 <script>
