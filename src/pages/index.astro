@@ -159,8 +159,12 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
       }
 
       article {
-        padding: 1rem;
         background-color: unset;
+        padding: 1rem 1rem 40vh 1rem;
+
+        @include min-width("s") {
+          padding: 1rem 1rem 35vh 1rem;
+        }
 
         h1 {
           font-size: 2rem;
