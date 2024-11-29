@@ -32,13 +32,16 @@ function renderStars(rating: number) {
 
 						reviews.map((review) => (
                     <div class='carousel-item'>
-                        <a href={review.author_url} target='_blank'>
-                            <h3>{review.author_name}</h3>
-                        </a>
-                        <p>
-													{renderStars(review.rating)} {review.relative_time_description}
-                        </p>
-                        <p>{review.text}</p>
+                        <div class="item">
+                            <a href={review.author_url} target='_blank'>
+                                <h3>{review.author_name}</h3>
+                            </a>
+                            <div>
+                                <div class="stars">{renderStars(review.rating)}</div>
+                                <div>{review.relative_time_description}</div>
+                            </div>
+                            <p>{review.text}</p>
+                        </div>
                     </div>
 						))
 					}
@@ -57,6 +60,10 @@ function renderStars(rating: number) {
             margin: auto;
             overflow-y: scroll;
 
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
             .carousel-inner {
                 display: flex;
                 transition: transform 0.5s ease;
@@ -64,13 +71,46 @@ function renderStars(rating: number) {
                 .carousel-item {
                     min-width: 100%;
                     box-sizing: border-box;
-                    margin-right: 2rem;
 
                     &:last-child {
                         padding-right: unset;
                     }
+
+                    .item {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        margin: 2rem;
+
+                        div {
+                            display: flex;
+                            gap: 1rem;
+
+                            .stars {
+                                color: gold;
+                            }
+                        }
+                    }
                 }
             }
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
         }
     }
 </style>
@@ -78,27 +118,34 @@ function renderStars(rating: number) {
 <script>
 	let currentIndex = 0;
 
-	function showSlide(index: number) {
+	function showSlide(index) {
 		const slides = document.querySelectorAll('.carousel-item');
-		if (index >= slides.length) {
-			currentIndex = 0;
-		} else if (index < 0) {
-			currentIndex = slides.length - 1;
-		} else {
-			currentIndex = index;
-		}
+		const totalSlides = slides.length;
+
+		if (totalSlides === 0) return;
+
+		currentIndex = (index + totalSlides) % totalSlides;
 		const offset = -currentIndex * 100;
-		//@ts-ignore
-		document.querySelector('.carousel-inner').style.transform =
-			`translateX(${offset}%)`;
+
+		const carouselInner = document.querySelector('.carousel-inner');
+		if (carouselInner) {
+			carouselInner.style.transform = `translateX(${offset}%)`;
+		}
+
+		slides.forEach((slide, i) => {
+			slide.style.opacity = i === currentIndex ? '1' : '0';
+		});
 	}
 
-	function autoScroll() {
-		setTimeout(autoScroll, 4000);
+	function startAutoSlide() {
+		setInterval(() => {
+			currentIndex++;
+			showSlide(currentIndex);
+		}, 5000);
 	}
 
 	document.addEventListener('DOMContentLoaded', () => {
-		showSlide(currentIndex);
-		setTimeout(autoScroll, 3000);
+		showSlide(0);
+		startAutoSlide();
 	});
 </script>
