@@ -22,5 +22,8 @@ Wohlfühloase im Freien schaffen.
 \
 \
 Für mehr Infos:
+\
+\
 [![Betterwood Logo](../../assets/Betterwood.jpg)](https://www.betterwood.de/)
 [![Natur in Form Logo](../../assets/NiF.jpg)](https://www.naturinform.com/de/)
+
