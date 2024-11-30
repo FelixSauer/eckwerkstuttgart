@@ -15,12 +15,10 @@ bei Ihnen zurück, um Ihre Fragen zu beantworten und alle Details zu besprechen.
 Wir freuen uns darauf, von Ihnen zu hören!
 \
 \
-\
 Eckwerkt Stuttgart\
 Stierlenstr. 25 \
 \
 70327 Stuttgart
-\
 \
 \
 Mail: [hallo@eckwerkstuttgart.de](mailto:hallo@eckwerkstuttgart.de)
