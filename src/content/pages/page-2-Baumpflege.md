@@ -11,7 +11,7 @@ Wir sorgen dafür, dass Ihre Bäume gesund bleiben und Ihre Außenanlagen sicher
 Techniken – **wie der Seilklettertechnik und Hubarbeitsbühnen** – erreichen wir selbst die schwer zugänglichsten
 Baumbereiche, um effizient und sicher arbeiten zu können.\
 \
-**Unser Angebot im Bereich Baumpflege:**
+Unser Angebot im Bereich Baumpflege:
 
 1. **Pflegeschnitte & Baumfällungen:** Wir schneiden Bäume professionell zurück oder fällen sie sicher, wenn es
    notwendig

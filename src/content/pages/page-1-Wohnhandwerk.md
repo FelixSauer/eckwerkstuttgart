@@ -12,7 +12,7 @@ Ob Sie Ihre Wände auffrischen, einen neuen Boden verlegen oder einen umfassende
 zuverlässige Partner an Ihrer Seite, der Ihre Wünsche mit Fachkenntnis und Präzision umsetzt.
 \
 \
-**Unsere Leistungen im Wohnhandwerk:**
+Unsere Leistungen im Wohnhandwerk:
 
 1. **Renovierungen & Sanierungen:** Wir kümmern uns um alle Arbeiten, die Ihre Räume aufwerten und erneuern – von
    kleinen
