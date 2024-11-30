@@ -21,7 +21,7 @@ alles aus einer Hand. Vertrauen Sie auf unser handwerkliches Können und lassen 
 Wohlfühloase im Freien schaffen.
 \
 \
-Für mehr Infos:
+**Für mehr Infos:**
 
 <div class="logo">
 

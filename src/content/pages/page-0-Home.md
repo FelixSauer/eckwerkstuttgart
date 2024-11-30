@@ -9,7 +9,7 @@ imagePath: IntroImage.jpg
 
 # Welcome
 
-Sie suchen einen zuverlässigen Partner für Ihre Renovierung, Sanierung oder andere Projekte?
+**Sie suchen einen zuverlässigen Partner für Ihre Renovierung, Sanierung oder andere Projekte?**
 \
 \
 Dann sind Sie bei uns genau

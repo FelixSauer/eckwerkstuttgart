@@ -6,7 +6,7 @@ navigation: Header
 
 # Baumpflege
 
-Baumpflege ist ein wichtiger Bestandteil der Garten- und Landschaftspflege.\
+**Baumpflege ist ein wichtiger Bestandteil der Garten- und Landschaftspflege.**\
 Wir sorgen dafür, dass Ihre Bäume gesund bleiben und Ihre Außenanlagen sicher und gepflegt wirken. Mit modernen
 Techniken – wie der Seilklettertechnik und Hubarbeitsbühnen – erreichen wir selbst die schwer zugänglichsten
 Baumbereiche, um effizient und sicher arbeiten zu können.\
