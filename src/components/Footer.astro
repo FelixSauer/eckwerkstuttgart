@@ -33,6 +33,7 @@ const year = date.getFullYear();
         <p>Stierlenstraße 25</p>
         <p>70327 Stuttgart</p>
         <p>Mail: <a href="mailto:hallo@eckwerkstuttgart.de">hallo@eckwerkstuttgart.de</a></p>
+        <br/>
         <p>© {year} Eckwerk Stuttgart</p>
     </div>
 </footer>
@@ -43,30 +44,43 @@ const year = date.getFullYear();
 
   footer {
     position: fixed;
-    height: 60px;
-    gap: $spacing-s;
-    font-size: .85rem;
+    height: auto;
+    font-size: .65rem;
     bottom: 0;
     width: 100%;
     background-color: $color-primary;
     color: $color-white;
-    padding: $spacing-m $spacing-4xl;
+    padding: 1rem;
 
+    @include min-width("m") {
+      font-size: .85rem;
+    }
 
     ul {
       display: flex;
       gap: $spacing-m;
-      justify-content: center;
-      align-items: center;
       list-style: none;
       margin: unset;
+      padding-bottom: 1rem;
+
+      @include min-width("m") {
+        padding-bottom: unset;
+        justify-content: center;
+        align-items: center;
+      }
+
+      li {
+        padding-left: 0;
+      }
     }
 
     div {
-      display: flex;
-      flex-direction: row;
-      gap: $spacing-m;
-      justify-content: center;
+      @include min-width("m") {
+        display: flex;
+        gap: $spacing-m;
+        flex-direction: row;
+        justify-content: center;
+      }
 
       p {
         margin: unset;

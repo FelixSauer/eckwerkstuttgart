@@ -16,7 +16,7 @@ import {Icon} from "astro-icon/components";
 
   div {
     padding-right: 1rem;
-    padding-bottom: 5rem;
+    padding-bottom: 12rem;
     position: fixed;
     top: 0;
     right: 0;
@@ -27,7 +27,8 @@ import {Icon} from "astro-icon/components";
     gap: 1rem;
     z-index: 900;
 
-    @include min-width("l") {
+    @include min-width("m") {
+      padding-bottom: 5rem;
       display: none;
     }
 
