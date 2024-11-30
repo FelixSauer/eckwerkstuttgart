@@ -15,7 +15,7 @@ import {Icon} from "astro-icon/components";
   @import "./../styles/GlobalStyling";
 
   div {
-    padding-right: 0.5rem;
+    padding-right: 1rem;
     padding-bottom: 5rem;
     position: fixed;
     top: 0;
@@ -24,7 +24,7 @@ import {Icon} from "astro-icon/components";
     display: none;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 0.5rem;
+    gap: 1rem;
     z-index: 900;
 
     @include min-width("l") {
@@ -38,10 +38,10 @@ import {Icon} from "astro-icon/components";
       width: 2rem;
       height: 2rem;
       cursor: pointer;
-      color: $color-gray-1;
+      color: $color-secondary;
 
       [data-icon] {
-        font-size: 1.75rem;
+        font-size: 2rem;
       }
 
       &:hover {
