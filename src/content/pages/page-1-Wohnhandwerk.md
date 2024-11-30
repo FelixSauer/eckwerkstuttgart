@@ -6,14 +6,13 @@ navigation: Header
 
 # Wohnhandwerk
 
-**Im Bereich des Wohnhandwerks bieten wir Ihnen ein breites Spektrum an Leistungen für den Innenausbau und die
-Gestaltung Ihrer Räume.**  
-\
+Im Bereich des Wohnhandwerks bieten wir Ihnen ein breites Spektrum an Leistungen für den Innenausbau und die
+Gestaltung Ihrer Räume.
 Ob Sie Ihre Wände auffrischen, einen neuen Boden verlegen oder einen umfassenden Umbau planen – wir sind der
 zuverlässige Partner an Ihrer Seite, der Ihre Wünsche mit Fachkenntnis und Präzision umsetzt.
 \
 \
-Unsere Leistungen im Wohnhandwerk:
+**Unsere Leistungen im Wohnhandwerk:**
 
 1. **Renovierungen & Sanierungen:** Wir kümmern uns um alle Arbeiten, die Ihre Räume aufwerten und erneuern – von
    kleinen
