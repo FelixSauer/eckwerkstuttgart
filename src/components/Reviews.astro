@@ -116,36 +116,36 @@ const renderStars = (rating: number) => {
 </style>
 
 <script>
-	let currentIndex = 0;
+	/*	let currentIndex = 0;
 
-	function showSlide(index) {
-		const slides = document.querySelectorAll('.carousel-item');
-		const totalSlides = slides.length;
+		function showSlide(index) {
+			const slides = document.querySelectorAll('.carousel-item');
+			const totalSlides = slides.length;
 
-		if (totalSlides === 0) return;
+			if (totalSlides === 0) return;
 
-		currentIndex = (index + totalSlides) % totalSlides;
-		const offset = -currentIndex * 100;
+			currentIndex = (index + totalSlides) % totalSlides;
+			const offset = -currentIndex * 100;
 
-		const carouselInner = document.querySelector('.carousel-inner');
-		if (carouselInner) {
-			carouselInner.style.transform = `translateX(${offset}%)`;
+			const carouselInner = document.querySelector('.carousel-inner');
+			if (carouselInner) {
+				carouselInner.style.transform = `translateX(${offset}%)`;
+			}
+
+			slides.forEach((slide, i) => {
+				slide.style.opacity = i === currentIndex ? '1' : '0';
+			});
 		}
 
-		slides.forEach((slide, i) => {
-			slide.style.opacity = i === currentIndex ? '1' : '0';
-		});
-	}
+		function startAutoSlide() {
+			setInterval(() => {
+				currentIndex++;
+				showSlide(currentIndex);
+			}, 5000);
+		}
 
-	function startAutoSlide() {
-		setInterval(() => {
-			currentIndex++;
-			showSlide(currentIndex);
-		}, 5000);
-	}
-
-	document.addEventListener('DOMContentLoaded', () => {
-		showSlide(0);
-		startAutoSlide();
-	});
+		document.addEventListener('DOMContentLoaded', () => {
+			showSlide(0);
+			startAutoSlide();
+		});*/
 </script>
