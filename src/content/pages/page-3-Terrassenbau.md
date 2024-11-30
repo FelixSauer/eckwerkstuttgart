@@ -4,7 +4,7 @@ mainStage: true
 navigation: Header
 ---
 
-# Terrassenbau – Holz- und WPC-Terrassen für Ihre Wohlfühloase
+# Terrassenbau
 
 Neben unserem umfassenden Leistungsportfolio im Bereich Wohnhandwerk bieten wir Ihnen besonders hochwertige Lösungen für
 den Bau von Holz- und WPC-Terrassen. Dabei verbinden wir Qualität, Ästhetik und Nachhaltigkeit:\

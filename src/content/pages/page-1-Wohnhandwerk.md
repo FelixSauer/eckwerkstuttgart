@@ -4,7 +4,7 @@ mainStage: true
 navigation: Header
 ---
 
-# Wohnhandwerk – Ihr Partner für Renovierungen und Sanierungen
+# Wohnhandwerk
 
 Im Bereich des Wohnhandwerks bieten wir Ihnen ein breites Spektrum an Leistungen für den Innenausbau und die Gestaltung
 Ihrer Räume.\

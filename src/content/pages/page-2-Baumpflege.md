@@ -4,7 +4,7 @@ mainStage: true
 navigation: Header
 ---
 
-# Baumpflege – Gesunde Bäume und gepflegte Außenanlagen
+# Baumpflege
 
 Baumpflege ist ein wichtiger Bestandteil der Garten- und Landschaftspflege.\
 Wir sorgen dafür, dass Ihre Bäume gesund bleiben und Ihre Außenanlagen sicher und gepflegt wirken. Mit modernen
