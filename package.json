@@ -11,10 +11,9 @@
     "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/react": "^3.6.2",
+    "@astrojs/check": "0.7.0",
+    "@astrojs/react": "3.6.2",
     "@astrojs/tailwind": "^5.1.1",
-    "@fontsource-variable/fira-code": "^5.0.18",
     "@fontsource-variable/material-symbols-outlined": "^5.0.33",
     "@fontsource-variable/montserrat": "^5.0.19",
     "@fontsource-variable/source-code-pro": "^5.0.19",
@@ -25,7 +24,7 @@
     "@iconify-json/mdi": "^1.1.67",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.11.3",
+    "astro": "4.16.1",
     "astro-favicons": "^2.0.2",
     "astro-icon": "^1.1.0",
     "astro-image": "^0.0.7",
