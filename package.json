@@ -14,6 +14,7 @@
     "@astrojs/check": "0.7.0",
     "@astrojs/react": "3.6.2",
     "@astrojs/tailwind": "^5.1.1",
+    "@fontsource-variable/fira-code": "^5.1.0",
     "@fontsource-variable/material-symbols-outlined": "^5.0.33",
     "@fontsource-variable/montserrat": "^5.0.19",
     "@fontsource-variable/source-code-pro": "^5.0.19",
