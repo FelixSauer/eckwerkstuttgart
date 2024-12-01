@@ -1,0 +1,109 @@
+---
+import type {ImageMetadata} from 'astro';
+import {Image} from 'astro:assets';
+import {getImage} from "astro:assets";
+
+interface Props {
+	imageCollection: string;
+}
+
+const {imageCollection} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/Albums/*/*");
+
+const imagePaths = Object.keys(images).filter((imagePath) => {
+	return imagePath.startsWith(`/src/assets/Albums/${imageCollection}/`);
+});
+---
+
+<div id="gallery"
+     class="mx-auto container my-8 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5">
+	{
+		imagePaths.map(async (imagePath) => {
+			let image = images[imagePath]();
+			let optimizedImage = await getImage({
+				src: image,
+				width: 1070,
+			});
+
+			return (
+              <a
+                      href={optimizedImage.src}
+                      data-pswp-width={optimizedImage.attributes.width}
+                      data-pswp-height={optimizedImage.attributes.height}
+                      target="_blank"
+                      class="group transition-all block"
+              >
+                  <Image
+                          src={image}
+                          alt={"altText"}
+                          format="avif"
+                          width={520}
+                          quality="mid"
+                          class="rounded mb-4 border border-transparent hover:border-gray-300 transition-all duration-300 ease-in-out hover:shadow-lg"
+                          loading="lazy"
+                  />
+              </a>
+			);
+		})
+	}
+</div>
+
+<script>
+	import PhotoSwipeLightbox from "photoswipe/lightbox";
+	import "photoswipe/style.css";
+
+	const lightbox = new PhotoSwipeLightbox({
+		gallery: "#gallery",
+		children: "a",
+		zoom: false,
+		arrowPrev: false,
+		arrowNext: false,
+		wheelToZoom: false,
+		showHideOpacity: false,
+		counter: false,
+		imageClickAction: "next",
+		pswpModule: () => import("photoswipe")
+	});
+
+	lightbox.init();
+	document.addEventListener(
+		'astro:page-load',
+		() => {
+			if (lightbox) lightbox.init()
+		},
+		{once: false},
+	)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

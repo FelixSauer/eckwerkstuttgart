@@ -2,25 +2,16 @@
 
 ---
 
-<p>
-    Eckwerk Stuttgart <br>
-    Stierlenstraße 25, 70327 Stuttgart <br>
-    Mail: <a href="mailto:hallo@eckwerkstuttgart.de" target="_blank">hallo@eckwerkstuttgart.de</a>
-</p>
+<form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-<style lang="scss">
-  @import "./../styles/GlobalStyling";
+    <label for="message">Nachricht:</label>
+    <textarea id="message" name="message" required></textarea>
 
-  a {
-    color: $color-white;
-    text-decoration: none;
+    <button type="submit">Senden</button>
+</form>
 
-
-    &:hover {
-      padding-bottom: 0.1rem;
-      border-bottom: 1px solid $color-white;
-
-    }
-  }
-</style>

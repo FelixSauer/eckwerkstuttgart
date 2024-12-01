@@ -11,6 +11,42 @@ const {navigation} = Astro.props;
 ---
 
 <header>
-    <Icon name="logo"/>
+    <a href="https://eckwerkstuttgart.de/">
+        <Icon name="logo"/>
+    </a>
     <Navigation navigation={navigation} navigationPostion="header"/>
 </header>
+
+
+<style lang="scss">
+  @import "./../styles/GlobalStyling";
+
+  header {
+    height: 90px;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary;
+    z-index: 1000;
+    padding: $spacing-l;
+
+    @include min-width("l") {
+      padding-left: $spacing-xxl;
+      padding-right: $spacing-xxl;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      padding: 0;
+      margin: 0;
+    }
+
+    [data-icon] {
+      font-size: 3rem;
+      z-index: 1000;
+    }
+  }
+</style>

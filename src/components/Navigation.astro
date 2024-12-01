@@ -1,5 +1,6 @@
 ---
-import type {INavigation} from "../types/navigation";
+import type {INavigation} from '../types/navigation';
+import {Icon} from 'astro-icon/components';
 
 interface Props {
 	navigation: INavigation[];
@@ -10,94 +11,61 @@ const {navigation} = Astro.props;
 const {navigationPostion} = Astro.props;
 ---
 
-<nav class="navbar">
-    <ul>
-			{
-				navigation.map((item) => {
-					return (
-                  <li>
-                      <a
-                              href={
-																navigationPostion === "header" ? "#" + item.title : item.title
-															}
-                              data-href={item.title}
-                              aria-current="page"
-                      >
-												{item.title}
-                      </a>
-                  </li>
-					);
-				})
-			}
-    </ul>
+<nav class='navbar'>
+    <div class='navbar-display'>
+        <ul>
+					{
+						navigation.map((item) => {
+							return (
+                      <li>
+                          <a
+                                  href={
+																		navigationPostion === 'header' ? '#' + item.title : item.title
+																	}
+                                  data-href={item.title}
+                                  aria-current='page'
+                          >
+														{item.title}
+                          </a>
+                      </li>
+							);
+						})
+					}
+        </ul>
+    </div>
+    <div class='navbar-mobile'>
+        <button>
+            <Icon name='line-md:close-to-menu-transition'/>
+        </button>
+
+        <div>
+            <ul>
+							{
+								navigation.map((item) => {
+									return (
+                          <li>
+                              <a
+                                      href={
+																				navigationPostion === 'header'
+																					? '#' + item.title
+																					: item.title
+																			}
+                                      data-href={item.title}
+                                      aria-current='page'
+                              >
+																{item.title}
+                              </a>
+                          </li>
+									);
+								})
+							}
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<script>
-	let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
-
-	document.addEventListener("DOMContentLoaded", () => {
-		initNavigation();
-		initIntersectionObserver();
-	});
-
-	function initNavigation(): void {
-		window.addEventListener('hashchange', updateActiveLink);
-		updateActiveLink();
-	}
-
-	function updateActiveLink(): void {
-		const navigationLinks = document.querySelectorAll<HTMLAnchorElement>('a[data-href]');
-		const currentUrl = window.location.hash.substring(1);
-
-		navigationLinks.forEach((link) => {
-			const linkHref = link?.getAttribute('data-href')?.substring(1);
-			link.classList.toggle("active", linkHref === currentUrl);
-		});
-	}
-
-	function initIntersectionObserver(): void {
-		const observerOptions: IntersectionObserverInit = {
-			root: null,
-			rootMargin: '0px',
-			threshold: 0.5
-		};
-
-		const observerCallback: IntersectionObserverCallback = (entries) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					const sectionId = entry.target.id;
-					handleScrollStop(sectionId);
-				}
-			});
-		};
-
-		const observer = new IntersectionObserver(observerCallback, observerOptions);
-		document.querySelectorAll<HTMLElement>('section').forEach(section => {
-			observer.observe(section);
-		});
-	}
-
-	function handleScrollStop(sectionId: string): void {
-		const activeLink = document.querySelector<HTMLAnchorElement>(`a[data-href='#${sectionId}']`);
-
-		if (activeLink) {
-			if (scrollTimeout !== null) {
-				clearTimeout(scrollTimeout);
-			}
-
-			scrollTimeout = setTimeout(() => {
-				document.querySelectorAll<HTMLAnchorElement>('a[data-href]').forEach(link => {
-					link.classList.remove('active');
-				});
-				activeLink.classList.add('active');
-			}, 200) as any; // Type assertion to allow assignment of setTimeout return value
-		}
-	}
-</script>
-
-
-<style lang="scss">
-  @import "./../styles/GlobalStyling";
+<style lang='scss'>
+  @import './../styles/GlobalStyling';
 
   nav {
     align-items: center;
@@ -109,39 +77,230 @@ const {navigationPostion} = Astro.props;
       padding: unset;
 
       li {
-        margin-right: $spacing-l;
-        font-weight: 300;
+        font-weight: 350;
+
+        &:first-child {
+          margin-left: unset;
+        }
 
         &:last-child {
           margin-right: unset;
+        }
+
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: Source Code Pro Variable,
+          sans-serif;
+          font-size: 1.1rem;
+          cursor: pointer;
         }
       }
     }
   }
 
   .navbar {
-    a {
-      color: $color-white;
-      opacity: 0.5;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-family: Source Code Pro Variable, sans-serif;
-      padding: $spacing-s;
-      border: 1px solid transparent;
-      transition: border 0.5s;
+    .navbar-mobile {
+      cursor: pointer;
+
+      @include min-width('l') {
+        display: none;
+      }
+
+      button {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        background: none;
+        border: none;
+        color: $color-white;
+        font-size: 3rem;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1000;
+
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+
+      div {
+        display: none;
+      }
 
       &.active {
-        opacity: 1;
+        div {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: slideIn ease-in;
+          animation-duration: 0.5s;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: $spacing-xl;
+            width: 100vw;
+            height: 100vh;
+            background-color: $color-primary;
+            padding: 3vh 5vw;
+
+            @include min-width("s") {
+              padding: 3vh 5vw;
+            }
+
+            @include min-width("m") {
+              padding: 5vh 10vw;
+            }
+
+            @include min-width("l") {
+              padding: 5vh 15vw;
+            }
+
+            @include min-width("xl") {
+              padding: 5vh 15vw;
+            }
+
+
+            li {
+              a {
+                font-size: 1.75rem;
+                color: $color-white;
+
+                &:hover {
+                  color: $color-secondary;
+                }
+              }
+            }
+          }
+        }
       }
 
-      &:hover {
-        opacity: 0.75;
+      &.inactive {
+        div {
+          animation: slideIn ease-out;
+          animation-duration: 0.5s;
+        }
+      }
+    }
+
+    .navbar-display {
+      display: none;
+
+      @include min-width('l') {
+        display: block;
       }
 
-      &:focus {
-        color: $color-accent-3;
+      a {
+        opacity: 0.5;
+        padding: $spacing-s;
+        border: 1px solid transparent;
+        transition: border 0.5s;
+
+        &.active {
+          opacity: 1;
+        }
+
+        &:hover {
+          opacity: 0.75;
+          color: $color-secondary;
+        }
+
+        &:focus {
+          color: $color-secondary;
+        }
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100vw);
+      }
+
+      to {
+        transform: translateX(0vw);
       }
     }
   }
-
 </style>
+
+<script>
+	const navbarMobile = document.querySelector('.navbar-mobile');
+
+	navbarMobile?.addEventListener('click', () => {
+		navbarMobile?.classList.toggle('active');
+	});
+
+	let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+	document.addEventListener('DOMContentLoaded', () => {
+		initNavigation();
+		initIntersectionObserver();
+	});
+
+	function initNavigation(): void {
+		window.addEventListener('hashchange', updateActiveLink);
+		updateActiveLink();
+	}
+
+	function updateActiveLink(): void {
+		const navigationLinks =
+			document.querySelectorAll<HTMLAnchorElement>('a[data-href]');
+		const currentUrl = window.location.hash.substring(1);
+
+		navigationLinks.forEach((link) => {
+			const linkHref = link?.getAttribute('data-href')?.substring(1);
+			link.classList.toggle('active', linkHref === currentUrl);
+		});
+	}
+
+	function initIntersectionObserver(): void {
+		const observerOptions: IntersectionObserverInit = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 0.5,
+		};
+
+		const observerCallback: IntersectionObserverCallback = (entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const sectionId = entry.target.id;
+					handleScrollStop(sectionId);
+				}
+			});
+		};
+
+		const observer = new IntersectionObserver(
+			observerCallback,
+			observerOptions
+		);
+		document.querySelectorAll<HTMLElement>('section').forEach((section) => {
+			observer.observe(section);
+		});
+	}
+
+	function handleScrollStop(sectionId: string): void {
+		const activeLink = document.querySelector<HTMLAnchorElement>(
+			`a[data-href='#${sectionId}']`
+		);
+
+		if (activeLink) {
+			if (scrollTimeout !== null) {
+				clearTimeout(scrollTimeout);
+			}
+
+			scrollTimeout = setTimeout(() => {
+				document
+					.querySelectorAll<HTMLAnchorElement>('a[data-href]')
+					.forEach((link) => {
+						link.classList.remove('active', 'inactive');
+						link.classList.add('inactive');
+					});
+
+				activeLink.classList.remove('inactive');
+				activeLink.classList.add('active');
+			}, 200);
+		}
+	}
+</script>

@@ -1,26 +1,195 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import type {ImageMetadata} from "astro";
+import {getCollection} from "astro:content";
+import Layout from "../layouts/multi.astro";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/fira-code";
 import "@fontsource-variable/source-code-pro";
+import '@fontsource-variable/source-sans-3';
 import '@fontsource/source-sans-pro';
 import "@fontsource/roboto";
 import "./../styles/GlobalStyling.scss";
-import {Icon} from "astro-icon/components";
-import Contact from "../components/Contact.astro";
+import Reviews from "../components/Reviews.astro";
+
+const pages = await getCollection("pages");
+
+const ParallaxImagesSrc = import.meta.glob<{ default: ImageMetadata }>("../assets/Albums/Parallax/*");
+const ParallaxImages = Object.keys(ParallaxImagesSrc);
+
+const IntroImagesSrc = import.meta.glob<{ default: ImageMetadata }>("../assets/Albums/Intro/*");
+const IntroImages = Object.keys(IntroImagesSrc);
+const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 ---
 
 <Layout title="Eckwerk Stuttgart">
-    <main>
-        <Icon name="logo2"/>
-        <p>Unsere Homepage macht gerade Urlaub. <br/>
-            <br/>
-            Wir sind aber gerne jederzeit für Sie da und stehen mit Rat und Tat zur Seite. <br/>
-            Melden Sie sich einfach bei uns!</p>
-        <Contact/>
-    </main>
+    <section class="introimage" style={`background-image: url('${IntroImage.default.src}')`}>
+        <article>{pages[0].data.slogan && <h1>{pages[0].data.slogan}</h1>}</article>
+    </section>
+
+	{pages.map(async (originPage, index) => {
+		const {Content} = await originPage.render();
+		const imagePath = ParallaxImages[index % ParallaxImages.length];
+		const image = await ParallaxImagesSrc[imagePath]();
+
+		return originPage.data.mainStage === true ? (
+            <>
+                <section class="content" id={originPage.data.title}
+                         style={originPage.data.title !== "Kontakt" ? `background-image: url('${image.default.src}'); @media (max-width: 768px) { background-image: url('/path/to/mobile-image.jpg'); }` : null}>
+                    <article>
+                        <Content/>
+                    </article>
+                </section>
+
+
+							{index === 3 &&
+                      <section class="subcontent">
+                          <article>
+                              <Reviews/>
+                          </article>
+                      </section>
+							}
+            </>
+		) : null;
+	})}
 </Layout>
 
 <style lang="scss" is:global>
   @import "./../styles/GlobalStyling";
+
+  section {
+    min-height: calc(100vh + 50vh);
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-margin-top: 8vh;
+    background-color: $color-white;
+
+    @include min-width("s") {
+      background-position: 50% 50%;
+    }
+
+    @include min-width("m") {
+      background-position: 25%;
+    }
+
+    @include min-width("l") {
+      scroll-margin-top: 24vh;
+      background-position: 25%;
+    }
+
+    @include min-width("xl") {
+      background-position: 25%;
+    }
+
+    article {
+      padding: 2vh 5vw 3vh 5vw;
+      background-color: $color-white;
+
+      @include min-width("s") {
+        padding: 2vh 5vw 3vh 5vw;
+        background-position: 0%;
+      }
+
+      @include min-width("m") {
+        padding: 4vh 10vw 5vh 10vw;
+        background-position: 45%;
+      }
+
+      @include min-width("l") {
+        padding: 4vh 15vw 5vh 15vw;
+        background-position: 45%;
+      }
+
+      @include min-width("xl") {
+        padding: 4vh 15vw 5vh 15vw;
+        background-position: 45%;
+      }
+
+      div.logo {
+        p {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 2rem;
+          padding: 3rem 0 1rem 0;
+
+          @include min-width("m") {
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    &.subcontent {
+      min-height: 65vh;
+      height: auto;
+      background-color: $color-white;
+
+      article {
+        background-color: $color-white;
+      }
+    }
+
+    &.introimage {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-position: 50%;
+
+      @include min-width("s") {
+        background-position: 50%;
+      }
+
+      @include min-width("m") {
+        background-position: 45%;
+      }
+
+      @include min-width("l") {
+        background-position: 45%;
+      }
+
+      @include min-width("xl") {
+        background-position: 45%;
+      }
+
+      article {
+        background-color: unset;
+        padding: 1rem 1rem 40vh 1rem;
+
+        @include min-width("s") {
+          padding: 1rem 1rem 35vh 1rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+          font-weight: 400;
+          color: $color-white;
+          text-align: center;
+
+          @include min-width("s") {
+            font-size: 2.75rem !important;
+          }
+
+          @include min-width("m") {
+            font-size: 4rem !important;
+          }
+
+          @include min-width("l") {
+            font-size: 5rem !important;
+          }
+
+          @include min-width("xl") {
+            font-size: 7rem !important;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      min-height: 100vh;
+    }
+  }
+
 </style>

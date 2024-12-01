@@ -1,0 +1,62 @@
+---
+import {getCollection} from "astro:content";
+import type {INavigation} from "../types/navigation";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import GoBack from "../components/GoBack.astro";
+
+interface Props {
+	title: string;
+}
+
+const {title} = Astro.props;
+
+
+const pages = await getCollection("pages");
+
+const navigation: INavigation[] = pages.map(
+	(page: any): INavigation => ({
+		page: page,
+		title: page.data.title,
+		navigation: page.data.navigation,
+		slug: page.slug,
+	}),
+);
+
+const navigationHeader = navigation.filter((nav) =>
+	nav.navigation?.includes("Header")
+);
+
+const navigationFooter = navigation.filter((nav) =>
+	nav.navigation?.includes("Footer")
+);
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Astro description"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content={Astro.generator}/>
+    <link rel="icon" type="image/svg+xml" href="/favicon-mode-dark.svg"/>
+    <base href={import.meta.env.BASE_URL}/>
+    <title>{title}</title>
+</head>
+<body>
+<Header navigation={navigationHeader}/>
+<main>
+    <slot/>
+</main>
+<GoBack/>
+<Footer navigation={navigationFooter}/>
+</body>
+</html>
+
+<style lang="scss">
+  main {
+    width: 100%;
+    position: absolute;
+    right: 0;
+  }
+</style>

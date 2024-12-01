@@ -2,103 +2,96 @@
 @import "Colors";
 
 body {
-  font-size: 1rem;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 100;
-  letter-spacing: .6px;
-  line-height: 1.6;
+  font-family: 'Source Sans 3 Variable', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  padding-bottom: 1rem;
+}
 
+h1 {
+  font-family: "Montserrat Variable", sans-serif;
+  font-weight: 300;
+  padding-bottom: 1rem;
+  font-size: 1.75rem !important;
 
-  @include min-width('s') {
-    font-size: 1.15rem;
+  @include min-width("s") {
+    font-size: 2rem !important;
   }
 
-  @include min-width('l') {
-    font-size: 1.25rem;
+  @include min-width("m") {
+    font-size: 2.25rem !important;
   }
 
-  @include min-width('xl') {
-    font-size: 1.25rem;
+  @include min-width("l") {
+    font-size: 2.5rem !important;
   }
 
-  @include min-width('xxl') {
-    font-size: 1.30rem;
+  @include min-width("xl") {
+    font-size: 2.5rem !important;
   }
 }
 
-/*h1 {
-  font-family: 'Montserrat Variable', sans-serif;
-  font-weight: 200;
-
-  @include min-width('s') {
-    font-size: 2.75rem!important;
-  }
-
-  @include min-width('m') {
-    font-size: 2.75rem!important;
-  }
-
-  @include min-width('l') {
-    font-size: 3.25rem!important;
-  }
-
-  @include min-width('xl') {
-    font-size: 3.5rem!important;
-  }
-
-  @include min-width('xxl') {
-    font-size: 5rem!important;
-  }
-}*/
-
 h2 {
-  font-family: 'Montserrat Variable', sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat Variable", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem !important;
+
+  @include min-width("s") {
+    font-size: 1.5rem !important;
+  }
+
+  @include min-width("m") {
+    font-size: 1.7rem !important;
+  }
+
+  @include min-width("l") {
+    font-size: 2.25rem !important;
+  }
+
+  @include min-width("xl") {
+    font-size: 2.5rem !important;
+  }
 }
 
 h3 {
-  font-family: 'Montserrat Variable', sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat Variable", sans-serif;
+  font-weight: 200;
+
+  @include min-width("s") {
+    font-size: 1.25rem !important;
+  }
+
+  @include min-width("m") {
+    font-size: 1.25rem !important;
+  }
+
+  @include min-width("l") {
+    font-size: 1.75rem !important;
+  }
+
+  @include min-width("xl") {
+    font-size: 1.75rem !important;
+  }
 }
 
 h4 {
-  font-family: 'Source Code Pro Variable', monospace;
+  font-family: "Source Code Pro Variable", monospace;
   font-weight: normal;
-}
 
-h5 {
-  font-family: 'Source Code Pro Variable', monospace;
-  font-weight: normal;
-}
+  @include min-width("s") {
+    font-size: 1rem !important;
+  }
 
-p {
-  font-family: 'Source Sans Pro', sans-serif;
-}
+  @include min-width("m") {
+    font-size: 1.25rem !important;
+  }
 
-a {
-  color: $color-black;
-  text-decoration: none;
+  @include min-width("l") {
+    font-size: 1.75rem !important;
+  }
 
-  &:hover {
-    text-decoration: underline;
+  @include min-width("xl") {
+    font-size: 1.75rem !important;
   }
 }
-
-em {
-  font-style: italic;
-}
-
-strong {
-  font-weight: bold;
-
-  em {
-    font-style: bold;
-    font-style: italic;
-  }
-}
-
-code {
-  font-family: 'Fira Code Variable', monospace;
-  color: $color-accent-3;
-}
-
