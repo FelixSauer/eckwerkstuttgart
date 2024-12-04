@@ -19,15 +19,10 @@ if (page) {
 <Layout title="Eckwerk Stuttgart">
     <main>
         <section>
-            <div>
-                <article>
-                    <div>
-                        <h1>{page?.data.title}</h1>
-											{Content &&
-                              <Content/>}
-                    </div>
-                </article>
-            </div>
+            <article>
+							{Content &&
+                      <Content/>}
+            </article>
         </section>
     </main>
 </Layout>
