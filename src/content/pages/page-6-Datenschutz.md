@@ -1,5 +1,5 @@
 ---
-title: Datenschutzerklärung
+title: Datenschutz
 mainStage: false
 navigation: Footer
 ---
@@ -29,7 +29,7 @@ Stand: 15. Juni 2024
 
 ## Verantwortlicher
 
-Vorname, Name / Firma Jaga8788
+Vorname, Name / Firma
 Straße, Hausnr.  
 PLZ, Ort, Land
 

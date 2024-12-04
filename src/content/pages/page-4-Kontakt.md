@@ -1,5 +1,4 @@
 ---
-
 title: Kontakt
 mainStage: true
 navigation: Header, Footer

@@ -14,10 +14,11 @@ const year = date.getFullYear();
     <ul>
 			{
 				navigation.map((item) => {
+					console.log(item);
 					return (
                   <li>
                       <a
-                              href={"eckwerkstuttgart/" + item.title}
+                              href={"/" + item.title.toLowerCase()}
                               data-href={item.title}
                               aria-current="page"
                       >
