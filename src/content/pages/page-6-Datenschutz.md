@@ -138,12 +138,19 @@ geltenden Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem
 <br/>
 
 Eckwerkt Stuttgart
+
 Stierlenstr. 25
+
 70327 Stuttgart
+
 Deutschland
+
+<br/>
 
 Tel.: +49017644403432
 E-Mail: hallo@eckwerkstuttgart.de
+
+<br/>
 
 Website: eckwerkstuttgart.de
 
