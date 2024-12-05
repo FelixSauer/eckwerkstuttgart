@@ -17,164 +17,39 @@ if (page) {
 ---
 
 <Layout title="Eckwerk Stuttgart">
-    <main>
-        <section>
-            <article>
-							{Content &&
-                      <Content/>}
-            </article>
-        </section>
-    </main>
+    <section>
+        <article>
+					{Content &&
+                  <Content/>}
+        </article>
+    </section>
 </Layout>
 
 <style lang="scss">
   @import "./../styles/GlobalStyling";
 
   section {
-    min-height: calc(100vh + 50vh);
-    background-attachment: fixed;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    scroll-margin-top: 8vh;
-    background-color: $color-white;
-
-    @include min-width("s") {
-      background-position: 50%;
-    }
-
-    @include min-width("m") {
-      background-position: 50%;
-    }
-
-    @include min-width("l") {
-      scroll-margin-top: 24vh;
-    }
+    display: flex;
+    margin: 20vh 0;
 
     article {
       padding: 2vh 5vw 3vh 5vw;
-      background-color: $color-white;
 
       @include min-width("s") {
         padding: 2vh 5vw 3vh 5vw;
-        background-position: 0%;
       }
 
       @include min-width("m") {
         padding: 4vh 10vw 5vh 10vw;
-        background-position: 45%;
       }
 
       @include min-width("l") {
         padding: 4vh 15vw 5vh 15vw;
-        background-position: 45%;
       }
 
       @include min-width("xl") {
         padding: 4vh 15vw 5vh 15vw;
-        background-position: 45%;
       }
-
-      div.logo {
-        p {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 2rem;
-          padding: 3rem 0 1rem 0;
-
-          @include min-width("m") {
-            flex-direction: row;
-          }
-        }
-      }
-    }
-
-    &.subcontent {
-      min-height: 65vh;
-      height: auto;
-      background-color: $color-white;
-
-      article {
-        background-color: $color-white;
-      }
-    }
-
-    &.carousel {
-      width: 100vw;
-      padding: unset;
-
-    }
-
-    &.introimage {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-position: 50%;
-
-      @include min-width("s") {
-        background-position: 50%;
-      }
-
-      @include min-width("m") {
-        background-position: 45%;
-      }
-
-      @include min-width("l") {
-        background-position: 45%;
-      }
-
-      @include min-width("xl") {
-        background-position: 45%;
-      }
-
-      article {
-        background-color: unset;
-        padding: 1rem 1rem 40vh 1rem;
-
-        @include min-width("s") {
-          padding: 1rem 1rem 35vh 1rem;
-        }
-
-        h1 {
-          font-size: 2rem;
-          font-weight: 400;
-          color: $color-white;
-          text-align: center;
-
-          @include min-width("s") {
-            font-size: 2.75rem !important;
-          }
-
-          @include min-width("m") {
-            font-size: 4rem !important;
-          }
-
-          @include min-width("l") {
-            font-size: 5rem !important;
-          }
-
-          @include min-width("xl") {
-            font-size: 7rem !important;
-          }
-        }
-      }
-    }
-
-    &:last-child {
-      min-height: 100vh;
     }
   }
-
-
-  @keyframes "bannermove" {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
 </style>
