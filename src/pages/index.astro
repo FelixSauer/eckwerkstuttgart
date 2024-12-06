@@ -122,8 +122,7 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     }
 
     &.subcontent {
-      min-height: 65vh;
-      height: auto;
+      min-height: max-content;
       background-color: $color-white;
 
       article {
@@ -133,7 +132,24 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 
     &.carousel {
       width: 100vw;
-      padding: unset;
+      min-height: max-content;
+      padding: 2vh 0 3vh 0;
+
+      @include min-width("s") {
+        padding: 2vh 0 3vh 0;
+      }
+
+      @include min-width("m") {
+        padding: 4vh 0 5vh 0;
+      }
+
+      @include min-width("l") {
+        padding: 4vh 0 5vh 0;
+      }
+
+      @include min-width("xl") {
+        padding: 4vh 0 5vh 0;
+      }
     }
 
     &.introimage {
@@ -193,7 +209,12 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     }
 
     &:last-child {
-      min-height: 100vh;
+      min-height: max-content;
+      padding-bottom: 3vh;
+
+      @include min-width("m") {
+        padding-bottom: 5vh;
+      }
     }
   }
 </style>
