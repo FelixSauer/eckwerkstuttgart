@@ -19,18 +19,14 @@ const imagePaths = Object.keys(images);
 
 							return (
                       <li>
-                          <a
-                                  href={"#" + optimizedImage.src}
-                                  target="_blank"
-                                  class="group transition-all block"
-                          >
-                              <Image
-                                      src={image}
-                                      alt={"altText"}
-                                      width={400}
-                                      height={300}
-                              />
-                          </a>
+
+                          <Image
+                                  src={image}
+                                  alt={"altText"}
+                                  width={400}
+                                  height={300}
+                          />
+
                       </li>
 							);
 						})
@@ -69,10 +65,6 @@ const imagePaths = Object.keys(images);
                     object-fit: cover;
                     position: relative;
                     margin-right: 10px;
-
-                    &:hover {
-                        cursor: pointer;
-                    }
 
                     img {
                         width: 100%;
