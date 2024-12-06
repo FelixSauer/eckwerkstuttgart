@@ -88,16 +88,3 @@ const imagePaths = Object.keys(images);
         }
     }
 </style>
-
-<script>
-	// Add break class to stop the animation on hover on list item
-	const listItems = document.querySelectorAll('.carousel-inner ul li');
-	listItems.forEach((item) => {
-		item.addEventListener('mouseover', () => {
-			item.parentElement.classList.add('break');
-		});
-		item.addEventListener('mouseout', () => {
-			item.parentElement.classList.remove('break');
-		});
-	});
-</script>
