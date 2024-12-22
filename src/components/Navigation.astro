@@ -90,10 +90,18 @@ const {navigationPostion} = Astro.props;
         a {
           text-decoration: none;
           text-transform: uppercase;
-          font-family: Source Code Pro Variable,
-          sans-serif;
-          font-size: 1.1rem;
+          font-family: Source Code Pro Variable, sans-serif;
+          font-size: 1.25rem;
           cursor: pointer;
+
+          &:active {
+            color: $color-secondary;
+          }
+
+          &:hover {
+            color: $color-secondary;
+          }
+
         }
       }
     }

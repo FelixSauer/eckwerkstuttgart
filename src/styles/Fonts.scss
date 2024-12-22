@@ -13,22 +13,22 @@ h1 {
   font-family: "Montserrat Variable", sans-serif;
   font-weight: 300;
   padding-bottom: 1rem;
-  font-size: 1.75rem !important;
+  font-size: 2.25rem !important;
 
   @include min-width("s") {
-    font-size: 2rem !important;
-  }
-
-  @include min-width("m") {
     font-size: 2.25rem !important;
   }
 
-  @include min-width("l") {
+  @include min-width("m") {
     font-size: 2.5rem !important;
   }
 
+  @include min-width("l") {
+    font-size: 2.75rem !important;
+  }
+
   @include min-width("xl") {
-    font-size: 2.5rem !important;
+    font-size: 3rem !important;
   }
 }
 

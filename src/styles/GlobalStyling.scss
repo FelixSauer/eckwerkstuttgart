@@ -12,7 +12,6 @@ html, body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -116,7 +115,6 @@ pre {
   margin-top: 0;
   padding: 1rem;
   background-color: $color-gray-10;
-  overflow-x: auto;
 }
 
 a {
