@@ -3,14 +3,17 @@ import type {ImageMetadata} from "astro";
 import {Icon} from "astro-icon/components";
 import Gallery from "./Gallery.astro";
 
-const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/Albums/*/*");
+
+/*const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/Albums/!*!/!*");
 const albumNames = Array.from(
 	new Set(
 		Object.keys(images)
 			.map((imagePath) => imagePath.split('/')[4])
 			.filter((name) => name !== 'Intro' && name !== 'Parallax')
 	)
-);
+);*/
+
+const albumNames = ['Wohnhandwerk', 'Baumpflege', 'Terrassenbau'];
 ---
 
 <div class="modal" id="galleryModal">
