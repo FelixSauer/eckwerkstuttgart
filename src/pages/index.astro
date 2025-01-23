@@ -62,7 +62,6 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
   @import "./../styles/GlobalStyling";
 
   section {
-    min-height: calc(100vh + 30vh);
     background-attachment: fixed;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -218,3 +217,17 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
     }
   }
 </style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const sections = document.querySelectorAll('section.content');
+
+		sections.forEach(section => {
+			const article = section.querySelector('article');
+			if (article) {
+				const articleHeight = article.offsetHeight;
+				section.style.height = `calc(${articleHeight}px + 50vh)`;
+			}
+		});
+	});
+</script>
