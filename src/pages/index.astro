@@ -226,6 +226,7 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 			const article = section.querySelector('article');
 			if (article) {
 				const articleHeight = article.offsetHeight;
+				// @ts-ignore
 				section.style.height = `calc(${articleHeight}px + 50vh)`;
 			}
 		});
