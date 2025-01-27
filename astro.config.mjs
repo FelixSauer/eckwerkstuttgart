@@ -1,13 +1,15 @@
-import {defineConfig } from "astro/config";
+import { defineConfig } from "astro/config";
 import icon from "astro-icon";
+import robotsTxt from "astro-robots-txt";
 import tailwind from "@astrojs/tailwind";
-import {ViteImageOptimizer} from "vite-plugin-image-optimizer";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://eckwerkstuttgart.de/',
-  base: '/',
+  site: "https://eckwerkstuttgart.de/",
+  base: "/",
   integrations: [
+    robotsTxt(),
     icon({
       iconDir: "src/assets/icons",
     }),
@@ -15,7 +17,7 @@ export default defineConfig({
   ],
   compressHTML: false,
   vite: {
-    plugins: [ViteImageOptimizer(),],
+    plugins: [ViteImageOptimizer()],
     jpg: {
       quality: 70,
     },
