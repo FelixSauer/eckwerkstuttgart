@@ -222,9 +222,9 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 	document.addEventListener('DOMContentLoaded', () => {
 		const sections = document.querySelectorAll('section.content');
 
-		sections.forEach(section => {
+		sections.forEach((section, index) => {
 			const article = section.querySelector('article');
-			if (article) {
+			if (article && article.id !== 'Kontakt' && index !== sections.length - 1) {
 				const articleHeight = article.offsetHeight;
 				// @ts-ignore
 				section.style.height = `calc(${articleHeight}px + 50vh)`;

@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import GoBack from "../components/GoBack.astro";
 import GalleryModal from "../components/GalleryModal.astro";
+import {GoogleTagmanager} from "@digi4care/astro-google-tagmanager";
 
 interface Props {
 	title: string;
@@ -43,6 +44,8 @@ const navigationFooter = navigation.filter((nav) =>
     <link rel="icon" type="image/svg+xml" href="/favicon-mode-dark.svg"/>
     <base href={import.meta.env.BASE_URL}/>
     <title>{title}</title>
+    <GoogleTagmanager id="GTM-TMM9XNTK" domain="https://eckwerkstuttgart.de/"
+                      container="custom-container.js"/>
 </head>
 <body>
 <Header navigation={navigationHeader}/>
