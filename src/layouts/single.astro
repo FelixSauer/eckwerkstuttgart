@@ -4,7 +4,7 @@ import type {INavigation} from "../types/navigation";
 import GoBack from "../components/GoBack.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import {GoogleTagmanager} from "@digi4care/astro-google-tagmanager";
+import {GoogleTagmanager, SiteVerification} from "@digi4care/astro-google-tagmanager";
 
 interface Props {
 	title: string;
@@ -41,6 +41,7 @@ const navigationFooter = navigation.filter((nav) =>
     <meta name="generator" content={Astro.generator}/>
     <link rel="icon" type="image/svg+xml" href="/favicon-mode-dark.svg"/>
     <title>{title}</title>
+    <SiteVerification id="8lL0JpE_6JXew9d2GzHXJXZCammo2euC0iLFXp2Y"/>
     <GoogleTagmanager id="GTM-TMM9XNTK" domain="https://eckwerkstuttgart.de/"
                       container="custom-container.js"/>
 </head>
