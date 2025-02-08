@@ -1,70 +1,70 @@
 ---
-import type {INavigation} from '../types/navigation';
-import {Icon} from 'astro-icon/components';
+import type { INavigation } from "../types/navigation";
+import { Icon } from "astro-icon/components";
 
 interface Props {
-	navigation: INavigation[];
-	navigationPostion: string;
+  navigation: INavigation[];
+  navigationPostion: string;
 }
 
-const {navigation} = Astro.props;
-const {navigationPostion} = Astro.props;
+const { navigation } = Astro.props;
+const { navigationPostion } = Astro.props;
 ---
 
-<nav class='navbar'>
-    <div class='navbar-display'>
-        <ul>
-					{
-						navigation.map((item) => {
-							return (
-                      <li>
-                          <a
-                                  href={
-																		navigationPostion === 'header' ? '#' + item.title : item.title
-																	}
-                                  data-href={item.title}
-                                  aria-current='page'
-                          >
-														{item.title}
-                          </a>
-                      </li>
-							);
-						})
-					}
-        </ul>
-    </div>
-    <div class='navbar-mobile'>
-        <button>
-            <Icon name='line-md:close-to-menu-transition'/>
-        </button>
+<nav class="navbar  ">
+  <div class="navbar-display">
+    <ul>
+      {
+        navigation.map((item) => {
+          return (
+            <li>
+              <a
+                href={
+                  navigationPostion === "header" ? "#" + item.title : item.title
+                }
+                data-href={item.title}
+                aria-current="page"
+              >
+                {item.title}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+  <div class="navbar-mobile">
+    <button>
+      <Icon name="line-md:close-to-menu-transition" />
+    </button>
 
-        <div>
-            <ul>
-							{
-								navigation.map((item) => {
-									return (
-                          <li>
-                              <a
-                                      href={
-																				navigationPostion === 'header'
-																					? '#' + item.title
-																					: item.title
-																			}
-                                      data-href={item.title}
-                                      aria-current='page'
-                              >
-																{item.title}
-                              </a>
-                          </li>
-									);
-								})
-							}
-            </ul>
-        </div>
+    <div>
+      <ul>
+        {
+          navigation.map((item) => {
+            return (
+              <li>
+                <a
+                  href={
+                    navigationPostion === "header"
+                      ? "#" + item.title
+                      : item.title
+                  }
+                  data-href={item.title}
+                  aria-current="page"
+                >
+                  {item.title}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
     </div>
+  </div>
 </nav>
 
-<style lang='scss'>
+<style lang="scss">
   @import './../styles/GlobalStyling';
 
   nav {
@@ -227,80 +227,80 @@ const {navigationPostion} = Astro.props;
 </style>
 
 <script>
-	const navbarMobile = document.querySelector('.navbar-mobile');
+  const navbarMobile = document.querySelector(".navbar-mobile");
 
-	navbarMobile?.addEventListener('click', () => {
-		navbarMobile?.classList.toggle('active');
-	});
+  navbarMobile?.addEventListener("click", () => {
+    navbarMobile?.classList.toggle("active");
+  });
 
-	let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
-	document.addEventListener('DOMContentLoaded', () => {
-		initNavigation();
-		initIntersectionObserver();
-	});
+  let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+  document.addEventListener("DOMContentLoaded", () => {
+    initNavigation();
+    initIntersectionObserver();
+  });
 
-	function initNavigation(): void {
-		window.addEventListener('hashchange', updateActiveLink);
-		updateActiveLink();
-	}
+  function initNavigation(): void {
+    window.addEventListener("hashchange", updateActiveLink);
+    updateActiveLink();
+  }
 
-	function updateActiveLink(): void {
-		const navigationLinks =
-			document.querySelectorAll<HTMLAnchorElement>('a[data-href]');
-		const currentUrl = window.location.hash.substring(1);
+  function updateActiveLink(): void {
+    const navigationLinks =
+      document.querySelectorAll<HTMLAnchorElement>("a[data-href]");
+    const currentUrl = window.location.hash.substring(1);
 
-		navigationLinks.forEach((link) => {
-			const linkHref = link?.getAttribute('data-href')?.substring(1);
-			link.classList.toggle('active', linkHref === currentUrl);
-		});
-	}
+    navigationLinks.forEach((link) => {
+      const linkHref = link?.getAttribute("data-href")?.substring(1);
+      link.classList.toggle("active", linkHref === currentUrl);
+    });
+  }
 
-	function initIntersectionObserver(): void {
-		const observerOptions: IntersectionObserverInit = {
-			root: null,
-			rootMargin: '0px',
-			threshold: 0.5,
-		};
+  function initIntersectionObserver(): void {
+    const observerOptions: IntersectionObserverInit = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5
+    };
 
-		const observerCallback: IntersectionObserverCallback = (entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					const sectionId = entry.target.id;
-					handleScrollStop(sectionId);
-				}
-			});
-		};
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          handleScrollStop(sectionId);
+        }
+      });
+    };
 
-		const observer = new IntersectionObserver(
-			observerCallback,
-			observerOptions
-		);
-		document.querySelectorAll<HTMLElement>('section').forEach((section) => {
-			observer.observe(section);
-		});
-	}
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+    document.querySelectorAll<HTMLElement>("section").forEach((section) => {
+      observer.observe(section);
+    });
+  }
 
-	function handleScrollStop(sectionId: string): void {
-		const activeLink = document.querySelector<HTMLAnchorElement>(
-			`a[data-href='#${sectionId}']`
-		);
+  function handleScrollStop(sectionId: string): void {
+    const activeLink = document.querySelector<HTMLAnchorElement>(
+      `a[data-href='#${sectionId}']`
+    );
 
-		if (activeLink) {
-			if (scrollTimeout !== null) {
-				clearTimeout(scrollTimeout);
-			}
+    if (activeLink) {
+      if (scrollTimeout !== null) {
+        clearTimeout(scrollTimeout);
+      }
 
-			scrollTimeout = setTimeout(() => {
-				document
-					.querySelectorAll<HTMLAnchorElement>('a[data-href]')
-					.forEach((link) => {
-						link.classList.remove('active', 'inactive');
-						link.classList.add('inactive');
-					});
+      scrollTimeout = setTimeout(() => {
+        document
+          .querySelectorAll<HTMLAnchorElement>("a[data-href]")
+          .forEach((link) => {
+            link.classList.remove("active", "inactive");
+            link.classList.add("inactive");
+          });
 
-				activeLink.classList.remove('inactive');
-				activeLink.classList.add('active');
-			}, 200);
-		}
-	}
+        activeLink.classList.remove("inactive");
+        activeLink.classList.add("active");
+      }, 200);
+    }
+  }
 </script>

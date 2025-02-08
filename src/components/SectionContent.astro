@@ -1,0 +1,19 @@
+---
+interface Props {
+  id: string;
+  style: string;
+}
+
+/**
+ * @param {Props} Astro.props
+ */
+const { id, style } = Astro.props;
+---
+
+<section class="content"
+         id={id}
+         style={style}>
+  <article class="text-l">
+    <slot />
+  </article>
+</section>

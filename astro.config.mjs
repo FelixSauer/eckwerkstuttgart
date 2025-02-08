@@ -15,7 +15,12 @@ export default defineConfig({
   ],
   compressHTML: false,
   vite: {
-    plugins: [ViteImageOptimizer(),],
+    resolve: {
+      alias: {
+        "@": "/src",
+      },
+    },
+    plugins: [ViteImageOptimizer()],
     jpg: {
       quality: 70,
     },
