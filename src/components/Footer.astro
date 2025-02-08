@@ -1,41 +1,41 @@
 ---
-import type {INavigation} from "../types/navigation";
+import type { INavigation } from "@/types/navigation";
 
 interface Props {
-	navigation: INavigation[];
+  navigation: INavigation[];
 }
 
-const {navigation} = Astro.props;
+const { navigation } = Astro.props;
 const date = new Date();
 const year = date.getFullYear();
 ---
 
 <footer class="h-17">
-    <ul>
-			{
-				navigation.map((item) => {
-					return (
-                  <li>
-                      <a
-                              href={"eckwerkstuttgart/" + item.title}
-                              data-href={item.title}
-                              aria-current="page"
-                      >
-												{item.title}
-                      </a>
-                  </li>
-					);
-				})
-			}
-    </ul>
-    <div>
-        <p>Eckwerk Stuttgart</p>
-        <p>Stierlenstraße 25</p>
-        <p>70327 Stuttgart</p>
-        <p>Mail: <a href="mailto:hallo@eckwerkstuttgart.de">hallo@eckwerkstuttgart.de</a></p>
-        <br/>
-        <p>© {year} Eckwerk Stuttgart</p>
-    </div>
+  <ul>
+    {
+      navigation.map((item) => {
+        return (
+          <li>
+            <a
+              href={"eckwerkstuttgart/" + item.title}
+              data-href={item.title}
+              aria-current="page"
+            >
+              {item.title}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+  <div>
+    <p>Eckwerk Stuttgart</p>
+    <p>Stierlenstraße 25</p>
+    <p>70327 Stuttgart</p>
+    <p>Mail: <a href="mailto:hallo@eckwerkstuttgart.de">hallo@eckwerkstuttgart.de</a></p>
+    <br />
+    <p>© {year} Eckwerk Stuttgart</p>
+  </div>
 </footer>
 
 

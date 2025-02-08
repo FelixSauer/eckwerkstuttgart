@@ -1,19 +1,19 @@
 ---
 import type { ImageMetadata } from "astro";
 import { getCollection } from "astro:content";
-import Layout from "../layouts/multi.astro";
+import Layout from "@/layouts/multi.astro";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/fira-code";
 import "@fontsource-variable/source-code-pro";
 import "@fontsource-variable/source-sans-3";
 import "@fontsource/source-sans-pro";
 import "@fontsource/roboto";
-import "./../styles/GlobalStyling.scss";
-import "./../styles/global.css";
+import "@/styles/GlobalStyling.scss";
+import "@/styles/global.css";
 
-import Carousel from "../components/Carousel.astro";
-import SectionIntro from "../components/SectionIntro.astro";
-import SectionContent from "../components/SectionContent.astro";
+
+import SectionIntro from "@/components/SectionIntro.astro";
+import SectionContent from "@/components/SectionContent.astro";
 import Reviews from "@/components/Reviews.astro";
 
 const pages = await getCollection("pages");
@@ -37,16 +37,17 @@ const IntroImage = await IntroImagesSrc[IntroImages[0]]();
 
     return originPage.data.mainStage === true ? (
       <>
-        <SectionContent id={originPage.data.title} style={`background-image: url('${image.default.src}'); @media (max-width: 768px) { background-image: url('/path/to/mobile-image.jpg'); }`}>
+        <SectionContent id={originPage.data.title}
+                        style={`background-image: url('${image.default.src}'); @media (max-width: 768px) { background-image: url('/path/to/mobile-image.jpg'); }`}>
           <Content />
         </SectionContent>
 
         {index === 3 &&
           <section class="max-content bg-white">
-              <article>
-                <Reviews />
-              </article>
-            </section>
+            <article>
+              <Reviews />
+            </article>
+          </section>
 
 
         }
