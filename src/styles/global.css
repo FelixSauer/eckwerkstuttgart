@@ -26,3 +26,27 @@ button {
     ease-in-out
     bg-transparent
 }
+/* Styling for modern scrollbar in main element */
+main::-webkit-scrollbar {
+    width: 12px;
+    background: transparent;
+}
+
+main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* For Firefox */
+main {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
