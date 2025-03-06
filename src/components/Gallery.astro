@@ -16,7 +16,7 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
 ---
 
 <div id="gallery"
-     class="mx-auto container my-8 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5">
+     class="mx-auto container sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5">
 	{
 		imagePaths.map(async (imagePath) => {
 			let image = images[imagePath]();
@@ -52,58 +52,26 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
 	import PhotoSwipeLightbox from "photoswipe/lightbox";
 	import "photoswipe/style.css";
 
+	const leftArrowSVGString = '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="16" stroke-dashoffset="16" d="M19 12h-13.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M5 12l5 5M5 12l5 -5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="10;0"/></path></g></svg>';
+	const rightArrowSVGString = '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="16" stroke-dashoffset="16" d="M5 12h13.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M19 12l-5 5M19 12l-5 -5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="10;0"/></path></g></svg>';
+	const closeSVGString = '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-dasharray="12" stroke-dashoffset="12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12l7 7M12 12l-7 -7M12 12l-7 7M12 12l7 -7"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="12;0"/></path></svg>';
+
 	const lightbox = new PhotoSwipeLightbox({
+		arrowPrevSVG: leftArrowSVGString,
+		arrowNextSVG: rightArrowSVGString,
+		closeSVG: closeSVGString,
 		gallery: "#gallery",
 		children: "a",
 		zoom: false,
-		arrowPrev: false,
-		arrowNext: false,
 		wheelToZoom: false,
 		showHideOpacity: false,
 		counter: false,
-		imageClickAction: "next",
 		pswpModule: () => import("photoswipe")
 	});
 
 	lightbox.init();
-	document.addEventListener(
-		'astro:page-load',
-		() => {
-			if (lightbox) lightbox.init()
-		},
-		{once: false},
-	)
+
+	document.addEventListener('astro:page-load', () => {
+		lightbox.init();
+	}, {once: true});
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,12 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "importOrder": [
-    "^@/(.*)$"
-  ],
+  "importOrder": ["^@/(.*)$"],
   "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "importOrderSortSpecifiers": true,
+  "pluginSearchDirs": false,
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "printWidth": 100,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "useTabs": true
 }

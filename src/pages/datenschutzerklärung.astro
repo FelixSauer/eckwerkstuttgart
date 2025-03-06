@@ -1,32 +1,27 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "@/layouts/multi.astro";
-import "@fontsource-variable/montserrat";
-import "@fontsource-variable/fira-code";
-import "@fontsource-variable/source-code-pro";
-import "@fontsource/source-sans-pro";
-import "@fontsource/roboto";
-import "@/styles/GlobalStyling.scss";
+import { getCollection } from 'astro:content'
+import Layout from '@/layouts/multi.astro'
+import '@fontsource-variable/montserrat'
+import '@fontsource-variable/fira-code'
+import '@fontsource-variable/source-code-pro'
+import '@fontsource/source-sans-pro'
+import '@fontsource/roboto'
 
-const pages = await getCollection("pages");
-const page = pages[0];
-const { Content } = await page.render();
+const pages = await getCollection('pages')
+const page = pages[0]
+const { Content } = await page.render()
 ---
 
 <Layout title="Eckwerk Stuttgart">
-  <main>
-    <section id={page.data.title}>
-      <div>
-        <article>
-          <div>
-            <Content />
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
+	<main>
+		<section id={page.data.title}>
+			<div>
+				<article>
+					<div>
+						<Content />
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
 </Layout>
-
-<style lang="scss" is:global>
-  @import "./../styles/GlobalStyling";
-</style>

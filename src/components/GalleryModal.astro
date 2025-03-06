@@ -1,0 +1,158 @@
+---
+import { Icon } from 'astro-icon/components'
+import Gallery from './Gallery.astro'
+
+const albumNames = ['Wohnhandwerk', 'Baumpflege', 'Terrassenbau']
+---
+
+<div class="modal" id="galleryModal">
+	<div class="gallery">
+		<div class="gallery__menu">
+			<ul>
+				{
+					albumNames.map((albumName) => (
+						<li>
+							<a>{albumName}</a>
+						</li>
+					))
+				}
+			</ul>
+			<button>
+				<Icon name="line-md:close" id="galleryModalClose" />
+			</button>
+		</div>
+
+		<div class="gallery__content">
+			{
+				albumNames.map((albumName) => (
+					<div class="gallery">
+						<Gallery imageCollection={albumName} />
+					</div>
+				))
+			}
+		</div>
+	</div>
+</div>
+
+<style lang="scss">
+	.modal {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		z-index: 1000;
+		display: none;
+		background-color: #fff;
+		padding: 1rem;
+
+		.gallery {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			gap: 1rem;
+
+			&__menu {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				justify-content: space-between;
+				background-color: #fff;
+				padding: 1rem;
+
+				ul {
+					gap: 1rem;
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+
+					li {
+						padding: 0;
+
+						a {
+							opacity: 0.5;
+							text-decoration: none;
+							text-transform: uppercase;
+							font-family:
+								Source Code Pro Variable,
+								sans-serif;
+							cursor: pointer;
+						}
+
+						&:hover {
+							color: yellow;
+						}
+					}
+				}
+
+				button {
+					background: none;
+					border: none;
+					cursor: pointer;
+					padding: 0;
+					margin: 0;
+
+					&:hover {
+						color: yellow;
+					}
+				}
+			}
+
+			&__content {
+				height: 100%;
+				overflow-y: auto;
+			}
+		}
+	}
+
+	.active {
+		display: block;
+	}
+
+	.active-link {
+		a {
+			color: yellow;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const modal = document.getElementById('galleryModal')
+		const close = document.querySelector('#galleryModalClose')
+		const galleryItems = document.querySelectorAll('.gallery__menu ul li')
+		const galleryContents = document.querySelectorAll('.gallery__content .gallery')
+
+		if (close) {
+			close.addEventListener('click', () => {
+				if (modal) {
+					modal.classList.remove('active')
+				}
+			})
+		}
+
+		if (galleryItems.length > 0) {
+			galleryItems[0].classList.add('active-link')
+			// @ts-ignore
+			galleryContents[0].style.display = 'block'
+		}
+
+		galleryItems.forEach((item, index) => {
+			item.addEventListener('click', () => {
+				galleryItems.forEach((link) => link.classList.remove('active-link'))
+				// @ts-ignore
+				galleryContents.forEach((content) => (content.style.display = 'none'))
+				item.classList.add('active-link')
+				// @ts-ignore
+				galleryContents[index].style.display = 'block'
+				document.body.classList.add('no-scroll')
+				modal?.classList.add('active')
+			})
+		})
+
+		document.addEventListener('keydown', (event) => {
+			if (event.key === 'Escape' && modal?.classList.contains('active')) {
+				document.body.classList.remove('no-scroll')
+				modal?.classList.remove('active')
+			}
+		})
+	})
+</script>

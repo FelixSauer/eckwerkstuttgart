@@ -1,94 +1,39 @@
 ---
-import type { INavigation } from "@/types/navigation";
+import type { INavigation } from '@/types/navigation'
 
 interface Props {
-  navigation: INavigation[];
+	navigation: INavigation[]
 }
 
-const { navigation } = Astro.props;
-const date = new Date();
-const year = date.getFullYear();
+const { navigation } = Astro.props
+const date = new Date()
+const year = date.getFullYear()
 ---
 
-<footer class="h-17">
-  <ul>
-    {
-      navigation.map((item) => {
-        return (
-          <li>
-            <a
-              href={"eckwerkstuttgart/" + item.title}
-              data-href={item.title}
-              aria-current="page"
-            >
-              {item.title}
-            </a>
-          </li>
-        );
-      })
-    }
-  </ul>
-  <div>
-    <p>Eckwerk Stuttgart</p>
-    <p>Stierlenstraße 25</p>
-    <p>70327 Stuttgart</p>
-    <p>Mail: <a href="mailto:hallo@eckwerkstuttgart.de">hallo@eckwerkstuttgart.de</a></p>
-    <br />
-    <p>© {year} Eckwerk Stuttgart</p>
-  </div>
+<footer class="fixed bottom-0 w-full bg-primary p-4 text-xs text-white">
+	<ul class="m-0 flex list-none gap-4 p-0 lg:justify-center lg:pb-0 lg:text-center">
+		{
+			navigation.map((item) => {
+				return (
+					<li class="pl-0">
+						<a href={'eckwerkstuttgart/' + item.title} data-href={item.title} aria-current="page">
+							{item.title}
+						</a>
+					</li>
+				)
+			})
+		}
+	</ul>
+	<div class="lg:flex lg:justify-center lg:gap-4 lg:text-center">
+		<p>Eckwerk Stuttgart</p>
+		<p>Stierlenstraße 25</p>
+		<p>70327 Stuttgart</p>
+		<p>
+			Mail: <a class="text-white" href="mailto:hallo@eckwerkstuttgart.de"
+				>hallo@eckwerkstuttgart.de</a
+			>
+		</p>
+		<br />
+		<p>© {year} Eckwerk Stuttgart</p>
+	</div>
 </footer>
-
-
-<style lang="scss">
-  @import "./../styles/GlobalStyling";
-
-  footer {
-    position: fixed;
-    font-size: .65rem;
-    bottom: 0;
-    width: 100%;
-    background-color: $color-primary;
-    color: $color-white;
-    padding: 1rem;
-
-    @include min-width("m") {
-      font-size: .85rem;
-    }
-
-    ul {
-      display: flex;
-      gap: $spacing-m;
-      list-style: none;
-      margin: unset;
-      padding-bottom: 1rem;
-
-      @include min-width("m") {
-        padding-bottom: unset;
-        justify-content: center;
-        align-items: center;
-      }
-
-      li {
-        padding-left: 0;
-      }
-    }
-
-    div {
-      @include min-width("m") {
-        display: flex;
-        gap: $spacing-m;
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      p {
-        margin: unset;
-      }
-    }
-
-    a {
-      color: $color-white;
-
-    }
-  }
-</style>
