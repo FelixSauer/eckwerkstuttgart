@@ -9,7 +9,7 @@ interface Props {
 /**
  * @param {Props} Astro.props
  */
-const { id, onlyPass = false, withoutImages = false, images, classes } = Astro.props
+const { id, onlyPass = false, withoutImages = false, images } = Astro.props
 
 const imageDesktop = images ? images[0] : ''
 const imageMobile = images ? images[1] : ''

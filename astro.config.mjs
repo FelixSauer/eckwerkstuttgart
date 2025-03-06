@@ -22,10 +22,10 @@ export default defineConfig({
 		},
 		plugins: [ViteImageOptimizer()],
 		jpg: {
-			quality: 80
+			quality: 70
 		},
 		server: {
-			allowedHosts: ['86a3-84-118-214-213.ngrok-free.app']
+			allowedHosts: ['2481-84-118-214-213.ngrok-free.app']
 		}
 	},
 	build: {

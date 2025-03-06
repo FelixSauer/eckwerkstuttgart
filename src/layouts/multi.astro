@@ -40,7 +40,9 @@ const navigationFooter = navigation.filter((nav) => nav.navigation?.includes('Fo
 	</head>
 	<body class="h-full overflow-hidden">
 		<Header navigation={navigationHeader} />
-		<main class="relative mt-24 h-screen w-screen overflow-y-auto overflow-x-hidden scroll-smooth">
+		<main
+			class="md: relative mt-24 h-screen w-screen overflow-y-auto overflow-x-hidden scroll-smooth pb-36 md:pb-64 lg:pb-0"
+		>
 			<slot />
 		</main>
 		<GoBack />
