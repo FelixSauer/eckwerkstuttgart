@@ -28,12 +28,11 @@ button {
 }
 /* Styling for modern scrollbar in main element */
 main::-webkit-scrollbar {
-    width: 12px;
-    background: transparent;
+    width: 122px;
 }
 
 main::-webkit-scrollbar-track {
-    background: transparent;
+    background: transparent !important;
 }
 
 main::-webkit-scrollbar-thumb {
@@ -48,5 +47,5 @@ main::-webkit-scrollbar-thumb:hover {
 /* For Firefox */
 main {
     scrollbar-width: thin;
-    scrollbar-color: #888 transparent;
+    scrollbar-color: #888 transparent !important;
 }
