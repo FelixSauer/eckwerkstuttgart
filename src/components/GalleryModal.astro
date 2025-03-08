@@ -37,10 +37,7 @@ const albumNames = ['Wohnhandwerk', 'Baumpflege', 'Terrassenbau']
 		<div class="h-full w-full overflow-x-hidden overflow-y-scroll">
 			{
 				albumNames.map((albumName, index) => (
-					<div
-						class="mb-1 hidden h-full w-full border-2 border-secondary"
-						id={`galleryContent-${index}`}
-					>
+					<div class="mb-1 hidden h-full w-full" id={`galleryContent-${index}`}>
 						<Gallery imageCollection={albumName} />
 					</div>
 				))

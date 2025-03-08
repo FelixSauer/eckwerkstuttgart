@@ -55,19 +55,12 @@ const imagePaths = shuffleArray(Object.keys(images))
 </style>
 
 <script>
-	/**
-	 * This script is responsible for opening the modal when an image is clicked
-	 */
 	document.addEventListener('DOMContentLoaded', () => {
 		const images = document.querySelectorAll('#carousel-inner img')
 		const modal = document.getElementById('galleryModal')
 
-		console.log(modal) // TODO: Remove me later
-
 		images.forEach((image) => {
 			image.addEventListener('click', () => {
-				console.log('Hallo Click') // TODO: Remove me later
-
 				modal?.classList.toggle('hidden')
 			})
 		})
