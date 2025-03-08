@@ -28,7 +28,7 @@ const imagePaths = shuffleArray(Object.keys(images))
 									alt={'altText'}
 									width={400}
 									height={300}
-									class="absolute left-0 top-0 h-full w-full object-cover hover:border-4 hover:border-yellow-500"
+									class="hover:bore absolute left-0 top-0 h-full w-full object-cover hover:border-4 hover:border-secondary"
 								/>
 							</a>
 						</li>
@@ -55,14 +55,20 @@ const imagePaths = shuffleArray(Object.keys(images))
 </style>
 
 <script>
+	/**
+	 * This script is responsible for opening the modal when an image is clicked
+	 */
 	document.addEventListener('DOMContentLoaded', () => {
 		const images = document.querySelectorAll('#carousel-inner img')
 		const modal = document.getElementById('galleryModal')
 
+		console.log(modal) // TODO: Remove me later
+
 		images.forEach((image) => {
 			image.addEventListener('click', () => {
-				console.log('Item Click') // TODO: Remove me later
-				modal?.classList.add('active')
+				console.log('Hallo Click') // TODO: Remove me later
+
+				modal?.classList.toggle('hidden')
 			})
 		})
 	})

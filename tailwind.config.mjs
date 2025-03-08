@@ -45,6 +45,10 @@ export default {
 					9: '#404040',
 					10: '#303030'
 				}
+			},
+			writingMode: {
+				horizontal: 'horizontal-tb',
+				vertical: 'vertical-rl'
 			}
 		}
 	},

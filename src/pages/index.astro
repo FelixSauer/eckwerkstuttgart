@@ -31,45 +31,47 @@ const mainStagePages = pages.filter((page) => page.data.mainStage === true)
 ---
 
 <Layout title="Eckwerk Stuttgart">
-	<SectionContent onlyPass>
-		<Intro title={pages[0].data.slogan} />
-	</SectionContent>
+	<div class="mb-40">
+		<SectionContent onlyPass>
+			<Intro title={pages[0].data.slogan} />
+		</SectionContent>
 
-	{
-		mainStagePages.map(async (originPage, index) => {
-			//@eslint-disable-next-line
-			const { Content } = await originPage.render()
+		{
+			mainStagePages.map(async (originPage, index) => {
+				//@eslint-disable-next-line
+				const { Content } = await originPage.render()
 
-			const desktopImagePath = ParallaxImagesDesktop[index % ParallaxImagesDesktop.length]
-			const mobilImagePath = ParallaxImagesMobil[index % ParallaxImagesMobil.length]
+				const desktopImagePath = ParallaxImagesDesktop[index % ParallaxImagesDesktop.length]
+				const mobilImagePath = ParallaxImagesMobil[index % ParallaxImagesMobil.length]
 
-			const desktopImageModule = await ParallaxImagesDesktopSrc[desktopImagePath]()
-			const mobilImageModule = await ParallaxImagesMobilSrc[mobilImagePath]()
+				const desktopImageModule = await ParallaxImagesDesktopSrc[desktopImagePath]()
+				const mobilImageModule = await ParallaxImagesMobilSrc[mobilImagePath]()
 
-			const images = [desktopImageModule.default.src, mobilImageModule.default.src]
+				const images = [desktopImageModule.default.src, mobilImageModule.default.src]
 
-			return originPage.data.mainStage === true ? (
-				<>
-					<SectionContent
-						transition:animate="slide"
-						id={originPage.data.title}
-						images={index !== mainStagePages.length - 1 ? images : null}
-					>
-						<Content />
-					</SectionContent>
+				return originPage.data.mainStage === true ? (
+					<>
+						<SectionContent
+							transition:animate="slide"
+							id={originPage.data.title}
+							images={index !== mainStagePages.length - 1 ? images : null}
+						>
+							<Content />
+						</SectionContent>
 
-					{index === 3 && (
-						<>
-							<SectionContent id="reviews" withoutImages>
-								<Reviews />
-							</SectionContent>
-							<SectionContent id="carousel" onlyPass>
-								<Carousel />
-							</SectionContent>
-						</>
-					)}
-				</>
-			) : null
-		})
-	}
+						{index === 3 && (
+							<>
+								<SectionContent id="reviews" withoutImages>
+									<Reviews />
+								</SectionContent>
+								<SectionContent id="carousel" onlyPass>
+									<Carousel />
+								</SectionContent>
+							</>
+						)}
+					</>
+				) : null
+			})
+		}
+	</div>
 </Layout>

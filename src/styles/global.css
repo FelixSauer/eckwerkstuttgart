@@ -49,3 +49,11 @@ main {
     scrollbar-width: thin;
     scrollbar-color: #888 transparent !important;
 }
+
+.writingMode-horizontal {
+    writing-mode: horizontal-tb;
+}
+
+.writingMode-vertical {
+    writing-mode: vertical-lr;
+}

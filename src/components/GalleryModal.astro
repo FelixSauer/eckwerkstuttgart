@@ -5,27 +5,42 @@ import Gallery from './Gallery.astro'
 const albumNames = ['Wohnhandwerk', 'Baumpflege', 'Terrassenbau']
 ---
 
-<div class="modal" id="galleryModal">
-	<div class="gallery">
-		<div class="gallery__menu">
-			<ul>
+<div
+	class="absolute left-0 top-0 z-[1000] hidden h-screen w-screen bg-white p-2 xl:p-4"
+	id="galleryModal"
+>
+	<div class="flex h-full flex-row gap-4">
+		<div class="flex flex-col items-center justify-between bg-primary" id="galleryMenu">
+			<ul class="flex flex-col">
 				{
-					albumNames.map((albumName) => (
-						<li>
-							<a>{albumName}</a>
+					albumNames.map((albumName, index) => (
+						<li class="flex flex-row" id={`galleryItem-${index}`}>
+							<a
+								class="font-source-code-pro text-1xl writingMode-vertical cursor-pointer px-2 py-4 pb-0 uppercase no-underline opacity-75 hover:text-yellow-500"
+								id={`link-${albumName}`}
+							>
+								{albumName}
+							</a>
 						</li>
 					))
 				}
 			</ul>
-			<button>
-				<Icon name="line-md:close" id="galleryModalClose" />
+
+			<button
+				class="text-1xl cursor-pointer border-none bg-none p-2 text-white hover:text-yellow-500"
+				id="galleryModalClose"
+			>
+				<Icon name="line-md:close" />
 			</button>
 		</div>
 
-		<div class="gallery__content">
+		<div class="h-full w-full overflow-x-hidden overflow-y-scroll">
 			{
-				albumNames.map((albumName) => (
-					<div class="gallery">
+				albumNames.map((albumName, index) => (
+					<div
+						class="mb-1 hidden h-full w-full border-2 border-secondary"
+						id={`galleryContent-${index}`}
+					>
 						<Gallery imageCollection={albumName} />
 					</div>
 				))
@@ -34,124 +49,43 @@ const albumNames = ['Wohnhandwerk', 'Baumpflege', 'Terrassenbau']
 	</div>
 </div>
 
-<style lang="scss">
-	.modal {
-		position: fixed;
-		height: 100%;
-		width: 100%;
-		z-index: 1000;
-		display: none;
-		background-color: #fff;
-		padding: 1rem;
-
-		.gallery {
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			gap: 1rem;
-
-			&__menu {
-				display: flex;
-				flex-direction: row;
-				align-items: flex-start;
-				justify-content: space-between;
-				background-color: #fff;
-				padding: 1rem;
-
-				ul {
-					gap: 1rem;
-					list-style-type: none;
-					padding: 0;
-					margin: 0;
-
-					li {
-						padding: 0;
-
-						a {
-							opacity: 0.5;
-							text-decoration: none;
-							text-transform: uppercase;
-							font-family:
-								Source Code Pro Variable,
-								sans-serif;
-							cursor: pointer;
-						}
-
-						&:hover {
-							color: yellow;
-						}
-					}
-				}
-
-				button {
-					background: none;
-					border: none;
-					cursor: pointer;
-					padding: 0;
-					margin: 0;
-
-					&:hover {
-						color: yellow;
-					}
-				}
-			}
-
-			&__content {
-				height: 100%;
-				overflow-y: auto;
-			}
-		}
-	}
-
-	.active {
-		display: block;
-	}
-
-	.active-link {
-		a {
-			color: yellow;
-		}
-	}
-</style>
-
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
 		const modal = document.getElementById('galleryModal')
-		const close = document.querySelector('#galleryModalClose')
-		const galleryItems = document.querySelectorAll('.gallery__menu ul li')
-		const galleryContents = document.querySelectorAll('.gallery__content .gallery')
+		const close = document.getElementById('galleryModalClose')
+		const galleryItems = document.querySelectorAll('#galleryMenu ul li a')
+		const galleryContents = document.querySelectorAll('[id^="galleryContent-"]')
 
 		if (close) {
 			close.addEventListener('click', () => {
-				if (modal) {
-					modal.classList.remove('active')
-				}
+				modal?.classList.toggle('hidden')
+				document.body.classList.remove('overflow-hidden')
 			})
 		}
 
 		if (galleryItems.length > 0) {
-			galleryItems[0].classList.add('active-link')
-			// @ts-ignore
-			galleryContents[0].style.display = 'block'
+			galleryItems[0].classList.add('text-secondary')
+			galleryContents[0].classList.remove('hidden')
 		}
 
 		galleryItems.forEach((item, index) => {
-			item.addEventListener('click', () => {
-				galleryItems.forEach((link) => link.classList.remove('active-link'))
-				// @ts-ignore
-				galleryContents.forEach((content) => (content.style.display = 'none'))
-				item.classList.add('active-link')
-				// @ts-ignore
-				galleryContents[index].style.display = 'block'
-				document.body.classList.add('no-scroll')
-				modal?.classList.add('active')
+			item.addEventListener('click', (event) => {
+				event.preventDefault()
+
+				galleryItems.forEach((link) => link.classList.remove('text-secondary'))
+				galleryContents.forEach((content) => content.classList.add('hidden'))
+
+				item.classList.add('text-secondary')
+				galleryContents[index].classList.remove('hidden')
+				document.body.classList.add('overflow-hidden')
+				modal?.classList.add('block')
 			})
 		})
 
 		document.addEventListener('keydown', (event) => {
-			if (event.key === 'Escape' && modal?.classList.contains('active')) {
-				document.body.classList.remove('no-scroll')
-				modal?.classList.remove('active')
+			if (event.key === 'Escape' && modal?.classList.contains('block')) {
+				document.body.classList.remove('overflow-hidden')
+				modal?.classList.remove('block')
 			}
 		})
 	})
