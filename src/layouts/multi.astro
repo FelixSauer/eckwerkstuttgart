@@ -38,14 +38,13 @@ const navigationFooter = navigation.filter((nav) => nav.navigation?.includes('Fo
 		<base href={import.meta.env.BASE_URL} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="h-screen w-screen flex flex-col">
 		<Header navigation={navigationHeader} />
-		<main class="absolute h-full w-full overflow-y-scroll overflow-x-hidden scroll-smooth">
+		<main class="flex-1 overflow-y-auto scroll-smooth">
 			<slot />
 		</main>
+    <GoBack />
 		<Footer navigation={navigationFooter} />
-		<GalleryModal />
+    <GalleryModal />
 	</body>
 </html>
-
-<style></style>
