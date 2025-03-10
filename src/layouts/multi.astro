@@ -28,7 +28,7 @@ const navigationFooter = navigation.filter((nav) => nav.navigation?.includes('Fo
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden h-full">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -38,7 +38,7 @@ const navigationFooter = navigation.filter((nav) => nav.navigation?.includes('Fo
 		<base href={import.meta.env.BASE_URL} />
 		<title>{title}</title>
 	</head>
-	<body class="h-screen w-screen flex flex-col">
+	<body class="flex flex-col overflow-x-hidden h-full">
 		<Header navigation={navigationHeader} />
 		<main class="flex-1 overflow-y-auto scroll-smooth">
 			<slot />

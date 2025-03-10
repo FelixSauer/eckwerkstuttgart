@@ -13,8 +13,8 @@ export default {
 			extend: {
 				keyframes: {
 					slideIn: {
-						'0%': { transform: 'translateX(100vw)' },
-						'100%': { transform: 'translateX(0vw)' }
+						'0%': { transform: 'translateX(100%)' },
+						'100%': { transform: 'translateX(0%)' }
 					}
 				},
 				animation: {

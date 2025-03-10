@@ -14,12 +14,6 @@
 
 section > article > div.logo>p {@apply py-4 gap-4 flex flex-col md:flex-row}
 
-html, body {
-    @apply
-    overflow-hidden
-    h-full
-}
-
 main {
     @apply
     bg-white
