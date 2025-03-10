@@ -10,7 +10,7 @@ interface Props {
 const { navigation, navigationPostion } = Astro.props as Props
 ---
 
-<nav class="items-center">
+<nav class="flex items-center">
 	<div class="hidden lg:block" id="navbarDesktop">
 		<ul class="m-0 flex list-none gap-6 p-0 font-normal first:m-0 last:m-0">
 			{
@@ -32,7 +32,7 @@ const { navigation, navigationPostion } = Astro.props as Props
 	<div class="lg:hidden">
 		<button
 			id="navbarToggle"
-			class="absolute right-5 top-5 z-40 cursor-pointer border-0 bg-transparent p-0 text-5xl text-white hover:text-secondary"
+			class="relative z-40 pt-1 cursor-pointer border-0 bg-transparent text-3xl sm:text-5xl text-white hover:text-secondary flex align-middle"
 		>
 			<Icon name="line-md:close-to-menu-transition" />
 		</button>
