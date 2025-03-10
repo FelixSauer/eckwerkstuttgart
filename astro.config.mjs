@@ -20,10 +20,14 @@ export default defineConfig({
 				'@': '/src'
 			}
 		},
-		plugins: [ViteImageOptimizer()],
-		jpg: {
-			quality: 70
-		},
+		plugins: [
+			ViteImageOptimizer({
+				webp: {
+					quality: 80,
+					maxSize: 1000
+				}
+			})
+		],
 		server: {
 			allowedHosts: ['2481-84-118-214-213.ngrok-free.app']
 		}
