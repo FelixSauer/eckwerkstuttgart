@@ -26,33 +26,6 @@ button {
     ease-in-out
     bg-transparent
 }
-/* Styling for modern scrollbar in main element */
-main::-webkit-scrollbar {
-    width: 122px;
-}
-
-main::-webkit-scrollbar-track {
-    background: transparent !important;
-}
-
-main::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 6px;
-}
-
-main::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-/* For Firefox */
-main {
-    scrollbar-width: thin;
-    scrollbar-color: #888 transparent !important;
-}
-
-.writingMode-horizontal {
-    writing-mode: horizontal-tb;
-}
 
 .writingMode-vertical {
     writing-mode: vertical-lr;
