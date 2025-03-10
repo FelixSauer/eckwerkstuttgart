@@ -1,50 +1,50 @@
 ---
-import {getCollection} from "astro:content";
-import type {INavigation} from "../types/navigation";
-import GoBack from "../components/GoBack.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import { getCollection } from "astro:content";
+import type { INavigation } from "@/types/navigation";
+import GoBack from "@/components/GoBack.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
-const {title} = Astro.props;
+const { title } = Astro.props;
 
 const pages = await getCollection("pages");
 
 const navigation: INavigation[] = pages.map(
-	(page: any): INavigation => ({
-		page: page,
-		title: page.data.title,
-		navigation: page.data.navigation,
-		slug: page.slug,
-	}),
+  (page: any): INavigation => ({
+    page: page,
+    title: page.data.title,
+    navigation: page.data.navigation,
+    slug: page.slug
+  })
 );
 
 const navigationHeader = navigation.filter((nav) =>
-	nav.navigation?.includes("Header")
+  nav.navigation?.includes("Header")
 );
 
 const navigationFooter = navigation.filter((nav) =>
-	nav.navigation?.includes("Footer")
+  nav.navigation?.includes("Footer")
 );
 ---
 
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="description" content="Astro description"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content={Astro.generator}/>
-    <link rel="icon" type="image/svg+xml" href="/favicon-mode-dark.svg"/>
-    <title>{title}</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content={Astro.generator} />
+  <link rel="icon" type="image/svg+xml" href="/favicon-mode-dark.svg" />
+  <title>{title}</title>
 </head>
 <body>
-<Header navigation={navigationHeader}/>
-<slot/>
-<GoBack/>
-<Footer navigation={navigationFooter}/>
+<Header navigation={navigationHeader} />
+<slot />
+<GoBack />
+<Footer navigation={navigationFooter} />
 </body>
 </html>

@@ -1,0 +1,89 @@
+---
+import { Icon } from 'astro-icon/components'
+import Gallery from './Gallery.astro'
+
+const albumNames = ['Wohnhandwerk', 'Baumpflege', 'Terrassenbau']
+---
+
+<div
+	class="absolute left-0 top-0 z-[1000] hidden h-screen w-screen bg-white p-2 xl:p-4"
+	id="galleryModal"
+>
+	<div class="flex h-full flex-row gap-4">
+		<div class="flex flex-col items-center justify-between bg-primary" id="galleryMenu">
+			<ul class="flex flex-col">
+				{
+					albumNames.map((albumName, index) => (
+						<li class="flex flex-row" id={`galleryItem-${index}`}>
+							<a
+								class="font-source-code-pro text-1xl writingMode-vertical cursor-pointer px-2 py-4 pb-0 uppercase no-underline opacity-75 hover:text-yellow-500"
+								id={`link-${albumName}`}
+							>
+								{albumName}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+
+			<button
+				class="text-1xl cursor-pointer border-none bg-none p-2 text-white hover:text-yellow-500"
+				id="galleryModalClose"
+			>
+				<Icon name="line-md:close" />
+			</button>
+		</div>
+
+		<div class="h-full w-full overflow-x-hidden overflow-y-scroll">
+			{
+				albumNames.map((albumName, index) => (
+					<div class="mb-1 hidden h-full w-full" id={`galleryContent-${index}`}>
+						<Gallery imageCollection={albumName} />
+					</div>
+				))
+			}
+		</div>
+	</div>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const modal = document.getElementById('galleryModal')
+		const close = document.getElementById('galleryModalClose')
+		const galleryItems = document.querySelectorAll('#galleryMenu ul li a')
+		const galleryContents = document.querySelectorAll('[id^="galleryContent-"]')
+
+		if (close) {
+			close.addEventListener('click', () => {
+				modal?.classList.toggle('hidden')
+				document.body.classList.remove('overflow-hidden')
+			})
+		}
+
+		if (galleryItems.length > 0) {
+			galleryItems[0].classList.add('text-secondary')
+			galleryContents[0].classList.remove('hidden')
+		}
+
+		galleryItems.forEach((item, index) => {
+			item.addEventListener('click', (event) => {
+				event.preventDefault()
+
+				galleryItems.forEach((link) => link.classList.remove('text-secondary'))
+				galleryContents.forEach((content) => content.classList.add('hidden'))
+
+				item.classList.add('text-secondary')
+				galleryContents[index].classList.remove('hidden')
+				document.body.classList.add('overflow-hidden')
+				modal?.classList.add('block')
+			})
+		})
+
+		document.addEventListener('keydown', (event) => {
+			if (event.key === 'Escape' && modal?.classList.contains('block')) {
+				document.body.classList.remove('overflow-hidden')
+				modal?.classList.remove('block')
+			}
+		})
+	})
+</script>
