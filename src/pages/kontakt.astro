@@ -1,55 +1,12 @@
 ---
-import {getCollection} from "astro:content";
-import Layout from "../layouts/multi.astro";
-import "@fontsource-variable/montserrat";
-import "@fontsource-variable/source-code-pro";
-import '@fontsource/source-sans-pro';
-import "@fontsource/roboto";
-import "./../styles/GlobalStyling.scss";
-
-const pages = await getCollection("pages");
-const page = pages.find(page => page.slug === "page-4-kontakt");
-let Content;
-if (page) {
-	const rendered = await page.render();
-	Content = rendered.Content;
-}
+import Layout from '../layouts/single.astro'
+import '@fontsource-variable/montserrat'
+import '@fontsource-variable/fira-code'
+import '@fontsource-variable/source-code-pro'
+import '@fontsource/source-sans-pro'
+import '@fontsource/roboto'
 ---
 
 <Layout title="Eckwerk Stuttgart">
-    <section>
-        <article>
-					{Content &&
-                  <Content/>}
-        </article>
-    </section>
+	<main>Hallo</main>
 </Layout>
-
-<style lang="scss">
-  @import "./../styles/GlobalStyling";
-
-  section {
-    display: flex;
-    margin: 20vh 0;
-
-    article {
-      padding: 2vh 5vw 3vh 5vw;
-
-      @include min-width("s") {
-        padding: 2vh 5vw 3vh 5vw;
-      }
-
-      @include min-width("m") {
-        padding: 4vh 10vw 5vh 10vw;
-      }
-
-      @include min-width("l") {
-        padding: 4vh 15vw 5vh 15vw;
-      }
-
-      @include min-width("xl") {
-        padding: 4vh 15vw 5vh 15vw;
-      }
-    }
-  }
-</style>

@@ -1,164 +1,88 @@
 ---
-import {Icon} from "astro-icon/components";
+import { Icon } from 'astro-icon/components'
 
 interface Review {
-	author_url: string;
-	author_name: string;
-	rating: number;
-	relative_time_description: string;
-	text: string;
+	author_url: string
+	author_name: string
+	rating: number
+	relative_time_description: string
+	text: string
 }
 
-const reviews: Review[] = await fetchReviews();
-
 async function fetchReviews(): Promise<Review[]> {
-	const API_KEY = 'AIzaSyAlDmSirID3ctmTbZn5-rJG6Z-ofXZCmws';
-	const PLACE_ID = 'ChIJ_erOoVuif6kRZSACbgSg1Ss';
-	const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&language=de&key=${API_KEY}`;
+	const API_KEY = 'AIzaSyAlDmSirID3ctmTbZn5-rJG6Z-ofXZCmws'
+	const PLACE_ID = 'ChIJ_erOoVuif6kRZSACbgSg1Ss'
+	const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&language=de&key=${API_KEY}`
 
-	const response = await fetch(url);
-	const data = await response.json();
+	const response = await fetch(url)
+	const data = await response.json()
 
 	if (!response.ok) {
-		throw new Error(data.error_message || 'Failed to fetch Google Reviews');
+		throw new Error(data.error_message || 'Failed to fetch Google Reviews')
 	}
 
-	return data.result.reviews || [];
+	return data.result?.reviews || []
 }
 
 const renderStars = (rating: number): string => {
-	const fullStars = Math.floor(rating);
-	const halfStar = rating % 1 >= 0.5 ? 1 : 0;
-	const emptyStars = 5 - fullStars - halfStar;
-	return '★'.repeat(fullStars) + '☆'.repeat(emptyStars);
-};
+	const fullStars = Math.floor(rating)
+	const halfStar = rating % 1 >= 0.5 ? 1 : 0
+	const emptyStars = 5 - fullStars - halfStar
+	return '★'.repeat(fullStars) + '☆'.repeat(emptyStars)
+}
+
+const reviews: Review[] = await fetchReviews()
 ---
 
-<div class="reviews">
-    <h1>Google Reviews</h1>
-    <div class="container">
-			{reviews.map((review, index) => (
-              <div class={`item ${index === 0 ? "active" : ""}`}>
-                  <div class="review fade">
-                      <a href={review.author_url} target="_blank">
-                          <h3>{review.author_name}</h3>
-                      </a>
-                      <div class="rating">
-                          <div class="stars">{renderStars(review.rating)}</div>
-                          <div>{review.relative_time_description}</div>
-                      </div>
-                      <p>{review.text}</p>
-                  </div>
-              </div>
-			))}
-        <div class="review-menu">
-            <button class="prev" id="prevButton">
-                <div class="icon">
-                    <Icon name='line-md:arrow-small-left'/>
-                </div>
-            </button>
-            <button class="next" id="nextButton">
-                <div class="icon">
-                    <Icon name='line-md:arrow-small-right'/>
-                </div>
-            </button>
-        </div>
-    </div>
+<div class="h-max">
+	<h1>Google Reviews</h1>
+	<div class="container relative m-auto">
+		<div class="relative flex justify-center gap-4 sm:gap-8">
+			<button class="prev m-0 p-0 text-4xl font-bold hover:text-secondary" id="prevButton">
+				<Icon name="line-md:chevron-left" />
+			</button>
+			<div>
+				{
+					reviews.map((review, index) => (
+						<div class={`item ${index === 0 ? 'block' : 'hidden'}`}>
+							<div class="review fade flex min-h-80 flex-col gap-4 px-0 py-10">
+								<a href={review.author_url} target="_blank">
+									<h3>{review.author_name}</h3>
+								</a>
+								<div class="flex gap-4">
+									<div class="stars">{renderStars(review.rating)}</div>
+									<div>{review.relative_time_description}</div>
+								</div>
+								<p>{review.text}</p>
+							</div>
+						</div>
+					))
+				}
+			</div>
+			<button class="next m-0 p-0 text-4xl hover:text-secondary" id="nextButton">
+				<Icon name="line-md:chevron-right" />
+			</button>
+		</div>
+	</div>
 </div>
 
-<style lang="scss">
-  @import './../styles/GlobalStyling';
-
-  .reviews {
-    height: auto;
-
-    .container {
-      position: relative;
-      margin: auto;
-
-      .item {
-        display: none;
-
-        .review {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          padding: 2.5rem 0;
-
-          .rating {
-            display: flex;
-            gap: 1rem;
-          }
-        }
-      }
-    }
-  }
-
-  .review-menu {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-
-    button {
-      margin: unset;
-      padding: unset;
-    }
-  }
-
-
-  .prev, .next {
-    cursor: pointer;
-    transition: 0.6s ease;
-    background-color: unset;
-
-    .icon {
-      display: block;
-      color: $color-secondary;
-      background-color: $color-white;
-
-      [data-icon] {
-        font-size: 2rem;
-      }
-    }
-
-    &:hover {
-      .icon {
-        transition: 0.6s ease;
-      }
-    }
-
-  }
-
-  .next {
-    right: 0;
-  }
-
-  .active {
-    display: block;
-  }
-
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-
-  @keyframes fade {
-    from {
-      opacity: 0
-    }
-    to {
-      opacity: 1
-    }
-  }
+<style>
+	@keyframes fade {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
 </style>
 
 <script>
-	let slideIndex = 1;
+	let slideIndex = 1
 
 	const showSlides = (n: number) => {
-		let i;
-		const slides = document.getElementsByClassName("item");
+		let i
+		const slides = document.getElementsByClassName('item')
 
 		if (n > slides.length) {
 			slideIndex = 1
@@ -169,24 +93,24 @@ const renderStars = (rating: number): string => {
 		}
 
 		for (i = 0; i < slides.length; i++) {
-			(slides[i] as HTMLElement).style.display = "none";
+			;(slides[i] as HTMLElement).style.display = 'none'
 		}
-		(slides[slideIndex - 1] as HTMLElement).style.display = "block";
-	};
+		;(slides[slideIndex - 1] as HTMLElement).style.display = 'block'
+	}
 
 	const plusSlides = (n: number) => {
-		showSlides(slideIndex += n);
-	};
+		showSlides((slideIndex += n))
+	}
 
 	document.addEventListener('DOMContentLoaded', () => {
-		showSlides(slideIndex);
+		showSlides(slideIndex)
 
 		document.getElementById('prevButton')?.addEventListener('click', () => {
-			plusSlides(-1);
-		});
+			plusSlides(-1)
+		})
 
 		document.getElementById('nextButton')?.addEventListener('click', () => {
-			plusSlides(1);
-		});
-	});
+			plusSlides(1)
+		})
+	})
 </script>

@@ -1,52 +1,21 @@
 ---
-import Navigation from "./Navigation.astro";
-import {Icon} from "astro-icon/components";
-import type {INavigation} from "../types/navigation";
+import Navigation from '@/components/Navigation.astro'
+import { Icon } from 'astro-icon/components'
+import type { INavigation } from '@/types/navigation'
 
 interface Props {
-	navigation: INavigation[];
+	navigation: INavigation[]
 }
 
-const {navigation} = Astro.props;
+const { navigation } = Astro.props
 ---
 
-<header>
-    <a href="https://eckwerkstuttgart.de/">
-        <Icon name="logo"/>
-    </a>
-    <Navigation navigation={navigation} navigationPostion="header"/>
+<header
+	class="absolute left-0 top-0 z-50 flex h-24 w-full items-center justify-between bg-primary px-6 sm:px-12 md:px-16"
+>
+	<a href="https://eckwerkstuttgart.de/" class="z-50 text-5xl no-underline">
+		<Icon name="logo" />
+	</a>
+
+	<Navigation navigation={navigation} navigationPostion="header" />
 </header>
-
-
-<style lang="scss">
-  @import "./../styles/GlobalStyling";
-
-  header {
-    height: 90px;
-    width: 100vw;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $color-primary;
-    z-index: 1000;
-    padding: $spacing-l;
-
-    @include min-width("l") {
-      padding-left: $spacing-xxl;
-      padding-right: $spacing-xxl;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      padding: 0;
-      margin: 0;
-    }
-
-    [data-icon] {
-      font-size: 3rem;
-      z-index: 1000;
-    }
-  }
-</style>

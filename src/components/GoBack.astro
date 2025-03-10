@@ -1,81 +1,50 @@
 ---
-import {Icon} from "astro-icon/components";
+import { Icon } from 'astro-icon/components'
 ---
-<div id="scrollToolBox">
-    <a id="scrollnextTopSection">
-        <Icon name="line-md:chevron-up"/>
-    </a>
 
-    <a id="scrollTopButton">
-        <Icon name="line-md:arrow-align-top"/>
-    </a>
+<div
+	id="scrollToolBox"
+	class="fixed right-0 top-0 z-[900] flex hidden h-screen flex-col justify-end gap-4 pb-48 pr-4 md:pb-24"
+>
+	<a
+		id="scrollnextTopSection"
+		class="flex h-8 w-8 cursor-pointer items-center justify-center text-secondary hover:text-secondary"
+	>
+		<Icon name="line-md:chevron-up" class="text-2xl" />
+	</a>
+
+	<a
+		id="scrollTopButton"
+		class="flex h-8 w-8 cursor-pointer items-center justify-center text-secondary hover:text-secondary"
+	>
+		<Icon name="line-md:arrow-align-top" class="text-2xl" />
+	</a>
 </div>
 
-<style lang="scss">
-  @import "./../styles/GlobalStyling";
-
-  div {
-    padding-right: 1rem;
-    padding-bottom: 12rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    display: none;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 1rem;
-    z-index: 900;
-
-    @include min-width("m") {
-      padding-bottom: 6rem;
-      display: none;
-    }
-
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 2rem;
-      height: 2rem;
-      cursor: pointer;
-      color: $color-secondary;
-
-      [data-icon] {
-        font-size: 2rem;
-      }
-
-      &:hover {
-        color: $color-secondary;
-      }
-    }
-  }
-</style>
-
 <script>
-	const scrollToolBox = document.getElementById('scrollToolBox'); // Ensure you target the right element
-	const scrollTopButton = document.getElementById('scrollTopButton');
-	const scrollnextTopSection = document.getElementById('scrollnextTopSection');
+	const scrollToolBox = document.getElementById('scrollToolBox') // Ensure you target the right element
+	const scrollTopButton = document.getElementById('scrollTopButton')
+	const scrollnextTopSection = document.getElementById('scrollnextTopSection')
 
 	if (scrollTopButton) {
 		scrollTopButton.addEventListener('click', function () {
 			window.scrollTo({
 				top: 0,
 				behavior: 'smooth'
-			});
+			})
 		})
 	}
 
 	if (scrollnextTopSection) {
 		scrollnextTopSection.addEventListener('click', function () {
-			const sections = document.querySelectorAll('section');
-			let currentScroll = window.scrollY;
+			const sections = document.querySelectorAll('section')
+			let currentScroll = window.scrollY
 
-			let previousSection = null;
+			let previousSection = null
 			for (let i = sections.length - 1; i >= 0; i--) {
 				if (sections[i].offsetTop < currentScroll) {
-					previousSection = sections[i];
-					break;
+					previousSection = sections[i]
+					break
 				}
 			}
 
@@ -83,21 +52,21 @@ import {Icon} from "astro-icon/components";
 				window.scrollTo({
 					top: previousSection.offsetTop,
 					behavior: 'smooth'
-				});
+				})
 			}
 		})
 	}
 
 	if (scrollToolBox) {
 		window.addEventListener('scroll', function () {
-			const scrollY = window.scrollY;
-			const windowHeight = window.innerHeight;
-			const documentHeight = document.documentElement.scrollHeight;
+			const scrollY = window.scrollY
+			const windowHeight = window.innerHeight
+			const documentHeight = document.documentElement.scrollHeight
 
-			if (scrollY <= 50 || (scrollY + windowHeight) >= documentHeight) {
-				scrollToolBox.style.display = 'none';
+			if (scrollY <= 50 || scrollY + windowHeight >= documentHeight) {
+				scrollToolBox.style.display = 'none'
 			} else {
-				scrollToolBox.style.display = 'flex';
+				scrollToolBox.style.display = 'flex'
 			}
 		})
 	}
