@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: 22.3.0
           package-manager: pnpm@latest
+          install-command: pnpm install --force
 
   deploy:
     needs: build
