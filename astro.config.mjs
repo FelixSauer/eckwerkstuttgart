@@ -33,7 +33,7 @@ export default defineConfig({
 		}
 	},
 	build: {
-		site: 'eckwerkstuttgart',
+		site: '',
 		out: 'assets',
 		assets: 'assets'
 	}
