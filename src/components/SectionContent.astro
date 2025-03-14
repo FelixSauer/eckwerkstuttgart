@@ -15,13 +15,13 @@ const imageDesktop = images ? images[0] : ''
 const imageMobile = images ? images[1] : ''
 ---
 
-<section class="relative w-full scroll-m-52" id={id}>
+<section class="relative w-full scroll-m-52 bg-white" id={id}>
 	{
 		onlyPass ? (
 			<slot />
 		) : (
 			<>
-				<article class="text-l md:py-18 bg-white px-6 py-10 contain-content last:min-h-max sm:px-12 sm:py-14 md:px-16 lg:px-36 lg:py-28 xl:px-52">
+				<article class="text-l md:py-18 px-6 py-10 contain-content last:min-h-max sm:px-12 sm:py-14 md:px-16 lg:px-36 lg:py-28 xl:px-52">
 					<slot />
 				</article>
 				{images !== null && !withoutImages ? (

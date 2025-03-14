@@ -10,13 +10,13 @@ const date = new Date()
 const year = date.getFullYear()
 ---
 
-<footer class="bottom-0 w-full bg-primary p-4 px-6 text-xs text-white sm:px-12 md:px-16 z-50">
+<footer class="bottom-0 z-50 w-full bg-primary p-4 px-6 text-xs text-white sm:px-12 md:px-16">
 	<ul class="m-0 flex list-none gap-4 p-0 md:justify-center md:pb-0 md:text-center">
 		{
 			navigation.map((item) => {
 				return (
 					<li class="pl-0">
-						<a href={'eckwerkstuttgart/' + item.title} data-href={item.title} aria-current="page">
+						<a href={item.title} data-href={item.title} aria-current="page">
 							{item.title}
 						</a>
 					</li>

@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: 23.9.0
           package-manager: pnpm@latest
+          build-script: build-prod
 
   deploy:
     needs: build

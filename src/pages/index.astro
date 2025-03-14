@@ -31,14 +31,13 @@ const mainStagePages = pages.filter((page) => page.data.mainStage === true)
 ---
 
 <Layout title="Eckwerk Stuttgart">
-  <div>
+	<div>
 		<SectionContent onlyPass>
 			<Intro title={pages[0].data.slogan} />
 		</SectionContent>
 
 		{
 			mainStagePages.map(async (originPage, index) => {
-				//@eslint-disable-next-line
 				const { Content } = await originPage.render()
 
 				const desktopImagePath = ParallaxImagesDesktop[index % ParallaxImagesDesktop.length]
@@ -73,5 +72,5 @@ const mainStagePages = pages.filter((page) => page.data.mainStage === true)
 				) : null
 			})
 		}
-  </div>
+	</div>
 </Layout>
