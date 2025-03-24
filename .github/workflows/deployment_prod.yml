@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build the site
-        run: pnpm run build-prod
+        run: npm run build-prod
 
   deploy:
     needs: build
