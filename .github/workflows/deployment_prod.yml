@@ -24,7 +24,12 @@ jobs:
         run: pnpm install
       - name: Build the site
         run: npm run build-prod
-
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ./dist
+          
   deploy:
     needs: build
     runs-on: ubuntu-latest
