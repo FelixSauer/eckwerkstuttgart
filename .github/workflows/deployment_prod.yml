@@ -1,11 +1,9 @@
-name: deploy prod on github pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
-
   workflow_dispatch:
-
 
 permissions:
   contents: read
@@ -16,20 +14,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
-      - name: Install pnpm
-        run: npm install -g pnpm
-      - name: Install dependencies
+
+      - name: 🚀 Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: ⚡ Install dependencies with pnpm
         run: pnpm install
-      - name: Build the site
-        run: npm run build-prod
-      - name: Upload build artifacts
+        env:
+          CI: true
+
+      - name: 🏗️ Build the project
+        run: pnpm run build-prod
+
+      - name: 📦 Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: ./dist
-          
+          retention-days: 1
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -37,6 +44,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 📥 Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: ./dist
+
+      - name: 🚀 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
