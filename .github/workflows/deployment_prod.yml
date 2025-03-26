@@ -5,37 +5,29 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [23.x]
+
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🚀 Setup pnpm
-        uses: pnpm/action-setup@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
-          version: latest
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
-      - name: ⚡ Install dependencies with pnpm
-        run: pnpm install
-        env:
-          CI: true
+      - name: Install  dependencies
+        run: npm i
 
-      - name: 🏗️ Build the project
-        run: pnpm run build-prod
-
-      - name: 📦 Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: ./dist
-          retention-days: 1
+      - name: Build Production
+        run: npm run build-prod
 
   deploy:
     needs: build
@@ -44,12 +36,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: 📥 Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: ./dist
-
-      - name: 🚀 Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
