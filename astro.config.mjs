@@ -6,14 +6,13 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://eckwerkstuttgart.de/',
-	base: '/',
 	integrations: [
 		icon({
 			iconDir: 'src/assets/icons'
 		}),
 		tailwind()
 	],
-	compressHTML: false,
+	compressHTML: true,
 	vite: {
 		resolve: {
 			alias: {
