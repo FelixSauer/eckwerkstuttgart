@@ -27,9 +27,5 @@ export default defineConfig({
 				}
 			})
 		]
-	},
-	/*build: {
-		out: 'assets',
-		assets: 'assets'
-	}*/
+	}
 })
