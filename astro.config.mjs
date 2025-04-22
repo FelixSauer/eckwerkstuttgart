@@ -5,6 +5,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 // https://astro.build/config
 export default defineConfig({
+	output: 'static',
 	site: process.env.SITE_URL,
 	base: process.env.BASE_URL,
 	integrations: [
