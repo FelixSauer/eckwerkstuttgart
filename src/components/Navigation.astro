@@ -17,7 +17,7 @@ const { navigation, navigationPostion } = Astro.props as Props
 				navigation.map((item) => (
 					<li>
 						<a
-							href={navigationPostion === 'header' ? '#' + item.title : item.title}
+							href={navigationPostion === 'header' ? '/#' + item.title : item.title}
 							data-href={item.title}
 							aria-current="page"
 							class="cursor-pointer font-sourceCodePro text-xl font-light uppercase tracking-wide no-underline subpixel-antialiased hover:text-secondary"
