@@ -14,6 +14,7 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.4.1",
     "@astrojs/tailwind": "^5.1.1",
     "@fontsource-variable/fira-code": "^5.0.18",
     "@fontsource-variable/material-symbols-outlined": "^5.0.33",
