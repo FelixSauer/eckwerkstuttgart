@@ -19,6 +19,7 @@ const { navigation, navigationPostion } = Astro.props as Props
 						<a
 							href={navigationPostion === 'header' ? '/#' + item.title : item.title}
 							data-href={item.title}
+							aria-label={item.title}
 							aria-current="page"
 							class="cursor-pointer font-sourceCodePro text-xl font-light uppercase tracking-wide no-underline subpixel-antialiased hover:text-secondary"
 						>
@@ -32,6 +33,7 @@ const { navigation, navigationPostion } = Astro.props as Props
 	<div class="lg:hidden">
 		<button
 			id="navbarToggle"
+			aria-label="Toggle navigation menu"
 			class="relative z-40 pt-1 cursor-pointer border-0 bg-transparent text-3xl sm:text-5xl text-white hover:text-secondary flex align-middle"
 		>
 			<Icon name="line-md:close-to-menu-transition" />
@@ -48,6 +50,7 @@ const { navigation, navigationPostion } = Astro.props as Props
 							<a
 								href={navigationPostion === 'header' ? '/#' + item.title : item.title}
 								data-href={item.title}
+								aria-label="{item.title}"
 								aria-current="page"
 								id="navItem"
 								class="m-1 text-4xl text-white hover:text-secondary"

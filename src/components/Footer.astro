@@ -16,7 +16,7 @@ const year = date.getFullYear()
 			navigation.map((item) => {
 				return (
 					<li class="pl-0">
-						<a href={"/"+item.title+"/"} data-href={item.title} aria-current="page">
+						<a href={"/"+item.title+"/"} data-href={item.title} aria-current="page" aria-label={item.title}>
 							{item.title}
 						</a>
 					</li>
@@ -29,7 +29,7 @@ const year = date.getFullYear()
 		<p>Stierlenstraße 25</p>
 		<p>70327 Stuttgart</p>
 		<p>
-			Mail: <a class="text-white" href="mailto:hallo@eckwerkstuttgart.de"
+			Mail: <a class="text-white" href="mailto:hallo@eckwerkstuttgart.de" aria-label="E-Mail"
 				>hallo@eckwerkstuttgart.de</a
 			>
 		</p>
