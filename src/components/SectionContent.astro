@@ -21,7 +21,7 @@ const imageMobile = images ? images[1] : ''
 			<slot />
 		) : (
 			<>
-				<article class="text-l md:py-18 px-6 py-10 contain-content last:min-h-max sm:px-12 sm:py-14 md:px-16 lg:px-36 lg:py-28 xl:px-52">
+				<article class="text-l md:py-18 px-6 py-10 opacity-0 contain-content last:min-h-max sm:px-12 sm:py-14 md:px-16 lg:px-36 lg:py-28 xl:px-52">
 					<slot />
 				</article>
 				{images !== null && !withoutImages ? (
@@ -41,3 +41,37 @@ const imageMobile = images ? images[1] : ''
 		)
 	}
 </section>
+
+<script>
+	import { fadeIn } from '../utils/Animations'
+	import { gsap } from 'gsap'
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const sections = document.querySelectorAll('section[id]')
+
+		const observerOptions = {
+			root: null,
+			rootMargin: '-10% 0px',
+			threshold: 0.1
+		}
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				const section = entry.target
+				const article = section.querySelector('article')
+
+				if (!article) return
+
+				if (entry.isIntersecting) {
+					fadeIn(article)
+				} else {
+					gsap.set(article, { opacity: 0 })
+				}
+			})
+		}, observerOptions)
+
+		sections.forEach((section) => {
+			observer.observe(section)
+		})
+	})
+</script>

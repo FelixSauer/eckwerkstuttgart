@@ -32,16 +32,6 @@ export default defineConfig({
 			background_color: '#ffffff',
 			display: 'standalone',
 			orientation: 'natural'
-		}),
-		playformCompress({
-			css: {
-				minify: true,
-				target: ['es2015']
-			},
-			html: {
-				minify: true,
-				removeAttributeQuotes: false
-			}
 		})
 	],
 	vite: {

@@ -46,7 +46,11 @@ const reviews: Review[] = await fetchReviews()
 					reviews.map((review, index) => (
 						<div class={`item ${index === 0 ? 'block' : 'hidden'}`}>
 							<div class="review fade flex min-h-80 flex-col gap-4 px-0 py-10">
-								<a href={review.author_url} target="_blank" aria-label={`Review by ${review.author_name}`}>
+								<a
+									href={review.author_url}
+									target="_blank"
+									aria-label={`Review by ${review.author_name}`}
+								>
 									<h3>{review.author_name}</h3>
 								</a>
 								<div class="flex gap-4">

@@ -16,6 +16,7 @@ const albumNames = ['Wohnhandwerk', 'Baumpflege', 'Terrassenbau']
 					albumNames.map((albumName, index) => (
 						<li class="flex flex-row" id={`galleryItem-${index}`}>
 							<a
+								href={`/#${albumName}`}
 								class="font-source-code-pro text-1xl writingMode-vertical cursor-pointer px-2 py-4 pb-0 uppercase no-underline opacity-75 hover:text-yellow-500"
 								id={`link-${albumName}`}
 							>
@@ -27,7 +28,7 @@ const albumNames = ['Wohnhandwerk', 'Baumpflege', 'Terrassenbau']
 			</ul>
 
 			<button
-				class="text-1xl cursor-pointer border-none bg-none p-2 text-white hover:text-yellow-500 z-[110]"
+				class="text-1xl z-[110] cursor-pointer border-none bg-none p-2 text-white hover:text-yellow-500"
 				id="galleryModalClose"
 			>
 				<Icon name="line-md:close" />

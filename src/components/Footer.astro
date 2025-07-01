@@ -11,12 +11,17 @@ const year = date.getFullYear()
 ---
 
 <footer class="bottom-0 z-50 w-full bg-primary p-4 px-6 text-xs text-white sm:px-12 md:px-16">
-	<ul class="m-0 flex list-none gap-4 p-0 md:justify-center md:pb-0 md:text-center">
+	<ul class="m-0 flex list-none gap-4 p-0 md:pb-0">
 		{
 			navigation.map((item) => {
 				return (
 					<li class="pl-0">
-						<a href={"/"+item.title+"/"} data-href={item.title} aria-current="page" aria-label={item.title}>
+						<a
+							href={'/' + item.title + '/'}
+							data-href={item.title}
+							aria-current="page"
+							aria-label={item.title}
+						>
 							{item.title}
 						</a>
 					</li>
@@ -24,7 +29,7 @@ const year = date.getFullYear()
 			})
 		}
 	</ul>
-	<div class="lg:flex lg:justify-center lg:gap-4 lg:text-center">
+	<div class="lg:flex lg:gap-4 lg:text-right">
 		<p>Eckwerk Stuttgart</p>
 		<p>Stierlenstraße 25</p>
 		<p>70327 Stuttgart</p>

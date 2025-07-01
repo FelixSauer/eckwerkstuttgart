@@ -1,6 +1,7 @@
 ---
 import type { ImageMetadata } from 'astro'
 import { Image } from 'astro:assets'
+import { getImage } from 'astro:assets'
 
 const shuffleArray = (array: string[]): string[] => {
 	for (let i = array.length - 1; i > 0; i--) {
@@ -20,12 +21,24 @@ const imagePaths = shuffleArray(Object.keys(images))
 			{
 				imagePaths.map(async (imagePath) => {
 					let image = images[imagePath]()
+					let optimizedImage = await getImage({
+						src: image,
+						width: 400
+					})
+
+					const pathParts = imagePath.split('/')
+					const albumName = pathParts[pathParts.length - 2]
+
 					return (
 						<li class="relative mr-2.5 h-[300px] w-[400px] overflow-hidden">
-							<a class="block h-full w-full pr-8 hover:cursor-pointer" aria-label="Gallery Image">
+							<a
+								href={optimizedImage.src}
+								class="block h-full w-full pr-8 hover:cursor-pointer"
+								aria-label={`Gallery Image from ${albumName} collection`}
+							>
 								<Image
 									src={image}
-									alt={'altText'}
+									alt={`${albumName} gallery image`}
 									width={400}
 									height={300}
 									class="hover:bore left-0 top-0 h-full w-full object-cover hover:border-4 hover:border-secondary"
@@ -60,7 +73,8 @@ const imagePaths = shuffleArray(Object.keys(images))
 		const modal = document.getElementById('galleryModal')
 
 		images.forEach((image) => {
-			image.addEventListener('click', () => {
+			image.addEventListener('click', (e) => {
+				e.preventDefault() // Prevent default navigation
 				modal?.classList.toggle('hidden')
 			})
 		})

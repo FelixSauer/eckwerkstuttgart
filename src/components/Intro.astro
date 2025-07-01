@@ -44,9 +44,21 @@ const { imageDesktop, imageMobil } = await getIntroImages(introImagesSrc)
 		class="absolute inset-0 flex items-center justify-center break-normal break-keep tracking-tight lg:tracking-tight"
 	>
 		<h1
-			class="2xl:text-9xs pb-36 text-center text-4xl text-white sm:pb-56 sm:text-6xl md:pb-64 md:text-6xl lg:pb-96 lg:text-7xl xl:text-8xl 2xl:pb-96"
+			id="intro-title"
+			class="2xl:text-9xs pb-36 text-center text-4xl text-white sm:pb-56 sm:text-6xl md:pb-64 md:text-6xl lg:pb-96 lg:text-7xl xl:break-words xl:pl-9 xl:pr-9 xl:text-9xl 2xl:pb-96 2xl:pl-9 2xl:pr-9"
 		>
 			{title}
 		</h1>
 	</div>
 </>
+
+<script>
+	import { fadeIn } from '../utils/Animations'
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const titleElement = document.getElementById('intro-title')
+
+		// Apply fade in animation to the title with a slight delay
+		fadeIn(titleElement, 0.5, 1.5)
+	})
+</script>
