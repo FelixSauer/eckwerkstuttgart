@@ -36,12 +36,12 @@ const reviews: Review[] = await fetchReviews()
 
 <div class="h-max">
 	<h1>Google Reviews</h1>
-	<div class="container relative m-auto">
-		<div class="relative flex justify-center gap-4 sm:gap-8">
+	<div class="container relative m-auto h-96">
+		<div class="relative flex h-full items-center gap-4 sm:gap-8">
 			<button class="prev m-0 p-0 text-4xl font-bold hover:text-secondary" id="prevButton">
 				<Icon name="line-md:chevron-left" />
 			</button>
-			<div>
+			<div class="align-middle">
 				{
 					reviews.map((review, index) => (
 						<div class={`item ${index === 0 ? 'block' : 'hidden'}`}>
