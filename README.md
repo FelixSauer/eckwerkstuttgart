@@ -1,39 +1,31 @@
 # Eckwerk Stuttgart
 
-## Overview
+<div align="center">
+  <img src="public/android-chrome-192x192.png" alt="Eckwerk Stuttgart Logo" width="120" />
+</div>
 
-Eckwerk Stuttgart is a modern web application built with [Astro](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/), and enhanced with [GSAP](https://greensock.com/gsap/) animations. The site showcases content related to home crafts, tree care, terrace construction, and more, with a focus on performance and user experience.
+## 📋 Overview
 
-![Eckwerk Stuttgart](public/android-chrome-192x192.png)
+Eckwerk Stuttgart is a modern web application showcasing professional services in home crafts, tree care, and terrace construction. Built with [Astro](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/), and enhanced with [GSAP](https://greensock.com/gsap/) animations for a smooth user experience.
 
-## Table of Contents
+## ✨ Features
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Development](#development)
-- [Building and Deployment](#building-and-deployment)
-- [Docker Support](#docker-support)
-- [Contributing](#contributing)
-- [License](#license)
+- **High Performance**: Fast loading and rendering with Astro's static site generation
+- **Responsive Design**: Seamlessly adapts to all device sizes
+- **Interactive Elements**: Smooth animations powered by GSAP
+- **Image Galleries**: Showcasing project portfolios with modal support
+- **Content Management**: Structured with Astro's content collections
+- **Development Tools**: Docker support for consistent development environments
 
-## Features
-
-- Fast and responsive design using Astro and Tailwind CSS
-- Smooth animations powered by GSAP
-- Image galleries and carousels
-- Content management using Astro's content collections
-- Fully responsive navigation and layout
-- Docker support for consistent development environments
-
-## Prerequisites
+## 🔧 Prerequisites
 
 - Node.js (v16.x or later)
 - npm or yarn
 - Git
 
-## Installation
+## 🚀 Getting Started
+
+### Installation
 
 1. Clone the repository
 ```bash
@@ -48,13 +40,20 @@ npm install
 yarn install
 ```
 
-## Project Structure
+3. Start the development server
+```bash
+npm run dev
+```
+
+## 📁 Project Structure
 
 ```
 eckwerkstuttgart/
 ├── public/               # Static assets (images, fonts, favicon, etc.)
 ├── src/
 │   ├── assets/           # Project-specific assets (processed by build)
+│   │   ├── Albums/       # Image collections for galleries
+│   │   └── icons/        # SVG icons and logos
 │   ├── components/       # Reusable Astro components
 │   ├── content/          # Content collections and config
 │   ├── hooks/            # Custom hooks
@@ -69,9 +68,9 @@ eckwerkstuttgart/
 └── docker-compose.yml    # Docker configuration
 ```
 
-## Development
+## ⚙️ Development
 
-### Commands
+### Available Commands
 
 All commands are run from the root of the project:
 
@@ -86,35 +85,61 @@ All commands are run from the root of the project:
 
 ### Key Components
 
-- **SectionContent.astro**: Handles the display of content sections with optional images
-- **Gallery.astro**: Image gallery component with modal support
-- **Navigation.astro**: Site navigation with responsive design
-- **Intro.astro**: Landing page introduction component
+- **SectionContent.astro**: Content sections with optional images
+- **Gallery.astro**: Image gallery with lightbox functionality
+- **GalleryModal.astro**: Modal component for image viewing
+- **Navigation.astro**: Responsive site navigation
+- **Intro.astro**: Landing page hero section
 - **Animations.ts**: GSAP animation utilities
 
-## Building and Deployment
+## 📦 Building and Deployment
 
-To build the project for production:
+### Production Build
 
 ```bash
 npm run build
 ```
 
-This will generate static files in the `dist/` directory that can be deployed to any static hosting service.
+This generates optimized static files in the `./dist/` directory that can be deployed to any static hosting service.
 
-## Docker Support
-
-The project includes Docker support for consistent development environments:
+### Preview Production Build
 
 ```bash
-# Start the Docker container
-docker-compose up
-
-# Build the Docker image
-docker-compose build
+npm run preview
 ```
 
-## Contributing
+### Deployment Process
+
+#### GitHub Pages Deployment
+
+The project is configured for automatic deployment to GitHub Pages:
+
+1. Push changes to the `main` branch
+2. GitHub Actions workflow automatically builds and deploys the site
+3. The site is deployed to `https://yourusername.github.io/eckwerkstuttgart/` (or your custom domain)
+
+#### Manual Deployment
+
+For manual deployment to other hosting services:
+
+1. Build the project: `npm run build`
+2. Upload the contents of the `dist/` directory to your web server
+3. Ensure proper MIME types are configured on your server
+4. For SPA routing support, configure URL rewriting to redirect requests to `index.html`
+
+#### Custom Domain Setup
+
+If using a custom domain:
+
+1. Add your domain to the `CNAME` file in the `public/` directory
+2. Configure DNS settings with your domain provider:
+   - For apex domain: Add an A record pointing to your hosting provider's IP
+   - For subdomain: Add a CNAME record pointing to `yourusername.github.io`
+3. Enable HTTPS in your hosting settings for secure connections
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
 2. Create your feature branch: `git checkout -b feature/amazing-feature`
@@ -122,6 +147,6 @@ docker-compose build
 4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-## License
+## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
