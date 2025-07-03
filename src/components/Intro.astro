@@ -45,7 +45,7 @@ const { imageDesktop, imageMobil } = await getIntroImages(introImagesSrc)
 	>
 		<h1
 			id="intro-title"
-			class="2xl:text-9xs pb-36 text-center text-4xl text-white sm:pb-56 sm:text-6xl md:pb-64 md:text-6xl lg:pb-96 lg:text-7xl xl:break-words xl:pl-9 xl:pr-9 xl:text-9xl 2xl:pb-96 2xl:pl-9 2xl:pr-9"
+			class="2xl:text-9xs pb-36 text-center text-4xl text-white opacity-0 sm:pb-56 sm:text-6xl md:pb-64 md:text-6xl lg:pb-96 lg:text-7xl xl:break-words xl:pl-9 xl:pr-9 xl:text-9xl 2xl:pb-96 2xl:pl-9 2xl:pr-9"
 		>
 			{title}
 		</h1>
@@ -59,6 +59,6 @@ const { imageDesktop, imageMobil } = await getIntroImages(introImagesSrc)
 		const titleElement = document.getElementById('intro-title')
 
 		// Apply fade in animation to the title with a slight delay
-		fadeIn(titleElement, 0.5, 1.5)
+		fadeIn(titleElement, 0, 1.5)
 	})
 </script>

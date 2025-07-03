@@ -1,16 +1,28 @@
 ---
+/**
+ * SectionContent Component
+ *
+ * This component renders a content section with optional image support.
+ * It features responsive design with different images for mobile and desktop views,
+ * and includes animation capabilities through GSAP.
+ *
+ * @component
+ */
+
 interface Props {
+	/** Unique identifier for the section, used for navigation and animation targeting */
 	id?: string
+	/** When true, only passes through children without wrapping in article element */
 	onlyPass?: boolean
+	/** When true, prevents images from being displayed even if they are provided */
 	withoutImages?: boolean
+	/** Array of image URLs [desktop, mobile] or null if no images */
 	images?: string[] | null
 }
 
-/**
- * @param {Props} Astro.props
- */
 const { id, onlyPass = false, withoutImages = false, images } = Astro.props
 
+// Extract desktop and mobile image URLs from the images array if provided
 const imageDesktop = images ? images[0] : ''
 const imageMobile = images ? images[1] : ''
 ---
@@ -21,12 +33,15 @@ const imageMobile = images ? images[1] : ''
 			<slot />
 		) : (
 			<>
+				{/* Content container with responsive padding and animation setup */}
 				<article class="text-l md:py-18 px-6 py-10 opacity-0 contain-content last:min-h-max sm:px-12 sm:py-14 md:px-16 lg:px-36 lg:py-28 xl:px-52">
 					<slot />
 				</article>
+				{/* Conditional rendering of images based on props */}
 				{images !== null && !withoutImages ? (
 					<div class="inset-0">
 						<picture>
+							{/* Responsive image handling with media queries */}
 							<source media="(max-width: 767px)" srcset={imageMobile} />
 							<source media="(min-width: 768px)" srcset={imageDesktop} />
 							<img
@@ -46,6 +61,10 @@ const imageMobile = images ? images[1] : ''
 	import { fadeIn } from '../utils/Animations'
 	import { gsap } from 'gsap'
 
+	/**
+	 * Initialize animations for section content
+	 * Sets up IntersectionObserver to trigger animations when sections come into view
+	 */
 	document.addEventListener('DOMContentLoaded', () => {
 		const sections = document.querySelectorAll('section[id]')
 

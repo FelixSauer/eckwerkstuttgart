@@ -36,8 +36,8 @@ const reviews: Review[] = await fetchReviews()
 
 <div class="h-max">
 	<h1>Google Reviews</h1>
-	<div class="container relative m-auto h-96">
-		<div class="relative flex h-full items-center gap-4 sm:gap-8">
+	<div class="container relative m-auto h-96 md:h-96">
+		<div class="relative flex h-max items-center gap-2 sm:gap-8 md:h-full md:gap-4">
 			<button class="prev m-0 p-0 text-4xl font-bold hover:text-secondary" id="prevButton">
 				<Icon name="line-md:chevron-left" />
 			</button>
@@ -45,7 +45,7 @@ const reviews: Review[] = await fetchReviews()
 				{
 					reviews.map((review, index) => (
 						<div class={`item ${index === 0 ? 'block' : 'hidden'}`}>
-							<div class="review fade flex min-h-80 flex-col gap-4 px-0 py-10">
+							<div class="review fade flex min-h-80 flex-col gap-2 px-0 md:gap-4">
 								<a
 									href={review.author_url}
 									target="_blank"
@@ -53,7 +53,7 @@ const reviews: Review[] = await fetchReviews()
 								>
 									<h3>{review.author_name}</h3>
 								</a>
-								<div class="flex gap-4">
+								<div class="size text-xxs flex gap-4 p-0">
 									<div class="stars">{renderStars(review.rating)}</div>
 									<div>{review.relative_time_description}</div>
 								</div>
