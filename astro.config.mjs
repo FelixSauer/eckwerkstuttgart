@@ -3,7 +3,6 @@ import icon from 'astro-icon'
 import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import webmanifest from 'astro-webmanifest'
-import playformCompress from '@playform/compress'
 
 // https://astro.build/config
 export default defineConfig({
