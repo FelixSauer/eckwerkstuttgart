@@ -1,0 +1,5 @@
+---
+'eckwerkstuttgart': major
+---
+
+First release
