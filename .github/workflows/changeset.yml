@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [opened, synchronize, labeled]
 
 permissions:
   contents: write
@@ -17,12 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
-      - name: Checkout Repository
+      - name: Checkout Repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Setup Node.js Environment
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -31,37 +27,10 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Create Release Pull Request
+      - name: Set version and generate changelog
         id: changesets
         uses: changesets/action@v1
         with:
-          version: yarn version
+          publish: yarn version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  close-empty-changeset-pr:
-    name: Close Empty Changeset PR
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && (github.actor == 'github-actions[bot]' || github.actor == 'changeset[bot]')
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Check for empty changeset
-        id: check_changeset
-        run: |
-          if [ ! -d ".changeset" ] || [ -z "$(ls -A .changeset | grep -v 'README.md\|config.json' | grep '.md')" ]; then
-            echo "No changeset found"
-            echo "should_close=true" >> $GITHUB_OUTPUT
-          else
-            echo "Changeset(s) found"
-            echo "should_close=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Close PR
-        if: steps.check_changeset.outputs.should_close == 'true'
-        run: |
-          gh pr close "$PR_URL" --comment "No packages to release — closing automatically."
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_URL: ${{ github.event.pull_request.html_url }}
