@@ -1,5 +1,0 @@
----
-'eckwerkstuttgart': minor
----
-
-Add Changeset
