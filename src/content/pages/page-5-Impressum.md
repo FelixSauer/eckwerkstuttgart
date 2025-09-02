@@ -6,7 +6,7 @@ navigation: Footer
 
 # Impressum
 
-**Eckwerkt Stuttgart**
+**Eckwerk Stuttgart**
 
 Stierlenstr. 25
 
@@ -17,7 +17,7 @@ Deutschland
 Tel: [+49 (0) 711 50 44 16 33](tel:+4971150441633)
 \
 Mobil: [+49 (0) 176 444 03 432](tel:+4917644403432)
-
+\
 Mail: [hallo@eckwerkstuttgart.de](mailto:hallo@eckwerkstuttgart.de)
 \
 \
