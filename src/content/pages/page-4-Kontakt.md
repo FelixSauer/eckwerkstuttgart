@@ -14,9 +14,15 @@ bei Ihnen zurück, um Ihre Fragen zu beantworten und alle Details zu besprechen.
 **Wir freuen uns darauf, von Ihnen zu hören!**
 \
 \
-Eckwerkt Stuttgart\
-Stierlenstr. 25 \
+**Eckwerk Stuttgart**
+
+Stierlenstr. 25
+\
 70327 Stuttgart
 \
+Deutschland
 \
-**Mail:** [hallo@eckwerkstuttgart.de](mailto:hallo@eckwerkstuttgart.de)
+\
+Tel: [+49 (0) 711 50 44 16 33](tel:+4971150441633)
+\
+Mail: [hallo@eckwerkstuttgart.de](mailto:hallo@eckwerkstuttgart.de)
