@@ -1,18 +1,44 @@
 ---
-import type {INavigation} from "../types/navigation";
-import Navigation from "./Navigation.astro";
-import Contact from "./Contact.astro";
-import Copyright from "./Copyright.astro";
+import type { INavigation } from '@/types/navigation'
 
 interface Props {
-	navigation: INavigation[];
+	navigation: INavigation[]
 }
 
-const {navigation} = Astro.props;
+const { navigation } = Astro.props
+const date = new Date()
+const year = date.getFullYear()
 ---
 
-<footer>
-    <Contact/>
-    <Navigation navigation={navigation} navigationPostion="footer"/>
-    <Copyright/>
+<footer class="bottom-0 z-50 w-full bg-primary p-4 px-6 text-xs text-white sm:px-12 md:px-16">
+	<ul class="m-0 flex list-none gap-4 p-0 md:pb-0">
+		{
+			navigation.map((item) => {
+				return (
+					<li class="pl-0">
+						<a
+							href={'/' + item.title + '/'}
+							data-href={item.title}
+							aria-current="page"
+							aria-label={item.title}
+						>
+							{item.title}
+						</a>
+					</li>
+				)
+			})
+		}
+	</ul>
+	<div class="lg:flex lg:gap-4 lg:text-right">
+		<p>Eckwerk Stuttgart</p>
+		<p>Stierlenstraße 25</p>
+		<p>70327 Stuttgart</p>
+		<p>
+			Mail: <a class="text-white" href="mailto:kontakt@eckwerkstuttgart.de" aria-label="E-Mail"
+				>kontakt@eckwerkstuttgart.de</a
+			>
+		</p>
+		<br />
+		<p>© {year} Eckwerk Stuttgart</p>
+	</div>
 </footer>

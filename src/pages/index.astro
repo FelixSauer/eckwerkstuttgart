@@ -1,23 +1,76 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "@fontsource-variable/montserrat";
-import "@fontsource-variable/fira-code";
-import "@fontsource-variable/source-code-pro";
-import '@fontsource/source-sans-pro';
-import "@fontsource/roboto";
-import "./../styles/GlobalStyling.scss";
-import {Icon} from "astro-icon/components";
-import Contact from "../components/Contact.astro";
+import type { ImageMetadata } from 'astro'
+import { getCollection } from 'astro:content'
+import Layout from '@/layouts/multi.astro'
+import '@fontsource-variable/montserrat'
+import '@fontsource-variable/source-code-pro'
+import '@fontsource-variable/source-sans-3'
+import '@fontsource/source-sans-pro'
+import '@fontsource/roboto'
+import '@/styles/global.css'
+
+import Intro from '@/components/Intro.astro'
+import SectionContent from '@/components/SectionContent.astro'
+import Reviews from '@/components/Reviews.astro'
+import Carousel from '../components/Carousel.astro'
+
+const pages = await getCollection('pages')
+
+const ParallaxImagesDesktopSrc = import.meta.glob<{ default: ImageMetadata }>(
+	'../assets/Albums/Parallax/desktop/*'
+)
+
+const ParallaxImagesMobilSrc = import.meta.glob<{ default: ImageMetadata }>(
+	'../assets/Albums/Parallax/mobil/*'
+)
+
+const ParallaxImagesDesktop = Object.keys(ParallaxImagesDesktopSrc)
+const ParallaxImagesMobil = Object.keys(ParallaxImagesMobilSrc)
+
+const mainStagePages = pages.filter((page) => page.data.mainStage === true)
 ---
 
 <Layout title="Eckwerk Stuttgart">
-    <main>
-        <Icon name="logo2"/>
-        <h1>Wir renovieren momentan.</h1>
-        <Contact/>
-    </main>
-</Layout>
+	<div>
+		<SectionContent onlyPass>
+			<Intro title={pages[0].data.slogan} />
+		</SectionContent>
 
-<style lang="scss" is:global>
-  @import "./../styles/GlobalStyling";
-</style>
+		{
+			mainStagePages.map(async (originPage, index) => {
+				const { Content } = await originPage.render()
+
+				const desktopImagePath = ParallaxImagesDesktop[index % ParallaxImagesDesktop.length]
+				const mobilImagePath = ParallaxImagesMobil[index % ParallaxImagesMobil.length]
+
+				const desktopImageModule = await ParallaxImagesDesktopSrc[desktopImagePath]()
+				const mobilImageModule = await ParallaxImagesMobilSrc[mobilImagePath]()
+
+				const images = [desktopImageModule.default.src, mobilImageModule.default.src]
+
+				return originPage.data.mainStage === true ? (
+					<>
+						<SectionContent
+							transition:animate="slide"
+							id={originPage.data.title}
+							images={index !== mainStagePages.length - 1 ? images : null}
+						>
+							<Content />
+						</SectionContent>
+
+						{index === 3 && (
+							<>
+								<SectionContent id="reviews" withoutImages>
+									<Reviews />
+								</SectionContent>
+								<SectionContent id="carousel" onlyPass>
+									<Carousel />
+								</SectionContent>
+							</>
+						)}
+					</>
+				) : null
+			})
+		}
+	</div>
+</Layout>

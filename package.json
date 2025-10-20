@@ -1,43 +1,63 @@
 {
   "name": "eckwerkstuttgart",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build --mode=prod",
+    "build-prod": "astro check && astro build --mode=prod",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\"",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.4.1",
+    "@astrojs/tailwind": "^5.1.1",
     "@fontsource-variable/fira-code": "^5.0.18",
     "@fontsource-variable/material-symbols-outlined": "^5.0.33",
     "@fontsource-variable/montserrat": "^5.0.19",
     "@fontsource-variable/source-code-pro": "^5.0.19",
+    "@fontsource-variable/source-sans-3": "^5.1.0",
     "@fontsource/roboto": "^5.0.13",
     "@fontsource/source-sans-pro": "^5.0.8",
     "@iconify-json/line-md": "^1.1.38",
     "@iconify-json/mdi": "^1.1.67",
+    "@playform/compress": "^0.2.0",
     "astro": "^4.11.3",
+    "astro-compressor": "^1.0.0",
     "astro-favicons": "^2.0.2",
     "astro-icon": "^1.1.0",
+    "astro-image": "^0.0.7",
     "astro-robots-txt": "^1.0.0",
     "astro-seo": "^0.8.4",
-    "typescript": "^5.5.3"
+    "astro-webmanifest": "^1.0.0",
+    "gsap": "^3.13.0",
+    "photoswipe": "^5.4.4",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.5.3",
+    "vite-plugin-image-optimizer": "^1.1.8"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@types/photoswipe": "^4.1.6",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.6.0",
     "eslint-plugin-astro": "^1.2.2",
-    "prettier": "^3.3.2",
-    "prettier-plugin-astro": "^0.14.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-packagejson": "^2.5.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "sass": "^1.77.6"
   },
   "volta": {
-    "node": "22.4.0",
-    "yarn": "4.3.1"
+    "node": "22.14.0",
+    "yarn": "1.22.11"
   }
 }

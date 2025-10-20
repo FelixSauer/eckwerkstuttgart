@@ -1,147 +1,114 @@
 ---
-import type {INavigation} from "../types/navigation";
+import type { INavigation } from '@/types/navigation'
+import { Icon } from 'astro-icon/components'
 
 interface Props {
-	navigation: INavigation[];
-	navigationPostion: string;
+	navigation: INavigation[]
+	navigationPostion: string
 }
 
-const {navigation} = Astro.props;
-const {navigationPostion} = Astro.props;
+const { navigation, navigationPostion } = Astro.props as Props
 ---
 
-<nav class="navbar">
-    <ul>
+<nav class="flex items-center">
+	<div class="hidden lg:block" id="navbarDesktop">
+		<ul class="m-0 flex list-none gap-6 p-0 font-normal first:m-0 last:m-0">
 			{
-				navigation.map((item) => {
-					return (
-                  <li>
-                      <a
-                              href={
-																navigationPostion === "header" ? "#" + item.title : item.title
-															}
-                              data-href={item.title}
-                              aria-current="page"
-                      >
-												{item.title}
-                      </a>
-                  </li>
-					);
-				})
+				navigation.map((item) => (
+					<li>
+						<a
+							href={navigationPostion === 'header' ? '/#' + item.title : item.title}
+							data-href={item.title}
+							aria-label={item.title}
+							aria-current="page"
+							class="cursor-pointer font-sourceCodePro text-xl font-light uppercase tracking-wide no-underline subpixel-antialiased hover:text-secondary"
+						>
+							{item.title}
+						</a>
+					</li>
+				))
 			}
-    </ul>
+		</ul>
+	</div>
+	<div class="lg:hidden">
+		<button
+			id="navbarToggle"
+			aria-label="Toggle navigation menu"
+			class="relative z-40 pt-1 cursor-pointer border-0 bg-transparent text-3xl sm:text-5xl text-white hover:text-secondary flex align-middle"
+		>
+			<Icon name="line-md:close-to-menu-transition" />
+		</button>
+
+		<div
+			id="navbarMenu"
+			class="absolute hidden left-0 top-0 z-30 h-screen w-screen translate-x-full transform bg-primary transition-transform duration-300 ease-in-out"
+		>
+			<ul class="flex h-full flex-col justify-center gap-8 p-8">
+				{
+					navigation.map((item) => (
+						<li>
+							<a
+								href={navigationPostion === 'header' ? '/#' + item.title : item.title}
+								data-href={item.title}
+								aria-label="{item.title}"
+								aria-current="page"
+								id="navItem"
+								class="m-1 text-4xl text-white hover:text-secondary"
+							>
+								{item.title}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
 </nav>
 
 <script>
-	let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+	document.addEventListener('DOMContentLoaded', () => {
+		const navbarToggle = document.getElementById('navbarToggle')
+		const navbarMenu = document.getElementById('navbarMenu')
+		const navItems = document.querySelectorAll('#navItem')
 
-	document.addEventListener("DOMContentLoaded", () => {
-		initNavigation();
-		initIntersectionObserver();
-	});
+		if (!navbarToggle || !navbarMenu) {
+			console.error('Navbar elements are missing')
+			return
+		}
 
-	function initNavigation(): void {
-		window.addEventListener('hashchange', updateActiveLink);
-		updateActiveLink();
-	}
+		const toggleMenu = () => {
+      navbarMenu.classList.toggle('hidden')
+			navbarMenu.classList.toggle('translate-x-full')
+		}
 
-	function updateActiveLink(): void {
-		const navigationLinks = document.querySelectorAll<HTMLAnchorElement>('a[data-href]');
-		const currentUrl = window.location.hash.substring(1);
+		const closeMenu = () => {
+			navbarMenu.classList.add('translate-x-full')
+      navbarMenu.classList.toggle('hidden')
+		}
 
-		navigationLinks.forEach((link) => {
-			const linkHref = link?.getAttribute('data-href')?.substring(1);
-			link.classList.toggle("active", linkHref === currentUrl);
-		});
-	}
+		navbarToggle.addEventListener('click', toggleMenu)
 
-	function initIntersectionObserver(): void {
-		const observerOptions: IntersectionObserverInit = {
-			root: null,
-			rootMargin: '0px',
-			threshold: 0.5
-		};
-
-		const observerCallback: IntersectionObserverCallback = (entries) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					const sectionId = entry.target.id;
-					handleScrollStop(sectionId);
-				}
-			});
-		};
-
-		const observer = new IntersectionObserver(observerCallback, observerOptions);
-		document.querySelectorAll<HTMLElement>('section').forEach(section => {
-			observer.observe(section);
-		});
-	}
-
-	function handleScrollStop(sectionId: string): void {
-		const activeLink = document.querySelector<HTMLAnchorElement>(`a[data-href='#${sectionId}']`);
-
-		if (activeLink) {
-			if (scrollTimeout !== null) {
-				clearTimeout(scrollTimeout);
+		document.addEventListener('click', (event) => {
+			if (event === null) {
+				throw new Error('Event is null')
 			}
 
-			scrollTimeout = setTimeout(() => {
-				document.querySelectorAll<HTMLAnchorElement>('a[data-href]').forEach(link => {
-					link.classList.remove('active');
-				});
-				activeLink.classList.add('active');
-			}, 200) as any; // Type assertion to allow assignment of setTimeout return value
-		}
-	}
+			if (
+				!navbarMenu.contains(event.target as Node) &&
+				!navbarToggle.contains(event.target as Node)
+			) {
+				closeMenu()
+			}
+		})
+
+		document.addEventListener('keydown', (event) => {
+			if (event.key === 'Escape') {
+				closeMenu()
+			}
+		})
+
+		navItems.forEach((navItem) => {
+			navItem.addEventListener('click', closeMenu)
+		})
+	})
 </script>
-
-
-<style lang="scss">
-  @import "./../styles/GlobalStyling";
-
-  nav {
-    align-items: center;
-
-    ul {
-      display: flex;
-      list-style: none;
-      margin: unset;
-      padding: unset;
-
-      li {
-        margin-right: $spacing-l;
-        font-weight: 300;
-
-        &:last-child {
-          margin-right: unset;
-        }
-      }
-    }
-  }
-
-  .navbar {
-    a {
-      color: $color-white;
-      opacity: 0.5;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-family: Source Code Pro Variable, sans-serif;
-      padding: $spacing-s;
-      border: 1px solid transparent;
-      transition: border 0.5s;
-
-      &.active {
-        opacity: 1;
-      }
-
-      &:hover {
-        opacity: 0.75;
-      }
-
-      &:focus {
-        color: $color-accent-3;
-      }
-    }
-  }
-
-</style>

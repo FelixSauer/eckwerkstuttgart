@@ -1,0 +1,120 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Review {
+	author_url: string
+	author_name: string
+	rating: number
+	relative_time_description: string
+	text: string
+}
+
+async function fetchReviews(): Promise<Review[]> {
+	const API_KEY = 'AIzaSyAlDmSirID3ctmTbZn5-rJG6Z-ofXZCmws'
+	const PLACE_ID = 'ChIJ_erOoVuif6kRZSACbgSg1Ss'
+	const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&language=de&key=${API_KEY}`
+
+	const response = await fetch(url)
+	const data = await response.json()
+
+	if (!response.ok) {
+		throw new Error(data.error_message || 'Failed to fetch Google Reviews')
+	}
+
+	return data.result?.reviews || []
+}
+
+const renderStars = (rating: number): string => {
+	const fullStars = Math.floor(rating)
+	const halfStar = rating % 1 >= 0.5 ? 1 : 0
+	const emptyStars = 5 - fullStars - halfStar
+	return '★'.repeat(fullStars) + '☆'.repeat(emptyStars)
+}
+
+const reviews: Review[] = await fetchReviews()
+---
+
+<div class="h-max">
+	<h1>Google Reviews</h1>
+	<div class="container relative m-auto h-96 md:h-96">
+		<div class="relative flex h-max items-center gap-2 sm:gap-8 md:h-full md:gap-4">
+			<button class="prev m-0 p-0 text-4xl font-bold hover:text-secondary" id="prevButton">
+				<Icon name="line-md:chevron-left" />
+			</button>
+			<div class="align-middle">
+				{
+					reviews.map((review, index) => (
+						<div class={`item ${index === 0 ? 'block' : 'hidden'}`}>
+							<div class="review fade flex min-h-80 flex-col gap-2 px-0 md:gap-4">
+								<a
+									href={review.author_url}
+									target="_blank"
+									aria-label={`Review by ${review.author_name}`}
+								>
+									<h3>{review.author_name}</h3>
+								</a>
+								<div class="size text-xxs flex gap-4 p-0">
+									<div class="stars">{renderStars(review.rating)}</div>
+									<div>{review.relative_time_description}</div>
+								</div>
+								<p>{review.text}</p>
+							</div>
+						</div>
+					))
+				}
+			</div>
+			<button class="next m-0 p-0 text-4xl hover:text-secondary" id="nextButton">
+				<Icon name="line-md:chevron-right" />
+			</button>
+		</div>
+	</div>
+</div>
+
+<style>
+	@keyframes fade {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+</style>
+
+<script>
+	let slideIndex = 1
+
+	const showSlides = (n: number) => {
+		let i
+		const slides = document.getElementsByClassName('item')
+
+		if (n > slides.length) {
+			slideIndex = 1
+		}
+
+		if (n < 1) {
+			slideIndex = slides.length
+		}
+
+		for (i = 0; i < slides.length; i++) {
+			;(slides[i] as HTMLElement).style.display = 'none'
+		}
+		;(slides[slideIndex - 1] as HTMLElement).style.display = 'block'
+	}
+
+	const plusSlides = (n: number) => {
+		showSlides((slideIndex += n))
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		showSlides(slideIndex)
+
+		document.getElementById('prevButton')?.addEventListener('click', () => {
+			plusSlides(-1)
+		})
+
+		document.getElementById('nextButton')?.addEventListener('click', () => {
+			plusSlides(1)
+		})
+	})
+</script>

@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../layouts/multi.astro'
+import '@fontsource-variable/montserrat'
+import '@fontsource-variable/source-code-pro'
+import '@fontsource/source-sans-pro'
+import '@fontsource/roboto'
+import '@/styles/global.css'
+
+const pages = await getCollection('pages')
+const page = pages.find((page) => page.slug === 'page-6-datenschutz')
+let Content
+if (page) {
+	const rendered = await page.render()
+	Content = rendered.Content
+}
+---
+
+<Layout title="Eckwerk Stuttgart">
+	<section class="relative h-full w-full items-center bg-white align-middle">
+		<article
+			class="text-l md:py-18 px-6 py-10 contain-content last:min-h-max sm:px-12 sm:py-14 md:px-16 lg:px-36 lg:py-28 xl:px-52"
+		>
+			{Content && <Content />}
+		</article>
+	</section>
+</Layout>

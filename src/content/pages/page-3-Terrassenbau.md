@@ -1,15 +1,32 @@
 ---
 title: Terrassenbau
-mainstage: true
+mainStage: true
 navigation: Header
 ---
 
-# Renovierung
+# Terrassenbau
 
-Möchten Sie Ihr Büro modernisieren oder die eigenen vier Wände einfach verschönern?
+Neben unserem umfassenden Leistungsportfolio im Bereich Wohnhandwerk bieten wir Ihnen besonders hochwertige Lösungen für
+den Bau von **Holz- und WPC-Terrassen**. Dabei verbinden wir Qualität, Ästhetik und Nachhaltigkeit:\
+\
+Für unsere Holzterrassen arbeiten wir mit **Betterwood** zusammen, einem Partner, der fair gehandelte Hölzer liefert und
+aktiv die Wiederaufforstung der Urwälder unterstützt. So tragen wir gemeinsam zum Schutz unserer Umwelt bei.\
+\
+Für langlebige WPC-Terrassen setzen wir auf **NATURinForm**, einen deutschen Hersteller, der aus 70 % heimischen Hölzern
+hochwertige, umweltfreundliche Materialien produziert. Mit WPC schaffen wir nicht nur eine besonders pflegeleichte
+Terrasse, sondern leisten auch einen Beitrag zur Ressourcenschonung und regionalen Wertschöpfung.
+\
+\
+Neben dem Bau Ihrer Terrasse bieten wir Ihnen auch die komplette Gartengestaltung sowie alle vorbereitenden Arbeiten –
+alles aus einer Hand. Vertrauen Sie auf unser handwerkliches Können und lassen Sie sich von uns eine individuelle
+Wohlfühloase im Freien schaffen.
+\
+\
+**Für mehr Infos:**
 
-Ob Sie schon eine ganz konkrete Vorstellung haben oder erst eine vage Idee, wir übernehmen sämtliche Renovierungs-, Sanierungs- und Modernisierungsarbeiten. Dazu gehören die Konzeptentwicklung, Lösungsvorschläge, Beratung zur Materialauswahl und die Umsetzung inklusive aller Arbeitsmaterialien –
+<div class="logo">
 
-bis Ihr Wunschprojekt fix fertig ist.
+[![Betterwood Logo](../../assets/Betterwood.jpg)](https://www.betterwood.de/)
+[![Natur in Form Logo](../../assets/NiF.jpg)](https://www.naturinform.com/de/)
 
-Kommen Sie für ein Erstgespräch, eine Beratung oder ein konkretes Angebot direkt auf uns zu.
+</div>

@@ -1,289 +1,727 @@
 ---
-title: Datenschutzerklärung
-mainstage: false
+title: Datenschutz
+mainStage: false
 navigation: Footer
 ---
 
 # Datenschutzerklärung
 
-# Datenschutzerklärung
+Wir freuen uns sehr über Ihr Interesse an unserem Unternehmen. Datenschutz hat einen besonders hohen Stellenwert für die
+Geschäftsleitung der Eckwerkt Stuttgart. Eine Nutzung der Internetseiten der Eckwerkt Stuttgart ist grundsätzlich ohne
+jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services unseres Unternehmens über
+unsere Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich
+werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung keine
+gesetzliche Grundlage, holen wir generell eine Einwilligung der betroffenen Person ein.
+
+<br/>
+
+Die Verarbeitung personenbezogener Daten, beispielsweise des Namens, der Anschrift, E-Mail-Adresse oder Telefonnummer
+einer betroffenen Person, erfolgt stets im Einklang mit der Datenschutz-Grundverordnung und in Übereinstimmung mit den
+für die Eckwerkt Stuttgart geltenden landesspezifischen Datenschutzbestimmungen. Mittels dieser Datenschutzerklärung
+möchte unser Unternehmen die Öffentlichkeit über Art, Umfang und Zweck der von uns erhobenen, genutzten und
+verarbeiteten personenbezogenen Daten informieren. Ferner werden betroffene Personen mittels dieser Datenschutzerklärung
+über die ihnen zustehenden Rechte aufgeklärt.
+
+<br/>
+
+Die Eckwerkt Stuttgart hat als für die Verarbeitung Verantwortlicher zahlreiche technische und organisatorische
+Maßnahmen umgesetzt, um einen möglichst lückenlosen Schutz der über diese Internetseite verarbeiteten personenbezogenen
+Daten sicherzustellen. Dennoch können Internetbasierte Datenübertragungen grundsätzlich Sicherheitslücken aufweisen,
+sodass ein absoluter Schutz nicht gewährleistet werden kann. Aus diesem Grund steht es jeder betroffenen Person frei,
+personenbezogene Daten auch auf alternativen Wegen, beispielsweise telefonisch, an uns zu übermitteln.
+
+<br/>
+
+**Begriffsbestimmungen**
+Die Datenschutzerklärung der Eckwerkt Stuttgart beruht auf den Begrifflichkeiten, die durch den Europäischen
+Richtlinien- und Verordnungsgeber beim Erlass der Datenschutz-Grundverordnung (DS-GVO) verwendet wurden. Unsere
+Datenschutzerklärung soll sowohl für die Öffentlichkeit als auch für unsere Kunden und Geschäftspartner einfach
+lesbar und verständlich sein. Um dies zu gewährleisten, möchten wir vorab die verwendeten Begrifflichkeiten
+erläutern.
 
-Stand: 15. Juni 2024
+<br/>
 
-## Inhaltsübersicht
+Wir verwenden in dieser Datenschutzerklärung unter anderem die folgenden Begriffe:
 
-- [Verantwortlicher](#m3)
-- [Übersicht der Verarbeitungen](#mOverview)
-- [Maßgebliche Rechtsgrundlagen](#m2427)
-- [Sicherheitsmaßnahmen](#m27)
-- [Übermittlung von personenbezogenen Daten](#m25)
-- [Internationale Datentransfers](#m24)
-- [Allgemeine Informationen zur Datenspeicherung und Löschung](#m12)
-- [Rechte der betroffenen Personen](#m10)
-- [Geschäftliche Leistungen](#m317)
-- [Bereitstellung des Onlineangebots und Webhosting](#m225)
-- [Einsatz von Cookies](#m134)
-- [Kontakt- und Anfrageverwaltung](#m182)
-- [Newsletter und elektronische Benachrichtigungen](#m17)
-- [Webanalyse, Monitoring und Optimierung](#m263)
-- [Kundenrezensionen und Bewertungsverfahren](#m299)
-- [Plug-ins und eingebettete Funktionen sowie Inhalte](#m328)
+<br/>
 
-## Verantwortlicher
+a) personenbezogene Daten
+Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche
+Person (im Folgenden „betroffene Person“) beziehen. Als identifizierbar wird eine natürliche Person angesehen, die
+direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu
+Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen, die Ausdruck der physischen,
+physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen
+Person sind, identifiziert werden kann.
 
-Vorname, Name / Firma  
-Straße, Hausnr.  
-PLZ, Ort, Land
+<br/>
 
-E-Mail-Adresse: [vorname.name@beispielsdomain.eu](mailto:vorname.name@beispielsdomain.eu)
+b) betroffene Person
+Betroffene Person ist jede identifizierte oder identifizierbare natürliche Person, deren personenbezogene Daten von dem
+für die Verarbeitung Verantwortlichen verarbeitet werden.
 
-## Übersicht der Verarbeitungen
+<br/>
 
-Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.
+c) Verarbeitung
+Verarbeitung ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe
+im Zusammenhang mit personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation, das Ordnen, die
+Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch
+Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die
+Einschränkung, das Löschen oder die Vernichtung.
 
-### Arten der verarbeiteten Daten
+<br/>
+d) Einschränkung der Verarbeitung
+Einschränkung der Verarbeitung ist die Markierung gespeicherter personenbezogener Daten mit dem Ziel, ihre künftige
+Verarbeitung einzuschränken.
 
-- Bestandsdaten.
-- Zahlungsdaten.
-- Standortdaten.
-- Kontaktdaten.
-- Inhaltsdaten.
-- Vertragsdaten.
-- Nutzungsdaten.
-- Meta-, Kommunikations- und Verfahrensdaten.
-- Protokolldaten.
+<br/>
 
-### Kategorien betroffener Personen
+e) Profiling
+Profiling ist jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese
+personenbezogenen Daten verwendet werden, um bestimmte persönliche Aspekte, die sich auf eine natürliche Person
+beziehen, zu bewerten, insbesondere, um Aspekte bezüglich Arbeitsleistung, wirtschaftlicher Lage, Gesundheit,
+persönlicher Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser natürlichen
+Person zu analysieren oder vorherzusagen.
 
-- Leistungsempfänger und Auftraggeber.
-- Interessenten.
-- Kommunikationspartner.
-- Nutzer.
-- Geschäfts- und Vertragspartner.
+<br/>
 
-### Zwecke der Verarbeitung
+f) Pseudonymisierung
+Pseudonymisierung ist die Verarbeitung personenbezogener Daten in einer Weise, auf welche die personenbezogenen Daten
+ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden können,
+sofern diese zusätzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Maßnahmen
+unterliegen, die gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren
+natürlichen Person zugewiesen werden.
 
-- Erbringung vertraglicher Leistungen und Erfüllung vertraglicher Pflichten.
-- Kommunikation.
-- Sicherheitsmaßnahmen.
-- Direktmarketing.
-- Reichweitenmessung.
-- Büro- und Organisationsverfahren.
-- Organisations- und Verwaltungsverfahren.
-- Feedback.
-- Marketing.
-- Profile mit nutzerbezogenen Informationen.
-- Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.
-- Informationstechnische Infrastruktur.
-- Geschäftsprozesse und betriebswirtschaftliche Verfahren.
+<br/>
 
-## Maßgebliche Rechtsgrundlagen
+g) Verantwortlicher oder für die Verarbeitung Verantwortlicher
+Verantwortlicher oder für die Verarbeitung Verantwortlicher ist die natürliche oder juristische Person, Behörde,
+Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von
+personenbezogenen Daten entscheidet. Sind die Zwecke und Mittel dieser Verarbeitung durch das Unionsrecht oder das Recht
+der Mitgliedstaaten vorgegeben, so kann der Verantwortliche beziehungsweise können die bestimmten Kriterien seiner
+Benennung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten vorgesehen werden.
 
-**Maßgebliche Rechtsgrundlagen nach der DSGVO:** Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können. Sollten ferner im Einzelfall speziellere Rechtsgrundlagen maßgeblich sein, teilen wir Ihnen diese in der Datenschutzerklärung mit.
+<br/>
 
-- **Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO)** - Die betroffene Person hat ihre Einwilligung in die Verarbeitung der sie betreffenden personenbezogenen Daten für einen spezifischen Zweck oder mehrere bestimmte Zwecke gegeben.
-- **Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO)** - Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf Anfrage der betroffenen Person erfolgen.
-- **Rechtliche Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c) DSGVO)** - Die Verarbeitung ist zur Erfüllung einer rechtlichen Verpflichtung erforderlich, der der Verantwortliche unterliegt.
-- **Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO)** - die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten notwendig, vorausgesetzt, dass die Interessen, Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz personenbezogener Daten verlangen, nicht überwiegen.
+h) Auftragsverarbeiter
+Auftragsverarbeiter ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die
+personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.
 
-**Nationale Datenschutzregelungen in Deutschland:** Zusätzlich zu den Datenschutzregelungen der DSGVO gelten nationale Regelungen zum Datenschutz in Deutschland. Hierzu gehört insbesondere das Gesetz zum Schutz vor Missbrauch personenbezogener Daten bei der Datenverarbeitung (Bundesdatenschutzgesetz – BDSG). Das BDSG enthält insbesondere Spezialregelungen zum Recht auf Auskunft, zum Recht auf Löschung, zum Widerspruchsrecht, zur Verarbeitung besonderer Kategorien personenbezogener Daten, zur Verarbeitung für andere Zwecke und zur Übermittlung sowie automatisierten Entscheidungsfindung im Einzelfall einschließlich Profiling. Ferner können Landesdatenschutzgesetze der einzelnen Bundesländer zur Anwendung gelangen.
+<br/>
 
-**Hinweis auf Geltung DSGVO und Schweizer DSG:** Diese Datenschutzhinweise dienen sowohl der Informationserteilung nach dem Schweizer DSG als auch nach der Datenschutzgrundverordnung (DSGVO). Aus diesem Grund bitten wir Sie zu beachten, dass aufgrund der breiteren räumlichen Anwendung und Verständlichkeit die Begriffe der DSGVO verwendet werden. Insbesondere statt der im Schweizer DSG verwendeten Begriffe „Bearbeitung" von „Personendaten", "überwiegendes Interesse" und "besonders schützenswerte Personendaten" werden die in der DSGVO verwendeten Begriffe „Verarbeitung" von „personenbezogenen Daten" sowie "berechtigtes Interesse" und "besondere Kategorien von Daten" verwendet. Die gesetzliche Bedeutung der Begriffe wird jedoch im Rahmen der Geltung des Schweizer DSG weiterhin nach dem Schweizer DSG bestimmt.
+i) Empfänger
+Empfänger ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, der personenbezogene
+Daten offengelegt werden, unabhängig davon, ob es sich bei ihr um einen Dritten handelt oder nicht. Behörden, die im
+Rahmen eines bestimmten Untersuchungsauftrags nach dem Unionsrecht oder dem Recht der Mitgliedstaaten möglicherweise
+personenbezogene Daten erhalten, gelten jedoch nicht als Empfänger.
 
-## Sicherheitsmaßnahmen
+<br/>
 
-Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.
+j) Dritter
+Dritter ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle außer der betroffenen
+Person, dem Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter der unmittelbaren Verantwortung des
+Verantwortlichen oder des Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu verarbeiten.
 
-Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit, Integrität und Verfügbarkeit von Daten durch Kontrolle des physischen und elektronischen Zugangs zu den Daten als auch des sie betreffenden Zugriffs, der Eingabe, der Weitergabe, der Sicherung der Verfügbarkeit und ihrer Trennung. Des Weiteren haben wir Verfahren eingerichtet, die eine Wahrnehmung von Betroffenenrechten, die Löschung von Daten und Reaktionen auf die Gefährdung der Daten gewährleisten. Ferner berücksichtigen wir den Schutz personenbezogener Daten bereits bei der Entwicklung bzw. Auswahl von Hardware, Software sowie Verfahren entsprechend dem Prinzip des Datenschutzes, durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen.
+<br/>
 
-## Übermittlung von personenbezogenen Daten
+k) Einwilligung
+Einwilligung ist jede von der betroffenen Person freiwillig für den bestimmten Fall in informierter Weise und
+unmissverständlich abgegebene Willensbekundung in Form einer Erklärung oder einer sonstigen eindeutigen bestätigenden
+Handlung, mit der die betroffene Person zu verstehen gibt, dass sie mit der Verarbeitung der sie betreffenden
+personenbezogenen Daten einverstanden ist.
 
-Im Rahmen unserer Verarbeitung von personenbezogenen Daten kommt es vor, dass diese an andere Stellen, Unternehmen, rechtlich selbstständige Organisationseinheiten oder Personen übermittelt beziehungsweise ihnen gegenüber offengelegt werden. Zu den Empfängern dieser Daten können z. B. mit IT-Aufgaben beauftragte Dienstleister gehören oder Anbieter von Diensten und Inhalten, die in eine Website eingebunden sind. In solchen Fällen beachten wir die gesetzlichen Vorgaben und schließen insbesondere entsprechende Verträge bzw. Vereinbarungen, die dem Schutz Ihrer Daten dienen, mit den Empfängern Ihrer Daten ab.
+<br/>
 
-## Internationale Datentransfers
+**2.** Name und Anschrift des für die Verarbeitung Verantwortlichen
+Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitgliedstaaten der Europäischen Union
+geltenden Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem Charakter ist die:
 
-Datenverarbeitung in Drittländern: Sofern wir Daten in einem Drittland (d. h., außerhalb der Europäischen Union (EU), des Europäischen Wirtschaftsraums (EWR)) verarbeiten oder die Verarbeitung im Rahmen der Inanspruchnahme von Diensten Dritter oder der Offenlegung bzw. Übermittlung von Daten an andere Personen, Stellen oder Unternehmen stattfindet, erfolgt dies nur im Einklang mit den gesetzlichen Vorgaben. Sofern das Datenschutzniveau in dem Drittland mittels eines Angemessenheitsbeschlusses anerkannt wurde (Art. 45 DSGVO), dient dieser als Grundlage des Datentransfers. Im Übrigen erfolgen Datentransfers nur dann, wenn das Datenschutzniveau anderweitig gesichert ist, insbesondere durch Standardvertragsklauseln (Art. 46 Abs. 2 lit. c) DSGVO), ausdrückliche Einwilligung oder im Fall vertraglicher oder gesetzlich erforderlicher Übermittlung (Art. 49 Abs. 1 DSGVO). Im Übrigen teilen wir Ihnen die Grundlagen der Drittlandübermittlung bei den einzelnen Anbietern aus dem Drittland mit, wobei die Angemessenheitsbeschlüsse als Grundlagen vorrangig gelten. Informationen zu Drittlandtransfers und vorliegenden Angemessenheitsbeschlüssen können dem Informationsangebot der EU-Kommission entnommen werden: [https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en?prefLang=de.](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en?prefLang=de)
+<br/>
 
-EU-US Trans-Atlantic Data Privacy Framework: Im Rahmen des sogenannten „Data Privacy Framework" (DPF) hat die EU-Kommission das Datenschutzniveau ebenfalls für bestimmte Unternehmen aus den USA im Rahmen der Angemessenheitsbeschlusses vom 10.07.2023 als sicher anerkannt. Die Liste der zertifizierten Unternehmen als auch weitere Informationen zu dem DPF können Sie der Website des Handelsministeriums der USA unter [https://www.dataprivacyframework.gov/](https://www.dataprivacyframework.gov/) (in Englisch) entnehmen. Wir informieren Sie im Rahmen der Datenschutzhinweise, welche von uns eingesetzten Diensteanbieter unter dem Data Privacy Framework zertifiziert sind.
+Eckwerkt Stuttgart
 
-## Allgemeine Informationen zur Datenspeicherung und Löschung
+Stierlenstr. 25
 
-Wir löschen personenbezogene Daten, die wir verarbeiten, gemäß den gesetzlichen Bestimmungen, sobald die zugrundeliegenden Einwilligungen widerrufen werden oder keine weiteren rechtlichen Grundlagen für die Verarbeitung bestehen. Dies betrifft Fälle, in denen der ursprüngliche Verarbeitungszweck entfällt oder die Daten nicht mehr benötigt werden. Ausnahmen von dieser Regelung bestehen, wenn gesetzliche Pflichten oder besondere Interessen eine längere Aufbewahrung oder Archivierung der Daten erfordern.
+70327 Stuttgart
 
-Insbesondere müssen Daten, die aus handels- oder steuerrechtlichen Gründen aufbewahrt werden müssen oder deren Speicherung notwendig ist zur Rechtsverfolgung oder zum Schutz der Rechte anderer natürlicher oder juristischer Personen, entsprechend archiviert werden.
+Deutschland
 
-Unsere Datenschutzhinweise enthalten zusätzliche Informationen zur Aufbewahrung und Löschung von Daten, die speziell für bestimmte Verarbeitungsprozesse gelten.
+<br/>
 
-Bei mehreren Angaben zur Aufbewahrungsdauer oder Löschungsfristen eines Datums, ist stets die längste Frist maßgeblich.
+Tel.: +49017644403432
+E-Mail: hallo@eckwerkstuttgart.de
 
-Beginnt eine Frist nicht ausdrücklich zu einem bestimmten Datum und beträgt sie mindestens ein Jahr, so startet sie automatisch am Ende des Kalenderjahres, in dem das fristauslösende Ereignis eingetreten ist. Im Fall laufender Vertragsverhältnisse, in deren Rahmen Daten gespeichert werden, ist das fristauslösende Ereignis der Zeitpunkt des Wirksamwerdens der Kündigung oder sonstige Beendigung des Rechtsverhältnisses.
+<br/>
 
-Daten, die nicht mehr für den ursprünglich vorgesehenen Zweck, sondern aufgrund gesetzlicher Vorgaben oder anderer Gründe aufbewahrt werden, verarbeiten wir ausschließlich zu den Gründen, die ihre Aufbewahrung rechtfertigen.
+Website: eckwerkstuttgart.de
 
-**Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:**
+<br/>
 
-- **Aufbewahrung und Löschung von Daten:** Die folgenden allgemeinen Fristen gelten für die Aufbewahrung und Archivierung nach deutschem Recht:
-  - 10 Jahre - Aufbewahrungsfrist für Bücher und Aufzeichnungen, Jahresabschlüsse, Inventare, Lageberichte, Eröffnungsbilanz sowie die zu ihrem Verständnis erforderlichen Arbeitsanweisungen und sonstigen Organisationsunterlagen, Buchungsbelege und Rechnungen (§ 147 Abs. 3 i. V. m. Abs. 1 Nr. 1, 4 und 4a AO, § 14b Abs. 1 UStG, § 257 Abs. 1 Nr. 1 u. 4, Abs. 4 HGB).
-  - 6 Jahre - Übrige Geschäftsunterlagen: empfangene Handels- oder Geschäftsbriefe, Wiedergaben der abgesandten Handels- oder Geschäftsbriefe, sonstige Unterlagen, soweit sie für die Besteuerung von Bedeutung sind, z. B. Stundenlohnzettel, Betriebsabrechnungsbögen, Kalkulationsunterlagen, Preisauszeichnungen, aber auch Lohnabrechnungsunterlagen, soweit sie nicht bereits Buchungsbelege sind und Kassenstreifen (§ 147 Abs. 3 i. V. m. Abs. 1 Nr. 2, 3, 5 AO, § 257 Abs. 1 Nr. 2 u. 3, Abs. 4 HGB).
-  - 3 Jahre - Daten, die erforderlich sind, um potenzielle Gewährleistungs- und Schadensersatzansprüche oder ähnliche vertragliche Ansprüche und Rechte zu berücksichtigen sowie damit verbundene Anfragen zu bearbeiten, basierend auf früheren Geschäftserfahrungen und üblichen Branchenpraktiken, werden für die Dauer der regulären gesetzlichen Verjährungsfrist von drei Jahren gespeichert (§§ 195, 199 BGB).
+**3.** Cookies
+Die Internetseiten der Eckwerkt Stuttgart verwenden Cookies. Cookies sind Textdateien, welche über einen
+Internetbrowser auf einem Computersystem abgelegt und gespeichert werden.
 
-## Rechte der betroffenen Personen
+<br/>
 
-Rechte der betroffenen Personen aus der DSGVO: Ihnen stehen als Betroffene nach der DSGVO verschiedene Rechte zu, die sich insbesondere aus Art. 15 bis 21 DSGVO ergeben:
+Zahlreiche Internetseiten und Server verwenden Cookies. Viele Cookies enthalten eine sogenannte Cookie-ID. Eine
+Cookie-ID ist eine eindeutige Kennung des Cookies. Sie besteht aus einer Zeichenfolge, durch welche Internetseiten und
+Server dem konkreten Internetbrowser zugeordnet werden können, in dem das Cookie gespeichert wurde. Dies ermöglicht es
+den besuchten Internetseiten und Servern, den individuellen Browser der betroffenen Person von anderen Internetbrowsern,
+die andere Cookies enthalten, zu unterscheiden. Ein bestimmter Internetbrowser kann über die eindeutige Cookie-ID
+wiedererkannt und identifiziert werden.
 
-- **Widerspruchsrecht: Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Werden die Sie betreffenden personenbezogenen Daten verarbeitet, um Direktwerbung zu betreiben, haben Sie das Recht, jederzeit Widerspruch gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen; dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht.**
-- **Widerrufsrecht bei Einwilligungen:** Sie haben das Recht, erteilte Einwilligungen jederzeit zu widerrufen.
-- **Auskunftsrecht:** Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen und Kopie der Daten entsprechend den gesetzlichen Vorgaben.
-- **Recht auf Berichtigung:** Sie haben entsprechend den gesetzlichen Vorgaben das Recht, die Vervollständigung der Sie betreffenden Daten oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen.
-- **Recht auf Löschung und Einschränkung der Verarbeitung:** Sie haben nach Maßgabe der gesetzlichen Vorgaben das Recht, zu verlangen, dass Sie betreffende Daten unverzüglich gelöscht werden, bzw. alternativ nach Maßgabe der gesetzlichen Vorgaben eine Einschränkung der Verarbeitung der Daten zu verlangen.
-- **Recht auf Datenübertragbarkeit:** Sie haben das Recht, Sie betreffende Daten, die Sie uns bereitgestellt haben, nach Maßgabe der gesetzlichen Vorgaben in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder deren Übermittlung an einen anderen Verantwortlichen zu fordern.
-- **Beschwerde bei Aufsichtsbehörde:** Sie haben unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthaltsorts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die Vorgaben der DSGVO verstößt.
+<br/>
 
-## Geschäftliche Leistungen
+Durch den Einsatz von Cookies kann die Eckwerkt Stuttgart den Nutzern dieser Internetseite nutzerfreundlichere Services
+bereitstellen, die ohne die Cookie-Setzung nicht möglich wären.
 
-Wir verarbeiten Daten unserer Vertrags- und Geschäftspartner, z. B. Kunden und Interessenten (zusammenfassend als „Vertragspartner" bezeichnet), im Rahmen von vertraglichen und vergleichbaren Rechtsverhältnissen sowie damit verbundenen Maßnahmen und im Hinblick auf die Kommunikation mit den Vertragspartnern (oder vorvertraglich), etwa zur Beantwortung von Anfragen.
+<br/>
+
+Mittels eines Cookies können die Informationen und Angebote auf unserer Internetseite im Sinne des Benutzers optimiert
+werden. Cookies ermöglichen uns, wie bereits erwähnt, die Benutzer unserer Internetseite wiederzuerkennen. Zweck dieser
+Wiedererkennung ist es, den Nutzern die Verwendung unserer Internetseite zu erleichtern. Der Benutzer einer
+Internetseite, die Cookies verwendet, muss beispielsweise nicht bei jedem Besuch der Internetseite erneut seine
+Zugangsdaten eingeben, weil dies von der Internetseite und dem auf dem Computersystem des Benutzers abgelegten Cookie
+übernommen wird. Ein weiteres Beispiel ist das Cookie eines Warenkorbes im Online-Shop. Der Online-Shop merkt sich die
+Artikel, die ein Kunde in den virtuellen Warenkorb gelegt hat, über ein Cookie.
+
+<br/>
+
+Die betroffene Person kann die Setzung von Cookies durch unsere Internetseite jederzeit mittels einer entsprechenden
+Einstellung des genutzten Internetbrowsers verhindern und damit der Setzung von Cookies dauerhaft widersprechen. Ferner
+können bereits gesetzte Cookies jederzeit über einen Internetbrowser oder andere Softwareprogramme gelöscht werden. Dies
+ist in allen gängigen Internetbrowsern möglich. Deaktiviert die betroffene Person die Setzung von Cookies in dem
+genutzten Internetbrowser, sind unter Umständen nicht alle Funktionen unserer Internetseite vollumfänglich nutzbar.
+
+<br/>
+
+**4.** Erfassung von allgemeinen Daten und Informationen
+Die Internetseite der Eckwerkt Stuttgart erfasst mit jedem Aufruf der Internetseite durch eine betroffene Person oder
+ein automatisiertes System eine Reihe von allgemeinen Daten und Informationen. Diese allgemeinen Daten und
+Informationen werden in den Logfiles des Servers gespeichert. Erfasst werden können die (1) verwendeten Browsertypen
+und Versionen, (2) das vom zugreifenden System verwendete Betriebssystem, (3) die Internetseite, von welcher ein
+zugreifendes System auf unsere Internetseite gelangt (sogenannte Referrer), (4) die Unterwebseiten, welche über ein
+zugreifendes System auf unserer Internetseite angesteuert werden, (5) das Datum und die Uhrzeit eines Zugriffs auf
+die Internetseite, (6) eine Internet-Protokoll-Adresse (IP-Adresse), (7) der Internet-Service-Provider des
+zugreifenden Systems und (8) sonstige ähnliche Daten und Informationen, die der Gefahrenabwehr im Falle von Angriffen
+auf unsere informationstechnologischen Systeme dienen.
 
-Wir verwenden diese Daten, um unsere vertraglichen Verpflichtungen zu erfüllen. Dazu gehören insbesondere die Pflichten zur Erbringung der vereinbarten Leistungen, etwaige Aktualisierungspflichten und Abhilfe bei Gewährleistungs- und sonstigen Leistungsstörungen. Darüber hinaus verwenden wir die Daten zur Wahrung unserer Rechte und zum Zwecke der mit diesen Pflichten verbundenen Verwaltungsaufgaben sowie der Unternehmensorganisation. Zudem verarbeiten wir die Daten auf Grundlage unserer berechtigten Interessen sowohl an einer ordnungsgemäßen und betriebswirtschaftlichen Geschäftsführung als auch an Sicherheitsmaßnahmen zum Schutz unserer Vertragspartner und unseres Geschäftsbetriebs vor Missbrauch, Gefährdung ihrer Daten, Geheimnisse, Informationen und Rechte (z. B. zur Beteiligung von Telekommunikations-, Transport- und sonstigen Hilfsdiensten sowie Subunternehmern, Banken, Steuer- und Rechtsberatern, Zahlungsdienstleistern oder Finanzbehörden). Im Rahmen des geltenden Rechts geben wir die Daten von Vertragspartnern nur insoweit an Dritte weiter, als dies für die vorgenannten Zwecke oder zur Erfüllung gesetzlicher Pflichten erforderlich ist. Über weitere Formen der Verarbeitung, etwa zu Marketingzwecken, werden die Vertragspartner im Rahmen dieser Datenschutzerklärung informiert.
+<br/>
 
-Welche Daten für die vorgenannten Zwecke erforderlich sind, teilen wir den Vertragspartnern vor oder im Rahmen der Datenerhebung, z. B. in Onlineformularen, durch besondere Kennzeichnung (z. B. Farben) bzw. Symbole (z. B. Sternchen o. Ä.), oder persönlich mit.
-
-Wir löschen die Daten nach Ablauf gesetzlicher Gewährleistungs- und vergleichbarer Pflichten, d. h. grundsätzlich nach vier Jahren, es sei denn, dass die Daten in einem Kundenkonto gespeichert werden, z. B., solange sie aus gesetzlichen Gründen der Archivierung aufbewahrt werden müssen (etwa für Steuerzwecke im Regelfall zehn Jahre). Daten, die uns im Rahmen eines Auftrags durch den Vertragspartner offengelegt wurden, löschen wir entsprechend den Vorgaben und grundsätzlich nach Ende des Auftrags.
-
-- **Verarbeitete Datenarten:** Bestandsdaten (z. B. der vollständige Name, Wohnadresse, Kontaktinformationen, Kundennummer, etc.); Zahlungsdaten (z. B. Bankverbindungen, Rechnungen, Zahlungshistorie); Kontaktdaten (z. B. Post- und E-Mail-Adressen oder Telefonnummern). Vertragsdaten (z. B. Vertragsgegenstand, Laufzeit, Kundenkategorie).
-- **Betroffene Personen:** Leistungsempfänger und Auftraggeber; Interessenten. Geschäfts- und Vertragspartner.
-- **Zwecke der Verarbeitung:** Erbringung vertraglicher Leistungen und Erfüllung vertraglicher Pflichten; Kommunikation; Büro- und Organisationsverfahren; Organisations- und Verwaltungsverfahren. Geschäftsprozesse und betriebswirtschaftliche Verfahren.
-- **Aufbewahrung und Löschung:** Löschung entsprechend Angaben im Abschnitt "Allgemeine Informationen zur Datenspeicherung und Löschung".
-- **Rechtsgrundlagen:** Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO); Rechtliche Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c) DSGVO). Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
-
-**Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:**
-
-- **Handwerkliche Leistungen:** Wir verarbeiten die Daten unserer Kunden sowie Auftraggeber (nachfolgend einheitlich als "Kunden" bezeichnet), um ihnen die Auswahl, den Erwerb bzw. die Beauftragung der gewählten Leistungen oder Werke sowie verbundener Tätigkeiten als auch deren Bezahlung und Zustellung bzw. Ausführung oder Erbringung zu ermöglichen.  
-  Die erforderlichen Angaben sind als solche im Rahmen des Auftrags-, Bestell- bzw. vergleichbaren Vertragsschlusses gekennzeichnet und umfassen die zur Auslieferung und Abrechnung benötigten Angaben sowie Kontaktinformationen, um etwaige Rücksprachen halten zu können; **Rechtsgrundlagen:** Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO).
-
-## Bereitstellung des Onlineangebots und Webhosting
-
-Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen zu können. Zu diesem Zweck verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist, um die Inhalte und Funktionen unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu übermitteln.
-
-- **Verarbeitete Datenarten:** Nutzungsdaten (z. B. Seitenaufrufe und Verweildauer, Klickpfade, Nutzungsintensität und -frequenz, verwendete Gerätetypen und Betriebssysteme, Interaktionen mit Inhalten und Funktionen); Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte Personen). Protokolldaten (z. B. Logfiles betreffend Logins oder den Abruf von Daten oder Zugriffszeiten.).
-- **Betroffene Personen:** Nutzer (z. B. Webseitenbesucher, Nutzer von Onlinediensten).
-- **Zwecke der Verarbeitung:** Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit; Informationstechnische Infrastruktur (Betrieb und Bereitstellung von Informationssystemen und technischen Geräten (Computer, Server etc.).). Sicherheitsmaßnahmen.
-- **Aufbewahrung und Löschung:** Löschung entsprechend Angaben im Abschnitt "Allgemeine Informationen zur Datenspeicherung und Löschung".
-- **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
-
-**Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:**
-
-- **Erhebung von Zugriffsdaten und Logfiles:** Der Zugriff auf unser Onlineangebot wird in Form von sogenannten "Server-Logfiles" protokolliert. Zu den Serverlogfiles können die Adresse und der Name der abgerufenen Webseiten und Dateien, Datum und Uhrzeit des Abrufs, übertragene Datenmengen, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite) und im Regelfall IP-Adressen und der anfragende Provider gehören. Die Serverlogfiles können zum einen zu Sicherheitszwecken eingesetzt werden, z. B. um eine Überlastung der Server zu vermeiden (insbesondere im Fall von missbräuchlichen Angriffen, sogenannten DDoS-Attacken), und zum anderen, um die Auslastung der Server und ihre Stabilität sicherzustellen; **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO). **Löschung von Daten:** Logfile-Informationen werden für die Dauer von maximal 30 Tagen gespeichert und danach gelöscht oder anonymisiert. Daten, deren weitere Aufbewahrung zu Beweiszwecken erforderlich ist, sind bis zur endgültigen Klärung des jeweiligen Vorfalls von der Löschung ausgenommen.
-
-## Einsatz von Cookies
-
-Cookies sind kleine Textdateien bzw. sonstige Speichervermerke, die Informationen auf Endgeräten speichern und aus ihnen auslesen. Zum Beispiel, um den Log-in-Status in einem Nutzerkonto, einen Warenkorbinhalt in einem E-Shop, die aufgerufenen Inhalte oder verwendete Funktionen eines Onlineangebots zu speichern. Cookies können ferner in Bezug auf unterschiedliche Anliegen Einsatz finden, etwa zu Zwecken der Funktionsfähigkeit, der Sicherheit und des Komforts von Onlineangeboten sowie der Erstellung von Analysen der Besucherströme.
-
-**Hinweise zur Einwilligung:** Wir setzen Cookies im Einklang mit den gesetzlichen Vorschriften ein. Daher holen wir von den Nutzern eine vorhergehende Einwilligung ein, es sei denn, sie ist laut Gesetzeslage nicht gefordert. Eine Erlaubnis ist insbesondere nicht notwendig, wenn das Speichern und das Auslesen der Informationen, also auch von Cookies, unbedingt erforderlich sind, um den Nutzern einen von ihnen ausdrücklich gewünschten Telemediendienst (also unser Onlineangebot) zur Verfügung zu stellen. Die widerrufliche Einwilligung wird ihnen gegenüber deutlich kommuniziert und enthält die Informationen zur jeweiligen Cookie-Nutzung.
-
-**Hinweise zu datenschutzrechtlichen Rechtsgrundlagen:** Auf welcher datenschutzrechtlichen Grundlage wir die personenbezogenen Daten der Nutzer mithilfe von Cookies verarbeiten, hängt davon ab, ob wir sie um eine Einwilligung bitten. Falls die Nutzer akzeptieren, ist die Rechtsgrundlage der Verwertung ihrer Daten die erklärte Einwilligung. Andernfalls werden die mithilfe von Cookies verwerteten Daten auf Grundlage unserer berechtigten Interessen (z. B. an einem betriebswirtschaftlichen Betrieb unseres Onlineangebots und der Verbesserung seiner Nutzbarkeit) verarbeitet oder, falls dies im Rahmen der Erfüllung unserer vertraglichen Pflichten erfolgt, wenn der Einsatz von Cookies erforderlich ist, um unseren vertraglichen Verpflichtungen nachzukommen. Zu welchen Zwecken die Cookies von uns verwertet werden, darüber klären wir im Laufe dieser Datenschutzerklärung oder im Rahmen von unseren Einwilligungs- und Verarbeitungsprozessen auf.
-
-**Speicherdauer:** Im Hinblick auf die Speicherdauer werden die folgenden Arten von Cookies unterschieden:
-
-- **Temporäre Cookies (auch: Session- oder Sitzungscookies):** Temporäre Cookies werden spätestens gelöscht, nachdem ein Nutzer ein Onlineangebot verlassen und sein Endgerät (z. B. Browser oder mobile Applikation) geschlossen hat.
-- **Permanente Cookies:** Permanente Cookies bleiben auch nach dem Schließen des Endgeräts gespeichert. So können beispielsweise der Log-in-Status gespeichert und bevorzugte Inhalte direkt angezeigt werden, wenn der Nutzer eine Website erneut besucht. Ebenso können die mithilfe von Cookies erhobenen Nutzerdaten zur Reichweitenmessung Verwendung finden. Sofern wir Nutzern keine expliziten Angaben zur Art und Speicherdauer von Cookies mitteilen (z. B. im Rahmen der Einholung der Einwilligung), sollten sie davon ausgehen, dass diese permanent sind und die Speicherdauer bis zu zwei Jahre betragen kann.
-
-**Allgemeine Hinweise zum Widerruf und Widerspruch (Opt-out):** Nutzer können die von ihnen abgegebenen Einwilligungen jederzeit widerrufen und zudem einen Widerspruch gegen die Verarbeitung entsprechend den gesetzlichen Vorgaben, auch mittels der Privatsphäre-Einstellungen ihres Browsers, erklären.
-
-- **Verarbeitete Datenarten:** Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte Personen).
-- **Betroffene Personen:** Nutzer (z. B. Webseitenbesucher, Nutzer von Onlinediensten).
-- **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO). Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).
-
-**Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:**
-
-- **Verarbeitung von Cookie-Daten auf Grundlage einer Einwilligung:** Wir setzen eine Einwilligungs-Management-Lösung ein, bei der die Einwilligung der Nutzer zur Verwendung von Cookies oder zu den im Rahmen der Einwilligungs-Management-Lösung genannten Verfahren und Anbietern eingeholt wird. Dieses Verfahren dient der Einholung, Protokollierung, Verwaltung und dem Widerruf von Einwilligungen, insbesondere bezogen auf den Einsatz von Cookies und vergleichbaren Technologien, die zur Speicherung, zum Auslesen und zur Verarbeitung von Informationen auf den Endgeräten der Nutzer eingesetzt werden. Im Rahmen dieses Verfahrens werden die Einwilligungen der Nutzer für die Nutzung von Cookies und die damit verbundenen Verarbeitungen von Informationen, einschließlich der im Einwilligungs-Management-Verfahren genannten spezifischen Verarbeitungen und Anbieter, eingeholt. Die Nutzer haben zudem die Möglichkeit, ihre Einwilligungen zu verwalten und zu widerrufen. Die Einwilligungserklärungen werden gespeichert, um eine erneute Abfrage zu vermeiden und den Nachweis der Einwilligung gemäß der gesetzlichen Anforderungen führen zu können. Die Speicherung erfolgt serverseitig und/oder in einem Cookie (sogenanntes Opt-In-Cookie) oder mittels vergleichbarer Technologien, um die Einwilligung einem spezifischen Nutzer oder dessen Gerät zuordnen zu können. Sofern keine spezifischen Angaben zu den Anbietern von Einwilligungs-Management-Diensten vorliegen, gelten folgende allgemeine Hinweise: Die Dauer der Speicherung der Einwilligung beträgt bis zu zwei Jahre. Dabei wird ein pseudonymer Nutzer-Identifikator erstellt, der zusammen mit dem Zeitpunkt der Einwilligung, den Angaben zum Umfang der Einwilligung (z. B. betreffende Kategorien von Cookies und/oder Diensteanbieter) sowie Informationen über den Browser, das System und das verwendete Endgerät gespeichert wird; **Rechtsgrundlagen:** Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).
-
-## Kontakt- und Anfrageverwaltung
-
-Bei der Kontaktaufnahme mit uns (z. B. per Post, Kontaktformular, E-Mail, Telefon oder via soziale Medien) sowie im Rahmen bestehender Nutzer- und Geschäftsbeziehungen werden die Angaben der anfragenden Personen verarbeitet, soweit dies zur Beantwortung der Kontaktanfragen und etwaiger angefragter Maßnahmen erforderlich ist.
-
-- **Verarbeitete Datenarten:** Bestandsdaten (z. B. der vollständige Name, Wohnadresse, Kontaktinformationen, Kundennummer, etc.); Kontaktdaten (z. B. Post- und E-Mail-Adressen oder Telefonnummern); Inhaltsdaten (z. B. textliche oder bildliche Nachrichten und Beiträge sowie die sie betreffenden Informationen, wie z. B. Angaben zur Autorenschaft oder Zeitpunkt der Erstellung); Nutzungsdaten (z. B. Seitenaufrufe und Verweildauer, Klickpfade, Nutzungsintensität und -frequenz, verwendete Gerätetypen und Betriebssysteme, Interaktionen mit Inhalten und Funktionen). Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte Personen).
-- **Betroffene Personen:** Kommunikationspartner.
-- **Zwecke der Verarbeitung:** Kommunikation; Organisations- und Verwaltungsverfahren; Feedback (z. B. Sammeln von Feedback via Online-Formular). Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.
-- **Aufbewahrung und Löschung:** Löschung entsprechend Angaben im Abschnitt "Allgemeine Informationen zur Datenspeicherung und Löschung".
-- **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO). Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO).
-
-**Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:**
-
-- **Kontaktformular:** Bei Kontaktaufnahme über unser Kontaktformular, per E-Mail oder anderen Kommunikationswegen, verarbeiten wir die uns übermittelten personenbezogenen Daten zur Beantwortung und Bearbeitung des jeweiligen Anliegens. Dies umfasst in der Regel Angaben wie Name, Kontaktinformationen und gegebenenfalls weitere Informationen, die uns mitgeteilt werden und zur angemessenen Bearbeitung erforderlich sind. Wir nutzen diese Daten ausschließlich für den angegebenen Zweck der Kontaktaufnahme und Kommunikation; **Rechtsgrundlagen:** Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO), Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
-
-## Newsletter und elektronische Benachrichtigungen
-
-Wir versenden Newsletter, E-Mails und weitere elektronische Benachrichtigungen (nachfolgend „Newsletter") ausschließlich mit der Einwilligung der Empfänger oder aufgrund einer gesetzlichen Grundlage. Sofern im Rahmen einer Anmeldung zum Newsletter dessen Inhalte genannt werden, sind diese Inhalte für die Einwilligung der Nutzer maßgeblich. Für die Anmeldung zu unserem Newsletter ist normalerweise die Angabe Ihrer E-Mail-Adresse ausreichend. Um Ihnen jedoch einen personalisierten Service bieten zu können, bitten wir gegebenenfalls um die Angabe Ihres Namens für eine persönliche Ansprache im Newsletter oder um weitere Informationen, falls diese für den Zweck des Newsletters notwendig sind.
-
-Löschung und Einschränkung der Verarbeitung: Wir können die ausgetragenen E-Mail-Adressen bis zu drei Jahren auf Grundlage unserer berechtigten Interessen speichern, bevor wir sie löschen, um eine ehemals gegebene Einwilligung nachweisen zu können. Die Verarbeitung dieser Daten wird auf den Zweck einer potenziellen Abwehr von Ansprüchen beschränkt. Ein individueller Löschungsantrag ist jederzeit möglich, sofern zugleich das ehemalige Bestehen einer Einwilligung bestätigt wird. Im Fall von Pflichten zur dauerhaften Beachtung von Widersprüchen behalten wir uns die Speicherung der E-Mail-Adresse alleine zu diesem Zweck in einer Sperrliste (sogenannte „Blocklist") vor.
-
-Die Protokollierung des Anmeldeverfahrens erfolgt auf Grundlage unserer berechtigten Interessen zum Zweck des Nachweises seines ordnungsgemäßen Ablaufs. Soweit wir einen Dienstleister mit dem Versand von E-Mails beauftragen, erfolgt dies auf Grundlage unserer berechtigten Interessen an einem effizienten und sicheren Versandsystem.
-
-**Inhalte:**
-
-Informationen zu uns, unseren Leistungen, Aktionen und Angeboten.
-
-- **Verarbeitete Datenarten:** Bestandsdaten (z. B. der vollständige Name, Wohnadresse, Kontaktinformationen, Kundennummer, etc.); Kontaktdaten (z. B. Post- und E-Mail-Adressen oder Telefonnummern); Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte Personen). Nutzungsdaten (z. B. Seitenaufrufe und Verweildauer, Klickpfade, Nutzungsintensität und -frequenz, verwendete Gerätetypen und Betriebssysteme, Interaktionen mit Inhalten und Funktionen).
-- **Betroffene Personen:** Kommunikationspartner.
-- **Zwecke der Verarbeitung:** Direktmarketing (z. B. per E-Mail oder postalisch).
-- **Aufbewahrung und Löschung:** 3 Jahre - Vertragliche Ansprüche (AT) (Daten, die erforderlich sind, um potenzielle Gewährleistungs- und Schadensersatzansprüche oder ähnliche vertragliche Ansprüche und Rechte zu berücksichtigen sowie damit verbundene Anfragen zu bearbeiten, basierend auf früheren Geschäftserfahrungen und üblichen Branchenpraktiken, werden für die Dauer der regulären gesetzlichen Verjährungsfrist von drei Jahren gespeichert (§§ 1478, 1480 ABGB).). 10 Jahre - Vertragliche Ansprüche (CH) (Daten, die zur Berücksichtigung potenzieller Schadenersatzansprüche oder ähnlicher vertraglicher Ansprüche und Rechte notwendig sind, sowie für die Bearbeitung damit verbundener Anfragen, basierend auf früheren Geschäftserfahrungen und den üblichen Branchenpraktiken, werden für den Zeitraum der gesetzlichen Verjährungsfrist von zehn Jahren gespeichert, es sei denn, eine kürzere Frist von 5 Jahren ist maßgeblich, die in bestimmten Fällen einschlägig ist (Art. 127, 130 OR)).
-- **Rechtsgrundlagen:** Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).
-- **Widerspruchsmöglichkeit (Opt-Out):** Sie können den Empfang unseres Newsletters jederzeit kündigen, d. .h. Ihre Einwilligungen widerrufen, bzw. dem weiteren Empfang widersprechen. Einen Link zur Kündigung des Newsletters finden Sie entweder am Ende eines jeden Newsletters oder können sonst eine der oben angegebenen Kontaktmöglichkeiten, vorzugswürdig E-Mail, hierzu nutzen.
-
-**Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:**
-
-- **Messung von Öffnungs- und Klickraten:** Die Newsletter enthalten einen sogenannten „Web Beacons", d. h. eine pixelgroße Datei, die beim Öffnen des Newsletters von unserem bzw. dessen Server, sofern wir einen Versanddienstleister einsetzen, abgerufen wird. Im Rahmen dieses Abrufs werden zunächst sowohl technische Informationen, wie beispielsweise Angaben zum Browser und Ihrem System, als auch Ihre IP-Adresse und der Zeitpunkt des Abrufs erhoben. Diese Informationen werden zur technischen Verbesserung unseres Newsletters anhand der technischen Daten oder der Zielgruppen und ihres Leseverhaltens auf Basis ihrer Abruforte (die mithilfe der IP-Adresse bestimmbar sind) oder der Zugriffszeiten genutzt. Diese Analyse beinhaltet ebenfalls die Feststellung, ob und wann die Newsletter geöffnet und welche Links angeklickt werden. Die Informationen werden den einzelnen Newsletterempfängern zugeordnet und in deren Profilen bis zur Löschung gespeichert. Die Auswertungen dienen dazu, die Lesegewohnheiten unserer Nutzer zu erkennen und unsere Inhalte an sie anzupassen oder unterschiedliche Inhalte entsprechend den Interessen unserer Nutzer zu versenden. Die Messung der Öffnungs- und Klickraten sowie die Speicherung der Messergebnisse in den Profilen der Nutzer - Dieser Textbereich muss mit einer Premium Lizenz freischaltet werden. - premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext ; **Rechtsgrundlagen:** Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).
-
-## Webanalyse, Monitoring und Optimierung
-
-Die Webanalyse (auch als „Reichweitenmessung" bezeichnet) dient der Auswertung der Besucherströme unseres Onlineangebots und kann Verhalten, Interessen oder demografische Informationen zu den Besuchern, wie beispielsweise Alter oder Geschlecht, als pseudonyme Werte umfassen. Mithilfe der Reichweitenanalyse können wir zum Beispiel erkennen, zu welcher Zeit unser Onlineangebot oder dessen Funktionen beziehungsweise Inhalte am häufigsten genutzt werden, oder zur Wiederverwendung einladen. Ebenso ist es uns möglich, nachzuvollziehen, welche Bereiche der Optimierung bedürfen.
-
-Neben der Webanalyse können wir auch Testverfahren einsetzen, um etwa unterschiedliche Versionen unseres Onlineangebots oder seiner Bestandteile zu testen und zu optimieren.
-
-Sofern nachfolgend nicht anders angegeben, können zu diesen Zwecken Profile, also zu einem Nutzungsvorgang zusammengefasste Daten, angelegt und Informationen in einem Browser bzw. in einem Endgerät gespeichert und dann ausgelesen werden. Zu den erhobenen Angaben gehören insbesondere besuchte Websites und dort genutzte Elemente sowie technische Auskünfte, wie etwa der verwendete Browser, das benutzte Computersystem sowie Angaben zu Nutzungszeiten. Sofern sich Nutzer in die Erhebung ihrer Standortdaten uns gegenüber oder gegenüber den Anbietern der von uns eingesetzten Dienste einverstanden erklärt haben, ist auch die Verarbeitung von Standortdaten möglich.
-
-Darüber hinaus werden die IP-Adressen der Nutzer gespeichert. Jedoch nutzen wir ein IP-Masking-Verfahren (d. h. Pseudonymisierung durch Kürzung der IP-Adresse) zum Schutz der Nutzer. Generell werden die im Rahmen von Webanalyse, A/B-Testings und Optimierung keine Klardaten der Nutzer (wie z. B. E-Mail-Adressen oder Namen) gespeichert, sondern Pseudonyme. Das heißt, wir als auch die Anbieter der eingesetzten Software kennen nicht die tatsächliche Identität der Nutzer, sondern nur die zum Zweck der jeweiligen Verfahren in deren Profilen gespeicherten Angaben.
-
-Hinweise zu Rechtsgrundlagen: Sofern wir die Nutzer um deren Einwilligung in den Einsatz der Drittanbieter bitten, stellt die Rechtsgrundlage der Datenverarbeitung die Einwilligung dar. Ansonsten werden die Nutzerdaten auf Grundlage unserer berechtigten Interessen (d. h. Interesse an effizienten, wirtschaftlichen und empfängerfreundlichen Leistungen) verarbeitet. In diesem Zusammenhang möchten wir Sie auch auf die Informationen zur Verwendung von Cookies in dieser Datenschutzerklärung hinweisen.
-
-- **Verarbeitete Datenarten:** Nutzungsdaten (z. B. Seitenaufrufe und Verweildauer, Klickpfade, Nutzungsintensität und -frequenz, verwendete Gerätetypen und Betriebssysteme, Interaktionen mit Inhalten und Funktionen). Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte Personen).
-- **Betroffene Personen:** Nutzer (z. B. Webseitenbesucher, Nutzer von Onlinediensten).
-- **Zwecke der Verarbeitung:** Reichweitenmessung (z. B. Zugriffsstatistiken, Erkennung wiederkehrender Besucher); Profile mit nutzerbezogenen Informationen (Erstellen von Nutzerprofilen). Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.
-- **Aufbewahrung und Löschung:** Löschung entsprechend Angaben im Abschnitt "Allgemeine Informationen zur Datenspeicherung und Löschung". Speicherung von Cookies von bis zu 2 Jahren (Sofern nicht anders angegeben, können Cookies und ähnliche Speichermethoden für einen Zeitraum von zwei Jahren auf den Geräten der Nutzer gespeichert werden.).
-- **Sicherheitsmaßnahmen:** IP-Masking (Pseudonymisierung der IP-Adresse).
-- **Rechtsgrundlagen:** Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO). Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
-
-**Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:**
-
-- **Google Analytics:** Wir verwenden Google Analytics zur Messung und Analyse der Nutzung unseres Onlineangebotes auf der Grundlage einer pseudonymen Nutzeridentifikationsnummer. Diese Identifikationsnummer enthält keine eindeutigen Daten, wie Namen oder E-Mail-Adressen. Sie dient dazu, Analyseinformationen einem Endgerät zuzuordnen, um zu erkennen, welche Inhalte die Nutzer innerhalb eines oder verschiedener Nutzungsvorgänge aufgerufen haben, welche Suchbegriffe sie verwendet haben, diese erneut aufgerufen haben oder mit unserem Onlineangebot interagiert haben. Ebenso werden der Zeitpunkt der Nutzung und deren Dauer gespeichert, sowie die Quellen der Nutzer, die auf unser Onlineangebot verweisen und technische Aspekte ihrer Endgeräte und Browser.  
-  Dabei werden pseudonyme Profile von Nutzern mit Informationen aus der Nutzung verschiedener Geräte erstellt, wobei Cookies eingesetzt werden können. Google Analytics protokolliert und speichert keine individuellen IP-Adressen für EU-Nutzer. Analytics stellt jedoch grobe geografische Standortdaten bereit, indem es die folgenden Metadaten von IP-Adressen ableitet: Stadt (und der abgeleitete Breiten- und Längengrad der Stadt), Kontinent, Land, Region, Subkontinent (und ID-basierte Gegenstücke). Beim EU-Datenverkehr werden die IP-Adressdaten ausschließlich für diese Ableitung von Geolokalisierungsdaten verwendet, bevor sie sofort gelöscht werden. Sie werden nicht protokolliert, sind nicht zugänglich und werden nicht für weitere Verwendungszwecke genutzt. Wenn Google Analytics Messdaten sammelt, werden alle IP-Abfragen auf EU-basierten Servern durchgeführt, bevor der Verkehr zur Verarbeitung an Analytics-Server weitergeleitet wird; **Dienstanbieter:** Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland; **Rechtsgrundlagen:** Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO); **Website:** [https://marketingplatform.google.com/intl/de/about/analytics/](https://marketingplatform.google.com/intl/de/about/analytics/); **Sicherheitsmaßnahmen:** IP-Masking (Pseudonymisierung der IP-Adresse); **Datenschutzerklärung:** [https://policies.google.com/privacy](https://policies.google.com/privacy); **Auftragsverarbeitungsvertrag:** [https://business.safety.google/adsprocessorterms/](https://business.safety.google/adsprocessorterms/); **Grundlage Drittlandtransfers:** Data Privacy Framework (DPF); **Widerspruchsmöglichkeit (Opt-Out):** Opt-Out-Plugin: [https://tools.google.com/dlpage/gaoptout?hl=de](https://tools.google.com/dlpage/gaoptout?hl=de), Einstellungen für die Darstellung von Werbeeinblendungen: [https://myadcenter.google.com/personalizationoff](https://myadcenter.google.com/personalizationoff). **Weitere Informationen:** [https://business.safety.google/adsservices/](https://business.safety.google/adsservices/) (Arten der Verarbeitung sowie der verarbeiteten Daten).
-
-## Kundenrezensionen und Bewertungsverfahren
-
-Wir nehmen an Rezensions- und Bewertungsverfahren teil, um unsere Leistungen zu evaluieren, zu optimieren und zu bewerben. Wenn Nutzer uns über die beteiligten Bewertungsplattformen oder -verfahren bewerten oder anderweitig Feedback geben, gelten zusätzlich die Allgemeinen Geschäfts- oder Nutzungsbedingungen und die Datenschutzhinweise der Anbieter. Im Regelfall setzt die Bewertung zudem eine Registrierung bei den jeweiligen Anbietern voraus.
-
-Um sicherzustellen, dass die bewertenden Personen tatsächlich unsere Leistungen in Anspruch genommen haben, übermitteln wir mit Einwilligung der Kunden die hierzu erforderlichen Daten im Hinblick auf den Kunden und die in Anspruch genommene Leistung an die jeweilige Bewertungsplattform (einschließlich Name, E-Mail-Adresse und Bestellnummer bzw. Artikelnummer). Diese Daten werden alleine zur Verifizierung der Authentizität des Nutzers verwendet.
-
-- **Verarbeitete Datenarten:** Vertragsdaten (z. B. Vertragsgegenstand, Laufzeit, Kundenkategorie); Nutzungsdaten (z. B. Seitenaufrufe und Verweildauer, Klickpfade, Nutzungsintensität und -frequenz, verwendete Gerätetypen und Betriebssysteme, Interaktionen mit Inhalten und Funktionen). Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte Personen).
-- **Betroffene Personen:** Leistungsempfänger und Auftraggeber. Nutzer (z. B. Webseitenbesucher, Nutzer von Onlinediensten).
-- **Zwecke der Verarbeitung:** Feedback (z. B. Sammeln von Feedback via Online-Formular). Marketing.
-- **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
-
-## Plug-ins und eingebettete Funktionen sowie Inhalte
-
-Wir binden Funktions- und Inhaltselemente in unser Onlineangebot ein, die von den Servern ihrer jeweiligen Anbieter (nachfolgend als „Drittanbieter" bezeichnet) bezogen werden. Dabei kann es sich zum Beispiel um Grafiken, Videos oder Stadtpläne handeln (nachfolgend einheitlich als „Inhalte" bezeichnet).
-
-Die Einbindung setzt immer voraus, dass die Drittanbieter dieser Inhalte die IP-Adresse der Nutzer verarbeiten, da sie ohne IP-Adresse die Inhalte nicht an deren Browser senden könnten. Die IP-Adresse ist damit für die Darstellung dieser Inhalte oder Funktionen erforderlich. Wir bemühen uns, nur solche Inhalte zu verwenden, deren jeweilige Anbieter die IP-Adresse lediglich zur Auslieferung der Inhalte anzuwenden. Drittanbieter können ferner sogenannte Pixel-Tags (unsichtbare Grafiken, auch als „Web Beacons" bezeichnet) für statistische oder Marketingzwecke einsetzen. Durch die „Pixel-Tags" können Informationen, wie etwa der Besucherverkehr auf den Seiten dieser Website, ausgewertet werden. Die pseudonymen Informationen können darüber hinaus in Cookies auf dem Gerät der Nutzer gespeichert werden und unter anderem technische Auskünfte zum Browser und zum Betriebssystem, zu verweisenden Websites, zur Besuchszeit sowie weitere Angaben zur Nutzung unseres Onlineangebots enthalten, aber auch mit solchen Informationen aus anderen Quellen verbunden werden.
-
-**Hinweise zu Rechtsgrundlagen:** Sofern wir die Nutzer um ihre Einwilligung in den Einsatz der Drittanbieter bitten, stellt die Rechtsgrundlage der Datenverarbeitung die Erlaubnis dar. Ansonsten werden die Nutzerdaten auf Grundlage unserer berechtigten Interessen (d. h. Interesse an effizienten, wirtschaftlichen und empfängerfreundlichen Leistungen) verarbeitet. In diesem Zusammenhang möchten wir Sie auch auf die Informationen zur Verwendung von Cookies in dieser Datenschutzerklärung hinweisen.
-
-- **Verarbeitete Datenarten:** Nutzungsdaten (z. B. Seitenaufrufe und Verweildauer, Klickpfade, Nutzungsintensität und -frequenz, verwendete Gerätetypen und Betriebssysteme, Interaktionen mit Inhalten und Funktionen); Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte Personen). Standortdaten (Angaben zur geografischen Position eines Gerätes oder einer Person).
-- **Betroffene Personen:** Nutzer (z. B. Webseitenbesucher, Nutzer von Onlinediensten).
-- **Zwecke der Verarbeitung:** Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.
-- **Aufbewahrung und Löschung:** Löschung entsprechend Angaben im Abschnitt "Allgemeine Informationen zur Datenspeicherung und Löschung". Speicherung von Cookies von bis zu 2 Jahren (Sofern nicht anders angegeben, können Cookies und ähnliche Speichermethoden für einen Zeitraum von zwei Jahren auf den Geräten der Nutzer gespeichert werden.).
-- **Rechtsgrundlagen:** Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO). Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
-
-**Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:**
-
-- **Google Fonts (Bezug vom Google Server):** Bezug von Schriften (und Symbolen) zum Zwecke einer technisch sicheren, wartungsfreien und effizienten Nutzung von Schriften und Symbolen im Hinblick auf Aktualität und Ladezeiten, deren einheitliche Darstellung und Berücksichtigung möglicher lizenzrechtlicher Beschränkungen. Dem Anbieter der Schriftarten wird die IP-Adresse des Nutzers mitgeteilt, damit die Schriftarten im Browser des Nutzers zur Verfügung gestellt werden können. Darüber hinaus werden technische Daten (Spracheinstellungen, Bildschirmauflösung, Betriebssystem, verwendete Hardware) übermittelt, die für die Bereitstellung der Schriften in Abhängigkeit von den verwendeten Geräten und der technischen Umgebung notwendig sind. Diese Daten können auf einem Server des Anbieters der Schriftarten in den USA verarbeitet werden - Beim Besuch unseres Onlineangebotes senden die Browser der Nutzer ihre Browser HTTP-Anfragen an die Google Fonts Web API (d. h. eine Softwareschnittstelle für den Abruf der Schriftarten). Die Google Fonts Web API stellt den Nutzern die Cascading Style Sheets (CSS) von Google Fonts und danach die in der CCS angegebenen Schriftarten zur Verfügung. Zu diesen HTTP-Anfragen gehören (1) die vom jeweiligen Nutzer für den Zugriff auf das Internet verwendete IP-Adresse, (2) die angeforderte URL auf dem Google-Server und (3) die HTTP-Header, einschließlich des User-Agents, der die Browser- und Betriebssystemversionen der Websitebesucher beschreibt, sowie die Verweis-URL (d. h. die Webseite, auf der die Google-Schriftart angezeigt werden soll). IP-Adressen werden weder auf Google-Servern protokolliert noch gespeichert und sie werden nicht analysiert. Die Google Fonts Web API protokolliert Details der HTTP-Anfragen (angeforderte URL, User-Agent und Verweis-URL). Der Zugriff auf diese Daten ist eingeschränkt und streng kontrolliert. Die angeforderte URL identifiziert die Schriftfamilien, für die der Nutzer Schriftarten laden möchte. Diese Daten werden protokolliert, damit Google bestimmen kann, wie oft eine bestimmte Schriftfamilie angefordert wird. Bei der Google Fonts Web API muss der User-Agent die Schriftart anpassen, die für den jeweiligen Browsertyp generiert wird. Der User-Agent wird in erster Linie zum Debugging protokolliert und verwendet, um aggregierte Nutzungsstatistiken zu generieren, mit denen die Beliebtheit von Schriftfamilien gemessen wird. Diese zusammengefassten Nutzungsstatistiken werden auf der Seite „Analysen" von Google Fonts veröffentlicht. Schließlich wird die Verweis-URL protokolliert, sodass die Daten für die Wartung der Produktion verwendet und ein aggregierter Bericht zu den Top-Integrationen basierend auf der Anzahl der Schriftartenanfragen generiert werden kann. Google verwendet laut eigener Auskunft keine der von Google Fonts erfassten Informationen, um Profile von Endnutzern zu erstellen oder zielgerichtete Anzeigen zu schalten; **Dienstanbieter:** Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland; **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO); **Website:** [https://fonts.google.com/](https://fonts.google.com/); **Datenschutzerklärung:** [https://policies.google.com/privacy](https://policies.google.com/privacy); **Grundlage Drittlandtransfers:** Data Privacy Framework (DPF). **Weitere Informationen:** [https://developers.google.com/fonts/faq/privacy?hl=de](https://developers.google.com/fonts/faq/privacy?hl=de).
-- **Google Maps:** Wir binden die Landkarten des Dienstes "Google Maps" des Anbieters Google ein. Zu den verarbeiteten Daten können insbesondere IP-Adressen und Standortdaten der Nutzer gehören; **Dienstanbieter:** Google Cloud EMEA Limited, 70 Sir John Rogerson’s Quay, Dublin 2, Irland; **Rechtsgrundlagen:** Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO); **Website:** [https://mapsplatform.google.com/](https://mapsplatform.google.com/); **Datenschutzerklärung:** [https://policies.google.com/privacy](https://policies.google.com/privacy). **Grundlage Drittlandtransfers:** Data Privacy Framework (DPF).
+Bei der Nutzung dieser allgemeinen Daten und Informationen zieht die Eckwerkt Stuttgart keine Rückschlüsse auf die
+betroffene Person. Diese Informationen werden vielmehr benötigt, um (1) die Inhalte unserer Internetseite korrekt
+auszuliefern, (2) die Inhalte unserer Internetseite sowie die Werbung für diese zu optimieren, (3) die dauerhafte
+Funktionsfähigkeit unserer informationstechnologischen Systeme und der Technik unserer Internetseite zu gewährleisten
+sowie (4) um Strafverfolgungsbehörden im Falle eines Cyberangriffes die zur Strafverfolgung notwendigen Informationen
+bereitzustellen. Diese anonym erhobenen Daten und Informationen werden durch die Eckwerkt Stuttgart daher einerseits
+statistisch und ferner mit dem Ziel ausgewertet, den Datenschutz und die Datensicherheit in unserem Unternehmen zu
+erhöhen, um letztlich ein optimales Schutzniveau für die von uns verarbeiteten personenbezogenen Daten sicherzustellen.
+Die anonymen Daten der Server-Logfiles werden getrennt von allen durch eine betroffene Person angegebenen
+personenbezogenen Daten gespeichert.
+
+<br/>
+
+**5.** Kontaktmöglichkeit über die Internetseite
+Die Internetseite der Eckwerkt Stuttgart enthält aufgrund von gesetzlichen Vorschriften Angaben, die eine schnelle
+elektronische Kontaktaufnahme zu unserem Unternehmen sowie eine unmittelbare Kommunikation mit uns ermöglichen, was
+ebenfalls eine allgemeine Adresse der sogenannten elektronischen Post (E-Mail-Adresse) umfasst. Sofern eine
+betroffene Person per E-Mail oder über ein Kontaktformular den Kontakt mit dem für die Verarbeitung Verantwortlichen
+aufnimmt, werden die von der betroffenen Person übermittelten personenbezogenen Daten automatisch gespeichert. Solche
+auf freiwilliger Basis von einer betroffenen Person an den für die Verarbeitung Verantwortlichen übermittelten
+personenbezogenen Daten werden für Zwecke der Bearbeitung oder der Kontaktaufnahme zur betroffenen Person
+gespeichert. Es erfolgt keine Weitergabe dieser personenbezogenen Daten an Dritte.
+
+<br/>
+
+**6.** Routinemäßige Löschung und Sperrung von personenbezogenen Daten
+Der für die Verarbeitung Verantwortliche verarbeitet und speichert personenbezogene Daten der betroffenen Person nur
+für den Zeitraum, der zur Erreichung des Speicherungszwecks erforderlich ist oder sofern dies durch den Europäischen
+Richtlinien- und Verordnungsgeber oder einen anderen Gesetzgeber in Gesetzen oder Vorschriften, welchen der für die
+Verarbeitung Verantwortliche unterliegt, vorgesehen wurde.
+
+<br/>
+
+Entfällt der Speicherungszweck oder läuft eine vom Europäischen Richtlinien- und Verordnungsgeber oder einem anderen
+zuständigen Gesetzgeber vorgeschriebene Speicherfrist ab, werden die personenbezogenen Daten routinemäßig und
+entsprechend den gesetzlichen Vorschriften gesperrt oder gelöscht.
+
+<br/>
+
+**7.** Rechte der betroffenen Person
+a) Recht auf Bestätigung
+Jede betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber eingeräumte Recht, von dem für die
+Verarbeitung Verantwortlichen eine Bestätigung darüber zu verlangen, ob sie betreffende personenbezogene Daten
+verarbeitet werden. Möchte eine betroffene Person dieses Bestätigungsrecht in Anspruch nehmen, kann sie sich hierzu
+jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.
+
+<br/>
+
+b) Recht auf Auskunft
+Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und
+Verordnungsgeber gewährte Recht, jederzeit von dem für die Verarbeitung Verantwortlichen unentgeltliche Auskunft über
+die zu seiner Person gespeicherten personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten. Ferner hat der
+Europäische Richtlinien- und Verordnungsgeber der betroffenen Person Auskunft über folgende Informationen zugestanden:
+
+<br/>
+
+die Verarbeitungszwecke
+die Kategorien personenbezogener Daten, die verarbeitet werden
+die Empfänger oder Kategorien von Empfängern, gegenüber denen die personenbezogenen Daten offengelegt worden sind oder
+noch offengelegt werden, insbesondere bei Empfängern in Drittländern oder bei internationalen Organisationen
+falls möglich die geplante Dauer, für die die personenbezogenen Daten gespeichert werden, oder, falls dies nicht möglich
+ist, die Kriterien für die Festlegung dieser Dauer
+das Bestehen eines Rechts auf Berichtigung oder Löschung der sie betreffenden personenbezogenen Daten oder auf
+Einschränkung der Verarbeitung durch den Verantwortlichen oder eines Widerspruchsrechts gegen diese Verarbeitung
+das Bestehen eines Beschwerderechts bei einer Aufsichtsbehörde
+wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden: Alle verfügbaren Informationen über
+die Herkunft der Daten
+das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling gemäß Artikel 22 Abs.1 und 4 DS-GVO
+und — zumindest in diesen Fällen — aussagekräftige Informationen über die involvierte Logik sowie die Tragweite und die
+angestrebten Auswirkungen einer derartigen Verarbeitung für die betroffene Person
+Ferner steht der betroffenen Person ein Auskunftsrecht darüber zu, ob personenbezogene Daten an ein Drittland oder an
+eine internationale Organisation übermittelt wurden. Sofern dies der Fall ist, so steht der betroffenen Person im
+Übrigen das Recht zu, Auskunft über die geeigneten Garantien im Zusammenhang mit der Übermittlung zu erhalten.
+
+<br/>
+
+Möchte eine betroffene Person dieses Auskunftsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an einen
+Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.
+
+<br/>
+
+c) Recht auf Berichtigung
+Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und
+Verordnungsgeber gewährte Recht, die unverzügliche Berichtigung sie betreffender unrichtiger personenbezogener Daten zu
+verlangen. Ferner steht der betroffenen Person das Recht zu, unter Berücksichtigung der Zwecke der Verarbeitung, die
+Vervollständigung unvollständiger personenbezogener Daten — auch mittels einer ergänzenden Erklärung — zu verlangen.
+
+<br/>
+
+Möchte eine betroffene Person dieses Berichtigungsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an einen
+Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.
+
+<br/>
+
+d) Recht auf Löschung (Recht auf Vergessen werden)
+Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und
+Verordnungsgeber gewährte Recht, von dem Verantwortlichen zu verlangen, dass die sie betreffenden personenbezogenen
+Daten unverzüglich gelöscht werden, sofern einer der folgenden Gründe zutrifft und soweit die Verarbeitung nicht
+erforderlich ist:
+
+<br/>
+
+Die personenbezogenen Daten wurden für solche Zwecke erhoben oder auf sonstige Weise verarbeitet, für welche sie nicht
+mehr notwendig sind.
+Die betroffene Person widerruft ihre Einwilligung, auf die sich die Verarbeitung gemäß Art. 6 Abs. 1 Buchstabe a DS-GVO
+oder Art. 9 Abs. 2 Buchstabe a DS-GVO stützte, und es fehlt an einer anderweitigen Rechtsgrundlage für die Verarbeitung.
+Die betroffene Person legt gemäß Art. 21 Abs. 1 DS-GVO Widerspruch gegen die Verarbeitung ein, und es liegen keine
+vorrangigen berechtigten Gründe für die Verarbeitung vor, oder die betroffene Person legt gemäß Art. 21 Abs. 2 DS-GVO
+Widerspruch gegen die Verarbeitung ein.
+Die personenbezogenen Daten wurden unrechtmäßig verarbeitet.
+Die Löschung der personenbezogenen Daten ist zur Erfüllung einer rechtlichen Verpflichtung nach dem Unionsrecht oder dem
+Recht der Mitgliedstaaten erforderlich, dem der Verantwortliche unterliegt.
+Die personenbezogenen Daten wurden in Bezug auf angebotene Dienste der Informationsgesellschaft gemäß Art. 8 Abs. 1
+DS-GVO erhoben.
+Sofern einer der oben genannten Gründe zutrifft und eine betroffene Person die Löschung von personenbezogenen Daten, die
+bei der Eckwerkt Stuttgart gespeichert sind, veranlassen möchte, kann sie sich hierzu jederzeit an einen Mitarbeiter des
+für die Verarbeitung Verantwortlichen wenden. Der Mitarbeiter der Eckwerkt Stuttgart wird veranlassen, dass dem
+Löschverlangen unverzüglich nachgekommen wird.
+
+<br/>
+
+Wurden die personenbezogenen Daten von der Eckwerkt Stuttgart öffentlich gemacht und ist unser Unternehmen als
+Verantwortlicher gemäß Art. 17 Abs. 1 DS-GVO zur Löschung der personenbezogenen Daten verpflichtet, so trifft die
+Eckwerkt Stuttgart unter Berücksichtigung der verfügbaren Technologie und der Implementierungskosten angemessene
+Maßnahmen, auch technischer Art, um andere für die Datenverarbeitung Verantwortliche, welche die veröffentlichten
+personenbezogenen Daten verarbeiten, darüber in Kenntnis zu setzen, dass die betroffene Person von diesen anderen für
+die Datenverarbeitung Verantwortlichen die Löschung sämtlicher Links zu diesen personenbezogenen Daten oder von Kopien
+oder Replikationen dieser personenbezogenen Daten verlangt hat, soweit die Verarbeitung nicht erforderlich ist. Der
+Mitarbeiter der Eckwerkt Stuttgart wird im Einzelfall das Notwendige veranlassen.
+
+<br/>
+
+e) Recht auf Einschränkung der Verarbeitung
+Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und
+Verordnungsgeber gewährte Recht, von dem Verantwortlichen die Einschränkung der Verarbeitung zu verlangen, wenn eine der
+folgenden Voraussetzungen gegeben ist:
+
+Die Richtigkeit der personenbezogenen Daten wird von der betroffenen Person bestritten, und zwar für eine Dauer, die es
+dem Verantwortlichen ermöglicht, die Richtigkeit der personenbezogenen Daten zu überprüfen.
+Die Verarbeitung ist unrechtmäßig, die betroffene Person lehnt die Löschung der personenbezogenen Daten ab und verlangt
+stattdessen die Einschränkung der Nutzung der personenbezogenen Daten.
+Der Verantwortliche benötigt die personenbezogenen Daten für die Zwecke der Verarbeitung nicht länger, die betroffene
+Person benötigt sie jedoch zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
+Die betroffene Person hat Widerspruch gegen die Verarbeitung gem. Art. 21 Abs. 1 DS-GVO eingelegt und es steht noch
+nicht fest, ob die berechtigten Gründe des Verantwortlichen gegenüber denen der betroffenen Person überwiegen.
+Sofern eine der oben genannten Voraussetzungen gegeben ist und eine betroffene Person die Einschränkung von
+personenbezogenen Daten, die bei der Eckwerkt Stuttgart gespeichert sind, verlangen möchte, kann sie sich hierzu
+jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden. Der Mitarbeiter der Eckwerkt Stuttgart
+wird die Einschränkung der Verarbeitung veranlassen.
+
+<br/>
+
+f) Recht auf Datenübertragbarkeit
+Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und
+Verordnungsgeber gewährte Recht, die sie betreffenden personenbezogenen Daten, welche durch die betroffene Person einem
+Verantwortlichen bereitgestellt wurden, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten. Sie
+hat außerdem das Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die
+personenbezogenen Daten bereitgestellt wurden, zu übermitteln, sofern die Verarbeitung auf der Einwilligung gemäß Art. 6
+Abs. 1 Buchstabe a DS-GVO oder Art. 9 Abs. 2 Buchstabe a DS-GVO oder auf einem Vertrag gemäß Art. 6 Abs. 1 Buchstabe b
+DS-GVO beruht und die Verarbeitung mithilfe automatisierter Verfahren erfolgt, sofern die Verarbeitung nicht für die
+Wahrnehmung einer Aufgabe erforderlich ist, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt
+erfolgt, welche dem Verantwortlichen übertragen wurde.
+
+<br/>
+
+Ferner hat die betroffene Person bei der Ausübung ihres Rechts auf Datenübertragbarkeit gemäß Art. 20 Abs. 1 DS-GVO das
+Recht, zu erwirken, dass die personenbezogenen Daten direkt von einem Verantwortlichen an einen anderen Verantwortlichen
+übermittelt werden, soweit dies technisch machbar ist und sofern hiervon nicht die Rechte und Freiheiten anderer
+Personen beeinträchtigt werden.
+
+<br/>
+
+Zur Geltendmachung des Rechts auf Datenübertragbarkeit kann sich die betroffene Person jederzeit an einen Mitarbeiter
+der Eckwerkt Stuttgart wenden.
+
+<br/>
+
+g) Recht auf Widerspruch
+Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und
+Verordnungsgeber gewährte Recht, aus Gründen, die sich aus ihrer besonderen Situation ergeben, jederzeit gegen die
+Verarbeitung sie betreffender personenbezogener Daten, die aufgrund von Art. 6 Abs. 1 Buchstaben e oder f DS-GVO
+erfolgt, Widerspruch einzulegen. Dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling.
+
+<br/>
+
+Die Eckwerkt Stuttgart verarbeitet die personenbezogenen Daten im Falle des Widerspruchs nicht mehr, es sei denn, wir
+können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die den Interessen, Rechten und Freiheiten der
+betroffenen Person überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von
+Rechtsansprüchen.
+
+<br/>
+
+Verarbeitet die Eckwerkt Stuttgart personenbezogene Daten, um Direktwerbung zu betreiben, so hat die betroffene Person
+das Recht, jederzeit Widerspruch gegen die Verarbeitung der personenbezogenen Daten zum Zwecke derartiger Werbung
+einzulegen. Dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht. Widerspricht die
+betroffene Person gegenüber der Eckwerkt Stuttgart der Verarbeitung für Zwecke der Direktwerbung, so wird die Eckwerkt
+Stuttgart die personenbezogenen Daten nicht mehr für diese Zwecke verarbeiten.
+
+<br/>
+
+Zudem hat die betroffene Person das Recht, aus Gründen, die sich aus ihrer besonderen Situation ergeben, gegen die sie
+betreffende Verarbeitung personenbezogener Daten, die bei der Eckwerkt Stuttgart zu wissenschaftlichen oder historischen
+Forschungszwecken oder zu statistischen Zwecken gemäß Art. 89 Abs. 1 DS-GVO erfolgen, Widerspruch einzulegen, es sei
+denn, eine solche Verarbeitung ist zur Erfüllung einer im öffentlichen Interesse liegenden Aufgabe erforderlich.
+
+<br/>
+
+Zur Ausübung des Rechts auf Widerspruch kann sich die betroffene Person direkt an jeden Mitarbeiter der Eckwerkt
+Stuttgart oder einen anderen Mitarbeiter wenden. Der betroffenen Person steht es ferner frei, im Zusammenhang mit der
+Nutzung von Diensten der Informationsgesellschaft, ungeachtet der Richtlinie 2002/58/EG, ihr Widerspruchsrecht mittels
+automatisierter Verfahren auszuüben, bei denen technische Spezifikationen verwendet werden.
+
+<br/>
+
+h) Automatisierte Entscheidungen im Einzelfall einschließlich Profiling
+Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und
+Verordnungsgeber gewährte Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung — einschließlich
+Profiling — beruhenden Entscheidung unterworfen zu werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in
+ähnlicher Weise erheblich beeinträchtigt, sofern die Entscheidung (1) nicht für den Abschluss oder die Erfüllung eines
+Vertrags zwischen der betroffenen Person und dem Verantwortlichen erforderlich ist, oder (2) aufgrund von
+Rechtsvorschriften der Union oder der Mitgliedstaaten, denen der Verantwortliche unterliegt, zulässig ist und diese
+Rechtsvorschriften angemessene Maßnahmen zur Wahrung der Rechte und Freiheiten sowie der berechtigten Interessen der
+betroffenen Person enthalten oder (3) mit ausdrücklicher Einwilligung der betroffenen Person erfolgt.
+
+<br/>
+
+Ist die Entscheidung (1) für den Abschluss oder die Erfüllung eines Vertrags zwischen der betroffenen Person und dem
+Verantwortlichen erforderlich oder (2) erfolgt sie mit ausdrücklicher Einwilligung der betroffenen Person, trifft die
+Eckwerkt Stuttgart angemessene Maßnahmen, um die Rechte und Freiheiten sowie die berechtigten Interessen der betroffenen
+Person zu wahren, wozu mindestens das Recht auf Erwirkung des Eingreifens einer Person seitens des Verantwortlichen, auf
+Darlegung des eigenen Standpunkts und auf Anfechtung der Entscheidung gehört.
+
+<br/>
+
+Möchte die betroffene Person Rechte mit Bezug auf automatisierte Entscheidungen geltend machen, kann sie sich hierzu
+jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.
+
+<br/>
+
+i) Recht auf Widerruf einer datenschutzrechtlichen Einwilligung
+Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und
+Verordnungsgeber gewährte Recht, eine Einwilligung zur Verarbeitung personenbezogener Daten jederzeit zu widerrufen.
+
+<br/>
+
+Möchte die betroffene Person ihr Recht auf Widerruf einer Einwilligung geltend machen, kann sie sich hierzu jederzeit an
+einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.
+
+<br/>
+
+**8.** Datenschutz bei Bewerbungen und im Bewerbungsverfahren
+Der für die Verarbeitung Verantwortliche erhebt und verarbeitet die personenbezogenen Daten von Bewerbern zum Zwecke
+der Abwicklung des Bewerbungsverfahrens. Die Verarbeitung kann auch auf elektronischem Wege erfolgen. Dies ist
+insbesondere dann der Fall, wenn ein Bewerber entsprechende Bewerbungsunterlagen auf dem elektronischen Wege,
+beispielsweise per E-Mail oder über ein auf der Internetseite befindliches Webformular, an den für die Verarbeitung
+Verantwortlichen übermittelt. Schließt der für die Verarbeitung Verantwortliche einen Anstellungsvertrag mit einem
+Bewerber, werden die übermittelten Daten zum Zwecke der Abwicklung des Beschäftigungsverhältnisses unter Beachtung
+der gesetzlichen Vorschriften gespeichert. Wird von dem für die Verarbeitung Verantwortlichen kein Anstellungsvertrag
+mit dem Bewerber geschlossen, so werden die Bewerbungsunterlagen zwei Monate nach Bekanntgabe der Absageentscheidung
+automatisch gelöscht, sofern einer Löschung keine sonstigen berechtigten Interessen des für die Verarbeitung
+Verantwortlichen entgegenstehen. Sonstiges berechtigtes Interesse in diesem Sinne ist beispielsweise eine
+Beweispflicht in einem Verfahren nach dem Allgemeinen Gleichbehandlungsgesetz (AGG).
+
+<br/>
+
+**9.** Datenschutzbestimmungen zu Einsatz und Verwendung von Google Analytics (mit Anonymisierungsfunktion)
+Der für die Verarbeitung Verantwortliche hat auf dieser Internetseite die Komponente Google Analytics (mit
+Anonymisierungsfunktion) integriert. Google Analytics ist ein Web-Analyse-Dienst. Web-Analyse ist die Erhebung,
+Sammlung und Auswertung von Daten über das Verhalten von Besuchern von Internetseiten. Ein Web-Analyse-Dienst erfasst
+unter anderem Daten darüber, von welcher Internetseite eine betroffene Person auf eine Internetseite gekommen ist (
+sogenannte Referrer), auf welche Unterseiten der Internetseite zugegriffen oder wie oft und für welche Verweildauer
+eine Unterseite betrachtet wurde. Eine Web-Analyse wird überwiegend zur Optimierung einer Internetseite und zur
+Kosten-Nutzen-Analyse von Internetwerbung eingesetzt.
+
+<br/>
+
+Betreibergesellschaft der Google-Analytics-Komponente ist die Google Ireland Limited, Gordon House, Barrow Street,
+Dublin, D04 E5W5, Ireland.
+
+<br/>
+
+Der für die Verarbeitung Verantwortliche verwendet für die Web-Analyse über Google Analytics den Zusatz "_gat._
+anonymizeIp". Mittels dieses Zusatzes wird die IP-Adresse des Internetanschlusses der betroffenen Person von Google
+gekürzt und anonymisiert, wenn der Zugriff auf unsere Internetseiten aus einem Mitgliedstaat der Europäischen Union oder
+aus einem anderen Vertragsstaat des Abkommens über den Europäischen Wirtschaftsraum erfolgt.
+
+<br/>
+
+Der Zweck der Google-Analytics-Komponente ist die Analyse der Besucherströme auf unserer Internetseite. Google nutzt die
+gewonnenen Daten und Informationen unter anderem dazu, die Nutzung unserer Internetseite auszuwerten, um für uns
+Online-Reports, welche die Aktivitäten auf unseren Internetseiten aufzeigen, zusammenzustellen, und um weitere mit der
+Nutzung unserer Internetseite in Verbindung stehende Dienstleistungen zu erbringen.
+
+<br/>
+
+Google Analytics setzt ein Cookie auf dem informationstechnologischen System der betroffenen Person. Was Cookies sind,
+wurde oben bereits erläutert. Mit Setzung des Cookies wird Google eine Analyse der Benutzung unserer Internetseite
+ermöglicht. Durch jeden Aufruf einer der Einzelseiten dieser Internetseite, die durch den für die Verarbeitung
+Verantwortlichen betrieben wird und auf welcher eine Google-Analytics-Komponente integriert wurde, wird der
+Internetbrowser auf dem informationstechnologischen System der betroffenen Person automatisch durch die jeweilige
+Google-Analytics-Komponente veranlasst, Daten zum Zwecke der Online-Analyse an Google zu übermitteln. Im Rahmen dieses
+technischen Verfahrens erhält Google Kenntnis über personenbezogene Daten, wie der IP-Adresse der betroffenen Person,
+die Google unter anderem dazu dienen, die Herkunft der Besucher und Klicks nachzuvollziehen und in der Folge
+Provisionsabrechnungen zu ermöglichen.
+
+<br/>
+
+Mittels des Cookies werden personenbezogene Informationen, beispielsweise die Zugriffszeit, der Ort, von welchem ein
+Zugriff ausging und die Häufigkeit der Besuche unserer Internetseite durch die betroffene Person, gespeichert. Bei jedem
+Besuch unserer Internetseiten werden diese personenbezogenen Daten, einschließlich der IP-Adresse des von der
+betroffenen Person genutzten Internetanschlusses, an Google in den Vereinigten Staaten von Amerika übertragen. Diese
+personenbezogenen Daten werden durch Google in den Vereinigten Staaten von Amerika gespeichert. Google gibt diese über
+das technische Verfahren erhobenen personenbezogenen Daten unter Umständen an Dritte weiter.
+
+<br/>
+
+Die betroffene Person kann die Setzung von Cookies durch unsere Internetseite, wie oben bereits dargestellt, jederzeit
+mittels einer entsprechenden Einstellung des genutzten Internetbrowsers verhindern und damit der Setzung von Cookies
+dauerhaft widersprechen. Eine solche Einstellung des genutzten Internetbrowsers würde auch verhindern, dass Google ein
+Cookie auf dem informationstechnologischen System der betroffenen Person setzt. Zudem kann ein von Google Analytics
+bereits gesetzter Cookie jederzeit über den Internetbrowser oder andere Softwareprogramme gelöscht werden.
+
+<br/>
+
+Ferner besteht für die betroffene Person die Möglichkeit, einer Erfassung der durch Google Analytics erzeugten, auf eine
+Nutzung dieser Internetseite bezogenen Daten sowie der Verarbeitung dieser Daten durch Google zu widersprechen und eine
+solche zu verhindern. Hierzu muss die betroffene Person ein Browser-Add-On unter dem
+Link https://tools.google.com/dlpage/gaoptout herunterladen und installieren. Dieses Browser-Add-On teilt Google
+Analytics über JavaScript mit, dass keine Daten und Informationen zu den Besuchen von Internetseiten an Google Analytics
+übermittelt werden dürfen. Die Installation des Browser-Add-Ons wird von Google als Widerspruch gewertet. Wird das
+informationstechnologische System der betroffenen Person zu einem späteren Zeitpunkt gelöscht, formatiert oder neu
+installiert, muss durch die betroffene Person eine erneute Installation des Browser-Add-Ons erfolgen, um Google
+Analytics zu deaktivieren. Sofern das Browser-Add-On durch die betroffene Person oder einer anderen Person, die ihrem
+Machtbereich zuzurechnen ist, deinstalliert oder deaktiviert wird, besteht die Möglichkeit der Neuinstallation oder der
+erneuten Aktivierung des Browser-Add-Ons.
+
+<br/>
+
+Weitere Informationen und die geltenden Datenschutzbestimmungen von Google können
+unter https://www.google.de/intl/de/policies/privacy/ und unter http://www.google.com/analytics/terms/de.html abgerufen
+werden. Google Analytics wird unter diesem Link https://www.google.com/intl/de_de/analytics/ genauer erläutert.
+
+<br/>
+
+**10.** Datenschutzbestimmungen zu Einsatz und Verwendung von Instagram
+Der für die Verarbeitung Verantwortliche hat auf dieser Internetseite Komponenten des Dienstes Instagram integriert.
+Instagram ist ein Dienst, der als audiovisuelle Plattform zu qualifizieren ist und den Nutzern das Teilen von Fotos
+und Videos und zudem eine Weiterverbreitung solcher Daten in anderen sozialen Netzwerken ermöglicht.
+
+<br/>
+
+Betreibergesellschaft der Dienste von Instagram ist die Facebook Ireland Ltd., 4 Grand Canal Square, Grand Canal
+Harbour, Dublin 2 Ireland.
+
+<br/>
+
+Durch jeden Aufruf einer der Einzelseiten dieser Internetseite, die durch den für die Verarbeitung Verantwortlichen
+betrieben wird und auf welcher eine Instagram-Komponente (Insta-Button) integriert wurde, wird der Internetbrowser auf
+dem informationstechnologischen System der betroffenen Person automatisch durch die jeweilige Instagram-Komponente
+veranlasst, eine Darstellung der entsprechenden Komponente von Instagram herunterzuladen. Im Rahmen dieses technischen
+Verfahrens erhält Instagram Kenntnis darüber, welche konkrete Unterseite unserer Internetseite durch die betroffene
+Person besucht wird.
+
+<br/>
+
+Sofern die betroffene Person gleichzeitig bei Instagram eingeloggt ist, erkennt Instagram mit jedem Aufruf unserer
+Internetseite durch die betroffene Person und während der gesamten Dauer des jeweiligen Aufenthaltes auf unserer
+Internetseite, welche konkrete Unterseite die betroffene Person besucht. Diese Informationen werden durch die
+Instagram-Komponente gesammelt und durch Instagram dem jeweiligen Instagram-Account der betroffenen Person zugeordnet.
+Betätigt die betroffene Person einen der auf unserer Internetseite integrierten Instagram-Buttons, werden die damit
+übertragenen Daten und Informationen dem persönlichen Instagram-Benutzerkonto der betroffenen Person zugeordnet und von
+Instagram gespeichert und verarbeitet.
+
+<br/>
+
+Instagram erhält über die Instagram-Komponente immer dann eine Information darüber, dass die betroffene Person unsere
+Internetseite besucht hat, wenn die betroffene Person zum Zeitpunkt des Aufrufs unserer Internetseite gleichzeitig bei
+Instagram eingeloggt ist; dies findet unabhängig davon statt, ob die betroffene Person die Instagram-Komponente anklickt
+oder nicht. Ist eine derartige Übermittlung dieser Informationen an Instagram von der betroffenen Person nicht gewollt,
+kann diese die Übermittlung dadurch verhindern, dass sie sich vor einem Aufruf unserer Internetseite aus ihrem
+Instagram-Account ausloggt.
+
+<br/>
+
+Weitere Informationen und die geltenden Datenschutzbestimmungen von Instagram können
+unter https://help.instagram.com/155833707900388 und https://www.instagram.com/about/legal/privacy/ abgerufen werden.
+
+<br/>
+
+**11.** Datenschutzbestimmungen zu Einsatz und Verwendung von Matomo
+Der für die Verarbeitung Verantwortliche hat auf dieser Internetseite die Komponente Matomo integriert. Matomo ist
+ein Open-Source-Softwaretool zur Web-Analyse. Web-Analyse ist die Erhebung, Sammlung und Auswertung von Daten über
+das Verhalten von Besuchern von Internetseiten. Ein Web-Analyse-Tool erfasst unter anderem Daten darüber, von
+welcher Internetseite eine betroffene Person auf eine Internetseite gekommen ist (sogenannter Referrer), auf welche
+Unterseiten der Internetseite zugegriffen oder wie oft und für welche Verweildauer eine Unterseite betrachtet wurde.
+Eine Web-Analyse wird überwiegend zur Optimierung einer Internetseite und zur Kosten-Nutzen-Analyse von
+Internetwerbung eingesetzt.
+
+<br/>
+
+Die Software wird auf dem Server des für die Verarbeitung Verantwortlichen betrieben, die datenschutzrechtlich sensiblen
+Logdateien werden ausschließlich auf diesem Server gespeichert.
+
+<br/>
+
+Der Zweck der Matomo-Komponente ist die Analyse der Besucherströme auf unserer Internetseite. Der für die Verarbeitung
+Verantwortliche nutzt die gewonnenen Daten und Informationen unter anderem dazu, die Nutzung dieser Internetseite
+auszuwerten, um Online-Reports, welche die Aktivitäten auf unseren Internetseiten aufzeigen, zusammenzustellen.
+
+<br/>
+
+Matomo setzt ein Cookie auf dem informationstechnologischen System der betroffenen Person. Was Cookies sind, wurde oben
+bereits erläutert. Mit der Setzung des Cookies wird uns eine Analyse der Benutzung unserer Internetseite ermöglicht.
+Durch jeden Aufruf einer der Einzelseiten dieser Internetseite wird der Internetbrowser auf dem
+informationstechnologischen System der betroffenen Person automatisch durch die Matomo-Komponente veranlasst, Daten zum
+Zwecke der Online-Analyse an unseren Server zu übermitteln. Im Rahmen dieses technischen Verfahrens erhalten wir
+Kenntnis über personenbezogene Daten, wie der IP-Adresse der betroffenen Person, die uns unter anderem dazu dient, die
+Herkunft der Besucher und Klicks nachzuvollziehen.
+
+<br/>
+
+Mittels des Cookies werden personenbezogene Informationen, beispielsweise die Zugriffszeit, der Ort, von welchem ein
+Zugriff ausging und die Häufigkeit der Besuche auf unserer Internetseite gespeichert. Bei jedem Besuch unserer
+Internetseiten werden diese personenbezogenen Daten, einschließlich der IP-Adresse des von der betroffenen Person
+genutzten Internetanschlusses, an unseren Server übertragen. Diese personenbezogenen Daten werden durch uns gespeichert.
+Wir geben diese personenbezogenen Daten nicht an Dritte weiter.
+
+<br/>
+
+Die betroffene Person kann die Setzung von Cookies durch unsere Internetseite, wie oben bereits dargestellt, jederzeit
+mittels einer entsprechenden Einstellung des genutzten Internetbrowsers verhindern und damit der Setzung von Cookies
+dauerhaft widersprechen. Eine solche Einstellung des genutzten Internetbrowsers würde auch verhindern, dass Matomo ein
+Cookie auf dem informationstechnologischen System der betroffenen Person setzt. Zudem kann ein von Matomo bereits
+gesetzter Cookie jederzeit über einen Internetbrowser oder andere Softwareprogramme gelöscht werden.
+
+<br/>
+
+Ferner besteht für die betroffene Person die Möglichkeit, einer Erfassung der durch den Matomo erzeugten, auf eine
+Nutzung dieser Internetseite bezogenen Daten zu widersprechen und eine solche zu verhindern. Hierzu muss die betroffene
+Person in Ihrem Browser "Do Not Track" einstellen.
+
+<br/>
+
+Mit der Setzung des Opt-Out-Cookies besteht jedoch die Möglichkeit, dass die Internetseiten des für die Verarbeitung
+Verantwortlichen für die betroffene Person nicht mehr vollumfänglich nutzbar sind.
+
+<br/>
+
+Weitere Informationen und die geltenden Datenschutzbestimmungen von Matomo können unter https://matomo.org/privacy/
+abgerufen werden.
+
+<br/>
+
+**12.** Rechtsgrundlage der Verarbeitung
+Art. 6 I lit. a DS-GVO dient unserem Unternehmen als Rechtsgrundlage für Verarbeitungsvorgänge, bei denen wir eine
+Einwilligung für einen bestimmten Verarbeitungszweck einholen. Ist die Verarbeitung personenbezogener Daten zur
+Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, erforderlich, wie dies beispielsweise bei
+Verarbeitungsvorgängen der Fall ist, die für eine Lieferung von Waren oder die Erbringung einer sonstigen Leistung
+oder Gegenleistung notwendig sind, so beruht die Verarbeitung auf Art. 6 I lit. b DS-GVO. Gleiches gilt für solche
+Verarbeitungsvorgänge die zur Durchführung vorvertraglicher Maßnahmen erforderlich sind, etwa in Fällen von Anfragen
+zur unseren Produkten oder Leistungen. Unterliegt unser Unternehmen einer rechtlichen Verpflichtung durch welche
+eine Verarbeitung von personenbezogenen Daten erforderlich wird, wie beispielsweise zur Erfüllung steuerlicher
+Pflichten, so basiert die Verarbeitung auf Art. 6 I lit. c DS-GVO. In seltenen Fällen könnte die Verarbeitung von
+personenbezogenen Daten erforderlich werden, um lebenswichtige Interessen der betroffenen Person oder einer anderen
+natürlichen Person zu schützen. Dies wäre beispielsweise der Fall, wenn ein Besucher in unserem Betrieb verletzt
+werden würde und daraufhin sein Name, sein Alter, seine Krankenkassendaten oder sonstige lebenswichtige
+Informationen an einen Arzt, ein Krankenhaus oder sonstige Dritte weitergegeben werden müssten. Dann würde die
+Verarbeitung auf Art. 6 I lit. d DS-GVO beruhen. Letztlich könnten Verarbeitungsvorgänge auf Art. 6 I lit. f DS-GVO
+beruhen. Auf dieser Rechtsgrundlage basieren Verarbeitungsvorgänge, die von keiner der vorgenannten Rechtsgrundlagen
+erfasst werden, wenn die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens oder eines
+Dritten erforderlich ist, sofern die Interessen, Grundrechte und Grundfreiheiten des Betroffenen nicht überwiegen.
+Solche Verarbeitungsvorgänge sind uns insbesondere deshalb gestattet, weil sie durch den Europäischen Gesetzgeber
+besonders erwähnt wurden. Er vertrat insoweit die Auffassung, dass ein berechtigtes Interesse anzunehmen sein
+könnte, wenn die betroffene Person ein Kunde des Verantwortlichen ist (Erwägungsgrund 47 Satz 2 DS-GVO).
+
+<br/>
+
+**13.** Berechtigte Interessen an der Verarbeitung, die von dem Verantwortlichen oder einem Dritten verfolgt werden
+Basiert die Verarbeitung personenbezogener Daten auf Artikel 6 I lit. f DS-GVO ist unser berechtigtes Interesse die
+Durchführung unserer Geschäftstätigkeit zugunsten des Wohlergehens all unserer Mitarbeiter und unserer
+Anteilseigner.
+
+<br/>
+
+**14.** Dauer, für die die personenbezogenen Daten gespeichert werden
+Das Kriterium für die Dauer der Speicherung von personenbezogenen Daten ist die jeweilige gesetzliche
+Aufbewahrungsfrist. Nach Ablauf der Frist werden die entsprechenden Daten routinemäßig gelöscht, sofern sie nicht
+mehr zur Vertragserfüllung oder Vertragsanbahnung erforderlich sind.
+
+<br/>
+
+**15.** Gesetzliche oder vertragliche Vorschriften zur Bereitstellung der personenbezogenen Daten; Erforderlichkeit für
+den
+Vertragsabschluss; Verpflichtung der betroffenen Person, die personenbezogenen Daten bereitzustellen; mögliche
+Folgen der Nichtbereitstellung
+Wir klären Sie darüber auf, dass die Bereitstellung personenbezogener Daten zum Teil gesetzlich vorgeschrieben ist (
+z.B. Steuervorschriften) oder sich auch aus vertraglichen Regelungen (z.B. Angaben zum Vertragspartner) ergeben
+kann. Mitunter kann es zu einem Vertragsschluss erforderlich sein, dass eine betroffene Person uns personenbezogene
+Daten zur Verfügung stellt, die in der Folge durch uns verarbeitet werden müssen. Die betroffene Person ist
+beispielsweise verpflichtet uns personenbezogene Daten bereitzustellen, wenn unser Unternehmen mit ihr einen Vertrag
+abschließt. Eine Nichtbereitstellung der personenbezogenen Daten hätte zur Folge, dass der Vertrag mit dem
+Betroffenen nicht geschlossen werden könnte. Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen
+muss sich der Betroffene an einen unserer Mitarbeiter wenden. Unser Mitarbeiter klärt den Betroffenen
+einzelfallbezogen darüber auf, ob die Bereitstellung der personenbezogenen Daten gesetzlich oder vertraglich
+vorgeschrieben oder für den Vertragsabschluss erforderlich ist, ob eine Verpflichtung besteht, die personenbezogenen
+Daten bereitzustellen, und welche Folgen die Nichtbereitstellung der personenbezogenen Daten hätte.
+
+<br/>
+
+**16.** Bestehen einer automatisierten Entscheidungsfindung
+Als verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein
+Profiling.
+
+<br/>
+
+Diese Datenschutzerklärung wurde durch den Datenschutzerklärungs-Generator der DGD Deutsche Gesellschaft für Datenschutz
+GmbH, die als Externer Datenschutzbeauftragter Stuttgart tätig ist, in Kooperation mit dem Kölner Datenschutz Anwalt
+Christian Solmecke erstellt.

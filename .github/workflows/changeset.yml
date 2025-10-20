@@ -1,0 +1,36 @@
+name: Changesets
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  changesets:
+    name: Create Release PR
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Set version and generate changelog
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: yarn version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
