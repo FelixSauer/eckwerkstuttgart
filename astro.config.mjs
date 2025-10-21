@@ -6,7 +6,7 @@ import webmanifest from 'astro-webmanifest'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://eckwerkstuttgart.de/',
+	site: 'https://www.eckwerkstuttgart.de/',
 	integrations: [
 		icon({
 			iconDir: 'src/assets/icons'
@@ -14,15 +14,15 @@ export default defineConfig({
 		tailwind(),
 		sitemap({
 			customPages: [
-				'https://eckwerkstuttgart.de/#Home',
-				'https://eckwerkstuttgart.de/#Wohnhandwerk',
-				'https://eckwerkstuttgart.de/#Baumpflege',
-				'https://eckwerkstuttgart.de/#Terrassenbau',
-				'https://eckwerkstuttgart.de/#Kontakt'
+				'https://www.eckwerkstuttgart.de/#Home',
+				'https://www.eckwerkstuttgart.de/#Wohnhandwerk',
+				'https://www.eckwerkstuttgart.de/#Baumpflege',
+				'https://www.eckwerkstuttgart.de/#Terrassenbau',
+				'https://www.eckwerkstuttgart.de/#Kontakt'
 			]
 		}),
 		webmanifest({
-			name: 'eckwerkstuttgart.de',
+			name: 'www.eckwerkstuttgart.de',
 			icon: 'src/assets/favicon-mode-light.svg',
 			short_name: 'eckwerkstuttgart',
 			description: 'Ihr Partner für Wohnhandwerk, Baumpflege und Terrassenbau in Stuttgart',
