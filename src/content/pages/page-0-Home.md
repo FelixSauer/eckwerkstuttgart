@@ -1,5 +1,5 @@
 ---
-title: Home
+title: About
 mainStage: true
 navigation: Header
 slogan: "Ihr Handwerker in der Region"
@@ -7,7 +7,7 @@ imagePath: IntroImage.jpg
 
 ---
 
-# Willkommen
+# About
 
 **Sie suchen einen zuverlässigen Partner für Ihre Renovierung, Sanierung oder andere Projekte?**
 \

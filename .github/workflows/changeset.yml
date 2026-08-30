@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   changesets:
-    name: Create Release PR
+    name: Create Changelog and Version Bump
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
@@ -25,12 +25,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+      - run: yarn install
+      - run: yarn changeset version
 
-      - name: Set version and generate changelog
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: yarn version
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

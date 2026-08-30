@@ -3,30 +3,67 @@
 @tailwind utilities;
 
 @layer base {
-    h1 { @apply font-montserrat font-normal text-4xl sm:text-5xl md:text-6xl pb-7 }
-    h3 { @apply text-2xl font-medium }
-    h4 { @apply text-xl font-medium }
-    h5 { @apply text-lg font-normal }
-    h6 { @apply text-base font-normal }
-    body { @apply font-light text-lg }
-    strong { @apply font-semibold }
+  h1 {
+    @apply font-montserrat font-normal text-3xl sm:text-4xl md:text-5xl pb-7;
+  }
+
+  h3 {
+    @apply text-xl font-medium;
+  }
+
+  h4 {
+    @apply text-xl font-medium;
+  }
+
+  h5 {
+    @apply text-lg font-normal;
+  }
+
+  h6 {
+    @apply text-base font-normal;
+  }
+
+  body {
+    @apply font-light text-lg;
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+
+  main {
+    @apply bg-white;
+
+    article {
+      ul {
+    @apply list-disc pl-6 marker:text-primary;
+  }
+
+  ul li {
+    @apply mb-2;
+    padding-top: .8em ;
+    
+  }
+  li::marker {
+  font-size: 1em;
+  font-weight: 300;
 }
 
-section > article > div.logo>p {@apply py-4 gap-4 flex flex-col md:flex-row}
+  ul ul {
+    @apply list-[circle] pl-6;
+  }
+    }
+  }
+}
 
-main {
-    @apply
-    bg-white
+section > article > div.logo > p {
+  @apply flex flex-col gap-4 py-4 md:flex-row;
 }
 
 button {
-    @apply
-    cursor-pointer
-    transition duration-[600ms]
-    ease-in-out
-    bg-transparent
+  @apply cursor-pointer bg-transparent transition duration-[600ms] ease-in-out;
 }
 
 .writingMode-vertical {
-    writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
