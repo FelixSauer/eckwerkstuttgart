@@ -35,7 +35,7 @@ const { navigation, navigationPostion } = Astro.props as Props;
 		<button
 			id="navbarToggle"
 			aria-label="Toggle navigation menu"
-			class="relative z-40 pt-1 cursor-pointer border-0 bg-transparent text-2xl sm:text-5xl text-white hover:text-secondary flex align-middle"
+			class="relative z-40 pt-1 cursor-pointer border-0 bg-transparent text-2xl sm:text-3xl lg:text-5xl text-white hover:text-secondary flex align-middle"
 		>
 			<Icon name="line-md:close-to-menu-transition" />
 		</button>
@@ -44,7 +44,7 @@ const { navigation, navigationPostion } = Astro.props as Props;
 			id="navbarMenu"
 			class="absolute hidden left-0 top-0 z-30 h-screen w-screen translate-x-full transform bg-primary transition-transform duration-300 ease-in-out"
 		>
-			<ul class="flex h-full flex-col gap-8 p-8 pt-24">
+			<ul class="flex h-full flex-col gap-8 p-8 pl-6 sm:pl-12 md:pl-16 pt-24">
 				{
 					navigation.map((item) => (
 						<li>
