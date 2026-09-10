@@ -1,16 +1,16 @@
 ---
-import Header from '@/components/Header.astro'
-import Footer from '@/components/Footer.astro'
-import GoBack from '@/components/GoBack.astro'
-import GalleryModal from '@/components/GalleryModal.astro'
-import { getNavigation } from '@/hooks/navigation'
+import Footer from "@/components/Footer.astro";
+import GalleryModal from "@/components/GalleryModal.astro";
+import GoBack from "@/components/GoBack.astro";
+import Header from "@/components/Header.astro";
+import { getNavigation } from "@/hooks/navigation";
 
 interface Props {
-	title: string
+	title: string;
 }
 
-const { title } = Astro.props
-const { navigationHeader, navigationFooter } = await getNavigation()
+const { title } = Astro.props;
+const { navigationHeader, navigationFooter } = await getNavigation();
 ---
 
 <!doctype html>
@@ -31,9 +31,7 @@ const { navigationHeader, navigationFooter } = await getNavigation()
 		<Header navigation={navigationHeader} />
 		<main class="flex-1 overflow-y-auto scroll-smooth">
 			<slot />
+      <Footer navigation={navigationFooter} />
 		</main>
-		<GoBack />
-		<Footer navigation={navigationFooter} />
-		<GalleryModal />
 	</body>
 </html>

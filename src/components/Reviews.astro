@@ -56,9 +56,9 @@ const reviews: Review[] = await fetchReviews();
 									<h4>{review.author_name}</h4>
 								</a>
 
-                  <div class="size text-xxs flex gap-1 p-0">
+                  <div class="text-xs flex gap-1 p-0">
                     <div class="stars">{renderStars(review.rating)}</div>
-                    <div>{review.relative_time_description}</div>
+                    <div class="text-sm">{review.relative_time_description}</div>
                   </div>
 
               </div>
