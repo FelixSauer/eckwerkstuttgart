@@ -4,31 +4,33 @@ mainStage: true
 navigation: Header
 ---
 
-# Leistungen
+# Unsere Leistungen rund um Renovierung & Sanierung
 
-Im Bereich des Wohnhandwerks bieten wir Ihnen ein breites Spektrum an Leistungen für den Innenausbau und die
-Gestaltung Ihrer Räume.
-Ob Sie Ihre Wände auffrischen, einen neuen Boden verlegen oder einen umfassenden Umbau planen, wir sind der
-zuverlässige Partner an Ihrer Seite, der Ihre Wünsche mit Fachkenntnis und Präzision umsetzt.
-\
-\
-Unsere Leistungen:
+Für Renovierungen und Sanierungen in Stuttgart und Umgebung bieten wir Ihnen ein breites Spektrum an Handwerksleistungen. Von einzelnen
+Renovierungsarbeiten bis zur umfassenden Sanierung von Wohnungen und Häusern übernehmen wir die fachgerechte Umsetzung Ihres Projekts.
 
-- **Renovierungen & Sanierungen:**  Wir kümmern uns um alle Arbeiten, die Ihre Räume aufwerten und erneuern, von
-   kleinen
-   Renovierungen bis hin zu größeren Sanierungsprojekten.
-- **Elektrik & Haustechnik:** Wir kümmern uns um die komplette Elektroinstallation, von der Verkabelung bis
-   hin zur Installation moderner Haustechnik wie Heizungs-, Lüftungs- und Klimaanlagen.
-- **Innenausbau:** Ob Trockenbau oder Wandgestaltung, wir schaffen individuelle Raumkonzepte, die perfekt zu Ihnen
-   passen.
-- **Badsanierung:** Wir bieten Ihnen die komplette Badsanierung aus einer Hand, von der Planung über die Ausführung
-   bis
-   hin
-   zur finalen Fertigstellung.
-- **Fliesenarbeiten:** Wir verlegen Fliesen in Ihren Badezimmern, Küchen und weiteren Räumen, präzise und passgenau,
-   mit
-   hochwertiger Verarbeitung und abgestimmt auf Ihre Wünsche.
-- **Bodenverlegung:** Ob Parkett, Laminat oder Fliesen, wir verlegen Ihren Wunschboden fachgerecht und schnell.
-- **Maler- & Putzarbeiten:** Mit neuen Farben, Tapeten und Putzen verleihen wir Ihren Räumen oder der Fassade frischen
-   Glanz.
-- **Fenster & Türen:** Wir tauschen alte Fenster und Türen aus oder montieren neue, passend zu Ihrem Stil und Bedarf.
+Viele Arbeiten erhalten Sie bei uns aus einer Hand, mit einem festen Ansprechpartner und einer abgestimmten Koordination der verschiedenen
+Gewerke.
+
+Unsere Leistungen
+
+- Renovierungen & Sanierungen: Von einzelnen Renovierungsarbeiten bis zur umfassenden Wohnungs- und Haussanierung übernehmen wir
+die Modernisierung und Aufwertung Ihrer Räume.
+
+- Elektrik & Haustechnik: Elektroinstallationen sowie Arbeiten rund um moderne Haustechnik werden passend zum jeweiligen Sanierungs- oder
+Renovierungsprojekt umgesetzt.
+
+- Innenausbau & Trockenbau: Wir realisieren individuelle Raumlösungen, erstellen und verkleiden Wände und Decken und übernehmen weitere
+Arbeiten im Bereich Trockenbau und Innenausbau.
+
+- Badsanierung: Wir übernehmen Ihre Badsanierung in Stuttgart von der Planung über Rückbau, Installation und Fliesenarbeiten bis zur
+Fertigstellung, koordiniert aus einer Hand.
+
+- Fliesenarbeiten: Fachgerechte Verlegung von Wand- und Bodenfliesen in Badezimmern, Küchen und anderen Wohnbereichen.
+
+- Bodenverlegung: Wir verlegen unterschiedliche Bodenbeläge fachgerecht und sorgen für die entsprechende Vorbereitung des Untergrunds.
+
+- Maler- & Putzarbeiten: Von klassischen Malerarbeiten über Spachtel- und Putzarbeiten bis zur Gestaltung von Wänden, Decken und Fassaden.
+
+- Fenster & Türen: Wir übernehmen den Austausch und die Montage von Fenstern und Türen im Rahmen von Renovierungs- und
+Sanierungsarbeiten.

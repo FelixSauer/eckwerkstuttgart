@@ -35,6 +35,10 @@
     @apply bg-white;
 
     article {
+      > p + p {
+        @apply mt-4;
+      }
+
       ul {
     @apply list-disc pl-6 marker:text-primary;
   }

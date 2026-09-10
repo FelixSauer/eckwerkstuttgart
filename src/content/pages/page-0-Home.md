@@ -7,14 +7,19 @@ imagePath: IntroImage.jpg
 
 ---
 
-# About
+# Ihr Partner für Renovierung und Sanierung in Stuttgart
 
-**Sie suchen einen zuverlässigen Partner für Ihre Renovierung, Sanierung oder andere Projekte?**
-\
-\
-Dann sind Sie bei uns genau richtig! Als professionelles Handwerksunternehmen bieten wir Ihnen maßgeschneiderte Lösungen für Ihre Renovierung, Badsanierung und die Pflege Ihrer Bäume – immer mit dem Ziel, Ihre Wohn- und Lebensqualität zu verbessern.\
-\
-Als kleines, agiles Team kümmern wir uns um alle Belange Ihrer Renovierungsarbeiten und verschönern so Ihr Zuhause. Egal, ob Sie Ihr ganzes Haus sanieren, Ihr Bad auf den neuesten Stand bringen oder nur einige Reparaturen benötigen – bei uns sind Sie in besten Händen. Mit höchsten Qualitätsansprüchen setzen wir Ihre Wünsche um und liefern Ergebnisse, die Sie begeistern.\
-\
-Unser Ziel ist es, Ihre Lebensräume mit hochwertiger Handwerksarbeit zu verschönern. Durch eine Kombination aus traditionellem Handwerk und innovativen Lösungen realisieren wir Ihre Vorstellungen effizient und professionell.
+Sie suchen ein zuverlässiges Handwerksunternehmen für Renovierung und Sanierung in
+Stuttgart und Umgebung? Dann sind Sie bei uns richtig. Wir unterstützen Sie bei kleinen
+Renovierungsarbeiten ebenso wie bei umfangreichen Sanierungsprojekten, zuverlässig,
+flexibel und mit einem hohen Anspruch an die handwerkliche Ausführung.
 
+Als kleines und eingespieltes Team übernehmen wir zahlreiche Arbeiten rund um
+Renovierung, Sanierung und Modernisierung. Ob komplette Wohnungssanierung,
+Haussanierung, Badsanierung, Trockenbau, Malerarbeiten, Bodenarbeiten oder kleinere
+Reparaturen: Wir koordinieren die verschiedenen Gewerke und sorgen für eine fachgerechte
+Umsetzung Ihres Projekts.
+
+Unser Ziel ist es, bestehende Wohnräume funktional und optisch aufzuwerten. Dabei
+verbinden wir solides Handwerk mit modernen Materialien und zeitgemäßen Lösungen. Von
+der ersten Planung bis zur Umsetzung erhalten Sie bei uns viele Leistungen aus einer Hand, für Renovierungs- und Sanierungsprojekte in Stuttgart und der Region.
