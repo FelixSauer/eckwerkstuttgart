@@ -282,7 +282,6 @@ src/
 
 ## Business Context
 - German craftsmanship company (language: German)
-- Services: Wohnhandwerk (home improvement), Baumpflege (tree care), Terrassenbau (terrace construction)
 - Location: Stuttgart, Germany
 - Target audience: homeowners seeking quality craftsmanship
 

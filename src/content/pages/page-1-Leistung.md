@@ -1,5 +1,5 @@
 ---
-title: Leistung
+title: Leistungen
 mainStage: true
 navigation: Header
 ---

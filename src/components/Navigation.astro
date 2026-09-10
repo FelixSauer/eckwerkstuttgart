@@ -17,6 +17,7 @@ const { navigation, navigationPostion } = Astro.props as Props;
 				navigation.map((item) => (
 					<li>
 						<a
+							id={`link-${item.title}`}
 							href={navigationPostion === 'header' ? '/#' + item.title : item.title}
 							data-href={item.title}
 							aria-label={item.title}
@@ -48,12 +49,12 @@ const { navigation, navigationPostion } = Astro.props as Props;
 					navigation.map((item) => (
 						<li>
 							<a
+								id={`link-${item.title}`}
 								href={navigationPostion === 'header' ? '/#' + item.title : item.title}
 								data-href={item.title}
 								aria-label="{item.title}"
 								aria-current="page"
-								id="navItem"
-								class="m-1 text-4xl text-white hover:text-secondary"
+								class="navItem m-1 text-4xl text-white hover:text-secondary"
 							>
 								{item.title}
 							</a>
@@ -69,7 +70,7 @@ const { navigation, navigationPostion } = Astro.props as Props;
 	document.addEventListener('DOMContentLoaded', () => {
 		const navbarToggle = document.getElementById('navbarToggle')
 		const navbarMenu = document.getElementById('navbarMenu')
-		const navItems = document.querySelectorAll('#navItem')
+		const navItems = document.querySelectorAll('.navItem')
 
 		if (!navbarToggle || !navbarMenu) {
 			console.error('Navbar elements are missing')

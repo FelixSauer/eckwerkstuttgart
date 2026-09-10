@@ -50,7 +50,13 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
 
 <style>
 	.pswp--custom-bg {
-		--pswp-bg: #fff;
+		--pswp-bg: #1a1a1a;
+		--pswp-icon-color-secondary: #fff;
+		--pswp-icon-stroke-color: #fff;
+	}
+
+	.pswp--custom-bg .pswp__button {
+		color: #fff;
 	}
 </style>
 
@@ -81,14 +87,4 @@ const imagePaths = Object.keys(images).filter((imagePath) => {
 	})
 
 	lightbox.init()
-
-	document.addEventListener(
-		'astro:page-load',
-		() => {
-			lightbox.init()
-		},
-		{
-			once: true
-		}
-	)
 </script>

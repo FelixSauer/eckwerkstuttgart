@@ -10,7 +10,7 @@ const date = new Date();
 const year = date.getFullYear();
 ---
 
-<footer class="bottom-0 z-50 w-full bg-primary p-4 px-6 text-xs text-white sm:px-12 md:px-16">
+<footer class="bottom-0 z-50 flex justify-end w-full gap-3 bg-primary p-4 px-6 text-xs text-white sm:px-12 md:px-16">
 	<ul class="m-0 flex list-none gap-4 p-0 md:pb-0">
 		{
 			navigation.map((item) => {
@@ -29,16 +29,5 @@ const year = date.getFullYear();
 			})
 		}
 	</ul>
-	<div class="md:flex md:gap-4 md:text-right">
-		<p>Eckwerk Stuttgart</p>
-		<p>Stierlenstraße 25</p>
-		<p>70327 Stuttgart</p>
-		<p>
-			Mail: <a class="text-white" href="mailto:kontakt@eckwerkstuttgart.de" aria-label="E-Mail"
-				>kontakt@eckwerkstuttgart.de</a
-			>
-		</p>
-		<br />
-		<p>© {year} Eckwerk Stuttgart</p>
-	</div>
+	© {year} Eckwerk Stuttgart
 </footer>
