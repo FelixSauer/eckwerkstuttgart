@@ -1,16 +1,18 @@
 ---
-import type { INavigation } from "@/types/navigation";
+import type { INavigation } from '@/types/navigation'
 
 interface Props {
-	navigation: INavigation[];
+	navigation: INavigation[]
 }
 
-const { navigation } = Astro.props;
-const date = new Date();
-const year = date.getFullYear();
+const { navigation } = Astro.props
+const date = new Date()
+const year = date.getFullYear()
 ---
 
-<footer class="bottom-0 z-50 flex justify-end w-full gap-3 bg-primary p-4 px-6 text-xs text-white sm:px-12 md:px-16">
+<footer
+	class="bottom-0 z-50 flex w-full justify-end gap-3 bg-primary p-4 px-6 text-xs text-white sm:px-12 md:px-16"
+>
 	<ul class="m-0 flex list-none gap-4 p-0 md:pb-0">
 		{
 			navigation.map((item) => {

@@ -1,13 +1,13 @@
 ---
-import { Icon } from "astro-icon/components";
-import type { INavigation } from "@/types/navigation";
+import { Icon } from 'astro-icon/components'
+import type { INavigation } from '@/types/navigation'
 
 interface Props {
-	navigation: INavigation[];
-	navigationPostion: string;
+	navigation: INavigation[]
+	navigationPostion: string
 }
 
-const { navigation, navigationPostion } = Astro.props as Props;
+const { navigation, navigationPostion } = Astro.props as Props
 ---
 
 <nav class="flex items-center">
@@ -22,7 +22,7 @@ const { navigation, navigationPostion } = Astro.props as Props;
 							data-href={item.title}
 							aria-label={item.title}
 							aria-current="page"
-							class="cursor-pointer font-sourceCodePro font-light uppercase text-xl  tracking-wide no-underline subpixel-antialiased hover:text-secondary"
+							class="cursor-pointer font-sourceCodePro text-xl font-light uppercase tracking-wide no-underline subpixel-antialiased hover:text-secondary"
 						>
 							{item.title}
 						</a>
@@ -35,16 +35,16 @@ const { navigation, navigationPostion } = Astro.props as Props;
 		<button
 			id="navbarToggle"
 			aria-label="Toggle navigation menu"
-			class="relative z-40 pt-1 cursor-pointer border-0 bg-transparent text-2xl sm:text-3xl lg:text-5xl text-white hover:text-secondary flex align-middle"
+			class="relative z-40 flex cursor-pointer border-0 bg-transparent pt-1 align-middle text-2xl text-white hover:text-secondary sm:text-3xl lg:text-5xl"
 		>
 			<Icon name="line-md:close-to-menu-transition" />
 		</button>
 
 		<div
 			id="navbarMenu"
-			class="absolute hidden left-0 top-0 z-30 h-screen w-screen translate-x-full transform bg-primary transition-transform duration-300 ease-in-out"
+			class="absolute left-0 top-0 z-30 hidden h-screen w-screen translate-x-full transform bg-primary transition-transform duration-300 ease-in-out"
 		>
-			<ul class="flex h-full flex-col gap-8 p-8 pl-6 sm:pl-12 md:pl-16 pt-24">
+			<ul class="flex h-full flex-col gap-8 p-8 pl-6 pt-24 sm:pl-12 md:pl-16">
 				{
 					navigation.map((item) => (
 						<li>
@@ -78,13 +78,13 @@ const { navigation, navigationPostion } = Astro.props as Props;
 		}
 
 		const toggleMenu = () => {
-      navbarMenu.classList.toggle('hidden')
+			navbarMenu.classList.toggle('hidden')
 			navbarMenu.classList.toggle('translate-x-full')
 		}
 
 		const closeMenu = () => {
 			navbarMenu.classList.add('translate-x-full')
-      navbarMenu.classList.toggle('hidden')
+			navbarMenu.classList.toggle('hidden')
 		}
 
 		navbarToggle.addEventListener('click', toggleMenu)

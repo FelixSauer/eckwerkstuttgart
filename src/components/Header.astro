@@ -1,23 +1,24 @@
 ---
-import { Icon } from "astro-icon/components";
-import Navigation from "@/components/Navigation.astro";
-import type { INavigation } from "@/types/navigation";
+import { Icon } from 'astro-icon/components'
+import Navigation from '@/components/Navigation.astro'
+import type { INavigation } from '@/types/navigation'
 
 interface Props {
-	navigation: INavigation[];
+	navigation: INavigation[]
 }
 
-const { navigation } = Astro.props;
+const { navigation } = Astro.props
 ---
 
 <header
-	class="top-0 bottom-0 z-50 flex h-16 lg:h-24 w-full align-middle items-center justify-between bg-primary px-6 sm:px-12 md:px-16"
+	class="bottom-0 top-0 z-50 flex h-16 w-full items-center justify-between bg-primary px-6 align-middle sm:px-12 md:px-16 lg:h-24"
 >
-	<a href="https://eckwerkstuttgart.de/" class="z-50 sm:text-5xl no-underline text-white" aria-label="Eckwerk Stuttgart">
-		<Icon
-      name="logo"
-      class="h-10 sm:h-12 w-auto"
-    />
+	<a
+		href="https://eckwerkstuttgart.de/"
+		class="z-50 text-white no-underline sm:text-5xl"
+		aria-label="Eckwerk Stuttgart"
+	>
+		<Icon name="logo" class="h-10 w-auto sm:h-12" />
 	</a>
 
 	<Navigation navigation={navigation} navigationPostion="header" />

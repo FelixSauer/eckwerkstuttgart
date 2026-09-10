@@ -2,9 +2,8 @@
 title: About
 mainStage: true
 navigation: Header
-slogan: "Ihr Handwerker in der Region"
+slogan: 'Ihr Handwerker in der Region'
 imagePath: IntroImage.jpg
-
 ---
 
 # Ihr Partner für Renovierung und Sanierung in Stuttgart

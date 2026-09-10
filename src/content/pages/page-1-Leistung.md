@@ -15,16 +15,16 @@ Gewerke.
 Unsere Leistungen
 
 - Renovierungen & Sanierungen: Von einzelnen Renovierungsarbeiten bis zur umfassenden Wohnungs- und Haussanierung übernehmen wir
-die Modernisierung und Aufwertung Ihrer Räume.
+  die Modernisierung und Aufwertung Ihrer Räume.
 
 - Elektrik & Haustechnik: Elektroinstallationen sowie Arbeiten rund um moderne Haustechnik werden passend zum jeweiligen Sanierungs- oder
-Renovierungsprojekt umgesetzt.
+  Renovierungsprojekt umgesetzt.
 
 - Innenausbau & Trockenbau: Wir realisieren individuelle Raumlösungen, erstellen und verkleiden Wände und Decken und übernehmen weitere
-Arbeiten im Bereich Trockenbau und Innenausbau.
+  Arbeiten im Bereich Trockenbau und Innenausbau.
 
 - Badsanierung: Wir übernehmen Ihre Badsanierung in Stuttgart von der Planung über Rückbau, Installation und Fliesenarbeiten bis zur
-Fertigstellung, koordiniert aus einer Hand.
+  Fertigstellung, koordiniert aus einer Hand.
 
 - Fliesenarbeiten: Fachgerechte Verlegung von Wand- und Bodenfliesen in Badezimmern, Küchen und anderen Wohnbereichen.
 
@@ -33,4 +33,4 @@ Fertigstellung, koordiniert aus einer Hand.
 - Maler- & Putzarbeiten: Von klassischen Malerarbeiten über Spachtel- und Putzarbeiten bis zur Gestaltung von Wänden, Decken und Fassaden.
 
 - Fenster & Türen: Wir übernehmen den Austausch und die Montage von Fenstern und Türen im Rahmen von Renovierungs- und
-Sanierungsarbeiten.
+  Sanierungsarbeiten.

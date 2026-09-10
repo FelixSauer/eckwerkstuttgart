@@ -1,19 +1,17 @@
 ---
-import { getImage, Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
+import { getImage, Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro'
 
 interface Props {
-	imageCollection: string;
+	imageCollection: string
 }
 
-const { imageCollection } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/Albums/*/*",
-);
+const { imageCollection } = Astro.props
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/Albums/!(Intro)/*')
 
 const imagePaths = Object.keys(images).filter((imagePath) => {
-	return imagePath.startsWith(`/src/assets/Albums/${imageCollection}/`);
-});
+	return imagePath.startsWith(`/src/assets/Albums/${imageCollection}/`)
+})
 ---
 
 <div id="gallery" class="container sm:columns-2 md:columns-3 lg:columns-5">

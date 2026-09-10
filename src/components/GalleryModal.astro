@@ -1,6 +1,6 @@
 ---
-import { Icon } from "astro-icon/components";
-import Gallery from "./Gallery.astro";
+import { Icon } from 'astro-icon/components'
+import Gallery from './Gallery.astro'
 ---
 
 <div
@@ -8,10 +8,7 @@ import Gallery from "./Gallery.astro";
 	class="absolute left-0 top-0 z-[100] hidden h-full w-full bg-white p-2 xl:p-4"
 >
 	<div class="flex h-full flex-row gap-4">
-		<div
-			id="galleryMenu"
-			class="flex flex-col items-center justify-between bg-primary"
-		>
+		<div id="galleryMenu" class="flex flex-col items-center justify-between bg-primary">
 			<div
 				class="font-source-code-pro text-1xl writingMode-vertical px-2 py-4 uppercase text-secondary"
 			>
@@ -21,42 +18,42 @@ import Gallery from "./Gallery.astro";
 			<button
 				id="galleryModalClose"
 				type="button"
-				class="z-[110] cursor-pointer border-none bg-transparent p-2 text-1xl text-white hover:text-yellow-500"
+				class="text-1xl z-[110] cursor-pointer border-none bg-transparent p-2 text-white hover:text-yellow-500"
 				aria-label="Galerie schließen"
 			>
 				<Icon name="line-md:close" />
 			</button>
 		</div>
 
-		<div class="h-full w-full overflow-x-hidden overflow-y-auto">
+		<div class="h-full w-full overflow-y-auto overflow-x-hidden">
 			<Gallery imageCollection="Leistungen" />
 		</div>
 	</div>
 </div>
 
 <script>
-	const modal = document.getElementById("galleryModal");
-	const closeButton = document.getElementById("galleryModalClose");
-	const openButton = document.getElementById("link-Leistungen");
+	const modal = document.getElementById('galleryModal')
+	const closeButton = document.getElementById('galleryModalClose')
+	const openButton = document.getElementById('link-Leistungen')
 
 	const openModal = () => {
-		modal?.classList.remove("hidden");
-	};
+		modal?.classList.remove('hidden')
+	}
 
 	const closeModal = () => {
-		modal?.classList.add("hidden");
-	};
+		modal?.classList.add('hidden')
+	}
 
-	openButton?.addEventListener("click", (event) => {
-		event.preventDefault();
-		openModal();
-	});
+	openButton?.addEventListener('click', (event) => {
+		event.preventDefault()
+		openModal()
+	})
 
-	closeButton?.addEventListener("click", closeModal);
+	closeButton?.addEventListener('click', closeModal)
 
-	document.addEventListener("keydown", (event) => {
-		if (event.key === "Escape") {
-			closeModal();
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') {
+			closeModal()
 		}
-	});
+	})
 </script>

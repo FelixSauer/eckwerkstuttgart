@@ -24,4 +24,3 @@ Mail: [kontakt@eckwerkstuttgart.de](mailto:kontakt@eckwerkstuttgart.de)
 Geschäftsführer: Maximilian Sauer
 \
 Umsatzsteuer-Identifikationsnummer: DE366726080
-

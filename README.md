@@ -28,12 +28,14 @@ Eckwerk Stuttgart is a modern web application showcasing professional services i
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/eckwerkstuttgart.git
 cd eckwerkstuttgart
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 # or
@@ -41,6 +43,7 @@ yarn install
 ```
 
 3. Start the development server
+
 ```bash
 npm run dev
 ```
@@ -75,7 +78,7 @@ eckwerkstuttgart/
 All commands are run from the root of the project:
 
 | Command                   | Action                                           |
-|:--------------------------|:-------------------------------------------------|
+| :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
