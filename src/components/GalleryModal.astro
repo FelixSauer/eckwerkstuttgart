@@ -1,6 +1,6 @@
 ---
-import { Icon } from 'astro-icon/components'
-import Gallery from './Gallery.astro'
+import { Icon } from "astro-icon/components";
+import Gallery from "./Gallery.astro";
 ---
 
 <div
@@ -12,7 +12,7 @@ import Gallery from './Gallery.astro'
 			<div
 				class="font-source-code-pro text-1xl writingMode-vertical px-2 py-4 uppercase text-secondary"
 			>
-				Leistungen
+				Referenzen
 			</div>
 
 			<button
@@ -26,7 +26,7 @@ import Gallery from './Gallery.astro'
 		</div>
 
 		<div class="h-full w-full overflow-y-auto overflow-x-hidden">
-			<Gallery imageCollection="Leistungen" />
+			<Gallery imageCollection="Referenzen" />
 		</div>
 	</div>
 </div>
@@ -34,7 +34,7 @@ import Gallery from './Gallery.astro'
 <script>
 	const modal = document.getElementById('galleryModal')
 	const closeButton = document.getElementById('galleryModalClose')
-	const openButton = document.getElementById('link-Leistungen')
+	const openButton = document.getElementById('link-Referenzen')
 
 	const openModal = () => {
 		modal?.classList.remove('hidden')

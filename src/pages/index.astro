@@ -49,26 +49,13 @@ const mainStagePages = pages.filter((page) => page.data.mainStage === true)
 				const images = [desktopImageModule.default.src, mobilImageModule.default.src]
 
 				return originPage.data.mainStage === true ? (
-					<>
-						<SectionContent
-							transition:animate="slide"
-							id={originPage.data.title}
-							images={index !== mainStagePages.length - 1 ? images : null}
-						>
-							<Content />
-						</SectionContent>
-
-						{index === 1 && (
-							<>
-								<SectionContent id="reviews" withoutImages>
-									<Reviews />
-								</SectionContent>
-								<SectionContent id="carousel" onlyPass>
-									<Carousel />
-								</SectionContent>
-							</>
-						)}
-					</>
+					<SectionContent
+						transition:animate="slide"
+						id={originPage.data.title}
+						images={index !== mainStagePages.length - 1 ? images : null}
+					>
+						<Content />
+					</SectionContent>
 				) : null
 			})
 		}
