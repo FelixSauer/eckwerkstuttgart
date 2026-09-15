@@ -1,28 +1,13 @@
 ---
-/**
- * SectionContent Component
- *
- * This component renders a content section with optional image support.
- * It features responsive design with different images for mobile and desktop views,
- * and includes animation capabilities through GSAP.
- *
- * @component
- */
-
 interface Props {
-	/** Unique identifier for the section, used for navigation and animation targeting */
 	id?: string
-	/** When true, only passes through children without wrapping in article element */
 	onlyPass?: boolean
-	/** When true, prevents images from being displayed even if they are provided */
 	withoutImages?: boolean
-	/** Array of image URLs [desktop, mobile] or null if no images */
 	images?: string[] | null
 }
 
 const { id, onlyPass = false, withoutImages = false, images } = Astro.props
 
-// Extract desktop and mobile image URLs from the images array if provided
 const imageDesktop = images ? images[0] : ''
 const imageMobile = images ? images[1] : ''
 ---
@@ -34,7 +19,7 @@ const imageMobile = images ? images[1] : ''
 		) : (
 			<>
 				{/* Content container with responsive padding and animation setup */}
-				<article class="text-l md:py-18 px-6 py-10 opacity-0 contain-content last:min-h-max sm:px-12 sm:py-14 md:px-16 lg:px-48 lg:py-28 xl:px-96">
+				<article class="text-l md:py-18 xl:px-66 lg:py-38 px-6 py-10 opacity-0 contain-content last:min-h-max sm:px-12 sm:py-14 md:px-16 md:py-24 lg:px-48">
 					<slot />
 				</article>
 				{/* Conditional rendering of images based on props */}
@@ -47,7 +32,7 @@ const imageMobile = images ? images[1] : ''
 							<img
 								src={imageMobile}
 								alt="Content Image"
-								class="w-full object-cover sm:aspect-auto lg:h-full"
+								class="w-full object-cover sm:aspect-auto lg:h-[900px]"
 							/>
 						</picture>
 					</div>

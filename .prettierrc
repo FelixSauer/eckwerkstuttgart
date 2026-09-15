@@ -4,9 +4,13 @@
   "importOrderSortSpecifiers": true,
   "pluginSearchDirs": false,
   "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-  "printWidth": 100,
+  "printWidth": 80,
   "semi": false,
   "singleQuote": true,
   "trailingComma": "none",
-  "useTabs": true
+  "useTabs": true,
+  "format_on_save": "on",
+  "code_actions_on_format": {
+    "source.fixAll.eslint": true
+  }
 }

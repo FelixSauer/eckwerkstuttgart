@@ -24,7 +24,7 @@
   }
 
   body {
-    @apply font-light text-base;
+    @apply font-light text-base lg:text-lg xl:text-lg;
   }
 
   strong {
@@ -46,7 +46,7 @@
   ul li {
     @apply mb-2;
     padding-top: .8em ;
-    
+
   }
   li::marker {
   font-size: 1em;

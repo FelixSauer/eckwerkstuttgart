@@ -1,33 +1,13 @@
 ---
-import { Icon } from "astro-icon/components";
-import Gallery from "./Gallery.astro";
+import Gallery from './Gallery.astro'
 ---
 
 <div
 	id="galleryModal"
-	class="absolute left-0 top-0 z-[100] hidden h-full w-full bg-white p-2 xl:p-4"
+	class="absolute left-0 top-16 z-[100] hidden h-full w-full bg-white p-2 lg:top-24 xl:p-4"
 >
 	<div class="flex h-full flex-row gap-4">
-		<div id="galleryMenu" class="flex flex-col items-center justify-between bg-primary">
-			<div
-				class="font-source-code-pro text-1xl writingMode-vertical px-2 py-4 uppercase text-secondary"
-			>
-				Referenzen
-			</div>
-
-			<button
-				id="galleryModalClose"
-				type="button"
-				class="text-1xl z-[110] cursor-pointer border-none bg-transparent p-2 text-white hover:text-yellow-500"
-				aria-label="Galerie schließen"
-			>
-				<Icon name="line-md:close" />
-			</button>
-		</div>
-
-		<div class="h-full w-full overflow-y-auto overflow-x-hidden">
-			<Gallery imageCollection="Referenzen" />
-		</div>
+		<Gallery imageCollection="Referenzen" />
 	</div>
 </div>
 
