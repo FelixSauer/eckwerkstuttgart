@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components'
 import Gallery from './Gallery.astro'
 ---
 
@@ -6,6 +7,14 @@ import Gallery from './Gallery.astro'
 	id="galleryModal"
 	class="absolute left-0 top-16 z-[100] hidden h-full w-full bg-white p-2 lg:top-24 xl:p-4"
 >
+	<button
+		id="galleryModalClose"
+		aria-label="Galerie schließen"
+		class="absolute right-2 top-2 z-10 cursor-pointer border-0 bg-white p-2 text-black hover:text-secondary lg:right-4 lg:top-4"
+	>
+		<Icon name="line-md:close" class="h-6 w-6" />
+	</button>
+
 	<div class="flex h-full flex-row gap-4">
 		<Gallery imageCollection="Referenzen" />
 	</div>
@@ -14,7 +23,7 @@ import Gallery from './Gallery.astro'
 <script>
 	const modal = document.getElementById('galleryModal')
 	const closeButton = document.getElementById('galleryModalClose')
-	const openButton = document.getElementById('link-Referenzen')
+	const openButtons = document.querySelectorAll('a[data-href="Referenzen"]')
 
 	const openModal = () => {
 		modal?.classList.remove('hidden')
@@ -24,12 +33,33 @@ import Gallery from './Gallery.astro'
 		modal?.classList.add('hidden')
 	}
 
-	openButton?.addEventListener('click', (event) => {
-		event.preventDefault()
-		openModal()
+	openButtons.forEach((openButton) => {
+		openButton.addEventListener('click', (event) => {
+			event.preventDefault()
+			openModal()
+		})
 	})
 
 	closeButton?.addEventListener('click', closeModal)
+
+	document.addEventListener('click', (event) => {
+		if (!modal || modal.classList.contains('hidden')) {
+			return
+		}
+
+		const target = event.target as Node | null
+		const link = target instanceof Element ? target.closest('a') : null
+
+		if (!link || modal.contains(link)) {
+			return
+		}
+
+		if (link.id === 'link-Referenzen') {
+			return
+		}
+
+		closeModal()
+	})
 
 	document.addEventListener('keydown', (event) => {
 		if (event.key === 'Escape') {
