@@ -1,11 +1,11 @@
 ---
-import { Icon } from 'astro-icon/components'
-import Gallery from './Gallery.astro'
+import { Icon } from "astro-icon/components";
+import Gallery from "./Gallery.astro";
 ---
 
 <div
 	id="galleryModal"
-	class="absolute left-0 top-16 z-[100] hidden h-full w-full bg-white p-2 lg:top-24 xl:p-4"
+	class="absolute left-0 top-16 z-[100] hidden h-full min-w-full  bg-white p-2 lg:top-24 xl:p-4"
 >
 	<button
 		id="galleryModalClose"
@@ -15,7 +15,7 @@ import Gallery from './Gallery.astro'
 		<Icon name="line-md:close" class="h-6 w-6" />
 	</button>
 
-	<div class="flex h-full flex-row gap-4">
+	<div class="flex h-full min-w-full flex-row gap-4">
 		<Gallery imageCollection="Referenzen" />
 	</div>
 </div>

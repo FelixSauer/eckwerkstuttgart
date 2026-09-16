@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import "@fontsource-variable/montserrat";
+import "@fontsource-variable/source-code-pro";
+import "@fontsource-variable/source-sans-3";
+import "@fontsource/source-sans-pro";
+import "@fontsource/roboto";
+import SectionContent from "@/components/SectionContent.astro";
+import Layout from "@/layouts/multi.astro";
+import "@/styles/global.css";
+
+export async function getStaticPaths() {
+	const pages = await getCollection("pages");
+
+	return pages
+		.filter((page) => page.data.navigation.includes("Footer"))
+		.map((page) => ({
+			params: { slug: page.data.title },
+			props: { page },
+		}));
+}
+
+const { page } = Astro.props;
+const { Content } = await page.render();
+---
+
+<Layout title={page.data.title} footerAtBottom>
+	<SectionContent id={page.data.title} withoutImages animate={false}>
+		<Content />
+	</SectionContent>
+</Layout>

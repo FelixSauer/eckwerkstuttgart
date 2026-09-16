@@ -1,13 +1,13 @@
 ---
-import { Icon } from 'astro-icon/components'
-import type { INavigation } from '@/types/navigation'
+import { Icon } from "astro-icon/components";
+import type { INavigation } from "@/types/navigation";
 
 interface Props {
-	navigation: INavigation[]
-	navigationPostion: string
+	navigation: INavigation[];
+	navigationPostion: string;
 }
 
-const { navigation, navigationPostion } = Astro.props as Props
+const { navigation, navigationPostion } = Astro.props as Props;
 ---
 
 <nav class="flex items-center">

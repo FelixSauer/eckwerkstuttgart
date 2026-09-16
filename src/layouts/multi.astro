@@ -1,15 +1,16 @@
 ---
-import Footer from '@/components/Footer.astro'
-import GalleryModal from '@/components/GalleryModal.astro'
-import Header from '@/components/Header.astro'
-import { getNavigation } from '@/hooks/navigation'
+import Footer from "@/components/Footer.astro";
+import GalleryModal from "@/components/GalleryModal.astro";
+import Header from "@/components/Header.astro";
+import { getNavigation } from "@/hooks/navigation";
 
 interface Props {
-	title: string
+	title: string;
+	footerAtBottom?: boolean;
 }
 
-const { title } = Astro.props
-const { navigationHeader, navigationFooter } = await getNavigation()
+const { title, footerAtBottom = false } = Astro.props;
+const { navigationHeader, navigationFooter } = await getNavigation();
 ---
 
 <!doctype html>
@@ -28,10 +29,13 @@ const { navigationHeader, navigationFooter } = await getNavigation()
 	</head>
 	<body class="flex h-full w-full flex-col overflow-x-hidden">
 		<Header navigation={navigationHeader} />
-		<main class="flex-1 overflow-y-auto scroll-smooth">
-			<slot />
+		<main class:list={["flex-1 overflow-y-auto scroll-smooth", { "flex flex-col": footerAtBottom }]}>
+			<div class:list={[{ "flex-1": footerAtBottom }]}>
+				<slot />
+			</div>
 			<Footer navigation={navigationFooter} />
 		</main>
 		<GalleryModal />
 	</body>
 </html>
+
