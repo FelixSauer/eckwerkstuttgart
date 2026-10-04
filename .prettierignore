@@ -1,1 +1,5 @@
 node_modules/**
+.astro/**
+.opencode/**
+dist/**
+pnpm-lock.yaml

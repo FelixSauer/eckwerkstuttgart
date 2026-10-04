@@ -1,16 +1,20 @@
 ---
-import Footer from "@/components/Footer.astro";
-import GalleryModal from "@/components/GalleryModal.astro";
-import Header from "@/components/Header.astro";
-import { getNavigation } from "@/hooks/navigation";
+import Footer from '@/components/Footer.astro'
+import GalleryModal from '@/components/GalleryModal.astro'
+import Header from '@/components/Header.astro'
+import { getNavigation } from '@/hooks/navigation'
+import '@fontsource-variable/montserrat'
+import '@fontsource-variable/source-code-pro'
+import '@fontsource-variable/source-sans-3'
+import '@/styles/global.css'
 
 interface Props {
-	title: string;
-	footerAtBottom?: boolean;
+	title: string
+	footerAtBottom?: boolean
 }
 
-const { title, footerAtBottom = false } = Astro.props;
-const { navigationHeader, navigationFooter } = await getNavigation();
+const { title, footerAtBottom = false } = Astro.props
+const { navigationHeader, navigationFooter } = await getNavigation()
 ---
 
 <!doctype html>
@@ -23,14 +27,19 @@ const { navigationHeader, navigationFooter } = await getNavigation();
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon-mode-dark.svg" />
+		<link rel="icon" href="/favicon-mode-dark.ico" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<title>{title}</title>
 	</head>
 	<body class="flex h-full w-full flex-col overflow-x-hidden">
 		<Header navigation={navigationHeader} />
-		<main class:list={["flex-1 overflow-y-auto scroll-smooth", { "flex flex-col": footerAtBottom }]}>
-			<div class:list={[{ "flex-1": footerAtBottom }]}>
+		<main
+			class:list={[
+				'flex-1 overflow-y-auto scroll-smooth',
+				{ 'flex flex-col': footerAtBottom }
+			]}
+		>
+			<div class:list={[{ 'flex-1': footerAtBottom }]}>
 				<slot />
 			</div>
 			<Footer navigation={navigationFooter} />
@@ -38,4 +47,3 @@ const { navigationHeader, navigationFooter } = await getNavigation();
 		<GalleryModal />
 	</body>
 </html>
-

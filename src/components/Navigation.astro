@@ -1,34 +1,30 @@
 ---
-import { Icon } from "astro-icon/components";
-import type { INavigation } from "@/types/navigation";
+import { Icon } from 'astro-icon/components'
+import type { INavigation } from '@/types/navigation'
 
 interface Props {
-	navigation: INavigation[];
-	navigationPostion: string;
+	navigation: INavigation[]
 }
 
-const { navigation, navigationPostion } = Astro.props as Props;
+const { navigation } = Astro.props
 ---
 
 <nav class="flex items-center">
 	<div class="hidden lg:block" id="navbarDesktop">
 		<ul class="m-0 flex list-none gap-6 p-0 font-normal first:m-0 last:m-0">
-			{
-				navigation.map((item) => (
-					<li>
-						<a
-							id={`link-${item.title}`}
-							href={navigationPostion === 'header' ? '/#' + item.title : item.title}
-							data-href={item.title}
-							aria-label={item.title}
-							aria-current="page"
-							class="cursor-pointer font-sourceCodePro text-xl font-light uppercase tracking-wide no-underline subpixel-antialiased hover:text-secondary"
-						>
-							{item.title}
-						</a>
-					</li>
-				))
-			}
+			{navigation.map((item) => (
+				<li>
+					<a
+						id={`link-${item.title}`}
+						href={`/#${item.title}`}
+						data-href={item.title}
+						aria-label={item.title}
+						class="cursor-pointer font-sourceCodePro text-xl font-light uppercase tracking-wide no-underline subpixel-antialiased hover:text-secondary"
+					>
+						{item.title}
+					</a>
+				</li>
+			))}
 		</ul>
 	</div>
 	<div class="lg:hidden">
@@ -45,22 +41,19 @@ const { navigation, navigationPostion } = Astro.props as Props;
 			class="absolute left-0 top-0 z-30 hidden h-screen w-screen translate-x-full transform bg-primary transition-transform duration-300 ease-in-out"
 		>
 			<ul class="flex h-full flex-col gap-8 p-8 pl-6 pt-24 sm:pl-12 md:pl-16">
-				{
-					navigation.map((item) => (
-						<li>
-							<a
-								id={`link-${item.title}`}
-								href={navigationPostion === 'header' ? '/#' + item.title : item.title}
-								data-href={item.title}
-								aria-label="{item.title}"
-								aria-current="page"
-								class="navItem m-1 text-4xl text-white hover:text-secondary"
-							>
-								{item.title}
-							</a>
-						</li>
-					))
-				}
+				{navigation.map((item) => (
+					<li>
+						<a
+							id={`link-${item.title}`}
+							href={`/#${item.title}`}
+							data-href={item.title}
+							aria-label={item.title}
+							class="navItem m-1 text-4xl text-white hover:text-secondary"
+						>
+							{item.title}
+						</a>
+					</li>
+				))}
 			</ul>
 		</div>
 	</div>
@@ -90,10 +83,6 @@ const { navigation, navigationPostion } = Astro.props as Props;
 		navbarToggle.addEventListener('click', toggleMenu)
 
 		document.addEventListener('click', (event) => {
-			if (event === null) {
-				throw new Error('Event is null')
-			}
-
 			if (
 				!navbarMenu.contains(event.target as Node) &&
 				!navbarToggle.contains(event.target as Node)

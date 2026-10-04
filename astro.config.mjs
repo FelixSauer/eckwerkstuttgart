@@ -23,7 +23,7 @@ export default defineConfig({
 		}),
 		webmanifest({
 			name: "www.eckwerkstuttgart.de",
-			icon: "src/assets/favicon-mode-dark.svg",
+			icon: "src/assets/favicon_io/android-chrome-192x192.png",
 			short_name: "eckwerkstuttgart",
 			description: "Ihr Partner für Handwerk in Stuttgart",
 			start_url: "/",
@@ -34,11 +34,27 @@ export default defineConfig({
 		}),
 	],
 	vite: {
+		build: {
+			rolldownOptions: {
+				onLog(level, log, defaultHandler) {
+					if (
+						level === "warn" &&
+						log.code === "MODULE_LEVEL_DIRECTIVE" &&
+						log.message.includes('"use astro:head-inject"') &&
+						/\.mdx\?astroPropagatedAssets(?:$|["'\s])/.test(
+							log.id ?? log.message,
+						)
+					) {
+						return;
+					}
+					defaultHandler(level, log);
+				},
+			},
+		},
 		resolve: {
 			alias: {
 				"@": "/src",
 			},
 		},
-		plugins: [],
 	},
 });

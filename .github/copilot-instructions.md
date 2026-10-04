@@ -6,15 +6,15 @@ This is an Astro-based website for Eckwerk Stuttgart, a craftsmanship company sp
 
 ## Tech Stack & Dependencies
 
-- **Framework**: Astro 4.11.3 with TypeScript
+- **Framework**: Astro 7.3.3 with TypeScript
 - **Styling**: Tailwind CSS with custom color scheme
 - **Icons**: Astro Icon with custom SVG icons
 - **Animations**: GSAP for smooth animations
 - **Image Gallery**: PhotoSwipe for image lightboxes
-- **Fonts**: Montserrat, Source Code Pro, Source Sans 3, Roboto
+- **Fonts**: Montserrat, Source Code Pro, Source Sans 3
 - **Build Tools**: Vite, ESLint, Prettier
-- **Package Management**: Node 22.14.0, Yarn 1.22.11
-- **CI/CD**: Changesets for versioning
+- **Package Management**: Node 22.22.3, pnpm 10.34.5
+- **CI/CD**: GitHub Pages deployment
 
 ## Software Design Aspects
 
@@ -189,9 +189,8 @@ Content Collections → Hooks → Components → UI
 
 #### Version Control
 
-- Changesets for semantic versioning
 - Conventional commit messages
-- Automated changelog generation
+- Automated GitHub Pages deployment from `main`
 
 ## Architecture Patterns
 
@@ -202,7 +201,7 @@ src/
 ├── components/     # Reusable Astro components
 ├── content/        # Content collections (pages)
 ├── hooks/          # Custom utilities (navigation)
-├── layouts/        # Page layouts (single, multi)
+├── layouts/        # Shared page layout
 ├── pages/          # Route pages
 ├── styles/         # Global CSS
 ├── types/          # TypeScript type definitions
@@ -221,14 +220,13 @@ src/
 
 - Content stored in `src/content/pages/` as Markdown files
 - Use Astro Content Collections with Zod schemas
-- Page frontmatter includes: title, mainStage, navigation, slogan, imagePath
+- Page frontmatter includes: title, mainStage, navigation, and optional slogan
 - Navigation items parsed from comma-separated strings
 
 ### Styling Guidelines
 
-- Primary color: `#828B6F` (green)
+- Primary color: `#5E7461` (green)
 - Secondary color: `#DBA507` (yellow)
-- Accent colors: blue tones (`#8EC7D2`, `#42AFBF`) and coral (`#FF7180`)
 - Use Tailwind utility classes
 - Custom font families defined in config
 - Base styles applied via `@layer base` in global.css
@@ -246,7 +244,6 @@ src/
 ### Layout Components
 
 - `multi.astro`: Main layout with header, footer, navigation
-- `single.astro`: Simpler layout variant
 - Include SEO meta tags, favicon, generator info
 - Use semantic HTML structure with proper accessibility
 
@@ -267,9 +264,7 @@ src/
 ### Animations
 
 - GSAP-based animation utilities in `utils/Animations.ts`
-- Common patterns: animateFromLeft, animateFromRight
-- Use `power3.out` easing for smooth effects
-- Configurable delay and duration parameters
+- Section content uses a shared fade-in animation
 
 ## Code Standards
 
@@ -304,10 +299,10 @@ src/
 
 ### Scripts
 
-- `yarn dev`: Development server
-- `yarn build`: Production build with type checking
-- `yarn lint`: Format and lint code
-- `yarn changeset`: Create changeset for versioning
+- `pnpm dev`: Development server
+- `pnpm build`: Production build with type checking
+- `pnpm lint`: ESLint check
+- `pnpm format`: Format files
 
 ### Content Updates
 

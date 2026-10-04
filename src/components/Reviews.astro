@@ -10,18 +10,38 @@ interface Review {
 }
 
 async function fetchReviews(): Promise<Review[]> {
-	const API_KEY = "AIzaSyAlDmSirID3ctmTbZn5-rJG6Z-ofXZCmws";
-	const PLACE_ID = "ChIJ_erOoVuif6kRZSACbgSg1Ss";
-	const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&language=de&key=${API_KEY}`;
+	const API_KEY = import.meta.env.GOOGLE_PLACES_API_KEY;
+	const PLACE_ID = import.meta.env.GOOGLE_PLACES_ID;
 
-	const response = await fetch(url);
-	const data = await response.json();
-
-	if (!response.ok) {
-		throw new Error(data.error_message || "Failed to fetch Google Reviews");
+	if (!API_KEY || !PLACE_ID) {
+		console.warn(
+			"Google reviews skipped: GOOGLE_PLACES_API_KEY or GOOGLE_PLACES_ID is missing.",
+		);
+		return [];
 	}
 
-	return data.result?.reviews || [];
+	const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&language=de&key=${API_KEY}`;
+
+	console.log("Fetching Google reviews...");
+
+	try {
+		const response = await fetch(url);
+		const data = await response.json();
+
+		if (!response.ok || data?.status !== "OK") {
+			console.warn(
+				"Google reviews request failed:",
+				response.status,
+				data?.status,
+			);
+			return [];
+		}
+
+		return Array.isArray(data.result?.reviews) ? data.result.reviews : [];
+	} catch (error) {
+		console.error("Failed to fetch Google reviews:", error);
+		return [];
+	}
 }
 
 const renderStars = (rating: number): string => {
@@ -34,41 +54,52 @@ const renderStars = (rating: number): string => {
 const reviews: Review[] = await fetchReviews();
 ---
 
-	<div class="container relative m-auto">
-		<div class="relative flex items-center gap-1 sm:gap-4">
-			<button class="prev m-0 p-0 font-bold hover:text-secondary md:text-4xl" id="prevButton">
-				<Icon name="line-md:chevron-left" />
-			</button>
-			<div class="align-middle">
-				{
-					reviews.map((review, index) => (
-						<div class={`item ${index === 0 ? 'block' : 'hidden'}`}>
-							<div class="review fade flex flex-col gap-2 md:gap-4">
-								<div class="flex gap-4 md:flex-col md:gap-2">
-									<a
-										href={review.author_url}
-										target="_blank"
-										aria-label={`Review by ${review.author_name}`}
-									>
-										<h4>{review.author_name}</h4>
-									</a>
+<div class="reviews-slider container relative m-auto">
+	<div class="relative flex items-center gap-1 sm:gap-4">
+		<button
+			type="button"
+			class="prev m-0 p-0 font-bold hover:text-secondary md:text-4xl"
+			aria-label="Vorherige Bewertung"
+		>
+			<Icon name="line-md:chevron-left" />
+		</button>
+		<div class="min-w-0 flex-1 align-middle">
+			{reviews.map((review, index) => (
+				<div
+					class="item"
+					data-slide={index}
+					hidden={index !== 0}
+					aria-hidden={index !== 0}
+				>
+					<div class="review fade flex flex-col gap-2 md:gap-4">
+						<div class="flex gap-4 md:flex-col md:gap-2">
+							<a
+								href={review.author_url}
+								target="_blank"
+								aria-label={`Review by ${review.author_name}`}
+							>
+								<h4>{review.author_name}</h4>
+							</a>
 
-									<div class="flex gap-1 p-0 text-xs">
-										<div class="stars">{renderStars(review.rating)}</div>
-										<div class="text-sm">{review.relative_time_description}</div>
-									</div>
-								</div>
-								<div>{review.text}</div>
+							<div class="flex gap-1 p-0 text-xs">
+								<div class="stars">{renderStars(review.rating)}</div>
+								<div class="text-sm">{review.relative_time_description}</div>
 							</div>
 						</div>
-					))
-				}
-			</div>
-			<button class="next m-0 p-0 hover:text-secondary md:text-4xl" id="nextButton">
-				<Icon name="line-md:chevron-right" />
-			</button>
+						<div>{review.text}</div>
+					</div>
+				</div>
+			))}
 		</div>
+		<button
+			type="button"
+			class="next m-0 p-0 hover:text-secondary md:text-4xl"
+			aria-label="Nächste Bewertung"
+		>
+			<Icon name="line-md:chevron-right" />
+		</button>
 	</div>
+</div>
 
 <style>
 	@keyframes fade {
@@ -81,40 +112,29 @@ const reviews: Review[] = await fetchReviews();
 	}
 </style>
 
-<script>
-	let slideIndex = 1
+<script is:inline>
+	const sliders = document.querySelectorAll('.reviews-slider')
 
-	const showSlides = (n: number) => {
-		let i
-		const slides = document.getElementsByClassName('item')
+	sliders.forEach((slider) => {
+		const slides = Array.from(slider.querySelectorAll('.item'))
+		let slideIndex = 0
 
-		if (n > slides.length) {
-			slideIndex = 1
+		const showSlide = (index) => {
+			if (!slides.length) return
+
+			slideIndex = (index + slides.length) % slides.length
+			slides.forEach((slide, currentIndex) => {
+				const isVisible = currentIndex === slideIndex
+				slide.hidden = !isVisible
+				slide.setAttribute('aria-hidden', String(!isVisible))
+			})
 		}
 
-		if (n < 1) {
-			slideIndex = slides.length
-		}
-
-		for (i = 0; i < slides.length; i++) {
-			;(slides[i] as HTMLElement).style.display = 'none'
-		}
-		;(slides[slideIndex - 1] as HTMLElement).style.display = 'block'
-	}
-
-	const plusSlides = (n: number) => {
-		showSlides((slideIndex += n))
-	}
-
-	document.addEventListener('DOMContentLoaded', () => {
-		showSlides(slideIndex)
-
-		document.getElementById('prevButton')?.addEventListener('click', () => {
-			plusSlides(-1)
-		})
-
-		document.getElementById('nextButton')?.addEventListener('click', () => {
-			plusSlides(1)
+		showSlide(slideIndex)
+		slider.addEventListener('click', (event) => {
+			const button = event.target.closest('button')
+			if (button?.classList.contains('prev')) showSlide(slideIndex - 1)
+			if (button?.classList.contains('next')) showSlide(slideIndex + 1)
 		})
 	})
 </script>

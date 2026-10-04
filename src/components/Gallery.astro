@@ -1,51 +1,52 @@
 ---
-import { getImage, Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
+import { getImage, Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro'
 
 interface Props {
-	imageCollection: string;
+	imageCollection: string
 }
 
-const { imageCollection } = Astro.props;
+const { imageCollection } = Astro.props
 const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/Albums/!(Intro)/*",
-);
+	'/src/assets/Albums/!(Intro)/*.{jpg,jpeg,png,webp,avif}'
+)
 
 const imagePaths = Object.keys(images).filter((imagePath) => {
-	return imagePath.startsWith(`/src/assets/Albums/${imageCollection}/`);
-});
+	return imagePath.startsWith(`/src/assets/Albums/${imageCollection}/`)
+})
 ---
 
-<div id="gallery" class="container sm:columns-2 md:columns-3 lg:columns-5 min-w-full">
-	{
-		imagePaths.map(async (imagePath) => {
-			let image = images[imagePath]()
-			let optimizedImage = await getImage({
-				src: image,
-				width: 1240
-			})
-
-			return (
-				<a
-					href={optimizedImage.src}
-					data-pswp-width={optimizedImage.attributes.width}
-					data-pswp-height={optimizedImage.attributes.height}
-					target="_blank"
-					class="group block transition-all"
-				>
-					<Image
-						src={image}
-						alt={'altText'}
-						format="avif"
-						width={1024}
-						quality="mid"
-						class="mb-4 rounded border border-transparent transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg"
-						loading="lazy"
-					/>
-				</a>
-			)
+<div
+	id="gallery"
+	class="container min-w-full sm:columns-2 md:columns-3 lg:columns-5"
+>
+	{imagePaths.map(async (imagePath) => {
+		const { default: image } = await images[imagePath]()
+		const optimizedImage = await getImage({
+			src: image,
+			width: 1240
 		})
-	}
+
+		return (
+			<a
+				href={optimizedImage.src}
+				data-pswp-width={optimizedImage.attributes.width}
+				data-pswp-height={optimizedImage.attributes.height}
+				target="_blank"
+				class="group block transition-all"
+			>
+				<Image
+					src={image}
+					alt={'altText'}
+					format="avif"
+					width={1024}
+					quality="mid"
+					class="mb-4 rounded border border-transparent transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg"
+					loading="lazy"
+				/>
+			</a>
+		)
+	})}
 </div>
 
 <style>
