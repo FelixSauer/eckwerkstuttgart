@@ -1,5 +1,8 @@
 ---
+import { writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
 import { Icon } from "astro-icon/components";
+import fallbackReviews from "../data/google-reviews.json";
 
 interface Review {
 	author_url: string;
@@ -9,6 +12,12 @@ interface Review {
 	text: string;
 }
 
+const localReviews: Review[] = fallbackReviews;
+const fallbackReviewsPath = resolve(
+	process.cwd(),
+	"src/data/google-reviews.json",
+);
+
 async function fetchReviews(): Promise<Review[]> {
 	const API_KEY = import.meta.env.GOOGLE_PLACES_API_KEY;
 	const PLACE_ID = import.meta.env.GOOGLE_PLACES_ID;
@@ -17,7 +26,7 @@ async function fetchReviews(): Promise<Review[]> {
 		console.warn(
 			"Google reviews skipped: GOOGLE_PLACES_API_KEY or GOOGLE_PLACES_ID is missing.",
 		);
-		return [];
+		return localReviews;
 	}
 
 	const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&language=de&key=${API_KEY}`;
@@ -33,14 +42,31 @@ async function fetchReviews(): Promise<Review[]> {
 				"Google reviews request failed:",
 				response.status,
 				data?.status,
+				data?.error_message,
 			);
-			return [];
+			return localReviews;
 		}
 
-		return Array.isArray(data.result?.reviews) ? data.result.reviews : [];
+		const reviews = data.result?.reviews;
+		if (!Array.isArray(reviews) || reviews.length === 0) {
+			return localReviews;
+		}
+
+		if (import.meta.env.PROD) {
+			try {
+				await writeFile(
+					fallbackReviewsPath,
+					`${JSON.stringify(reviews, null, 2)}\n`,
+				);
+			} catch (error) {
+				console.warn("Could not cache Google reviews:", error);
+			}
+		}
+
+		return reviews;
 	} catch (error) {
 		console.error("Failed to fetch Google reviews:", error);
-		return [];
+		return localReviews;
 	}
 }
 
@@ -54,7 +80,7 @@ const renderStars = (rating: number): string => {
 const reviews: Review[] = await fetchReviews();
 ---
 
-<div class="reviews-slider container relative m-auto">
+<div class="reviews-slider container">
 	<div class="relative flex items-center gap-1 sm:gap-4">
 		<button
 			type="button"
